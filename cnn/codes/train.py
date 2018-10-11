@@ -10,7 +10,7 @@ import traceback
 
 
 
-to_path = 'models/hdfs/456_sim.csv'
+to_path = 'models/hdfs/sim.csv'
 
 def train(train_iter, dev_iter, model, args):
     if args.cuda:
