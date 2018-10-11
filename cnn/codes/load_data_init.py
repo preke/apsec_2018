@@ -1,13 +1,16 @@
 import os
 import pandas as pd
 import numpy as np
-# from preprocess import Preprocess
+
 
 import re
 import random
 import tarfile
 import urllib
 from torchtext import data
+
+
+data_path = '../hadoop/hadoop.csv'
 
 
 
@@ -81,4 +84,4 @@ def load_data(data_path):
     return train_set, test_set, vali_set
 
 if __name__ == '__main__':
-    load_data('../hadoop/hadoop.csv')
+    load_data(data_path)

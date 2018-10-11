@@ -36,14 +36,11 @@ def train_word2vec_model(df):
     return word2vec_model
 
 
-if 1 == 1:
+if __name__ == '__main__':
     # data_path = '../hadoop/hadoop.csv'
     # df = pd.read_csv(data_path, encoding = 'gb18030')
     # word2vec_model = train_word2vec_model(df)
     # word2vec_model.save('hadoop_w2v.save')
-
-
-
 
     parser = argparse.ArgumentParser(description='')
     # learning
