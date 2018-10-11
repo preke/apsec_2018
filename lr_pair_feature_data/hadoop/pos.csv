@@ -1,0 +1,110 @@
+,Issue_id_1,Issue_id_2,Resolution,Title_1,Title_2,same_comp,same_prio,same_tw
+0,HADOOP-4,HADOOP-17,Fixed,tool to mount dfs on linux,tool to mount ndfs on linux,0,1,1
+1,HADOOP-19,HADOOP-56,Fixed,Datanode corruption,hadoop nameserver does not recognise ndfs nameserver image,1,1,1
+2,HADOOP-27,HADOOP-336,Fixed,MapRed tries to allocate tasks to nodes that have no available disk space,The task tracker should track disk space used; and have a configurable cap,1,1,1
+3,HADOOP-35,HADOOP-83,Duplicate,Files missing chunks can cause mapred runs to get stuck,infinite retries accessing a missing block,1,1,1
+4,HADOOP-39,HADOOP-1144,Duplicate,Create a job-configurable best effort for job execution,,0,0,1
+5,HADOOP-47,HADOOP-237,Duplicate,include records/second and bytes/second in  task reports,Standard set of Performance Metrics for Hadoop,0,1,1
+6,HADOOP-52,HADOOP-448,Fixed,mapred input and output dirs must be absolute,,0,0,1
+7,HADOOP-53,HADOOP-2206,Duplicate,MapReduce log files should be storable in dfs.,,0,0,1
+8,HADOOP-60,HADOOP-62,Fixed,Specification of alternate conf. directory,can't get environment variables from HADOOP_CONF_DIR,0,1,1
+9,HADOOP-64,HADOOP-74,Fixed,DataNode should be capable of managing multiple volumes,hash blocks into dfs.data.dirs,1,0,1
+10,HADOOP-64,HADOOP-257,Fixed,DataNode should be capable of managing multiple volumes,starting one data node thread to manage multiple data directories,1,0,1
+11,HADOOP-76,HADOOP-253,Fixed,Implement speculative re-execution of reduces,we need speculative execution for reduces,1,0,1
+12,HADOOP-94,HADOOP-124,Duplicate,disallow more than one datanode running on one computing sharing the same data directory,don't permit two datanodes to run from same dfs.data.dir,1,0,1
+13,HADOOP-99,HADOOP-305,Fixed,task trackers can only be assigned one task every heartbeat,tasktracker waits for 10 seconds for asking for a task.,1,0,1
+14,HADOOP-104,HADOOP-367,Duplicate,Reflexive access to non-public class with public ctor requires setAccessible (with some JVMs),Static blocks do not automatically run when a class is loaded in Java 5.0,1,1,1
+15,HADOOP-105,HADOOP-431,Duplicate,DFS commands either do not support some popular unix commands or have inconsistent behaviors,,0,0,1
+16,HADOOP-130,HADOOP-171,Duplicate,"Should be able to specify ""wide"" or ""full"" replication",need standard API to set dfs replication = high,1,0,1
+17,HADOOP-136,HADOOP-302,Duplicate,Overlong UTF8's not handled well,class Text (replacement for class UTF8) was: HADOOP-136,1,0,1
+18,HADOOP-146,HADOOP-158,Fixed,potential conflict in block id's; leading to data corruption,dfs should allocate a random blockid range to a file; then assign ids sequentially to blocks in the file,1,1,1
+19,HADOOP-155,HADOOP-260,Duplicate,Add a conf dir parameter to the scripts,the start up scripts should take a command line parameter --config making it easy to run multiple hadoop installation on same machines,0,0,1
+20,HADOOP-158,HADOOP-1497,Duplicate,dfs should allocate a random blockid range to a file; then assign ids sequentially to blocks in the file,,0,0,1
+21,MAPREDUCE-42,HADOOP-43,Invalid,task trackers should not restart for having a late heartbeat,JobTracker dumps TaskTrackers if it takes too long to service an RPC call,1,1,1
+22,HADOOP-225,HADOOP-244,Cannot Reproduce,tasks are left over when a job fails,very long cleanup after a job fails,1,0,1
+23,HADOOP-227,HADOOP-334,Fixed,Namespace check pointing is not performed until the namenode restarts.,Redesign the dfs namespace datastructures to be copy on write,1,1,1
+24,HADOOP-273,HADOOP-6541,Invalid,Add a interactive shell for admistrative access to the DFS,,0,0,1
+25,HADOOP-287,HADOOP-2919,Duplicate,Speed up SequenceFile sort with memory reduction,,0,0,1
+26,HADOOP-295,HADOOP-299,Fixed,jobs don't get executed in parallel,maps from second jobs will not run until the first job finishes completely,1,1,1
+27,HADOOP-366,HADOOP-1622,Fixed,Should be able to specify more than one jar into a JobConf file,,0,0,1
+28,HADOOP-372,HADOOP-450,Fixed,should allow to specify different inputformat classes for different input dirs for Map/Reduce jobs,,0,0,1
+29,HADOOP-374,HADOOP-474,Fixed,native support for gzipped text files,,0,0,1
+30,HADOOP-389,HADOOP-390,Fixed,MiniMapReduce tests get stuck because of some timing issues with initialization of tasktrackers.,,0,0,1
+31,HADOOP-5036,HADOOP-5397,Duplicate,chukwa agent controller remove file does not work ,,0,0,1
+32,CHUKWA-6,HADOOP-5301,Unresolved,Chukwa log4j appender logs corrupted data if the system is under high stress,Hadoop Metrics Log file should be used by only one process,1,1,1
+33,HADOOP-5076,HADOOP-5100,Duplicate,chukwa metrics file get overwritten when process launch,Chukwa Log4JMetricsContext class should append new log to current log file,1,1,1
+34,HADOOP-5179,HADOOP-7178,Duplicate,FileSystem#copyToLocalFile shouldn't copy .crc files,,0,0,1
+35,HDFS-219,HADOOP-9209,Duplicate,Add md5sum facility in dfsshell,,0,0,1
+36,HADOOP-5200,HADOOP-5687,Duplicate,NPE when the namenode comes up but the filesystem is set to file://,,0,0,1
+37,HADOOP-5321,HADOOP-5326,Duplicate,BZip2CompressionOutputStream sometimes corrupts data,bzip2 codec (CBZip2OutputStream) creates corrupted output file for some inputs,1,1,1
+38,HADOOP-10015,HADOOP-10274,Fixed,UserGroupInformation prints out excessive ERROR warnings,Lower the logging level from ERROR to WARN for UGI.doAs method,1,1,1
+39,HADOOP-10036,HADOOP-12697,Unresolved,RetryInvocationHandler should recognise that there is no point retrying to auth failures,,0,0,1
+40,HADOOP-10058,HADOOP-10061,Fixed,TestMetricsSystemImpl#testInitFirstVerifyStopInvokedImmediately fails on trunk,TestMetricsSystemImpl#testInitFirstVerifyStopInvokedImmediately failed,1,1,1
+41,HADOOP-10062,HADOOP-10165,Fixed,race condition in MetricsSystemImpl#publishMetricsNow that causes incorrect results,TestMetricsSystemImpl#testMultiThreadedPublish occasionally fails,0,0,1
+42,HADOOP-10077,HADOOP-11238,Duplicate,o.a.h.s.Groups should refresh in the background,,0,0,1
+43,HADOOP-10092,HADOOP-10273,Duplicate,hadoop-2.2.0-src build fails owing to wrong maven-site-plugin version,Fix 'mvn site',0,1,1
+44,HADOOP-10101,HADOOP-11319,Fixed,Update guava dependency to the latest version,,0,0,1
+45,HADOOP-10105,HADOOP-11053,Fixed,remove httpclient dependency,,0,0,1
+46,HADOOP-10110,HADOOP-10117,Fixed,hadoop-auth has a build break due to missing dependency,Unable to compile source code from stable 2.2.0 release,0,0,1
+47,HADOOP-10110,HADOOP-10170,Fixed,hadoop-auth has a build break due to missing dependency,Unable to compile source code from stable 2.2.0 release.,1,0,1
+48,HADOOP-10115,HADOOP-12363,Fixed,Exclude duplicate jars in hadoop package under different component's lib,,0,0,1
+49,HADOOP-10115,HADOOP-11680,Fixed,Exclude duplicate jars in hadoop package under different component's lib,,0,0,1
+50,HADOOP-10116,HADOOP-10681,Duplicate,"fix ""inconsistent synchronization"" warnings in ZlibCompressor",Remove synchronized blocks from SnappyCodec and ZlibCodec buffering inner loop,0,1,1
+51,HADOOP-10125,HADOOP-11019,Fixed,no need to process RPC request if the client connection has been dropped,,0,0,1
+52,HADOOP-10140,HADOOP-11508,Fixed,Specification of HADOOP_CONF_DIR via the environment in hadoop_config.cmd,,0,0,1
+53,HADOOP-10141,HADOOP-10528,Fixed,Create an API to separate encryption key storage from applications,A TokenKeyProvider for a Centralized Key Manager Server (BEE: bee-key-manager),1,1,1
+54,HADOOP-10177,HADOOP-10528,Fixed,Create CLI tools for managing keys via the KeyProvider API,A TokenKeyProvider for a Centralized Key Manager Server (BEE: bee-key-manager),1,1,1
+55,HADOOP-10187,HADOOP-10188,Fixed,FsShell CLI: add getfacl and setfacl with minimal support for getting and setting ACLs.,FsShell CLI: add setfacl flags for ACL entry modification and removal.,1,1,1
+56,HADOOP-10187,HADOOP-10189,Fixed,FsShell CLI: add getfacl and setfacl with minimal support for getting and setting ACLs.,FsShell CLI: add setfacl flag for removal of default ACL entries.,1,1,1
+57,HADOOP-10187,HADOOP-10190,Fixed,FsShell CLI: add getfacl and setfacl with minimal support for getting and setting ACLs.,FsShell CLI: add support for recursive flag in ACL commands.,1,1,1
+58,HADOOP-10194,HADOOP-10699,Duplicate,CLONE - setnetgrent in native code is not portable,Fix build native library on mac osx,0,1,1
+59,HADOOP-10206,HADOOP-10809,Duplicate,Port WASB HBase support to Hadoop 2.0,hadoop-azure: page blob support,0,1,1
+60,HADOOP-10209,HADOOP-10214,Duplicate,Fix findbugs in ActiveStandbyElector,Fix multithreaded correctness warnings in ActiveStandbyElector,0,1,1
+61,HADOOP-10224,HADOOP-10869,Fixed,JavaKeyStoreProvider has to protect against corrupting underlying store,JavaKeyStoreProvider backing jceks file may get corrupted,1,1,1
+62,HADOOP-10256,HADOOP-10257,Duplicate,hadoop2.2 building error,hadoop2.2 building error,1,1,1
+63,HADOOP-10257,HADOOP-10258,Duplicate,hadoop2.2 building error,hadoop2.2 building error,1,1,1
+64,HADOOP-10257,HADOOP-10268,Duplicate,hadoop2.2 building error,hadoop2.2 building error,0,1,1
+65,HADOOP-10257,HADOOP-10263,Duplicate,hadoop2.2 building error,hadoop2.2 building error,0,0,1
+66,HADOOP-10257,HADOOP-10265,Duplicate,hadoop2.2 building error,hadoop2.2 building error,0,0,1
+67,HADOOP-10257,HADOOP-10266,Duplicate,hadoop2.2 building error,hadoop2.2 building error,0,0,1
+68,HADOOP-10257,HADOOP-10267,Duplicate,hadoop2.2 building error,hadoop2.2 building error,0,0,1
+69,HADOOP-10257,HADOOP-10259,Duplicate,hadoop2.2 building error,hadoop2.2 building error,0,1,1
+70,HADOOP-10257,HADOOP-10260,Duplicate,hadoop2.2 building error,hadoop2.2 building error,0,1,1
+71,HADOOP-10257,HADOOP-10261,Duplicate,hadoop2.2 building error,hadoop2.2 building error,0,1,1
+72,HADOOP-10257,HADOOP-10262,Duplicate,hadoop2.2 building error,hadoop2.2 building error,0,1,1
+73,HADOOP-10257,HADOOP-10264,Duplicate,hadoop2.2 building error,hadoop2.2 building error,0,0,1
+74,HADOOP-10273,HADOOP-10324,Fixed,Fix 'mvn site',Bump the version of maven-site-plugin to 3.3,0,1,1
+75,HADOOP-10290,HADOOP-11855,Unresolved,Surefire steals focus on MacOS,,0,0,1
+76,HADOOP-10296,HADOOP-10331,Fixed,Incorrect null check in SwiftRestClient#buildException(),SwiftRestClient#buildException() references wrong length,1,1,1
+77,HADOOP-10315,HADOOP-12840,Unresolved,Log the original exception when getGroups() fail in UGI.,,0,0,1
+78,HADOOP-10358,HADOOP-10699,Duplicate,libhadoop doesn't compile on Mac OS X,Fix build native library on mac osx,0,0,1
+79,HADOOP-10362,HADOOP-11529,Duplicate,Closing of Reader in HadoopArchives#HArchiveInputFormat#getSplits() should check against null,,0,0,1
+80,HADOOP-10372,HADOOP-12709,Duplicate,Deprecate S3 implementation.,,0,0,1
+81,HADOOP-10400,HADOOP-13277,Fixed,Incorporate new S3A FileSystem implementation,,0,0,1
+82,HADOOP-10421,HADOOP-10774,Duplicate,Enable Kerberos profiled UTs to run with IBM JAVA,Update KerberosTestUtils for hadoop-auth tests when using IBM Java,0,1,1
+83,MAPREDUCE-5810,HADOOP-10438,Fixed,TestStreamingTaskLog#testStreamingTaskLogWithHadoopCmd is failing,TestStreamingTaskLog fails,0,1,1
+84,HADOOP-10433,HADOOP-10528,Fixed,Key Management Server based on KeyProvider API,A TokenKeyProvider for a Centralized Key Manager Server (BEE: bee-key-manager),1,1,1
+85,HADOOP-10434,HADOOP-12974,Duplicate,"Is it possible to use ""df"" to calculate the dfs usage instead of ""du""",,0,0,1
+86,HADOOP-10443,HADOOP-10640,Duplicate,limit symbol visibility in libhdfs-core.so and libyarn-core.so,Implement Namenode RPCs in HDFS native client,0,0,1
+87,HADOOP-10446,HADOOP-10640,Duplicate,native code for reading Hadoop configuration XML files,Implement Namenode RPCs in HDFS native client,0,1,1
+88,HADOOP-10447,HADOOP-10640,Duplicate,Implement C code for parsing Hadoop / HDFS URIs,Implement Namenode RPCs in HDFS native client,0,1,1
+89,HADOOP-10457,HADOOP-10589,Duplicate,S3N NPEs if you do a read() after a seek() past the EOF,NativeS3FileSystem throw NullPointerException when the file is empty,1,0,1
+90,HADOOP-10481,HADOOP-11379,Duplicate,Fix new findbugs warnings in hadoop-auth,,0,0,1
+91,HDFS-6261,HADOOP-10512,Unresolved,Document for enabling node group layer in HDFS,Document usage of node-group layer topology,1,1,1
+92,HADOOP-10510,HADOOP-10866,Duplicate,TestSymlinkLocalFSFileContext tests are failing,RawLocalFileSystem fails to read symlink targets via the stat command when the format of stat command uses non-curly quotes,0,1,1
+93,HADOOP-10528,HADOOP-10529,Unresolved,A TokenKeyProvider for a Centralized Key Manager Server (BEE: bee-key-manager),A TokenKeyProvider for a Centralized Key Manager Server (BEE: bee-key-manager),1,1,1
+94,HADOOP-10530,HADOOP-10963,Fixed,Make hadoop trunk build on Java7+ only,,0,0,1
+95,HADOOP-10530,HADOOP-11118,Fixed,Make hadoop trunk build on Java7+ only,,0,0,1
+96,HADOOP-10600,HADOOP-10670,Duplicate,AuthenticationFilterInitializer doesn't allow null signature secret file,Allow AuthenticationFilters to load secret from signature secret files,0,0,1
+97,HADOOP-10667,HADOOP-10705,Fixed,implement TCP connection reuse for native client,Fix namenode-rpc-unit  warning reported by memory leak check tool(valgrind),0,1,1
+98,HADOOP-10669,HADOOP-11678,Unresolved,Avro serialization does not flush buffered serialized values causing data lost,,0,0,1
+99,HADOOP-10695,HADOOP-13318,Fixed,KMSClientProvider should respect a configurable timeout.,,0,0,1
+100,HADOOP-10735,HADOOP-10785,Fixed,Fall back AesCtrCryptoCodec implementation from OpenSSL to JCE if non native support.,UnsatisfiedLinkError in cryptocodec tests with OpensslCipher#initContext,0,1,1
+101,HADOOP-10738,HADOOP-14189,Unresolved,Dynamically adjust distcp configuration by adding distcp-site.xml into code base,,0,0,1
+102,HADOOP-10768,HADOOP-14558,Unresolved,Optimize Hadoop RPC encryption performance,,0,0,1
+103,HADOOP-10768,HADOOP-14558,Unresolved,Optimize Hadoop RPC encryption performance,,0,0,1
+104,HADOOP-10775,HADOOP-11003,Fixed,Shell operations to fail with meaningful errors on windows if winutils.exe not found,,0,0,1
+105,HADOOP-10775,HADOOP-14586,Fixed,Shell operations to fail with meaningful errors on windows if winutils.exe not found,,0,0,1
+106,HADOOP-10844,HADOOP-10845,Duplicate,Add common tests for ACLs in combination with viewfs.,Add common tests for ACLs in combination with viewfs.,1,1,1
+107,HADOOP-10885,HADOOP-12545,Duplicate,Fix dead links to the javadocs of o.a.h.security.authorize,,0,0,1
+108,HADOOP-15024,HADOOP-15029,Fixed,AliyunOSS: support user agent configuration and include that & Hadoop version information to oss server,AliyunOSS:  Add User-Agent header in HTTP requests to the OSS server,1,1,1

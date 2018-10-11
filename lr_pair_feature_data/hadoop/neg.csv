@@ -1,0 +1,111 @@
+,Issue_id_1,Issue_id_2,Resolution,Title_1,Title_2,same_comp,same_prio,same_tw
+0,HADOOP-1,HADOOP-2,Fixed,initial import of code from Nutch,Reused Keys and Values fail with a Combiner,1,1,1
+1,HADOOP-2,HADOOP-3,Fixed,Reused Keys and Values fail with a Combiner,Output directories are not cleaned up before the reduces run,0,0,1
+2,HADOOP-3,HADOOP-4,Fixed,Output directories are not cleaned up before the reduces run,tool to mount dfs on linux,0,0,1
+3,HADOOP-5,HADOOP-6,Fixed,need commons-logging-api jar file,missing build directory in classpath,1,1,1
+4,HADOOP-6,HADOOP-7,Fixed,missing build directory in classpath,MapReduce has a series of problems concerning task-allocation to worker nodes,1,0,1
+5,HADOOP-7,HADOOP-8,Fixed,MapReduce has a series of problems concerning task-allocation to worker nodes,NDFS DataNode advertises localhost as it's address,1,1,1
+6,HADOOP-8,HADOOP-9,Won't Fix,NDFS DataNode advertises localhost as it's address,mapred.local.dir  temp dir. space allocation limited by smallest area,1,0,1
+7,HADOOP-9,HADOOP-10,Fixed,mapred.local.dir  temp dir. space allocation limited by smallest area,ndfs.replication is not documented within the nutch-default.xml configuration file.,1,0,1
+8,HADOOP-10,HADOOP-12,Fixed,ndfs.replication is not documented within the nutch-default.xml configuration file.,InputFormat used in job must be in JobTracker classpath (not loaded from job JAR),0,0,1
+9,HADOOP-12,HADOOP-12,Fixed,InputFormat used in job must be in JobTracker classpath (not loaded from job JAR),InputFormat used in job must be in JobTracker classpath (not loaded from job JAR),1,1,1
+10,HADOOP-12,HADOOP-16,Fixed,InputFormat used in job must be in JobTracker classpath (not loaded from job JAR),RPC call times out while indexing map task is computing splits,0,0,1
+11,HADOOP-16,HADOOP-16,Fixed,RPC call times out while indexing map task is computing splits,RPC call times out while indexing map task is computing splits,1,1,1
+12,HADOOP-16,HADOOP-16,Fixed,RPC call times out while indexing map task is computing splits,RPC call times out while indexing map task is computing splits,1,1,1
+13,HADOOP-16,HADOOP-17,Fixed,RPC call times out while indexing map task is computing splits,tool to mount ndfs on linux,0,0,1
+14,HADOOP-18,HADOOP-19,Invalid,Crash with multiple temp directories,Datanode corruption,1,1,1
+15,HADOOP-20,HADOOP-21,Fixed,Mapper; Reducer need an occasion to cleanup after the last record is processed.,the webapps need to be updated for the move from nutch,1,0,1
+16,HADOOP-21,HADOOP-22,Fixed,the webapps need to be updated for the move from nutch,remove unused imports,1,0,1
+17,HADOOP-22,HADOOP-23,Fixed,remove unused imports,single node cluster gets one reducer,1,0,1
+18,HADOOP-23,HADOOP-24,Won't Fix,single node cluster gets one reducer,make Configuration an interface,0,0,1
+19,HADOOP-24,HADOOP-25,Won't Fix,make Configuration an interface,a new map/reduce example and moving the examples from src/java to src/examples,0,0,1
+20,HADOOP-25,HADOOP-26,Fixed,a new map/reduce example and moving the examples from src/java to src/examples,DFS node choice doesn't take available space into account effectively,1,0,1
+21,HADOOP-26,HADOOP-27,Fixed,DFS node choice doesn't take available space into account effectively,MapRed tries to allocate tasks to nodes that have no available disk space,1,1,1
+22,HADOOP-28,HADOOP-29,Fixed,webapps broken,JobConf newInstance() method imposes a default constructor,1,0,1
+23,HADOOP-29,HADOOP-30,Won't Fix,JobConf newInstance() method imposes a default constructor,DFS shell: support for ls -r and cat,1,0,1
+24,HADOOP-30,HADOOP-31,Fixed,DFS shell: support for ls -r and cat,Stipulate main class in a job jar when using 'hadoop jar JARNAME',1,0,1
+25,HADOOP-31,HADOOP-32,Won't Fix,Stipulate main class in a job jar when using 'hadoop jar JARNAME',Creating job with InputDir set to non-existant directory locks up jobtracker,1,0,1
+26,HADOOP-32,HADOOP-33,Duplicate,Creating job with InputDir set to non-existant directory locks up jobtracker,DF enhancement: performance and win XP support,0,0,1
+27,HADOOP-34,HADOOP-35,Fixed,Build Paths Relative to PWD in build.xml,Files missing chunks can cause mapred runs to get stuck,1,0,1
+28,HADOOP-36,HADOOP-37,Fixed,Adding some uniformity/convenience to environment management,A way to determine the size and overall activity of the cluster,0,1,1
+29,HADOOP-37,HADOOP-38,Fixed,A way to determine the size and overall activity of the cluster,default splitter should incorporate fs block size,1,1,1
+30,HADOOP-38,HADOOP-39,Fixed,default splitter should incorporate fs block size,Create a job-configurable best effort for job execution,1,1,1
+31,HADOOP-40,HADOOP-41,Fixed,bufferSize argument is ignored in FileSystem.create(File; boolean; int),JAVA_OPTS for the TaskRunner Child,0,1,1
+32,HADOOP-41,HADOOP-42,Fixed,JAVA_OPTS for the TaskRunner Child,PositionCache decrements its position for reads at the end of file,0,0,1
+33,HADOOP-42,HADOOP-43,Fixed,PositionCache decrements its position for reads at the end of file,JobTracker dumps TaskTrackers if it takes too long to service an RPC call,0,1,1
+34,HADOOP-44,HADOOP-45,Fixed,RPC exceptions should include remote stack trace,JobTracker should log task errors,0,1,1
+35,HADOOP-45,HADOOP-46,Fixed,JobTracker should log task errors,user-specified job names,1,1,1
+36,HADOOP-46,HADOOP-47,Fixed,user-specified job names,include records/second and bytes/second in  task reports,1,1,1
+37,HADOOP-48,HADOOP-49,Won't Fix,add user data to task reports,JobClient cannot use a non-default server (unlike DFSShell),1,1,1
+38,HADOOP-49,HADOOP-50,Fixed,JobClient cannot use a non-default server (unlike DFSShell),dfs datanode should store blocks in multiple directories,1,1,1
+39,HADOOP-50,HADOOP-51,Fixed,dfs datanode should store blocks in multiple directories,per-file replication counts,1,1,1
+40,HADOOP-51,HADOOP-52,Fixed,per-file replication counts,mapred input and output dirs must be absolute,1,1,1
+41,HADOOP-54,HADOOP-55,Fixed,SequenceFile should compress blocks; not individual entries,map-reduce job overhead is too high,0,0,1
+42,HADOOP-55,HADOOP-56,Duplicate,map-reduce job overhead is too high,hadoop nameserver does not recognise ndfs nameserver image,1,0,1
+43,HADOOP-57,HADOOP-58,Fixed,hadoop dfs -ls / does not show root of file system,Hadoop requires configuration of hadoop-site.xml or won't run,1,1,1
+44,HADOOP-58,HADOOP-59,Won't Fix,Hadoop requires configuration of hadoop-site.xml or won't run,support generic command-line options,0,1,1
+45,HADOOP-59,HADOOP-60,Fixed,support generic command-line options,Specification of alternate conf. directory,0,1,1
+46,HADOOP-61,HADOOP-62,Won't Fix,Bashless Hadoop Start Script,can't get environment variables from HADOOP_CONF_DIR,0,1,1
+47,HADOOP-63,HADOOP-64,Fixed,problem with webapp when start a jobtracker,DataNode should be capable of managing multiple volumes,1,1,1
+48,HADOOP-65,HADOOP-66,Fixed,add a record I/O framework to hadoop,dfs client writes all data for a chunk to /tmp,0,0,1
+49,HADOOP-66,HADOOP-67,Fixed,dfs client writes all data for a chunk to /tmp,Added statistic/reporting info to DFS,1,0,1
+50,HADOOP-67,HADOOP-68,Fixed,Added statistic/reporting info to DFS,"Cannot abandon block during write to <file> and ""Cannot obtain additional block for file <file>"" errors during dfs write test",1,0,1
+51,HADOOP-68,HADOOP-69,Fixed,"Cannot abandon block during write to <file> and ""Cannot obtain additional block for file <file>"" errors during dfs write test",Unchecked lookup value causes NPE in FSNamesystemgetDatanodeHints,1,1,1
+52,HADOOP-69,HADOOP-70,Fixed,Unchecked lookup value causes NPE in FSNamesystemgetDatanodeHints,the two file system tests TestDFS and TestFileSystem take too long,1,1,1
+53,HADOOP-70,HADOOP-71,Fixed,the two file system tests TestDFS and TestFileSystem take too long,The SequenceFileRecordReader uses the default FileSystem rather than the supplied one,1,1,1
+54,HADOOP-71,HADOOP-72,Fixed,The SequenceFileRecordReader uses the default FileSystem rather than the supplied one,hadoop doesn't take advatage of distributed compiting in TestDFSIO,0,1,1
+55,HADOOP-72,HADOOP-73,Won't Fix,hadoop doesn't take advatage of distributed compiting in TestDFSIO,bin/hadoop dfs -rm works only for absolute paths,0,0,1
+56,HADOOP-73,HADOOP-74,Cannot Reproduce,bin/hadoop dfs -rm works only for absolute paths,hash blocks into dfs.data.dirs,1,0,1
+57,HADOOP-75,HADOOP-76,Fixed,dfs should check full file availability only at close,Implement speculative re-execution of reduces,1,1,1
+58,HADOOP-77,HADOOP-78,Fixed,hang / crash when input folder does not exists.,rpc commands not buffered,0,0,1
+59,HADOOP-78,HADOOP-79,Fixed,rpc commands not buffered,listFiles optimization,0,1,1
+60,HADOOP-79,HADOOP-80,Fixed,listFiles optimization,binary key,0,1,1
+61,HADOOP-80,HADOOP-81,Fixed,binary key,speculative execution is only controllable from the default config,0,1,1
+62,HADOOP-81,HADOOP-82,Fixed,speculative execution is only controllable from the default config,JobTracker loses it: NoSuchElementException,1,0,1
+63,HADOOP-82,HADOOP-83,Fixed,JobTracker loses it: NoSuchElementException,infinite retries accessing a missing block,1,0,1
+64,HADOOP-84,HADOOP-85,Fixed,client should report file name in which IO exception occurs,a single client stuck in a loop blocks all clients on same machine,1,0,1
+65,HADOOP-86,HADOOP-87,Fixed,If corrupted map outputs; reducers get stuck fetching forever,SequenceFile performance degrades substantially compression is on and large values are encountered,0,1,1
+66,HADOOP-87,HADOOP-88,Fixed,SequenceFile performance degrades substantially compression is on and large values are encountered,Configuration: separate client config from server config (and from other-server config),0,0,1
+67,HADOOP-88,HADOOP-89,Duplicate,Configuration: separate client config from server config (and from other-server config),files are not visible until they are closed,0,0,1
+68,HADOOP-89,HADOOP-90,Fixed,files are not visible until they are closed,DFS is succeptible to data loss in case of name node failure,1,0,1
+69,HADOOP-90,HADOOP-92,Fixed,DFS is succeptible to data loss in case of name node failure,Error Reporting/logging in MapReduce,1,0,1
+70,HADOOP-92,HADOOP-93,Fixed,Error Reporting/logging in MapReduce,allow minimum split size configurable,1,0,1
+71,HADOOP-93,HADOOP-94,Fixed,allow minimum split size configurable,disallow more than one datanode running on one computing sharing the same data directory,1,1,1
+72,HADOOP-95,HADOOP-96,Duplicate,dfs validation,name server should log decisions that affect data: block creation; removal; replication,1,0,1
+73,HADOOP-96,HADOOP-97,Fixed,name server should log decisions that affect data: block creation; removal; replication,DFSShell.cat returns NullPointerException if file does not exist,1,0,1
+74,HADOOP-97,HADOOP-98,Fixed,DFSShell.cat returns NullPointerException if file does not exist,The JobTracker's count of the number of running maps and reduces is wrong,1,1,1
+75,HADOOP-98,HADOOP-99,Fixed,The JobTracker's count of the number of running maps and reduces is wrong,task trackers can only be assigned one task every heartbeat,1,1,1
+76,HADOOP-100,HADOOP-101,Fixed,Inconsistent locking of the JobTracker.taskTrackers field,DFSck - fsck-like utility for checking DFS volumes,1,1,1
+77,HADOOP-101,HADOOP-102,Fixed,DFSck - fsck-like utility for checking DFS volumes,Two identical consecutive loops in FSNamesystem.chooseTarget(),1,1,1
+78,HADOOP-102,HADOOP-103,Fixed,Two identical consecutive loops in FSNamesystem.chooseTarget(),introduce a common parent class for Mapper and Reducer,1,0,1
+79,HADOOP-103,HADOOP-104,Fixed,introduce a common parent class for Mapper and Reducer,Reflexive access to non-public class with public ctor requires setAccessible (with some JVMs),1,0,1
+80,HADOOP-106,HADOOP-107,Won't Fix,Data blocks should be record-oriented.,"Namenode errors ""Failed to complete filename.crc  because dir.getFile()==null and null""",1,1,1
+81,HADOOP-107,HADOOP-108,Fixed,"Namenode errors ""Failed to complete filename.crc  because dir.getFile()==null and null""",EOFException in DataNode$DataXceiver.run,1,1,1
+82,HADOOP-108,HADOOP-109,Duplicate,EOFException in DataNode$DataXceiver.run,Blocks are not replicated when...,1,1,1
+83,HADOOP-109,HADOOP-110,Fixed,Blocks are not replicated when...,new key and value instances are allocated before each map,1,1,1
+84,HADOOP-110,HADOOP-111,Fixed,new key and value instances are allocated before each map,JobClient.runJob() should return exit status for a job.,1,1,1
+85,HADOOP-111,HADOOP-112,Duplicate,JobClient.runJob() should return exit status for a job.,copyFromLocal should exclude .crc files,1,0,1
+86,HADOOP-112,HADOOP-113,Fixed,copyFromLocal should exclude .crc files,Allow multiple Output Dirs to be specified for a job,1,0,1
+87,HADOOP-113,HADOOP-114,Won't Fix,Allow multiple Output Dirs to be specified for a job,Non-informative error message,1,0,1
+88,HADOOP-114,HADOOP-115,Fixed,Non-informative error message,permit reduce input types to differ from reduce output types,1,0,1
+89,HADOOP-115,HADOOP-116,Fixed,permit reduce input types to differ from reduce output types,cleaning up /tmp/hadoop/mapred/system,1,1,1
+90,HADOOP-116,HADOOP-117,Fixed,cleaning up /tmp/hadoop/mapred/system,mapred temporary files not deleted,1,0,1
+91,HADOOP-117,HADOOP-118,Fixed,mapred temporary files not deleted,Namenode does not always clean up pendingCreates,1,0,1
+92,HADOOP-118,HADOOP-119,Fixed,Namenode does not always clean up pendingCreates,ReduceTask.configure() is called twice,1,0,1
+93,HADOOP-119,HADOOP-120,Cannot Reproduce,ReduceTask.configure() is called twice,Reading an ArrayWriter does not work because valueClass does not get initialized,0,1,1
+94,HADOOP-120,HADOOP-123,Fixed,Reading an ArrayWriter does not work because valueClass does not get initialized,mini map/reduce cluster for junit tests,0,1,1
+95,HDFS-110,HADOOP-123,Won't Fix,Failed to execute fsck with -move option,mini map/reduce cluster for junit tests,1,1,1
+96,HADOOP-123,HADOOP-124,Fixed,mini map/reduce cluster for junit tests,don't permit two datanodes to run from same dfs.data.dir,1,0,1
+97,HADOOP-125,HADOOP-126,Fixed,LocalFileSystem.makeAbsolute bug on Windows,hadoop dfs -cp does not copy crc files,0,0,1
+98,HADOOP-126,HADOOP-127,Fixed,hadoop dfs -cp does not copy crc files,Unclear precedence of config files and property definitions,0,1,1
+99,HADOOP-127,HADOOP-128,Duplicate,Unclear precedence of config files and property definitions,Failure to replicate dfs block kills client,0,1,1
+100,HADOOP-128,HADOOP-129,Fixed,Failure to replicate dfs block kills client,FileSystem should not name files with java.io.File,0,1,1
+101,HADOOP-129,HADOOP-130,Fixed,FileSystem should not name files with java.io.File,"Should be able to specify ""wide"" or ""full"" replication",0,0,1
+102,HADOOP-131,HADOOP-132,Fixed,Separate start/stop-dfs.sh and start/stop-mapred.sh scripts,An API for reporting performance metrics,1,0,1
+103,HADOOP-132,HADOOP-133,Fixed,An API for reporting performance metrics,the TaskTracker.Child.ping thread calls exit,1,1,1
+104,HADOOP-133,HADOOP-134,Fixed,the TaskTracker.Child.ping thread calls exit,JobTracker trapped in a loop if it fails to localize a task,1,1,1
+105,HADOOP-134,HADOOP-135,Fixed,JobTracker trapped in a loop if it fails to localize a task,Potential deadlock in JobTracker.,1,1,1
+106,HADOOP-135,HADOOP-136,Fixed,Potential deadlock in JobTracker.,Overlong UTF8's not handled well,0,0,1
+107,HADOOP-137,HADOOP-138,Fixed,Different TaskTrackers may get the same task tracker id; thus cause many problems.,stop all tasks,1,0,1
+108,HADOOP-138,HADOOP-139,Fixed,stop all tasks,Deadlock in LocalFileSystem lock/release,0,0,1
+109,HADOOP-139,HADOOP-140,Fixed,Deadlock in LocalFileSystem lock/release,General documentation,0,0,1

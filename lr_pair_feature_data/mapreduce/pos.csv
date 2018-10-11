@@ -1,0 +1,377 @@
+,Issue_id_1,Issue_id_2,Resolution,Title_1,Title_2,same_comp,same_prio,same_tw
+0,MAPREDUCE-4,MAPREDUCE-237,Duplicate,TestJobTrackerRestart.testJobRecoveryWithEmptyHistory doesnt test the expected,Runtimes of TestJobTrackerRestart* testcases are high again,1,1,1
+1,MAPREDUCE-7,MAPREDUCE-5210,Duplicate,Reduce progress in the Reducer crosses 1,Job submission has strict permission validation,1,1,1
+2,MAPREDUCE-27,MAPREDUCE-805,Duplicate,Jobs with 0 maps will never get removed from the default scheduler,Deadlock in Jobtracker,1,1,1
+3,MAPREDUCE-55,MAPREDUCE-318,Duplicate,Reduce task should stop shuffle-retrying in case of out-of-memory errors,Refactor reduce shuffle code,0,1,1
+4,MAPREDUCE-73,MAPREDUCE-805,Duplicate,Deadlock in JobTracker initJobs,Deadlock in Jobtracker,1,0,1
+5,MAPREDUCE-81,MAPREDUCE-927,Duplicate,missing userlogs,Cleanup of task-logs should happen in TaskTracker instead of the Child,0,1,1
+6,MAPREDUCE-83,MAPREDUCE-114,Duplicate,Job completion delayed,All reducer tasks are finished; while some mapper tasks are still running,1,1,1
+7,MAPREDUCE-95,MAPREDUCE-1864,Duplicate,In PipeMarRed.java; log related fields seems useless,PipeMapRed.java has uninitialized members log_ and LOGNAME ,1,1,1
+8,MAPREDUCE-105,MAPREDUCE-420,Unresolved,Handling of mapred.task.profile.params is hprof specific,FileNotFoundException when finishing a profiled task that doesn't generate an output file,1,0,1
+9,MAPREDUCE-131,MAPREDUCE-842,Duplicate,After HADOOP-5420; tasks hang when the taskcontroller.cfg has multiple entries for mapred.local.dir,Per-job local data on the TaskTracker node should have right access-control,0,1,1
+10,MAPREDUCE-134,MAPREDUCE-2413,Duplicate,TaskTracker startup fails if any mapred.local.dir entries don't exist,TaskTracker should handle disk failures at both startup and runtime,0,1,1
+11,MAPREDUCE-137,MAPREDUCE-1494,Duplicate,org.apache.hadoop.mapred.TestJobDirCleanup.testJobDirCleanup timesout occasionally ,TestJobDirCleanup verifies wrong jobcache directory,0,0,1
+12,MAPREDUCE-153,MAPREDUCE-631,Fixed,TestJobInProgressListener sometimes timesout,TestJobInProgressListener brings up MinMR/DFS clusters for every test,1,0,1
+13,MAPREDUCE-158,MAPREDUCE-927,Duplicate,mapred.userlog.retain.hours killing long running tasks,Cleanup of task-logs should happen in TaskTracker instead of the Child,0,1,1
+14,MAPREDUCE-202,MAPREDUCE-1119,Duplicate,should dump stacks before timing out task,When tasks fail to report status; show tasks's stack dump before killing,0,1,1
+15,MAPREDUCE-207,MAPREDUCE-5887,Unresolved,Computing Input Splits on the MR Cluster,Move split creation from submission client to MRAppMaster,0,1,1
+16,MAPREDUCE-224,MAPREDEUCE-5583,Duplicate,limit running tasks per job,,0,0,1
+17,MAPREDUCE-227,MAPREDUCE-828,Duplicate,Ability to pause/resume jobs,,0,0,1
+18,MAPREDUCE-240,MAPREDUCE-318,Duplicate,"Improve the shuffle phase by using the ""connection: keep-alive"" and doing batch transfers of files",Refactor reduce shuffle code,0,1,1
+19,MAPREDUCE-259,MAPREDUCE-2038,Duplicate,Rack-aware Shuffle,Making reduce tasks locality-aware,1,1,1
+20,MAPREDUCE-268,MAPREDUCE-318,Duplicate,Implement memory-to-memory merge in the reduce,Refactor reduce shuffle code,0,1,1
+21,MAPREDUCE-276,MAPREDUCE-416,Duplicate,Multiple copies of jobconf is present in history-dir after restart,Move the completed jobs' history files to a DONE subdirectory inside the configured history directory,1,1,1
+22,MAPREDUCE-428,MAPREDUCE-2264,Duplicate,Reducers reported completion % is generally incorrect when consuming compressed map outputs,Job status exceeds 100% in some cases ,0,0,1
+23,MAPREDUCE-432,MAPREDUCE-2384,Duplicate,JobClient should check input/output specifications  before copying the job files on the DFS,The job submitter should make sure to validate jobs before creation of necessary files,0,0,1
+24,MAPREDUCE-433,MAPREDUCE-1172,Fixed,TestReduceFetch failed.,TestReduceFetch failed in 0.20,1,1,1
+25,MAPREDUCE-440,MAPREDUCE-787,Duplicate,-archives option in JobConf doesn't support symlink for an uncompressed archive directory,-files; -archives should honor user given symlink path,0,0,1
+26,MAPREDUCE-443,MAPREDUCE-457,Duplicate,snapshot a map-reduce to DFS ... and restore,Ability to pause/resume tasks,1,1,1
+27,MAPREDUCE-449,MAPREDUCE-1119,Duplicate,There is little information provided when the TaskTracker kills a Task that has not reported within the timeout (600 sec) interval - this patch provides a stack trace of the task ,When tasks fail to report status; show tasks's stack dump before killing,0,0,1
+28,MAPREDUCE-485,MAPREDUCE-984,Incomplete,jobID() lookup failure should notify client,"bin/hadoop job -kill command says"" job successfully killed"" even though job has retired.",0,0,1
+29,MAPREDUCE-487,MAPREDUCE-716,Duplicate,DBInputFormat support for Oracle,org.apache.hadoop.mapred.lib.db.DBInputformat not working with oracle,1,0,1
+30,MAPREDUCE-521,MAPREDUCE-873,Duplicate,After JobTracker restart  Capacity Schduler does not schedules pending tasks from already running tasks.,Simplify Job Recovery,0,1,1
+31,MAPREDUCE-539,MAPREDUCE-768,Duplicate,Implement a config validator tool for the capacity scheduler,Configuration information should generate dump in a standard format.,1,1,1
+32,MAPREDUCE-543,MAPREDUCE-706,Duplicate,large pending jobs hog resources,Support for FIFO pools in the fair scheduler,0,1,1
+33,MAPREDUCE-548,MAPREDUCE-706,Duplicate,Global scheduling in the Fair Scheduler,Support for FIFO pools in the fair scheduler,0,1,1
+34,MAPREDUCE-570,MAPREDUCE-1888,Duplicate,Streaming job fails with with identity mapper class,Streaming overrides user given output key and value types.,1,0,1
+35,MAPREDUCE-588,MAPREDUCE-1155,Duplicate,streaming failed without printing out the cause (IllegalArgumentException),Streaming tests swallow exceptions,1,1,1
+36,MAPREDUCE-592,MAPREDUCE-1888,Duplicate,Streaming does not checks whether  -mapper option is provided or not,Streaming overrides user given output key and value types.,1,0,1
+37,MAPREDUCE-598,MAPREDUCE-606,Fixed,Streaming: better conrol over input splits,Implement a binary input/output format for Streaming,1,1,1
+38,MAPREDUCE-598,MAPREDUCE-5018,Fixed,Streaming: better conrol over input splits,Support raw binary data with Hadoop streaming,1,0,1
+39,MAPREDUCE-607,MAPREDUCE-1773,Duplicate,Streaming has its own methods to monitor jobs. It should use the jobclient methods to monitor the jobs,streaming doesn't support jobclient.output.filter,1,0,1
+40,MAPREDUCE-612,MAPREDUCE-1766,Duplicate,streaming should default to KeyValueTextInputFormat with IdentityMapper,Hadoop Streaming should not use TextInputFormat class as the default input format class.,1,0,1
+41,MAPREDUCE-616,MAPREDUCE-1811,Duplicate,"Streaming: when a job is killed; the message should say it was ""killed"" rather than ""failed""",Job.monitorAndPrintJob() should print status of the job at completion,0,0,1
+42,MAPREDUCE-644,MAPREDUCE-648,Duplicate,distcp does not skip copying file if we are updating single file,Two distcp bugs,1,0,1
+43,MAPREDUCE-681,MAPREDUCE-757,Duplicate,Some testcases wait forever on a condition which might result into timeouts,JobConf will not be deleted from the logs folder if job retires from finalizeJob(),0,1,1
+44,MAPREDUCE-699,MAPREDUCE-891,Cannot Reproduce,Several streaming test cases seem to be failing,Streaming tests fail with NPE in MiniDFSCluster,0,1,1
+45,MAPREDUCE-730,MAPREDUCE-739,Duplicate,allow relative paths to be created inside archives.,Allow relative paths to be created inside archives.,1,1,1
+46,MAPREDUCE-746,MAPREDUCE-754,Duplicate,When a  task tracker is killed; there is a Null Pointer exception thrown.,NPE in expiry thread when a TT is lost,1,1,1
+47,MAPREDUCE-757,MAPREDUCE-2714,Duplicate,JobConf will not be deleted from the logs folder if job retires from finalizeJob(),When a job is retired by the same user's another job; its jobconf file is not deleted from the log directory of the JobTracker ,0,1,1
+48,MAPREDUCE-783,MAPREDUCE-816,Duplicate,"Rename Sqoop ""local"" transfer to ""direct""","Rename ""local"" mysql import to ""direct""",1,1,1
+49,MAPREDUCE-860,MAPREDUCE-861,Duplicate,Modify Queue APIs to support a hierarchy of queues,Modify queue configuration format and parsing to support a hierarchy of queues.,1,1,1
+50,MAPREDUCE-865,MAPREDUCE-2459,Duplicate,harchive: Reduce the number of open calls  to _index and _masterindex ,Cache HAR filesystem metadata,1,0,1
+51,MAPREDUCE-872,MAPREDUCE-877,Duplicate,Streaming tests in a clean workspace fail because of avro dependency.,Required avro class are missing in contrib projects,1,0,1
+52,MAPREDUCE-989,MAPREDUCE-1843,Unresolved,Allow segregation of DistributedCache for maps and reduces,Allow for map and reduce specific DistributedCache artifacts,1,1,1
+53,MAPREDUCE-1023,MAPREDUCE-1108,Duplicate,Newly introduced findBugs warnings should be suppressed,Modify test-patch.sh to verify that the number of findBugs warning is always zero,1,1,1
+54,MAPREDUCE-1039,MAPREDUCE-1404,Duplicate,cluster_setup.xml exists in both mapreduce and common projects,Cluster-Setup and Single-Node-Setup Docs ,1,1,1
+55,MAPREDUCE-1045,MAPREDUCE-1725,Duplicate,Changes to deprecated interfaces break Hive,Fix MapReduce API incompatibilities between 0.20 and 0.21,0,0,1
+56,MAPREDUCE-1053,MAPREDUCE-1062,Duplicate,MRReliabilityTest does not kill/fail tasks if history is enabled,MRReliability test does not work with retired jobs,0,0,1
+57,MAPREDUCE-1057,MAPREDUCE-1647,Unresolved,java tasks are not honouring the value of mapred.userlog.limit.kb,JvmEnv miss logSize argument,1,1,1
+58,MAPREDUCE-1080,MAPREDUCE-1105,Duplicate,Properties max.map.slots and max.reduce.slots should be hyphenated.,CapacityScheduler: It should be possible to set queue hard-limit beyond it's actual capacity,1,0,1
+59,MAPREDUCE-1082,MAPREDUCE-1110,Duplicate,Command line UI for queues' information is broken with hierarchical queues.,Currently QueueManager API's return JobQueueInfo ; instead it should return QueueInfo; similarly wher ever  we are using JobQueueInfo as view ; we should use QueueInfo,0,0,1
+60,MAPREDUCE-1119,MAPREDUCE-4121,Fixed,When tasks fail to report status; show tasks's stack dump before killing,dump the threads stack trace to stdout before killing a Task in timeout,0,1,1
+61,MAPREDUCE-1138,MAPREDUCE-1888,Duplicate,Erroneous output folder handling in streaming testcases,Streaming overrides user given output key and value types.,1,1,1
+62,MAPREDUCE-1141,MAPREDUCE-1302,Duplicate,Localization of a task's distributed-cache files gets blocked by deletion of old unrelated files when mapreduce.tasktracker.cache.local.size is hit.,TrackerDistributedCacheManager can delete file asynchronously,1,1,1
+63,MAPREDUCE-1151,MAPREDUCE-1476,Duplicate,Cleanup and Setup jobs should only call cleanupJob() and setupJob() methods of the OutputCommitter,committer.needsTaskCommit should not be called for a task cleanup attempt,1,1,1
+64,MAPREDUCE-1172,MAPREDUCE-1392,Duplicate,TestReduceFetch failed in 0.20,TestReduceFetch failure,0,1,1
+65,MAPREDUCE-1220,MAPREDUCE-2405,Duplicate,Implement an in-cluster LocalJobRunner,MR-279: Implement uber-AppMaster (in-cluster LocalJobRunner for MRv2),0,1,1
+66,MAPREDUCE-1237,MAPREDUCE-2903,Won't Fix,Job with no maps or reduces creates graph with XML parsing error,Map Tasks graph is throwing XML Parse error when Job is executed with 0 maps,0,1,1
+67,MAPREDUCE-1245,MAPREDUCE-1256,Fixed,"TestFairScheduler fails with ""too many open files"" error",org.apache.hadoop.mapred.TestFairScheduler.testPoolAssignment (from TestFairScheduler) is failing in trunk,0,1,1
+68,MAPREDUCE-1262,MAPREDUCE-1280,Duplicate,Eclipse Plugin does not build for Hadoop 0.20.1,Eclipse Plugin does not work with Eclipse Ganymede (3.4),1,1,1
+69,MAPREDUCE-1266,MAPREDUCE-1906,Duplicate,Allow heartbeat interval smaller than 3 seconds for tiny clusters,Lower default minimum heartbeat interval for tasktracker > Jobtracker,0,0,1
+70,MAPREDUCE-1270,MAPREDUCE-2841,Duplicate,Hadoop C++ Extention,Task level native optimization,1,1,1
+71,MAPREDUCE-1307,MAPREDUCE-1483,Fixed,Introduce the concept of Job Permissions,CompletedJobStore should be authorized using job-acls,0,1,1
+72,MAPREDUCE-1321,MAPREDUCE-1635,Duplicate,Spurios logs with org.apache.hadoop.util.DiskChecker$DiskErrorException in TaskTracker,ResourceEstimator does not work after MAPREDUCE-842,1,0,1
+73,MAPREDUCE-1322,MAPREDUCE-1390,Fixed,TestStreamingAsDifferentUser fails on trunk,"Default value of ""/tmp/hadoop/mapred/system"" for JTConfig.JT_SYSTEM_DIR prevents multiple users from running tests and starting mapred cluster/JobTracker",0,1,1
+74,MAPREDUCE-1350,MAPREDUCE-1785,Duplicate,Streaming should allow TextInputFormat keys to be passed through,Add streaming config option for not emitting the key,1,0,1
+75,MAPREDUCE-1366,MAPREDUCE-1562,Fixed,Tests should not timeout if TaskTracker/JobTracker crashes in MiniMRCluster,TestBadRecords fails sometimes,1,1,1
+76,MAPREDUCE-1382,MAPREDUCE-2049,Fixed,MRAsyncDiscService should tolerate missing local.dir,JT and TT should prune invalid local dirs on startup,0,0,1
+77,MAPREDUCE-1383,MAPREDUCE-1405,Fixed,Allow storage and caching of delegation token.,unchecked cast warnings in trunk,1,0,1
+78,MAPREDUCE-1401,MAPREDUCE-1840,Duplicate,[Gridmix] Add a load generating factory,[Gridmix] Exploit/Add security features in GridMix,1,1,1
+79,MAPREDUCE-1428,MAPREDUCE-1465,Fixed,Make block size and the size of archive created files configurable.,archive partSize should be configurable,1,1,1
+80,MAPREDUCE-1428,MAPREDUCE-1509,Fixed,Make block size and the size of archive created files configurable.,Partition size of Hadoop Archives should be configurable,1,1,1
+81,MAPREDUCE-1436,MAPREDUCE-1499,Invalid,Deadlock in preemption code in fair scheduler,JobTracker.finalizeJob inverts lock order and causes potential deadlock,0,0,1
+82,MAPREDUCE-1447,MAPREDUCE-3563,Duplicate,job level hook in OutputCommitter is not working in local mode,LocalJobRunner doesn't handle Jobs using o.a.h.mapreduce.OutputCommitter,0,1,1
+83,MAPREDUCE-1557,MAPREDUCE-5807,Duplicate,MapReduce teragen  example should print correct error message for invalid inputs. Currently throws ArrayIndexOutOfBoundsException .,Print usage for TeraSort job.,0,1,1
+84,MAPREDUCE-1569,MAPREDUCE-2002,Fixed,Mock Contexts & Configurations,MRUnit driver classes should provide ability to set a configuration object to be passed into the mapper/reducer,1,1,1
+85,MAPREDUCE-1577,MAPREDUCE-3193,Duplicate,FileInputFormat in the new mapreduce package to support multi-level/recursive directory listing ,FileInputFormat doesn't read files recursively in the input path dir,0,1,1
+86,MAPREDUCE-1592,MAPREDUCE-1619,Fixed,Generate Eclipse's .classpath file from Ivy config,Eclipse .classpath file should be generated from Ivy files to avoid duplicating dependencies,1,0,1
+87,MAPREDUCE-1595,MAPREDUCE-1609,Duplicate,LinuxTaskController is too strict on the initial ownership of files/dir.,TaskTracker.localizeJob should not set permissions on job log directory recursively,0,1,1
+88,MAPREDUCE-1597,MAPREDUCE-1649,Fixed,combinefileinputformat does not work with non-splittable files,Compressed files with TextInputFormat does not work with CombineFileInputFormat,1,1,1
+89,MAPREDUCE-1614,MAPREDUCE-1832,Duplicate,TestDFSIO should allow to configure output directory,Support for file sizes less than 1MB in DFSIO benchmark.,1,1,1
+90,MAPREDUCE-1641,MAPREDUCE-1709,Fixed,Job submission should fail if same uri is added for mapred.cache.files and mapred.cache.archives,mapred.cache.archives is not creating links for long path names,0,1,1
+91,MAPREDUCE-1652,MAPREDUCE-2041,Duplicate,Tasks need to emit a better error message when job-acls.xml file cannot be created,TaskRunner logDir race condition leads to crash on job-acl.xml creation,0,1,1
+92,MAPREDUCE-1658,MAPREDUCE-2153,Duplicate,[Rumen] Extract some job configurations.,Bring in more job configuration properties in to the trace file,1,1,1
+93,MAPREDUCE-1678,MAPREDUCE-2400,Duplicate,Change org.apache.hadoop.mapreduce.Cluster methods to allow for extending,Remove Cluster's dependency on JobTracker,0,0,1
+94,MAPREDUCE-1688,MAPREDUCE-3028,Duplicate,A failing retry'able notification in JobEndNotifier can affect notifications of other jobs.,Support job end notification in .next /0.23,0,0,1
+95,MAPREDUCE-1703,MAPREDUCE-1707,Duplicate,TaskRunner would crash in finally block if taskDistributedCacheManager is null,TaskRunner can get NPE in getting ugi from TaskTracker,1,1,1
+96,MAPREDUCE-1712,MAPREDUCE-1752,Duplicate,HAR sequence files throw errors in MR jobs,Implement getFileBlockLocations in HarFilesystem,1,1,1
+97,MAPREDUCE-1737,MAPREDUCE-2120,Duplicate,Refactoring of TestGridmixSubmission .,TestGridmixSubmission consumes a lot of time.,0,1,1
+98,MAPREDUCE-1744,MAPREDUCE-1862,Fixed,DistributedCache creates its own FileSytem instance when adding a file/archive to the path,Distributed Cache doesn't accept paths from non-default filesystems,1,1,1
+99,MAPREDUCE-1806,MAPREDUCE-2704,Fixed,CombineFileInputFormat does not work with paths not on default FS,CombineFileInputFormat only works when paths are on the default filesystem,0,1,1
+100,MAPREDUCE-1830,MAPREDUCE-1870,Duplicate,Ivy2.0 has bugs: let's upgrate to 2.1.0,Harmonize MapReduce JAR library versions with Common and HDFS,1,0,1
+101,MAPREDUCE-1833,MAPREDUCE-1936,Duplicate,[gridmix3] limit the maximum task duration in sleep job.,[gridmix3] Make Gridmix3 more customizable.,1,1,1
+102,MAPREDUCE-1972,MAPREDUCE-2238,Duplicate,TestUserLogCleanup test cant clean up the toBeDeleted,Undeletable build directories ,0,0,1
+103,MAPREDUCE-1976,MAPREDUCE-3349,Duplicate,Inconsistency in logging hostnames to JobHistory,No rack-name logged in JobHistory for unsuccessful tasks,0,0,1
+104,MAPREDUCE-1986,MAPREDUCE-2463,Duplicate,History files fail to move to DONE folder when hadoop.job.history.location is configured to a HDFS path,Job History files are not moving to done folder when job history location is hdfs location,1,1,1
+105,MAPREDUCE-2021,MAPREDUCE-4593,Fixed,CombineFileInputFormat returns duplicate  hostnames in split locations,CombineFileInputFormat must ensure it doesn't dupe locations in its InputSplit objects,1,0,1
+106,MAPREDUCE-2026,MAPREDUCE-2114,Fixed,JobTracker.getJobCounters() should not hold JobTracker lock while calling JobInProgress.getCounters(),user finer grained locks in JT getCounters implementation,0,1,1
+107,MAPREDUCE-2076,MAPREDUCE-3678,Duplicate,Showing inputsplit filename/offset inside the webui or tasklog,The Map tasks logs should have the value of input split it processed,0,0,1
+108,MAPREDUCE-2151,MAPREDUCE-2153,Duplicate,[rumen] Add a map of jobconf key-value pairs in LoggedJob,Bring in more job configuration properties in to the trace file,1,1,1
+109,YARN-349,MAPREDUCE-1438,Unresolved,Send out last-minute load averages in TaskTrackerStatus,Include one minute load average information in TaskTrackerStatus.ResourceStatus,0,0,1
+110,MAPREDUCE-2191,MAPREDUCE-2193,Duplicate,Findbugs reports 13 warnings on trunk,13 Findbugs warnings on trunk and branch-0.22,0,0,1
+111,MAPREDUCE-2204,MAPREDUCE-2517,Duplicate,Implement gridmix system tests with different time intervals of  high ram job traces.,Porting Gridmix v3 system tests into trunk branch.,1,1,1
+112,MAPREDUCE-2233,MAPREDUCE-2244,Duplicate,LinuxTaskController throws NPE when task fails to start,TestKillSubProcessesWithLinuxTaskController failing on trunk,0,1,1
+113,MAPREDUCE-2237,MAPREDUCE-2464,Not A Problem,Lost heartbeat response containing MapTask throws NPE when it is resent,NullPointerException is coming in the job tracker when job tracker resends the previous heartbeat response.,1,1,1
+114,MAPREDUCE-2264,MAPREDUCE-3267,Fixed,Job status exceeds 100% in some cases ,MR2 reduce tasks showing >100% complete,0,1,1
+115,MAPREDUCE-2308,MAPREDUCE-5705,Unresolved,Sort buffer size (io.sort.mb) is limited to < 2 GB,mapreduce.task.io.sort.mb hardcoded cap at 2047,1,0,1
+116,MAPREDUCE-2343,MAPREDUCE-2380,Unresolved, repeated replace() function calls damage the performance,Multiple replace function call can be replaced with a single for loop to improve performance ,1,1,1
+117,MAPREDUCE-2350,MAPREDUCE-3563,Duplicate,"LocalJobRunner uses ""mapred.output.committer.class"" configuration property to retrieve the OutputCommitter (regardless of whether the old API is used or the new API)",LocalJobRunner doesn't handle Jobs using o.a.h.mapreduce.OutputCommitter,0,1,1
+118,MAPREDUCE-2363,MAPREDUCE-2411,Duplicate,Bad error messages for queues without acls,When you submit a job to a queue with no ACLs you get an inscrutible NPE,0,0,1
+119,MAPREDUCE-2386,MAPREDUCE-2530,Unresolved,TT jetty server stuck in tight loop around epoll_wait, TaskTracker jetty stuck in a tight loop,1,1,1
+120,MAPREDUCE-2386,MAPREDUCE-5949,Unresolved,TT jetty server stuck in tight loop around epoll_wait,Tasktracker's java threads hunging,0,1,1
+121,MAPREDUCE-2446,MAPREDUCE-2841,Duplicate,HCE 2.0,Task level native optimization,0,1,1
+122,MAPREDUCE-2557,MAPREDUCE-6199,Duplicate,Counters don't reset state when readFields() called,AbstractCounters are not reset completely on deserialization,1,0,1
+123,MAPREDUCE-2572,MAPREDUCE-2969,Duplicate,Throttle the deletion of data from the distributed cache,Make the NodeManager delete unused distributed-cache entires by LRU policy,0,0,1
+124,MAPREDUCE-2584,MAPREDUCE-5728,Not A Problem,Check for serializers early; and give out more information regarding missing serializers,Check NPE for serializer/deserializer in MapTask,0,0,1
+125,MAPREDUCE-2586,MAPREDUCE-2588,Duplicate,mapreduce/contrib/raid not compile due to hdfs changes.,Raid is not compile after DataTransferProtocol refactoring,1,0,1
+126,MAPREDUCE-2600,MAPREDUCE-3367,Unresolved,MR-279: simplify the jars ,Consolidate MRv2 maven modules,0,1,1
+127,MAPREDUCE-2658,MAPREDUCE-3004,Duplicate,Problem running full map & reduce jobs on mrv2,sort example fails in shuffle/reduce stage as it assumes a local job by default ,1,0,1
+128,MAPREDUCE-2676,MAPREDUCE-2982,Fixed,MR-279: JobHistory Job page needs reformatted,App/Tasks progress is showing as 0% in UI even if successfully completed,0,1,1
+129,MAPREDUCE-2686,MAPREDUCE-2925,Duplicate,NPE while requesting info for a non-existing job,job -status <JOB_ID> is giving continuously info message for completed jobs on the console,1,0,1
+130,MAPREDUCE-2693,MAPREDUCE-3234,Fixed,NPE in AM causes it to lose containers which are never returned back to RM,Locality scheduling broken due to mismatch between IPs and hosts,1,0,1
+131,MAPREDUCE-2699,MAPREDUCE-2995,Duplicate,AM crashing because of invalid TA_CONTAINER_COMPLETED event,MR AM crashes when a container-launch hangs on a faulty NM,1,0,1
+132,MAPREDUCE-2713,MAPREDUCE-4326,Duplicate,Recovery of ResourceManager,,0,0,1
+133,MAPREDUCE-2717,MAPREDUCE-3065,Duplicate,Client should be able to know why an AM crashed.,ApplicationMaster killed by NodeManager due to excessive virtual memory consumption,0,0,1
+134,MAPREDUCE-2742,MAPREDUCE-3940,Duplicate,[MR-279] [Security] All tokens in YARN + MR should have an expiry interval ,ContainerTokens should have an expiry interval,1,0,1
+135,YARN-51,MAPREDUCE-3256,Duplicate,[MR-279] [Security] AM should not be able to abuse container tokens for repetitive container launches,Authorization checks needed for AM->NM protocol,0,1,1
+136,MAPREDUCE-2748,MAPREDUCE-3068,Duplicate,[MR-279] NM should pass a whitelisted environmental variables to the container ,Should set MALLOC_ARENA_MAX for all YARN daemons and AMs/Containers,0,0,1
+137,MAPREDUCE-2750,MAPREDUCE-2986,Duplicate,[MR-279] NodeManager should start its servers on ephemeral ports ,Multiple node managers support for the MiniYARNCluster,0,0,1
+138,MAPREDUCE-2754,MAPREDUCE-2755,Fixed,MR-279: AM logs are incorrectly going to stderr and error messages going incorrectly to stdout,MR-279: AM writes logs to stderr,1,1,1
+139,MAPREDUCE-2775,MAPREDUCE-3874,Fixed,[MR-279] Decommissioned node does not shutdown,Decommission nodes link is not working,0,0,1
+140,MAPREDUCE-2801,MAPREDUCE-2880,Duplicate,Include the native libs in java.library.path ,Fix classpath construction for MRv2,1,1,1
+141,MAPREDUCE-2815,MAPREDUCE-5438,Fixed,JavaDoc does not generate correctly for MultithreadedMapRunner,JavaDoc generates partially for MultithreadedMapRunner,1,1,1
+142,MAPREDUCE-2849,MAPREDUCE-2890,Duplicate,Add javadoc and site documentation for MRv2,Documentation for MRv2,0,0,1
+143,MAPREDUCE-2871,MAPREDUCE-2890,Duplicate,Docs updates for MR2,Documentation for MRv2,1,0,1
+144,MAPREDUCE-2875,MAPREDUCE-3031,Duplicate,NM does not communicate Container crash to RM,Job Client goes into infinite loop when we kill AM,0,0,1
+145,MAPREDUCE-2892,MAPREDUCE-3098,Duplicate,Improvements to AM apis,Report Application status as well as ApplicationMaster status in GetApplicationReportResponse ,0,1,1
+146,MAPREDUCE-2923,MAPREDUCE-3144,Duplicate,Add a new record to JobHistory to record start time of each instance of AM,Augment JobHistory to include information needed for serving aggregated logs.,0,0,1
+147,MAPREDUCE-2927,MAPREDUCE-2996,Duplicate,CompletedJob.isUber throws a Yarn exception which makes the JobHistory UI unusable.,Log uberized information into JobHistory and use the same via CompletedJob,0,0,1
+148,MAPREDUCE-2941,MAPREDUCE-2953,Duplicate,In secure mode RM WebUI shows wrong user for application,JobClient fails due to a race in RM; removes staged files and in turn crashes MR AM,1,0,1
+149,MAPREDUCE-2955,MAPREDUCE-4118,Unresolved,Port MR1 tests to MR2,Update tests to not use MiniMRCluster Internally; and filter out duplicate tests,0,1,1
+150,MAPREDUCE-2956,MAPREDUCE-2966,Duplicate,CompositeService should try to stop all services even if one fails,Add ShutDown hooks for MRV2 processes,0,1,1
+151,MAPREDUCE-2980,MAPREDUCE-5588,Unresolved,Fetch failures and other related issues in Jetty 6.1.26,TaskTrackers get killed by JettyBugMonitor because of incredibly high cpu usage,1,1,1
+152,MAPREDUCE-2982,MAPREDUCE-3078,Duplicate,App/Tasks progress is showing as 0% in UI even if successfully completed,Application's progress isn't updated from AM to RM.,0,0,1
+153,MAPREDUCE-2989,MAPREDUCE-3145,Fixed,JobHistory should link to task logs,Fix NM UI to serve logs from DFS once application finishes,0,0,1
+154,MAPREDUCE-3031,MAPREDUCE-3072,Fixed,Job Client goes into infinite loop when we kill AM,NodeManager doesn't recognize kill -9 of AM container,0,0,1
+155,MAPREDUCE-3032,MAPREDUCE-3120,Fixed,JobHistory doesn't have error information from failed tasks,JobHistory is not providing correct count failed;killed task,0,0,1
+156,MAPREDUCE-3063,MAPREDUCE-3064,Duplicate,Mapreduce trunk Commit builds are failing,"27 unit test failures with  Invalid ""mapreduce.jobtracker.address"" configuration value for JobTracker: ""local""",0,0,1
+157,MAPREDUCE-3064,MAPREDUCE-3085,Fixed,"27 unit test failures with  Invalid ""mapreduce.jobtracker.address"" configuration value for JobTracker: ""local""",Fix / remove failing tests from MrV1,0,0,1
+158,MAPREDUCE-3065,MAPREDUCE-3068,Duplicate,ApplicationMaster killed by NodeManager due to excessive virtual memory consumption,Should set MALLOC_ARENA_MAX for all YARN daemons and AMs/Containers,0,0,1
+159,MAPREDUCE-3084,MAPREDUCE-3240,Duplicate,race when KILL_CONTAINER is received for a LOCALIZED container,NM should send a SIGKILL for completed containers also,0,1,1
+160,MAPREDUCE-3111,MAPREDUCE-4283,Duplicate,Fix log serving in NodeManager,Display tail of aggregated logs by default,0,1,1
+161,MAPREDUCE-3135,MAPREDUCE-4798,Duplicate,Unit test org.apache.hadoop.mapred.TestJobHistoryServer fails intermittently,TestJobHistoryServer fails some times with 'java.lang.AssertionError: Address already in use',0,0,1
+162,MAPREDUCE-3168,MAPREDUCE-3462,Duplicate,[Gridmix] TestCompressionEmulationUtils fails after MR-3158,Job submission failing in JUnit tests,0,0,1
+163,MAPREDUCE-3177,MAPREDUCE-3366,Duplicate,mapreduce tar layout does not conform new layout,Mapreduce component should use consistent directory structure layout as HDFS/common,0,0,1
+164,MAPREDUCE-3200,MAPREDUCE-3537,Duplicate,Job got failed with FileNotFoundException during ResourceLocalization,DefaultContainerExecutor has a race condn. with multiple concurrent containers,0,1,1
+165,MAPREDUCE-3216,MAPREDUCE-3321,Duplicate,ant test TestNoDefaultsJobConf fails on trunk,Disable some failing legacy tests for MRv2 builds to go through,1,1,1
+166,MAPREDUCE-3218,MAPREDUCE-3321,Duplicate,ant test TestTokenCache failing on trunk,Disable some failing legacy tests for MRv2 builds to go through,0,1,1
+167,MAPREDUCE-3240,MAPREDUCE-3260,Fixed,NM should send a SIGKILL for completed containers also,Yarn app stuck in KILL_WAIT state,0,0,1
+168,MAPREDUCE-3271,MAPREDUCE-3360,Duplicate,Lost nodes list and count not updated,Provide information about lost nodes in the UI.,1,1,1
+169,MAPREDUCE-3277,MAPREDUCE-3318,Duplicate,TestSeveral is failing in 0.23,ant test TestSeveral timing out in commit builds,0,0,1
+170,MAPREDUCE-3294,MAPREDUCE-5692,Duplicate,Log the reason for killing a task during speculative execution,Add explicit diagnostics when a task attempt is killed due to speculative execution,1,1,1
+171,MAPREDUCE-3312,MAPREDUCE-3622,Fixed,Make MR AM not send a stopContainer w/o corresponding start container,findbug error during test-patch: org.apache.hadoop.mapreduce.v2.app.launcher.ContainerRemoteLaunchEvent defines equals but not hashCode,1,1,1
+172,MAPREDUCE-3338,MAPREDUCE-3370,Duplicate,Remove hardcoded version of mr-app jar from the tests,MiniMRYarnCluster uses a hard coded path location for the MapReduce application jar,1,1,1
+173,MAPREDUCE-3349,MAPREDUCE-3381,Fixed,No rack-name logged in JobHistory for unsuccessful tasks,[Rumen] TestRumenJobTraces fails after MAPREDUCE-3035,0,0,1
+174,MAPREDUCE-3363,MAPREDUCE-3585,Won't Fix,"The ""totalnodes""  and ""memorytotal"" fields show wrong information if the nodes are going down and coming up early(before 10min) ",RM unable to detect NMs restart,1,0,1
+175,MAPREDUCE-3366,MAPREDUCE-3416,Fixed,Mapreduce component should use consistent directory structure layout as HDFS/common,Rename {start;stop}-all.sh to {start;stop}-yarn.sh for consistency with HDFS,1,1,1
+176,MAPREDUCE-3384,MAPREDUCE-3385,Unresolved,Add warning message for underflow or overflow,Add warning message for the overflow in reduce() of org.apache.hadoop.mapreduce.lib.reduce.IntSumReducer,1,0,1
+177,MAPREDUCE-3389,MAPREDUCE-3428,Fixed,MRApps loads the 'mrapp-generated-classpath' file with classpath from the build machine,MR AppMaster CLASSPATH is dependent on the compile-time environment ,1,0,1
+178,MAPREDUCE-3393,MAPREDUCE-3407,Duplicate,TestMRJobs; TestMROldApiJobs; and TestUberAM failures,Wrong jar getting used in TestMR*Jobs* for MiniMRYarnCluster,1,0,1
+179,MAPREDUCE-3406,MAPREDUCE-3662,Duplicate,Add node information to bin/mapred job -list-attempt-ids and other improvements,Command line ask: NM info where containers are launched,1,1,1
+180,YARN-952,MAPREDUCE-4430,Later,Capacity scheduler reconfiguration of queues does not work for add sub-queues to an existing queue,"Adding child queues to any queue need the process restart ""./yarn rmadmin -refreshQueues"" throws IO exception",0,1,1
+181,MAPREDUCE-3421,MAPREDUCE-3426,Duplicate,Error in MR AM shutdown when running an uber-job,uber-jobs tried to write outputs into wrong dir,1,0,1
+182,MAPREDUCE-3470,MAPREDUCE-4451,Duplicate,Jobtracker sets permissions on mapred.system.dir to 700 preventing non-superusers from submitting jobs to multi-user cluster,fairscheduler fail to init job with kerberos authentication configured,0,1,1
+183,MAPREDUCE-3495,MAPREDUCE-4267,Duplicate,Remove my personal email address from the pipes build file.,mavenize pipes,0,0,1
+184,MAPREDUCE-3503,MAPREDUCE-3504,Duplicate,capacity scheduler allow capacity greater then 100% as long as its less then 101%,capacity scheduler allow capacity greater then 100% as long as its less then 101%,1,1,1
+185,MAPREDUCE-3506,MAPREDUCE-3912,Fixed,Calling getPriority on JobInfo after parsing a history log with JobHistoryParser throws a NullPointerException,getPriority() method within the JobHistoryParser JobInfo class fails,0,0,1
+186,MAPREDUCE-3540,MAPREDUCE-4114,Invalid,saveVersion.sh script fails in windows/cygwin (hadoop-yarn-common),saveVersion.sh fails if build directory contains space ,1,1,1
+187,MAPREDUCE-3563,MAPREDUCE-4280,Fixed,LocalJobRunner doesn't handle Jobs using o.a.h.mapreduce.OutputCommitter,LocalJobRunner doesn't honor custom OutputCommiter cleanupJob,0,1,1
+188,MAPREDUCE-3583,MAPREDUCE-3836,Fixed,ProcfsBasedProcessTree#constructProcessInfo() may throw NumberFormatException,TestContainersMonitor failing intermittently,0,0,1
+189,MAPREDUCE-3608,MAPREDUCE-3611,Fixed,MAPREDUCE-3522 commit causes compilation to fail,trunk build failure,0,0,1
+190,MAPREDUCE-3620,MAPREDUCE-3787,Duplicate,GrimdMix Stats at the end of GridMix are not reported correctly,[Gridmix] Improve STRESS mode,1,1,1
+191,MAPREDUCE-3621,MAPREDUCE-3984,Fixed,TestDBJob and TestDataDrivenDBInputFormat ant tests fail,TestDBJob and TestDataDrivenDBInputFormat timeout,1,1,1
+192,MAPREDUCE-3622,MAPREDUCE-3626,Duplicate,findbug error during test-patch: org.apache.hadoop.mapreduce.v2.app.launcher.ContainerRemoteLaunchEvent defines equals but not hashCode,Findbugs warning in ContainerRemoteLaunchEvent,1,1,1
+193,MAPREDUCE-3646,MAPREDUCE-3690,Fixed,"Remove redundant URL info from ""mapred job"" output",mapred.ClientServiceDelegate.java:getProxy prints the proxy without http:// prefix,0,1,1
+194,MAPREDUCE-3668,MAPREDUCE-3720,Duplicate,AccessControlException when running mapred job -list command,Command line listJobs should not visit each AM,0,0,1
+195,MAPREDUCE-3706,MAPREDUCE-4045,Fixed,HTTP Circular redirect error on the job attempts page,RM UI -> Applications -> Application Master Link -> Job Link -> New Maps/Reduces leads to circular redirect error,1,0,1
+196,MAPREDUCE-3716,MAPREDUCE-3844,Fixed,java.io.File.createTempFile fails in map/reduce tasks,Problem in setting the childTmpDir in MapReduceChildJVM,1,1,1
+197,MAPREDUCE-3746,MAPREDUCE-3862,Duplicate,Nodemanagers are not automatically shut down after decommissioning,Nodemanager can appear to hang on shutdown due to lingering DeletionService threads,0,0,1
+198,MAPREDUCE-3767,MAPREDUCE-3854,Duplicate,Fix and enable env tests in TestMiniMRChildTask,Reinstate environment variable tests in TestMiniMRChildTask,0,1,1
+199,MAPREDUCE-3770,MAPREDUCE-3797,Fixed,[Rumen] Zombie.getJobConf() results into NPE,lGridMix fails to Run with NPE with latest branch-0.23 code,0,0,1
+200,YARN-193,MAPREDUCE-3946,Fixed,Scheduler.normalizeRequest does not account for allocation requests that exceed maximumAllocation limits ,If a resource requirement is higher than available on any node; job should fail early,1,1,1
+201,MAPREDUCE-3808,MAPREDUCE-3821,Fixed,NPE in FileOutputCommitter when running a 0 reduce job,NPE while running Shuffle benchmark,1,0,1
+202,MAPREDUCE-3812,MAPREDUCE-4026,Fixed,Lower default allocation sizes; fix allocation configurations and document them,Lower minimum-allocation-mb to sensible defaults,0,1,1
+203,MAPREDUCE-3812,MAPREDUCE-4027,Fixed,Lower default allocation sizes; fix allocation configurations and document them,Document the minimum-allocation-mb and maximum-allocation-mb configurations,0,0,1
+204,MAPREDUCE-3852,MAPREDUCE-3853,Fixed,test TestLinuxResourceCalculatorPlugin failing,TestLinuxResourceCalculatorPlugin is failing on trunk and 0.23 branch.,1,0,1
+205,MAPREDUCE-3855,MAPREDUCE-3974,Duplicate,TestSubmitJob should use FileSystem instead of private HDFS classes.,TestSubmitJob in MR1 tests doesn't compile after HDFS-1623 merge,0,0,1
+206,MAPREDUCE-3872,MAPREDUCE-5080,Fixed,event handling races in ContainerLauncherImpl and TestContainerLauncher,TestContainerLauncher fails on Windows due to assertion failures on event/thread counts,0,1,1
+207,MAPREDUCE-3890,MAPREDUCE-3922,Duplicate,Change to nodemanager build now requires 32-bit libraries,Fix the potential problem compiling 32 bit binaries on a x86_64 host.,1,0,1
+208,MAPREDUCE-3900,MAPREDUCE-4649,Duplicate,mr-jobhistory-daemon.sh should rely on MAPREDUCE env. variables instead of the YARN ones,mr-jobhistory-daemon.sh needs to be updated post YARN-1,1,1,1
+209,MAPREDUCE-3908,MAPREDUCE-3972,Duplicate,jobhistory server trying to load job conf file from wrong location,Locking and exception issues in JobHistory Server.,0,1,1
+210,MAPREDUCE-3932,MAPREDUCE-6933,Fixed,MR tasks failing and crashing the AM when available-resources/headRoom becomes zero,Invalid event: TA_CONTAINER_LAUNCH_FAILED at KILLED,0,0,1
+211,YARN-39,MAPREDUCE-2742,Fixed,RM-NM secret-keys should be randomly generated and rolled every so often,[MR-279] [Security] All tokens in YARN + MR should have an expiry interval ,0,1,1
+212,YARN-39,MAPREDUCE-3105,Fixed,RM-NM secret-keys should be randomly generated and rolled every so often,NM<->RM shared secrets should be rolled every so often. ,0,0,1
+213,MAPREDUCE-3945,MAPREDUCE-5332,Duplicate,JobHistoryServer should store tokens to authenticate clients across restart,Support token-preserving restart of history server,0,1,1
+214,MAPREDUCE-3972,MAPREDUCE-4080,Fixed,Locking and exception issues in JobHistory Server.,FileNotFoundException while accessing job configuration from UI.,0,0,1
+215,MAPREDUCE-3980,MAPREDUCE-4649,Duplicate,mr-jobhistory-daemon.sh should look for mapred script in HADOOP_MAPRED_HOME,mr-jobhistory-daemon.sh needs to be updated post YARN-1,1,1,1
+216,MAPREDUCE-4010,MAPREDUCE-4011,Fixed,TestWritableJobConf fails on trunk,fix TestWritableJobConf failures,0,0,1
+217,MAPREDUCE-4019,MAPREDUCE-4120,Fixed,#NAME?,mapred job -list-attempt-ids fails to get attempt ids,0,0,1
+218,MAPREDUCE-4052,MAPREDUCE-5655,Fixed,Windows eclipse cannot submit job from Windows client to Linux/Unix Hadoop cluster.,Remote job submit from windows to a linux hadoop cluster fails due to wrong classpath,0,1,1
+219,MAPREDUCE-4053,MAPREDUCE-4538,Fixed,Counters group names deprecation is wrong; iterating over group names deprecated names don't show up,Please delete me,0,0,1
+220,MAPREDUCE-4053,MAPREDUCE-4539,Fixed,Counters group names deprecation is wrong; iterating over group names deprecated names don't show up,Please delete me,0,0,1
+221,MAPREDUCE-4069,MAPREDUCE-5199,Duplicate,Cleanup task tokens interface,AppTokens file can/should be removed,0,0,1
+222,MAPREDUCE-4094,MAPREDUCE-4096,Not A Problem,Mapreduce-trunk test cases are failing,tests seem to be randomly failing,0,1,1
+223,MAPREDUCE-4135,MAPREDUCE-4137,Duplicate,MRAppMaster throws IllegalStateException while shutting down,MRAppMaster shutdown hook should not call FileSystem.closeAll(),1,1,1
+224,MAPREDUCE-4227,MAPREDUCE-4963,Duplicate,TimeWindow statistics are not updated for TaskTrackers which have been restarted.,"StatisticsCollector improperly keeps track of ""Last Day"" and ""Last Hour"" statistics for new TaskTrackers",0,1,1
+225,MAPREDUCE-4229,MAPREDUCE-4303,Fixed,Counter names' memory usage can be decreased by interning,Look at using String.intern to dedupe some Strings,0,1,1
+226,MAPREDUCE-4239,MAPREDUCE-5098,Duplicate,gridmix has 11 findbugs warnings,Fix findbugs warnings in gridmix,1,0,1
+227,MAPREDUCE-4242,MAPREDUCE-4991,Duplicate,port gridmix tests to yarn,coverage for gridmix,0,0,1
+228,MAPREDUCE-4251,MAPREDUCE-5157,Duplicate,API Incompatibility - Sampler,Sort in hadoop-1 examples is not binary compatible with hadoop-2 mapred.lib,0,0,1
+229,MAPREDUCE-4299,MAPREDUCE-4358,Fixed,Terasort hangs with MR2 FifoScheduler,Reducers are assigned containers before all maps are assigned containers,1,1,1
+230,MAPREDUCE-4299,MAPREDUCE-4613,Fixed,Terasort hangs with MR2 FifoScheduler,Scheduling of reduce tasks results in starvation,0,1,1
+231,YARN-58,MAPREDUCE-4340,Fixed,NM leaks filesystems,Node Manager leaks socket connections connected to Data Node,0,1,1
+232,YARN-149,MAPREDUCE-225,Fixed,[Umbrella] ResourceManager (RM) Fail-over,Fault tolerant Hadoop Job Tracker,0,1,1
+233,MAPREDUCE-4363,MAPREDUCE-4383,Duplicate,Hadoop 1.X; 2.X and trunk do not build on Fedora 17,HadoopPipes.cc needs to include unistd.h,0,0,1
+234,MAPREDUCE-4376,MAPREDUCE-5690,Fixed,TestClusterMRNotification times out,TestLocalMRNotification.testMR occasionally fails,0,1,1
+235,MAPREDUCE-4398,MAPREDUCE-4451,Duplicate,Fix mapred.system.dir permission error with FairScheduler,fairscheduler fail to init job with kerberos authentication configured,1,1,1
+236,MAPREDUCE-4439,MAPREDUCE-4452,Duplicate,MAPREDUCE-3451 introduced a bunch of findbugs warnings,,0,0,1
+237,YARN-26,MAPREDUCE-3763,Duplicate,Refresh queue throws IO exception after configuring wrong queue capacity,,0,0,1
+238,MAPREDUCE-4470,MAPREDUCE-4475,Fixed,Fix TestCombineFileInputFormat.testForEmptyFile,testForEmptyFile failed,1,1,1
+239,MAPREDUCE-4526,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+240,MAPREDUCE-4527,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+241,MAPREDUCE-4528,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+242,MAPREDUCE-4529,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+243,MAPREDUCE-4530,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+244,MAPREDUCE-4531,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+245,MAPREDUCE-4532,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+246,MAPREDUCE-4536,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+247,MAPREDUCE-4537,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+248,MAPREDUCE-4540,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+249,MAPREDUCE-4541,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+250,MAPREDUCE-4542,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+251,MAPREDUCE-4543,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+252,MAPREDUCE-4544,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+253,MAPREDUCE-4546,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+254,MAPREDUCE-4547,MAPREDUCE-4554,Duplicate,Job Credentials are not transmitted if security is turned off,Job Credentials are not transmitted if security is turned off,1,1,1
+255,MAPREDUCE-4561,MAPREDUCE-4598,Duplicate,Support for node health scripts on Windows ,Support for node health scripts on Windows,1,1,1
+256,YARN-56,MAPREDUCE-3946,Unresolved,Handle container requests that request more resources than currently available in the cluster,If a resource requirement is higher than available on any node; job should fail early,1,1,1
+257,MAPREDUCE-4621,MAPREDUCE-4626,Duplicate,[MAPREDUCE-3902] Disable AM blacklisting if #blacklistedNodes crosses the configured threshold,[MAPREDUCE-3902] Fix and re-enable RMContaienrAllocator unit tests,1,1,1
+258,MAPREDUCE-4643,MAPREDUCE-4676,Fixed,Make job-history cleanup-period configurable,Add test for job history cleaner,1,1,1
+259,MAPREDUCE-4643,MAPREDUCE-4973,Fixed,Make job-history cleanup-period configurable,Backport history clean up configurations to branch-1,0,1,1
+260,MAPREDUCE-4644,MAPREDUCE-4656,Not A Problem,mapreduce-client-jobclient-tests do not run from dist tarball,Can't run TestDFSIO due to junit dependency,0,0,1
+261,MAPREDUCE-4671,MAPREDUCE-4984,Fixed,AM does not tell the RM about container requests that are no longer needed,AM leaves unwanted node/rack requests after container has been assigned,0,1,1
+262,MAPREDUCE-4712,MAPREDUCE-4814,Fixed,mr-jobhistory-daemon.sh doesn't accept --config,mr-jobhistory-daemon.sh does not parse --config options,0,1,1
+263,MAPREDUCE-4712,MAPREDUCE-4713,Fixed,mr-jobhistory-daemon.sh doesn't accept --config,mr-jobhistory-daemon.sh --config option doesn't work,1,1,1
+264,MAPREDUCE-4723,MAPREDUCE-4725,Fixed,Fix warnings found by findbugs 2,Setting local variables to null causes findbugs 2 warnings,1,1,1
+265,MAPREDUCE-4723,MAPREDUCE-4726,Fixed,Fix warnings found by findbugs 2,Empty catch blocks cause findbugs 2 warnings,1,1,1
+266,MAPREDUCE-4744,MAPREDUCE-4751,Duplicate,Application Master is running forever when the TaskAttempt gets TA_KILL event at the state SUCCESS_CONTAINER_CLEANUP,AM stuck in KILL_WAIT for days,0,1,1
+267,MAPREDUCE-4745,MAPREDUCE-4751,Duplicate,Application Master is hanging when the TaskImpl gets T_KILL event and completes attempts by the time  ,AM stuck in KILL_WAIT for days,1,1,1
+268,MAPREDUCE-4758,MAPREDUCE-5982,Duplicate,jobhistory web ui not showing correct # failed reducers,Task attempts that fail from the ASSIGNED state can disappear,0,1,1
+269,MAPREDUCE-4769,MAPREDUCE-6536,Duplicate,Pipes build problem with recent OpenSSL libs,hadoop-pipes doesn't use maven properties for openssl,1,0,1
+270,MAPREDUCE-4774,MAPREDUCE-4816,Fixed,JobImpl does not handle asynchronous task events in FAILED state,JobImpl Invalid event: JOB_TASK_ATTEMPT_COMPLETED at FAILED,0,1,1
+271,MAPREDUCE-4804,MAPREDUCE-5469,Unresolved,Counters for the applicationmaster,Counters for MRAppMaster,0,1,1
+272,MAPREDUCE-4841,MAPREDUCE-5476,Duplicate,Application Master Retries fail due to FileNotFoundException,Job can fail when RM restarts after staging dir is cleaned but before MR successfully unregister with RM,0,0,1
+273,MAPREDUCE-4842,MAPREDUCE-5423,Fixed,Shuffle race can hang reducer,Rare deadlock situation when reducers try to fetch map output,1,0,1
+274,MAPREDUCE-4852,MAPREDUCE-5251,Duplicate,Reducer should not signal fetch failures for disk errors on the reducer's side,Reducer should not implicate map attempt if it has insufficient space to fetch map output,1,1,1
+275,MAPREDUCE-4879,MAPREDUCE-5911,Fixed,TeraOutputFormat may overwrite an existing output directory,Terasort TeraOutputFormat does not check for output directory existance,1,0,1
+276,MAPREDUCE-4882,MAPREDUCE-6063,Duplicate,Error in estimating the length of the output file in Spill Phase,In sortAndSpill of MapTask.java; size is calculated wrongly when bufend < bufstart.,0,1,1
+277,MAPREDUCE-4883,MAPREDUCE-5649,Duplicate,Reducer's Maximum Shuffle Buffer Size should be enlarged for 64bit JVM,Reduce cannot use more than 2G memory  for the final merge,0,1,1
+278,MAPREDUCE-4893,MAPREDUCE-4982,Fixed,MR AppMaster can do sub-optimal assignment of containers to map tasks leading to poor node locality,AM hung with one pending map task,0,1,1
+279,MAPREDUCE-4935,MAPREDUCE-5066,Fixed,Support timeout limitation to MRv1 job end notifications ,JobTracker should set a timeout when calling into job.end.notification.url,0,1,1
+280,MAPREDUCE-4989,MAPREDUCE-5024,Fixed,JSONify DataTables input data for Attempts page,JobHistory task attempts page sorts elapsed time wrong,0,0,1
+281,MAPREDUCE-5002,MAPREDUCE-5115,Fixed,AM could potentially allocate a reduce container to a map attempt,MR app master may try to assign a reduce priority container to a map,0,1,1
+282,MAPREDUCE-5009,MAPREDUCE-5255,Fixed,Killing the Task Attempt slated for commit does not clear the value from the Task commitAttempt member,Reduce task preemption  results in task never completing ; incomplete fix to MAPREDUCE-3858 ?,0,0,1
+283,MAPREDUCE-5024,MAPREDUCE-5105,Duplicate,JobHistory task attempts page sorts elapsed time wrong,Job History Webpage Elapsed Time Column Sort Broken,1,0,1
+284,MAPREDUCE-5050,MAPREDUCE-5528,Unresolved,Cannot find partition.lst in Terasort on Hadoop/Local File System,"TeraSort fails with ""can't read paritions file"" - does not read partition file from distributed cache",1,1,1
+285,MAPREDUCE-5079,MAPREDUCE-5869,Fixed,Recovery should restore task state from job history info directly,Wrong date and and time on job tracker page,0,0,1
+286,MAPREDUCE-5127,MAPREDUCE-5471,Duplicate,MR job succeeds and exits even when unregister with RM fails,Succeed job tries to restart after RMrestart,0,0,1
+287,MAPREDUCE-5130,MAPREDUCE-5236,Fixed,Add missing job config options to mapred-default.xml,references to JobConf.DISABLE_MEMORY_LIMIT don't make sense in the context of MR2,0,1,1
+288,MAPREDUCE-5137,MAPREDUCE-5500,Fixed,AM web UI: clicking on Map Task results in 500 error,Accessing task page for running job throw 500 Error code,0,1,1
+289,MAPREDUCE-5143,MAPREDUCE-5656,Duplicate,TestLineRecordReader has no test case for compressed files,bzip2 codec can drop records when reading data in splits,1,0,1
+290,MAPREDUCE-5159,MAPREDUCE-5160,Fixed,Aggregatewordcount and aggregatewordhist in hadoop-1 examples are not binary compatible with hadoop-2 mapred.lib.aggregate,Aggregatewordcount and aggregatewordhist in hadoop-1 examples can not find their inner classes when running on Yarn,1,1,1
+291,MAPREDUCE-5174,MAPREDUCE-5447,Unresolved,Job History server gives wrong no of total maps and reducers,When a job state is ERROR ; total map and reduce task are displayed as 0 in JHS home page ; while navigating inside the respective job page displays the correct total. ,1,0,1
+292,MAPREDUCE-5214,MAPREDUCE-5243,Won't Fix,Compatibility: Add a deprecated MRAdmin that wraps around RMAdmin,MRAdmin is removed from M/R while RMAdmin is added to Yarn,1,1,1
+293,MAPREDUCE-5249,MAPREDUCE-5375,Duplicate,Oozie delegation token renewal fails for MR tokens in branch-1,Delegation Token renewal exception in jobtracker logs,0,0,1
+294,MAPREDUCE-5292,MAPREDUCE-5294,Duplicate,ShuffleConsumerPlugin.Context should support org.apache.hadoop.mapreduce.Reducer,Shuffle#MergeManager should support org.apache.hadoop.mapreduce.Reducer,1,0,1
+295,MAPREDUCE-5293,MAPREDUCE-5294,Duplicate,Shuffle#MergeManager should support org.apache.hadoop.mapreduce.Reducer,Shuffle#MergeManager should support org.apache.hadoop.mapreduce.Reducer,1,0,1
+296,MAPREDUCE-5339,MAPREDUCE-5340,Unresolved,There are methods and capabilities in Job and other Classes for which no information is provided in Javadoc.,isRetired is not well defined. javadoc does not indicate how a job is retired and waht does retired mean.,1,1,1
+297,MAPREDUCE-5341,MAPREDUCE-5597,Duplicate,All constructors for Job are deprecated. There is no indication of what the alternative is.,Missing alternatives in javadocs for deprecated constructors in mapreduce.Job,0,0,1
+298,MAPREDUCE-5342,MAPREDUCE-5343,Unresolved,There are methods that should be deprecated and new methods should be added with names matching purposes,reduceProgress is misleading. It should be renamed getReduceTasksProgress,1,1,1
+299,MAPREDUCE-5342,MAPREDUCE-5344,Unresolved,There are methods that should be deprecated and new methods should be added with names matching purposes,getClusterStatus method in Cluster returns ClusterMetrics. It should be called getClusterMetrics or it should return ClusterStatus.,0,1,1
+300,MAPREDUCE-5342,MAPREDUCE-5345,Unresolved,There are methods that should be deprecated and new methods should be added with names matching purposes,cleanupProgress is misleading. It should be renamed getCleanupTasksProgress ,0,1,1
+301,MAPREDUCE-5342,MAPREDUCE-5347,Unresolved,There are methods that should be deprecated and new methods should be added with names matching purposes,getBlacklistedTrackers() should be deprecated and a new method called  getNumBlacklistedTrackers should be added. ,0,1,1
+302,MAPREDUCE-5346,MAPREDUCE-5597,Duplicate,The example provided in the javadoc for Job is outdated.,Missing alternatives in javadocs for deprecated constructors in mapreduce.Job,0,1,1
+303,MAPREDUCE-5401,MAPREDUCE-5466,Duplicate,Succeeded Job details displayed as Error  In JobHistoryServer UI when RM issues Reboot to 1st app master.,Historyserver does not refresh the result of restarted jobs after RM restart,1,0,1
+304,MAPREDUCE-5409,MAPREDUCE-6933,Fixed,MRAppMaster throws InvalidStateTransitonException: Invalid event: TA_TOO_MANY_FETCH_FAILURE at KILLED for TaskAttemptImpl,Invalid event: TA_CONTAINER_LAUNCH_FAILED at KILLED,0,1,1
+305,MAPREDUCE-5418,MAPREDUCE-5641,Duplicate,JobHistoryServer has no information about applications if the MR-AM crashes,History for failed Application Masters should be made available to the Job History Server,0,0,1
+306,MAPREDUCE-5421,MAPREDUCE-5424,Fixed,TestNonExistentJob is failed due to recent changes in YARN,TestNonExistentJob failing after YARN-873,1,1,1
+307,MAPREDUCE-5427,MAPREDUCE-5632,Duplicate,TestRMContainerAllocator.testUpdatedNodes fails on jdk7,TestRMContainerAllocator#testUpdatedNodes fails,0,1,1
+308,MAPREDUCE-5485,MAPREDUCE-6437,Fixed,Allow repeating job commit by extending OutputCommitter API,Add retry on some connection exception on job commit phase,1,0,1
+309,MAPREDUCE-5502,MAPREDUCE-5581,Unresolved,History link in resource manager is broken for KILLED jobs,killing jobs which have failed causes log missing,0,1,1
+310,MAPREDUCE-5502,MAPREDUCE-6135,Unresolved,History link in resource manager is broken for KILLED jobs,Job staging directory remains if MRAppMaster is OOM,0,1,1
+311,MAPREDUCE-5503,MAPREDUCE-5516,Fixed,TestMRJobClient.testJobClient is failing,TestMRJobClient fails on trunk,0,0,1
+312,MAPREDUCE-5503,MAPREDUCE-5526,Fixed,TestMRJobClient.testJobClient is failing,TestMRJobClient fails on Windows and Linux,0,0,1
+313,MAPREDUCE-5535,MAPREDUCE-5538,Duplicate,TestClusterMRNotification.testMR is failing,MRAppMaster#shutDownJob shouldn't send job end notification before checking isLastRetry,1,0,1
+314,MAPREDUCE-5542,MAPREDUCE-5764,Fixed,Killing a job just as it finishes can generate an NPE in client,Potential NullPointerException in YARNRunner.killJob(JobID arg0),0,1,1
+315,MAPREDUCE-5583,MAPREDUCE-6176,Fixed,Ability to limit running map and reduce tasks,To limit the map task number or reduce task number of an application,1,1,1
+316,MAPREDUCE-5618,MAPREDUCE-5699,Duplicate,Allow setting lineage information,Allow setting tags on MR jobs,0,1,1
+317,MAPREDUCE-5642,MAPREDUCE-5850,Fixed,TestMiniMRChildTask fails on Windows,PATH environment variable contains duplicate values in map and reduce tasks on Windows.,0,1,1
+318,MAPREDUCE-5664,MAPREDUCE-5667,Duplicate,java.lang.RuntimeException: javax.xml.parsers.ParserConfigurationException:,Error in runtime in mapreduce code,1,1,1
+319,MAPREDUCE-5718,MAPREDUCE-5795,Unresolved,MR job will fail after commit fail,Job should be marked as Failed if it is recovered from commit.,0,1,1
+320,MAPREDUCE-5726,MAPREDUCE-5743,Duplicate,TestRMContainerAllocator#testCompletedTasksRecalculateSchedule fails,TestRMContainerAllocator is failing,1,1,1
+321,YARN-1680,MAPREDUCE-5928,Unresolved,availableResources sent to applicationMaster in heartbeat should exclude blacklistedNodes free memory.,Deadlock allocating containers for mappers and reducers,0,1,1
+322,MAPREDUCE-5793,MAPREDUCE-5804,Duplicate,Make TestMRJobsWithProfiler#testProfiler faster,TestMRJobsWithProfiler#testProfiler timesout,0,1,1
+323,MAPREDUCE-5799,MAPREDUCE-5842,Duplicate,add default value of MR_AM_ADMIN_USER_ENV,uber job with LinuxContainerExecutor cause exception,0,1,1
+324,MAPREDUCE-5799,MAPREDUCE-6577,Duplicate,add default value of MR_AM_ADMIN_USER_ENV,MR AM unable to load native library without MR_AM_ADMIN_USER_ENV set,0,0,1
+325,MAPREDUCE-5848,MAPREDUCE-5900,Duplicate,MapReduce counts forcibly preempted containers as FAILED,Container preemption interpreted as task failures and eventually job failures ,0,1,1
+326,MAPREDUCE-5856,MAPREDUCE-5875,Duplicate,Counter limits always use defaults even if JobClient is given a different Configuration,Make Counter limits consistent across JobClient; MRAppMaster; and YarnChild,0,1,1
+327,MAPREDUCE-5868,MAPREDUCE-5923,Fixed,TestPipeApplication causing nightly build to fail,org.apache.hadoop.mapred.pipes.TestPipeApplication timeouts intermittently,0,0,1
+328,MAPREDUCE-5875,MAPREDUCE-6129,Fixed,Make Counter limits consistent across JobClient; MRAppMaster; and YarnChild,Job failed due to counter out of limited in MRAppMaster,0,1,1
+329,MAPREDUCE-5920,MAPREDUCE-5922,Fixed,Add Xattr option in DistCp docs ,Update distcp documentation to mention option for preserving xattrs.,0,1,1
+330,MAPREDUCE-5951,MAPREDUCE-6113,Fixed,Add support for the YARN Shared Cache,An ability to override LocalResourceVisibility for public resources,0,0,1
+331,MAPREDUCE-5975,MAPREDUCE-5985,Duplicate,Fix native-task build on Ubuntu 13.10,native-task: Fix build on macosx,1,0,1
+332,MAPREDUCE-5993,MAPREDUCE-6000,Duplicate,native-task: simplify/remove dead code,native-task: Simplify ByteBufferDataReader/Writer,1,0,1
+333,MAPREDUCE-6016,MAPREDUCE-6017,Duplicate,hadoop yarn mapreduce skip failed records doesn't work,hadoop yarn mapreduce skip failed records doesn't work,1,1,1
+334,MAPREDUCE-6061,MAPREDUCE-6087,Duplicate,Fix MR_CLIENT_TO_AM_IPC_MAX_RETRIES_ON_TIMEOUTS property in MRJobConfig,MRJobConfig#MR_CLIENT_TO_AM_IPC_MAX_RETRIES_ON_TIMEOUTS config name is wrong,1,0,1
+335,MAPREDUCE-6078,MAPREDUCE-6106,Fixed,native-task: fix gtest build on macosx,hadoop-mapreduce-client-nativetask fails to compile on OS X,0,0,1
+336,MAPREDUCE-6092,MAPREDUCE-6104,Duplicate,TestJobHistoryParsing#testPartialJob timeouts in some environments,TestJobHistoryParsing.testPartialJob fails in branch-2,0,0,1
+337,MAPREDUCE-6094,MAPREDUCE-6098,Fixed,TestMRCJCFileInputFormat.testAddInputPath() fails on trunk,org.apache.hadoop.mapreduce.lib.input.TestMRCJCFileInputFormat intermittently failed in trunk,1,0,1
+338,MAPREDUCE-6094,MAPREDUCE-6114,Fixed,TestMRCJCFileInputFormat.testAddInputPath() fails on trunk,TestMRCJCFileInputFormat#testAddInputPath fails in trunk,0,1,1
+339,MAPREDUCE-6115,MAPREDUCE-6120,Fixed,TestPipeApplication#testSubmitter fails in trunk,TestPipeApplication fails on trunk,1,0,1
+340,MAPREDUCE-6156,MAPREDUCE-6157,Fixed,Fetcher - connect() doesn't handle connection refused correctly ,Connect failed in shuffle (due to NM down) could break current retry logic to tolerant NM restart.,1,0,1
+341,MAPREDUCE-6189,MAPREDUCE-6202,Duplicate,TestMRTimelineEventHandling fails in trunk,TestMRTimelineEventHandling fails on trunk,1,1,1
+342,MAPREDUCE-6206,MAPREDUCE-6207,Fixed,TestAggregatedTransferRate fails on non-US systems,TestAggregatedTransferRate fails on non-US systems,1,1,1
+343,MAPREDUCE-6225,MAPREDUCE-6226,Fixed,Fix new findbug warnings in hadoop-mapreduce-client-core,Findbugs warnings in mapreduce-client-core,1,1,1
+344,MAPREDUCE-6225,MAPREDUCE-6236,Fixed,Fix new findbug warnings in hadoop-mapreduce-client-core,Fix findbugs warnings in hadoop-mapreduce-client-core,0,0,1
+345,MAPREDUCE-6238,MAPREDUCE-6289,Fixed,MR2 can't run local jobs with -libjars command options which is a regression from MR1,libjars are assumed to be in the DistributedCache but are never added in pseudo distributed mode,0,0,1
+346,MAPREDUCE-6288,MAPREDUCE-6886,Done,mapred job -status fails with AccessControlException ,Job History File Permissions configurable,1,0,1
+347,MAPREDUCE-6300,MAPREDUCE-6301,Fixed,Task list sort by task id broken,Task UI; sort by name doesn't work,0,0,1
+348,MAPREDUCE-6307,MAPREDUCE-6308,Fixed,Remove property mapreduce.tasktracker.taskmemorymanager.monitoringinterval,Remove mapreduce.tasktracker.taskmemorymanager.monitoringinterval from trunk,1,1,1
+349,MAPREDUCE-6334,MAPREDUCE-6351,Fixed,Fetcher#copyMapOutput is leaking usedMemory upon IOException during InMemoryMapOutput shuffle handler,Reducer hung in copy phase.,0,0,1
+350,MAPREDUCE-6339,MAPREDUCE-6348,Fixed,Job history file is not flushed correctly because isTimerActive flag is not set true when flushTimerTask is scheduled.,JobHistoryEventHandler could not flush every 30 secondes,0,0,1
+351,MAPREDUCE-6346,MAPREDUCE-6459,Duplicate,mapred.nativetask.kvtest.KVTest crashes on PPC64LE,Native task crashes when merging spilled file on ppc64,1,1,1
+352,MAPREDUCE-6371,MAPREDUCE-6382,Duplicate,HTML tag shown in Diagnostics field of JobHistoryPage,Don't escape HTML links in Diagnostics in JHS job overview,0,0,1
+353,MAPREDUCE-6404,MAPREDUCE-6739,Fixed,Allow AM to specify a port range for starting its webapp,allow specifying range on the port that MR AM web server binds to,0,1,1
+354,MAPREDUCE-6441,MAPREDUCE-6685,Unresolved,Improve temporary directory name generation in LocalDistributedCacheManager for concurrent processes,LocalDistributedCacheManager can have overlapping filenames,1,1,1
+355,MAPREDUCE-6441,MAPREDUCE-6992,Unresolved,Improve temporary directory name generation in LocalDistributedCacheManager for concurrent processes,Race for temp dir in LocalDistributedCacheManager.java,1,1,1
+356,MAPREDUCE-6466,MAPREDUCE-6666,Duplicate,NNBench map task should create files in separate folder,Support MultiThreads in a Map and Distribution of files in NNBench,1,1,1
+357,MAPREDUCE-6472,MAPREDUCE-6576,Fixed,MapReduce AM should have java.io.tmpdir=./tmp to be consistent with tasks,AM java.io.tmpdir should be set to $PWD/tmp,0,1,1
+358,YARN-4686,MAPREDUCE-6623,Fixed,MiniYARNCluster.start() returns before cluster is completely started,TestRMNMInfo and TestNetworkedJob fails in trunk,0,1,1
+359,MAPREDUCE-6524,MAPREDUCE-6525,Duplicate,Fix intermittent test failure of TestMRJobsWithHistoryService.testJobHistoryData,Fix test failure of TestMiniMRClientCluster.testRestart,1,1,1
+360,MAPREDUCE-6549,MAPREDUCE-6891,Fixed,multibyte delimiters with LineRecordReader cause duplicate records,TextInputFormat: duplicate records with custom delimiter,0,1,1
+361,MAPREDUCE-6557,MAPREDUCE-6559,Fixed,Some tests in mapreduce-client-app are writing outside of target,TestMRAppMaster should use test.build.data for test directory,0,0,1
+362,MAPREDUCE-6577,MAPREDUCE-6590,Fixed,MR AM unable to load native library without MR_AM_ADMIN_USER_ENV set,Update MRJobConfig.DEFAULT_MAPRED_ADMIN_USER_ENV value for loading correct navite lib when using ubertask feature,1,0,1
+363,MAPREDUCE-6579,MAPREDUCE-6623,Fixed,JobStatus#getFailureInfo should not output diagnostic information when the job is running,TestRMNMInfo and TestNetworkedJob fails in trunk,0,0,1
+364,MAPREDUCE-6591,MAPREDUCE-6593,Duplicate,TestJobHistoryEventHandler#testTimelineEventHandling failing in trunk,TestJobHistoryEventHandler.testTimelineEventHandling fails on trunk because of NPE,0,1,1
+365,MAPREDUCE-6595,MAPREDUCE-6606,Fixed,Fix findbugs warnings in OutputCommitter and FileOutputCommitter,Findbug issue in org.apache.hadoop.mapred.OutputCommitter,1,1,1
+366,MAPREDUCE-6638,MAPREDUCE-6669,Fixed,Do not attempt to recover progress from previous job attempts if spill encryption is enabled,Jobs with encrypted spills don't tolerate AM failures,0,0,1
+367,MAPREDUCE-6648,MAPREDUCE-6949,Fixed,Add yarn.app.mapreduce.am.log.level to mapred-default.xml,yarn.app.mapreduce.am.log.level is not documented in mapred-default.xml,1,0,1
+368,MAPREDUCE-6659,MAPREDUCE-6982,Unresolved,Mapreduce App master waits long to kill containers on lost nodes.,Containers on lost nodes are considered failed after a too long time.,1,0,1
+369,MAPREDUCE-6704,MAPREDUCE-6783,Fixed,Update the documents to run MapReduce application,Default setting 'inheritParentEnv=false' caused mr executor failed to initialize,0,0,1
+370,MAPREDUCE-6705,MAPREDUCE-6706,Duplicate,Task failing continuously on trunk,Update TaskUmbilicalProtocol to use ProtobufRPCEngine,1,0,1
+371,MAPREDUCE-6724,MAPREDUCE-6805,Fixed,Single shuffle to memory must not exceed Integer#MAX_VALUE,Negative Array Exception while reducer fetch mapper output,1,0,1
+372,MAPREDUCE-6815,MAPREDUCE-6898,Fixed,Fix flaky TestKill.testKillTask(),TestKill.testKillTask is flaky,0,1,1
+373,MAPREDUCE-6829,MAPREDUCE-6922,Fixed,Add peak memory usage counter for each task,MapReduce jobs may fail during rolling upgrade due to MAPREDUCE-6829,0,0,1
+374,MAPREDUCE-6918,MAPREDUCE-6919,Duplicate,ShuffleMetrics.ShuffleConnections Gauge Metric Climbs Infinitely,ShuffleMetrics.ShuffleConnections Gauge Metric Rises Infinitely,1,1,1
+375,MAPREDUCE-6922,MAPREDUCE-6978,Duplicate,MapReduce jobs may fail during rolling upgrade due to MAPREDUCE-6829,MR task counters deserialized through RPC throws OutOfBoundsException if Counter enum class version not match,0,0,1
