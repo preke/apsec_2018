@@ -17,6 +17,7 @@ import pickle
 from gensim.models import Word2Vec
 import jieba
 
+wordvec_save = 'wordvec_save/hdfs_w2v.save'
 
 
 def train_word2vec_model(df):
@@ -36,11 +37,16 @@ def train_word2vec_model(df):
     return word2vec_model
 
 
+
+
 if __name__ == '__main__':
     # data_path = '../hadoop/hadoop.csv'
     # df = pd.read_csv(data_path, encoding = 'gb18030')
     # word2vec_model = train_word2vec_model(df)
     # word2vec_model.save('hadoop_w2v.save')
+
+
+
 
     parser = argparse.ArgumentParser(description='')
     # learning
@@ -97,7 +103,7 @@ if __name__ == '__main__':
     # add
     glove_path = 'wordvec.txt'
     # embedding_dict = load_glove_as_dict(glove_path)
-    embedding_dict = Word2Vec.load('hdfs_w2v.save')
+    embedding_dict = Word2Vec.load(wordvec_save)
     word_vec_list = []
     for idx, word in enumerate(issue1_field.vocab.itos):
         try:
