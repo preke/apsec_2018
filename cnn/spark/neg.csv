@@ -1,0 +1,1641 @@
+Increase SVN Limit for Binary Artifacts to 300MB,Use SPARK_MASTER_IP if it is set in start-slaves.sh.
+JavaPairRDD should support subtractByKey,Use SPARK_MASTER_IP if it is set in start-slaves.sh.
+The spark-shell will fail to start when Spark is deployed using the tar.gz file built by ./make-distribution.,Use SPARK_MASTER_IP if it is set in start-slaves.sh.
+Spark Stats package: supporting common statistical estimators for Big Data,Use SPARK_MASTER_IP if it is set in start-slaves.sh.
+Use SPARK_MASTER_IP if it is set in start-slaves.sh.,Removing credentials line in build.
+Removing credentials line in build.,Adding dependency repos in quickstart example
+Adding dependency repos in quickstart example,SparkContext.newShuffleId should be public or ShuffleDependency should set its own id
+SparkContext.newShuffleId should be public or ShuffleDependency should set its own id,Disable gpg by default.
+Disable gpg by default.,Access denied for LATEST_AMI_URL on 0.6 EC2 scripts
+Access denied for LATEST_AMI_URL on 0.6 EC2 scripts,Let the user specify environment variables to be passed to the Executors
+Let the user specify environment variables to be passed to the Executors,Change block manager to accept a ArrayBuffer
+Change block manager to accept a ArrayBuffer,Adding Java documentation
+Adding Java documentation,Null pointer exception when RDD size is larger than cache size
+Null pointer exception when RDD size is larger than cache size,Adding code for publishing to Sonatype.
+Adding code for publishing to Sonatype.,Fixed bug when fetching Jar dependencies.
+Fixed bug when fetching Jar dependencies.,Making Spark version configurable in docs and updating Bagel doc
+Making Spark version configurable in docs and updating Bagel doc,Support for Hadoop 2 distributions such as cdh4
+Support for Hadoop 2 distributions such as cdh4,Add m1.medium node option to cluster management script.
+Add m1.medium node option to cluster management script.,Document RDD api (i.e. RDD.scala)
+Document RDD api (i.e. RDD.scala),Adding documentation to public API's.
+Adding documentation to public API's.,Updates docs to use the new version num vars and adds Spark version in nav bar
+Updates docs to use the new version num vars and adds Spark version in nav bar,Synchronization bug fix in broadcast implementations
+Synchronization bug fix in broadcast implementations,Readding yarn-standalone scheduler scheme
+Readding yarn-standalone scheduler scheme,Adds special version variables to docs templating system
+Adds special version variables to docs templating system,Adding new download instructions
+Adding new download instructions,Removes the annoying small gap above the nav menu dropdown boxes
+Removes the annoying small gap above the nav menu dropdown boxes,Removing one link in quickstart
+Removing one link in quickstart,Changed the println to logInfo in Utils.fetchFile.
+Changed the println to logInfo in Utils.fetchFile.,Adding Sonatype releases to SBT.
+Adding Sonatype releases to SBT.,Document Dependency classes and make minor interface improvements
+Document Dependency classes and make minor interface improvements,"Fixed a bug in addFile that if the file is specified as ""file:///""; the symlink is created incorrectly for local mode."
+"Fixed a bug in addFile that if the file is specified as ""file:///""; the symlink is created incorrectly for local mode.",Move RDD classes/files to their own package/directory
+Move RDD classes/files to their own package/directory,Dev
+Dev,Fix SizeEstimator tests to work with String classes in JDK 6 and 7
+Fix SizeEstimator tests to work with String classes in JDK 6 and 7,Some additions to the Tuning Guide.
+Some additions to the Tuning Guide.,Made Serializer and JavaSerializer non private.
+Made Serializer and JavaSerializer non private.,Removes the included mesos-0.9.0.jar and pulls it from Maven Central instead
+Removes the included mesos-0.9.0.jar and pulls it from Maven Central instead,Changing version of Scala in README
+Changing version of Scala in README,First cut at adding documentation for GC tuning
+First cut at adding documentation for GC tuning,Package-Private Classes
+Package-Private Classes,Allow whitespaces in cluster URL configuration for local cluster.
+Allow whitespaces in cluster URL configuration for local cluster.,Don't build spark-repl-assembly in the assembly target by default
+Don't build spark-repl-assembly in the assembly target by default,"A Spark ""Quick Start"" example"
+"A Spark ""Quick Start"" example",publish-local should go to maven + ivy by default
+publish-local should go to maven + ivy by default,Publish local maven
+Publish local maven,Fixed #232: DirectBuffer's cleaner was empty and Spark tried to invoke clean on it.
+Fixed #232: DirectBuffer's cleaner was empty and Spark tried to invoke clean on it.,0.6: NPE in spark.storage.BlockManager
+0.6: NPE in spark.storage.BlockManager,"Added a new command ""pl"" in sbt to publish to both Maven and Ivy."
+"Added a new command ""pl"" in sbt to publish to both Maven and Ivy.",SizeEstimator gives different sizes for Strings on Java 7
+SizeEstimator gives different sizes for Strings on Java 7,Added mapPartitionsWithSplit to the programming guide.
+Added mapPartitionsWithSplit to the programming guide.,Allow controlling number of splits in distinct().
+Allow controlling number of splits in distinct().,Add a CoalescedRDD for decreasing the number of partitions in a map phase
+Add a CoalescedRDD for decreasing the number of partitions in a map phase,Log message which records RDD origin
+Log message which records RDD origin,Rename StorageLevels to something easier to remember
+Rename StorageLevels to something easier to remember,Added MapPartitionsWithSplitRDD.
+Added MapPartitionsWithSplitRDD.,Web UI should display memory in a nicer format
+Web UI should display memory in a nicer format,One commit that makes nav dropdowns show on hover
+One commit that makes nav dropdowns show on hover,Add spark-shell.cmd
+Add spark-shell.cmd,Scripts to start Spark under windows
+Scripts to start Spark under windows,Added a method to RDD to expose the ClassManifest.
+Added a method to RDD to expose the ClassManifest.,"Logs from ""run"" disappear once you run the tests because test-classes are now on classpath"
+"Logs from ""run"" disappear once you run the tests because test-classes are now on classpath",HTTP File server fixes
+HTTP File server fixes,The --ebs-vol-size option doesn't work with the current EC2 AMI
+The --ebs-vol-size option doesn't work with the current EC2 AMI,Log where in the user's code each RDD got created
+Log where in the user's code each RDD got created,run
+run,Set a limited number of retry in standalone deploy mode.
+Set a limited number of retry in standalone deploy mode.,Separated ShuffledRDD into multiple classes.
+Separated ShuffledRDD into multiple classes.,RDD.takeSample() produces samples biased toward earlier splits
+RDD.takeSample() produces samples biased toward earlier splits,SampledRDD produces incorrect samples when sampling with replacement
+SampledRDD produces incorrect samples when sampling with replacement,When a file is downloaded; make it executable.
+When a file is downloaded; make it executable.,Java Programming Guide
+Java Programming Guide,Updates to docs (including nav structure)
+Updates to docs (including nav structure),Updates to docs
+Updates to docs,YARN and standalone documentation
+YARN and standalone documentation,Fix links and make things a bit prettier.
+Fix links and make things a bit prettier.,"Adds a ""docs"" directory containing existing Spark documentation and doc build instructions"
+"Adds a ""docs"" directory containing existing Spark documentation and doc build instructions",Log entire exception (including stack trace) in BlockManagerWorker.
+Log entire exception (including stack trace) in BlockManagerWorker.,Spark HTTP FileServer
+Spark HTTP FileServer,Don't exit from the Examples since that stops the YARN ApplicationMaster.
+Don't exit from the Examples since that stops the YARN ApplicationMaster.,Broken build after typesafe ivy repo changes
+Broken build after typesafe ivy repo changes,Log cache add/remove messages in block manager.
+Log cache add/remove messages in block manager.,Simulating a Spark standalone cluster locally
+Simulating a Spark standalone cluster locally,sbin/mesos-start-cluster.sh      ulimit: error setting limit (Operation not permitted)
+sbin/mesos-start-cluster.sh      ulimit: error setting limit (Operation not permitted),Spark HTTP FileServer
+Spark HTTP FileServer,run spark.examples.SparkPi 127.0.1.1:5050  spark gets error
+run spark.examples.SparkPi 127.0.1.1:5050  spark gets error,Disable running combiners on map tasks when mergeCombiners function is not specified by the user.
+Disable running combiners on map tasks when mergeCombiners function is not specified by the user.,Disable running combiners on map tasks when mergeCombiners function is not specified by the user.
+Disable running combiners on map tasks when mergeCombiners function is not specified by the user.,Add a limit on the number of parallel fetches in the reduce stage
+Add a limit on the number of parallel fetches in the reduce stage,Removed the deserialization cache for ShuffleMapTask
+Removed the deserialization cache for ShuffleMapTask,Cache points in SparkLR example
+Cache points in SparkLR example,Replay debugger for Spark
+Replay debugger for Spark,Unresolved dependencies when running sbt to install spark
+Unresolved dependencies when running sbt to install spark,add accumulators for mutable collections; with correct typing!
+add accumulators for mutable collections; with correct typing!,Make spark-ec2 detect and handle VMs that fail to start correctly
+Make spark-ec2 detect and handle VMs that fail to start correctly,make accumulator.localValue public; add tests
+make accumulator.localValue public; add tests,Rsync root directory in EC2 script
+Rsync root directory in EC2 script,Size estimator changes for dev
+Size estimator changes for dev,Launching Spark over YARN
+Launching Spark over YARN,Changes to SizeEstimator more accurate
+Changes to SizeEstimator more accurate,Use JavaConversion to get a scala iterator
+Use JavaConversion to get a scala iterator,Detect non-zero exit status from PipedRDD process
+Detect non-zero exit status from PipedRDD process,Avoid a copy in ShuffleMapTask
+Avoid a copy in ShuffleMapTask,Fix test checkpoint to reuse spark context defined in the class
+Fix test checkpoint to reuse spark context defined in the class,Bug fix in RangePartitioner for partitioning when sorting in descending order.
+Bug fix in RangePartitioner for partitioning when sorting in descending order.,Use maxMemory to better estimate memory available for BlockManager cache
+Use maxMemory to better estimate memory available for BlockManager cache,Use sbt mergeStrategy for reference.conf files.
+Use sbt mergeStrategy for reference.conf files.,Standalone cluster scripts
+Standalone cluster scripts,Spark WebUI
+Spark WebUI,Merge Akka reference.conf files in sbt assembly task
+Merge Akka reference.conf files in sbt assembly task,Logging Throwables in Info and Debug
+Logging Throwables in Info and Debug,Support for external sorting and hashing
+Support for external sorting and hashing,Support for external hashing and sorting
+Support for external hashing and sorting,Broadcast UUID cannot be casted to Integer
+Broadcast UUID cannot be casted to Integer,Java API
+Java API,Always destroy SparkContext in after block for the unit tests.
+Always destroy SparkContext in after block for the unit tests.,Examples ship to to cluster
+Examples ship to to cluster,Failing Test: FileSuite - Read SequenceFile using new Hadoop API
+Failing Test: FileSuite - Read SequenceFile using new Hadoop API,Instantiating custom serializer using user's classpath
+Instantiating custom serializer using user's classpath,Use test fixtures or setup/teardown methods in unit tests
+Use test fixtures or setup/teardown methods in unit tests,Broadcast refactoring/cleaning up
+Broadcast refactoring/cleaning up,add Accumulatable; add corresponding docs & tests for accumulators
+add Accumulatable; add corresponding docs & tests for accumulators,User's JARs are not on the classpath when instantiating custom serializer
+User's JARs are not on the classpath when instantiating custom serializer,Include Shark on default Spark AMI
+Include Shark on default Spark AMI,Scalacheck groupId has changed https://github.com/rickynils/scalacheck/i...
+Scalacheck groupId has changed https://github.com/rickynils/scalacheck/i...,The default broadcast implementation should not use HDFS
+The default broadcast implementation should not use HDFS,run spark.examples.SparkPi  hangs with no results
+run spark.examples.SparkPi  hangs with no results,Standalone deploy mode
+Standalone deploy mode,SizeEstimator's sampling should reuse SearchState
+SizeEstimator's sampling should reuse SearchState,Make spark.repl.Main.interp_ publicly accessible
+Make spark.repl.Main.interp_ publicly accessible,ShuffleManager & RDD refactored. Some unit tests added.
+ShuffleManager & RDD refactored. Some unit tests added.,BoundedMemoryCache.put should fail when estimated size of 'value' is larger than cache capacity
+BoundedMemoryCache.put should fail when estimated size of 'value' is larger than cache capacity,Little refactoring and unit tests for CacheTrackerActor
+Little refactoring and unit tests for CacheTrackerActor,Return size estimation; cache usage; and cache capacity from slave nodes to CacheTracker
+Return size estimation; cache usage; and cache capacity from slave nodes to CacheTracker,Force serialize/deserialize task results in local execution mode.
+Force serialize/deserialize task results in local execution mode.,Update spark-yarn project to support newest version of YARN
+Update spark-yarn project to support newest version of YARN,End task instead of just exiting in LocalScheduler for tasks that throw exceptions
+End task instead of just exiting in LocalScheduler for tasks that throw exceptions,Spark executor should use Mesos-provided hostname for itself in cache tracker updates; etc
+Spark executor should use Mesos-provided hostname for itself in cache tracker updates; etc,Fix issues with JAR server in mesos-0.9 branch
+Fix issues with JAR server in mesos-0.9 branch,Added the ability to set environmental variables in piped rdd.
+Added the ability to set environmental variables in piped rdd.,Added an option (spark.closure.serializer) to specify the serializer for closures.
+Added an option (spark.closure.serializer) to specify the serializer for closures.,Report entry dropping in BoundedMemoryCache
+Report entry dropping in BoundedMemoryCache,Update the examples to show how to ship the job's code to a cluster
+Update the examples to show how to ship the job's code to a cluster,spark.master.host should be set to local IP address instead of hostname
+spark.master.host should be set to local IP address instead of hostname,Arthur: Replay debugger for Spark
+Arthur: Replay debugger for Spark,Update to work with Mesos 0.9 / 1.0 API
+Update to work with Mesos 0.9 / 1.0 API,Changed HadoopRDD to get key and value containers from the RecordReader instead of through reflection
+Changed HadoopRDD to get key and value containers from the RecordReader instead of through reflection,Adding sorting to RDDs
+Adding sorting to RDDs,Bad behavior when saving to S3
+Bad behavior when saving to S3,LocalFileShuffle should not be an object
+LocalFileShuffle should not be an object,Added immutable map registration in kryo serializer
+Added immutable map registration in kryo serializer,Add support for fixed sized samples
+Add support for fixed sized samples,Using 0 partition RDD in a shuffle causes crashes
+Using 0 partition RDD in a shuffle causes crashes,Made improvements to takeSample. Also changed SparkLocalKMeans to SparkKMeans
+Made improvements to takeSample. Also changed SparkLocalKMeans to SparkKMeans,"Why ""./run spark.examples.SparkPi 1@localhost:5050"" can't get result of Pi"
+"Why ""./run spark.examples.SparkPi 1@localhost:5050"" can't get result of Pi",Update documentation for building with Scala 2.8
+Update documentation for building with Scala 2.8,Add logging/notification when RDDs are evicted from cache
+Add logging/notification when RDDs are evicted from cache,Add an accumulating fold operator
+Add an accumulating fold operator,Add a version of sample() that returns a fixed number of elements
+Add a version of sample() that returns a fixed number of elements,Spark doesn't return offers if it doesn't have any tasks for them
+Spark doesn't return offers if it doesn't have any tasks for them,Bagel unit tests broken after API change
+Bagel unit tests broken after API change,Use Akka actors for communication
+Use Akka actors for communication,Tab completion doesn't work in REPL with Scala 2.9.1
+Tab completion doesn't work in REPL with Scala 2.9.1,Implement a sort() operation / RDD
+Implement a sort() operation / RDD,Ranges of Longs don't get split properly by SparkContext.parallelize
+Ranges of Longs don't get split properly by SparkContext.parallelize,Wrong documentation for Mesos+Spark integration
+Wrong documentation for Mesos+Spark integration,Report exceptions in tasks back to master to simplify debugging
+Report exceptions in tasks back to master to simplify debugging,Upgrade to SBT 0.11.0
+Upgrade to SBT 0.11.0,Upgrade to Scala 2.9.1.
+Upgrade to Scala 2.9.1.,Save RDDs should work for s3n paths
+Save RDDs should work for s3n paths,Delete scala-2.9 branch
+Delete scala-2.9 branch,Replace DepJar with sbt-assembly plugin
+Replace DepJar with sbt-assembly plugin,Enable -optimize in the build
+Enable -optimize in the build,Fix code not to use code deprecated in Scala 2.9
+Fix code not to use code deprecated in Scala 2.9,Workaround for scalac bug and publishTo configuration
+Workaround for scalac bug and publishTo configuration,Add APIs to Serializer for streams of objects of the same type
+Add APIs to Serializer for streams of objects of the same type,Kryo serializer sometimes fails to use no-argument constructor
+Kryo serializer sometimes fails to use no-argument constructor,ClosureCleaner fails when instantiating with outer
+ClosureCleaner fails when instantiating with outer,Port SBT build to SBT 0.10
+Port SBT build to SBT 0.10,Enable -optimize in the build
+Enable -optimize in the build,Add API for controlling the number of splits on a Hadoop file
+Add API for controlling the number of splits on a Hadoop file,Change @serializable to extends Serializable in 2.9 branch
+Change @serializable to extends Serializable in 2.9 branch,Functionality to save RDDs to Hadoop files
+Functionality to save RDDs to Hadoop files,Implemented RDD.leftOuterJoin and RDD.rightOuterJoin
+Implemented RDD.leftOuterJoin and RDD.rightOuterJoin,Add missing test for RDD.groupWith
+Add missing test for RDD.groupWith,Better readme
+Better readme,Move managedStyle to SparkProject
+Move managedStyle to SparkProject,Remove unnecessary toStream calls
+Remove unnecessary toStream calls,LocalScheduler should catch Throwable to avoid silent failures
+LocalScheduler should catch Throwable to avoid silent failures,Make SparkContext.runJob public
+Make SparkContext.runJob public,Remove merged branches
+Remove merged branches,Use explicit asInstanceOf instead of misleading unchecked pattern matching.
+Use explicit asInstanceOf instead of misleading unchecked pattern matching.,Fix deprecations when compiled with Scala 2.8.1
+Fix deprecations when compiled with Scala 2.8.1,Fix deprecations when compiled with Scala 2.8.1
+Fix deprecations when compiled with Scala 2.8.1,Support Scala 2.9.x
+Support Scala 2.9.x,Bagel: Large-scale graph processing on Spark
+Bagel: Large-scale graph processing on Spark,Cache to disk
+Cache to disk,Make sure slf4j is initialized before any piece of code tries to use it
+Make sure slf4j is initialized before any piece of code tries to use it,Concurrency bug in BlockedShuffle implementations in mos-shuffle-tracked branch
+Concurrency bug in BlockedShuffle implementations in mos-shuffle-tracked branch,Passing masterHostAddress to workers is not working
+Passing masterHostAddress to workers is not working,Serialization issue
+Serialization issue,Replacing the native lzf compression code with ning's lzf library
+Replacing the native lzf compression code with ning's lzf library,Pluggable broadcast implementations
+Pluggable broadcast implementations,Clean up temporary files after LocalFileShuffle
+Clean up temporary files after LocalFileShuffle,Support other serialization mechanisms than Java Serialization
+Support other serialization mechanisms than Java Serialization,Add unit tests for shuffle operations
+Add unit tests for shuffle operations,Organize broadcast implementations
+Organize broadcast implementations,Print milliseconds in the log timestamps
+Print milliseconds in the log timestamps,Spark/Mesos crashes after completion of jobs
+Spark/Mesos crashes after completion of jobs,java crashes when trying to run spark+EC2
+java crashes when trying to run spark+EC2,Increase default locality wait from 1s to 3-5s
+Increase default locality wait from 1s to 3-5s,Make Spark use log4j / slf4j for logging
+Make Spark use log4j / slf4j for logging,Write up a Spark tutorial for wiki
+Write up a Spark tutorial for wiki,Add a single spark.shared.fs option to use for REPL classes; broadcast; etc
+Add a single spark.shared.fs option to use for REPL classes; broadcast; etc,Don't keep trying to run tasks on a slave if they all fail
+Don't keep trying to run tasks on a slave if they all fail,Make per-task CPU and memory configurable
+Make per-task CPU and memory configurable,Make it possible to run spark-shell without a shared NFS
+Make it possible to run spark-shell without a shared NFS,Add support for Hadoop InputFormats other than TextInputFormat
+Add support for Hadoop InputFormats other than TextInputFormat,Consider using a better build tool than make
+Consider using a better build tool than make,Load-balance tasks better across nodes
+Load-balance tasks better across nodes,Add save() operation
+Add save() operation,Union operation on RDDs
+Union operation on RDDs,Merge Mosharaf's broadcast code into master branch
+Merge Mosharaf's broadcast code into master branch,Save operation
+Save operation,Unify the API and implementation of ParallelArrays and HdfsFiles
+Unify the API and implementation of ParallelArrays and HdfsFiles,Shuffle operation
+Shuffle operation,Make NexusScheduler more efficient by keeping a list of tasks for each node
+Make NexusScheduler more efficient by keeping a list of tasks for each node,Merge fault tolerance code into master branch
+Merge fault tolerance code into master branch,Make it easier to run external code on a Nexus cluster
+Make it easier to run external code on a Nexus cluster,Improve error reporting when slaves fail to start
+Improve error reporting when slaves fail to start,Exiting spark-ec2 with unfulfilled spot instance request does not cancel request
+Exiting spark-ec2 with unfulfilled spot instance request does not cancel request,Allow EC2 script to stop/destroy cluster after master/slave failures
+Allow EC2 script to stop/destroy cluster after master/slave failures,Support for Hadoop 2 distributions such as cdh4
+Support for Hadoop 2 distributions such as cdh4,Structure SBT build file into modules.
+Structure SBT build file into modules.,Create repository for /root/mesos-ec2 scripts
+Create repository for /root/mesos-ec2 scripts,Updated Kryo to version 2.20
+Updated Kryo to version 2.20,Added a method to report slave memory status; force serialize accumulator update in local mode.
+Added a method to report slave memory status; force serialize accumulator update in local mode.,spark integration issue with Cloudera hadoop
+spark integration issue with Cloudera hadoop,Refactoring of shuffling-related classes
+Refactoring of shuffling-related classes,sbt/sbt  --> eclipse won't work now
+sbt/sbt  --> eclipse won't work now,Support spark-shell when running on YARN
+Support spark-shell when running on YARN,Provide a dist-like target that builds a binary distribution (JARs + scripts)
+Provide a dist-like target that builds a binary distribution (JARs + scripts),Have a single file that controls the environmental variables and spark config options
+Have a single file that controls the environmental variables and spark config options,Spark driver process doesn't exit after finishing
+Spark driver process doesn't exit after finishing,Create more explicit logs for cache registration and task completion
+Create more explicit logs for cache registration and task completion,Log something when no resources have been offered in the cluster
+Log something when no resources have been offered in the cluster,Killing tasks in spark - request for comment
+Make SparkContext thread-safe,Error with technique to find hostname in bin/start-slaves.sh in dev branch
+Error with technique to find hostname in bin/start-slaves.sh in dev branch,Set SPARK_MEM based on instance type in EC2 scripts
+Set SPARK_MEM based on instance type in EC2 scripts,driver.run() returned with code DRIVER_ABORTED
+driver.run() returned with code DRIVER_ABORTED,INFO spark.MesosScheduler: Ignoring update from TID 9 because its job is gone
+INFO spark.MesosScheduler: Ignoring update from TID 9 because its job is gone,Permission denied(publickey)
+Permission denied(publickey),Add API to customize in-memory representation of RDDs
+Add API to customize in-memory representation of RDDs,Passing bad master address to SparkContext results in unhelpful Mesos error message
+Passing bad master address to SparkContext results in unhelpful Mesos error message,Cache Miss when machine have multiple hostname
+Cache Miss when machine have multiple hostname,Spark for Python
+Spark for Python,Provide a Configuration class in addition to system properties
+Provide a Configuration class in addition to system properties,support external sort
+Support full outer join and multiple join in a single shuffle,Provide a means to package Spark's executor into a tgz
+Provide a means to package Spark's executor into a tgz,Update Kryo to use 2.x
+Update Kryo to use 2.x,Move mesos.jar to a maven repository
+Move mesos.jar to a maven repository,Hiding the default spark context in the spark shell creates serialization issues
+Hiding the default spark context in the spark shell creates serialization issues,slave disconnected
+slave disconnected,spark api doc
+spark api doc,Write a tutorial for mining Wikipedia interactively on EC2
+Write a tutorial for mining Wikipedia interactively on EC2,Add aggregateByKey
+Add aggregateByKey,"Write a ""Spark internals"" wiki page"
+"Write a ""Spark internals"" wiki page",Results from tasks should be returned through our own sockets rather than Mesos framework messages
+Results from tasks should be returned through our own sockets rather than Mesos framework messages,Provide scripts for launching Spark through Amazon Elastic MapReduce
+Provide scripts for launching Spark through Amazon Elastic MapReduce,Simplify run script by relying on sbt to launch app
+Simplify run script by relying on sbt to launch app,Automatically register all classes used in fields of a class with Kryo
+Automatically register all classes used in fields of a class with Kryo,Specialize RDDs / iterators
+Specialize RDDs / iterators,Implement unit tests for RDD save functionality
+Implement unit tests for RDD save functionality,Add a way to ship files with as Spark job
+Add a way to ship files with as Spark job,Run findBugs and IDEA inspections in the codebase
+Run findBugs and IDEA inspections in the codebase,Publish to maven repository
+Publish to maven repository,Integrate spark in scala standard collection API
+Integrate spark in scala standard collection API,Replace polling+sleeping with semaphores in broadcast and shuffle
+Replace polling+sleeping with semaphores in broadcast and shuffle,Unified directory structure for temporary data
+Unified directory structure for temporary data,Document configuration options
+Document configuration options,Consolidate/reorganize configuration options
+Easy way to set remote node memory,Forbid return statements when cleaning closures
+Forbid return statements when cleaning closures,Forbid update of static mutable variables
+Forbid update of static mutable variables,Clarify semantics of the parallelized closures
+Clarify semantics of the parallelized closures,Put license notice and copyrights headers to all files
+Put license notice and copyrights headers to all files,Maintain a cache of JARs on each node to avoid unnecessary copying
+Maintain a cache of JARs on each node to avoid unnecessary copying,Design and develop a more precise progress estimator
+Design and develop a more precise progress estimator,Rename Split to Partition
+Rename Split to Partition,Fix interpreter code generation to only capture needed dependencies
+Fix interpreter code generation to only capture needed dependencies,An anonymous submission to Spark
+An anonymous submission to Spark,Use Spark local directory as PySpark tmp directory
+Use Spark local directory as PySpark tmp directory,Try using a smart commit and seeing if it works
+Try using a smart commit and seeing if it works,Add unit test for complex column (lazy column)
+Add unit test for complex column (lazy column),Failures in BlockStore may lead to infinite loops of task failures
+Failures in BlockStore may lead to infinite loops of task failures,Pass slave ip address when starting a cluster 
+Pass slave ip address when starting a cluster ,Mesos may not work with mesos:// URLs
+Mesos may not work with mesos:// URLs,Update docs to say that you need to set MESOS_NATIVE_LIBRARY when running standalone apps on Mesos
+Test issue,Have assembly example in quick start; or elsewhere in docs
+Have assembly example in quick start; or elsewhere in docs,MESOS_NATIVE_LIBRARY env var needs to be set when running on Mesos
+MESOS_NATIVE_LIBRARY env var needs to be set when running on Mesos,Log task size when it's too large on master
+Log task size when it's too large on master,Configuration System
+Total memory size on per-RDD basis,Send last few lines of failed standalone mode or Mesos task to master
+Send last few lines of failed standalone mode or Mesos task to master,Update examples to pass JARs when building a SparkContext in 0.6 and master
+"Document ""local-cluster"" mode",Memory Dashboard
+Memory Dashboard,Unimplemented configuration options in spark-daemon[s].sh
+Unimplemented configuration options in spark-daemon[s].sh,Test PySpark's Java-side pickling of arrays of key-value pairs
+Test PySpark's Java-side pickling of arrays of key-value pairs,OutOfMemoryErrors can cause workers to hang indefinitely
+OutOfMemoryErrors can cause workers to hang indefinitely,SparkContext.stop and clearJars delete local JAR files
+SparkContext.stop and clearJars delete local JAR files,PairRDDFunctions.lookup fails unnecessarily when self.partitioner is None
+PairRDDFunctions.lookup fails unnecessarily when self.partitioner is None,Pass integer hashcodes to Java during PySpark hash partitioning
+Pass integer hashcodes to Java during PySpark hash partitioning,add simple Counter API
+add simple Counter API,reconnect if mesos slaves dies
+reconnect if mesos slaves dies,Add support for new m3.xlarge and m3.2xlarge EC2 instance types
+Add support for new m3.xlarge and m3.2xlarge EC2 instance types,Add mapSideCombine setting to Java API partitionBy() method.
+Add mapSideCombine setting to Java API partitionBy() method.,Timeout while fetching map statuses may cause job to hang
+Timeout while fetching map statuses may cause job to hang,Allow showing worker STDOUT/STDERR log tail (e.g. last 512KB)
+Allow showing worker STDOUT/STDERR log tail (e.g. last 512KB),Add instructions for enabling Akka debug logging
+Add instructions for enabling Akka debug logging,Support master failover in standalone mode
+Support master failover in standalone mode,Allow JStack to be run from web UI
+Allow JStack to be run from web UI,Update examples to pass JAR file to SparkContext in master and 0.6 branches
+Standalone web UI links to internal IPs when running on EC2,Make last 4 digits of framework id in standalone mode logging monotonically increasing
+Make last 4 digits of framework id in standalone mode logging monotonically increasing,Add mapPartitionsWithIndex() to the Java API
+Add mapPartitionsWithIndex() to the Java API,Show dead workers in the standalone web UI
+Show dead workers in the standalone web UI,Driver program can crash when a standalone worker is lost
+Driver program can crash when a standalone worker is lost,start-mesos and stop-mesos scripts should check for running processes
+start-mesos and stop-mesos scripts should check for running processes,Hadoop MapReduce should be configured to use all local disks for shuffle on AMI
+Hadoop MapReduce should be configured to use all local disks for shuffle on AMI,Default SPARK_MEM on AMI too high
+Provide an API to manually throw RDDs out of the cache,spark-ec2 launch command hangs if instances fail while starting up.
+spark-ec2 launch command hangs if instances fail while starting up.,Don't hardcode log location for standalone UI
+Don't hardcode log location for standalone UI,The local IP address to bind to should be configurable
+The local IP address to bind to should be configurable,Client hangs when connecting to standalone cluster using wrong address
+Client hangs when connecting to standalone cluster using wrong address,deleting security groups gives me a 400 error
+deleting security groups gives me a 400 error,All references to [K; V] in JavaDStreamLike should be changed to [K2; V2]
+All references to [K; V] in JavaDStreamLike should be changed to [K2; V2],Make deletion of EC2 security groups optional
+Make deletion of EC2 security groups optional,Standalone job details page has strange value for number of cores
+Standalone job details page has strange value for number of cores,Master web UI shows some finished/killed executors as running
+Master web UI shows some finished/killed executors as running,SPARK_LOCAL_IP environment variable should also affect spark.master.host
+SPARK_LOCAL_IP environment variable should also affect spark.master.host,Akka system names need to be normalized (since they are case-sensitive)
+Akka system names need to be normalized (since they are case-sensitive),Support dropping blocks and RDDs from block manager
+Support dropping blocks and RDDs from block manager,Track and display a read count for each block replica in BlockManager
+Track and display a read count for each block replica in BlockManager,Pass a TaskContext object to compute() interface
+Pass a TaskContext object to compute() interface,Add mechanism to run system management/configuration tasks on all workers
+Create troubleshooting checklist,Standalone --cluster-type option broken in spark-ec2 due to SPARK_MASTER_IP setting
+Standalone --cluster-type option broken in spark-ec2 due to SPARK_MASTER_IP setting,Standalone cluster should report executor exit codes more nicely to clients
+Standalone cluster should report executor exit codes more nicely to clients,Update Hadoop 1 version to 1.1.0 (especially on AMIs)
+Update Hadoop 1 version to 1.1.0 (especially on AMIs),spark-ec2 standalone launch should create ~/mesos-ec2/slaves
+spark-ec2 standalone launch should create ~/mesos-ec2/slaves,spark-ec2 standalone launch should set SPARK_MEM and SPARK_JAVA_OPTS
+spark-ec2 standalone launch should set SPARK_MEM and SPARK_JAVA_OPTS,Standalone master crashes during actor restart
+Standalone master crashes during actor restart,Jobs canceled due to repeated executor failures may hang
+Jobs canceled due to repeated executor failures may hang,Calling distinct() without parentheses fails
+Calling distinct() without parentheses fails,Floating point overflow/underflow in LR examples
+Floating point overflow/underflow in LR examples,ConnectionManager.sendMessage may create too many unnecessary connections
+ConnectionManager.sendMessage may create too many unnecessary connections,takeSample() with repetitions should be able to return more items than an RDD contains
+takeSample() with repetitions should be able to return more items than an RDD contains,Windows support for PySpark
+Windows support for PySpark,"Add a ""setup hook"" API for running initialization code on each executor"
+Port sample()/takeSample() to PySpark,Propagate exceptions from PySpark workers to the driver
+Add accumulators to PySpark,Use ID of hash function when comparing Python partitioner objects in equals()
+Use ID of hash function when comparing Python partitioner objects in equals(),Implement co-partitioning aware joins in PySpark
+Let Amazon choose our EC2 clusters' availability zone if the user does not specify one,Don't use multiple loopback IP addresses in unit tests
+Don't use multiple loopback IP addresses in unit tests,Make Spark execution time logging more obvious and easier to read
+Make Spark execution time logging more obvious and easier to read,The master web interface is broken for Scala 2.10
+The master web interface is broken for Scala 2.10,Add StorageLevel support in Python
+Add StorageLevel support in Python,Java unit tests don't seem to run with Maven
+Java unit tests don't seem to run with Maven,Executor should only download files & jars once
+Executor should only download files & jars once,Implement Fair scheduler within ClusterScheduler
+Implement Fair scheduler within ClusterScheduler,Accumulator updates should get locally merged before sent to the driver
+Accumulator updates should get locally merged before sent to the driver,Create RPM packages for Spark
+Create RPM packages for Spark,Make Spark's master debug level logging consumable
+Make Spark's master debug level logging consumable,IntelliJ may insert stubs for inherited methods in Java Function classes
+IntelliJ may insert stubs for inherited methods in Java Function classes,JavaRDDLike.flatMap(PairFlatMapFunction) may fail with typechecking errors
+JavaRDDLike.flatMap(PairFlatMapFunction) may fail with typechecking errors,Send back task results through BlockManager instead of Akka messages
+Send back task results through BlockManager instead of Akka messages,"spark-ec2 should warn if you use the ""start"" command without passing a SSH key file"
+"spark-ec2 should warn if you use the ""start"" command without passing a SSH key file",Spark runs out of memory on fork/exec (affects both pipes and python)
+PySpark should capture and re-throw Python exceptions,Gateway JVM's should not be launched on slave
+Gateway JVM's should not be launched on slave,Gateway JVM should ask for less than SPARK_MEM memory
+Gateway JVM should ask for less than SPARK_MEM memory,Abbreviation in SPARK_MEM but not in SPARK_WORKER_MEMORY
+Abbreviation in SPARK_MEM but not in SPARK_WORKER_MEMORY,PySpark should not collect results through local filesystem
+PySpark should not collect results through local filesystem,Add an example that does a roll-up on log data
+Add an example that does a roll-up on log data,Have a DSL or other language support for OLAP expressions
+broadcast hangs spark cluster,Optimize hashtables used in Spark
+Optimize hashtables used in Spark,Memoize results of getPreferredLocations
+Spark 0.7 with Hadoop 1.0 does not work with current AMI's HDFS installation,Move downloads links on Spark website away from GitHub
+Move downloads links on Spark website away from GitHub,Add an environment variable to launch PySpark with ipython
+Add an environment variable to launch PySpark with ipython,Port FT heartbeat and fixes from 0.6 branch to master
+Port FT heartbeat and fixes from 0.6 branch to master,Use separate SPARK_DAEMON_MEMORY setting in Windows run script too
+Use separate SPARK_DAEMON_MEMORY setting in Windows run script too,Task crashed when I do spark stress test
+Task crashed when I do spark stress test,Task will crash when setting SPARK_WORKER_CORES> 128
+Task will crash when setting SPARK_WORKER_CORES> 128,Stack overflow when running pagerank more than 10000 iterators
+Stack overflow when running pagerank more than 10000 iterators,Infinite recursion in doCheckpoint when running Bagel
+Infinite recursion in doCheckpoint when running Bagel,spark-shell doesn't start in 0.6.2
+spark-shell doesn't start in 0.6.2,Let deploy scripts set alternate conf; work directories
+[pyspark] operator.getattr not serialized,Exponential recursion in getPreferredLocations
+sortByKey(ascending: Boolean) ignores ascending parameter,RDD should be covariant in T
+"Spark Standalone Mode is leaving a java process ""spark.executor.StandaloneExecutorBackend"" open on Windows",Add example of reading from HBase
+Add example of reading from HBase,Add example of reading from Cassandra
+Add example of reading from Cassandra,Wrong SPARK_MEM setting with different EC2 master and worker machine types
+Wrong SPARK_MEM setting with different EC2 master and worker machine types,All PairRDDFunctions should accept JFunction (not Function)
+All PairRDDFunctions should accept JFunction (not Function),KafkaWordCount example crashes with java.lang.ArrayIndexOutOfBoundsException in CheckpointRDD.scala
+KafkaWordCount example crashes with java.lang.ArrayIndexOutOfBoundsException in CheckpointRDD.scala,ConnectionManager sometimes cannot detect loss of sending connections
+ConnectionManager sometimes cannot detect loss of sending connections,Implement sortByKey() in PySpark
+Implement sortByKey() in PySpark,Failures in block manager put leads to task hanging
+Failures in block manager put leads to task hanging,Port more of the Scala example programs to Java
+Port more of the Scala example programs to Java,add a JobLogger for Spark
+add a JobLogger for Spark,Dropping a block reports 0 bytes
+Dropping a block reports 0 bytes,Remove dependency on Twitter4J repository
+Remove dependency on Twitter4J repository,Spark Streaming 0.7.0: ArrayIndexOutOfBoundsException in KafkaWordCount Example
+Kafka OutOfMemoryError,Broken link in quick start guide
+Broken link in quick start guide,"Link to YARN document broken in ""Launching Spark on YARN"" doc"
+"Link to YARN document broken in ""Launching Spark on YARN"" doc",Add documentation for using Maven to build Spark using
+Add documentation for using Maven to build Spark using,Unit tests fail out of the box
+Unit tests fail out of the box,Refactor Programming Guides in Documentation
+Refactor Programming Guides in Documentation,NPE when performing action during transformation
+NPE when performing action during transformation,Statically guarantee serialization will succeed
+Statically guarantee serialization will succeed,Fix remaining deprecation warnings
+Fix remaining deprecation warnings,"Prefix current Spark package names with ""org.spark-project."""
+"Prefix current Spark package names with ""org.spark-project.""",Upgrade from Scala 2.9.2 to 2.9.3
+Upgrade from Scala 2.9.2 to 2.9.3,Have Akka logging enabled by default for standalone daemons
+Have Akka logging enabled by default for standalone daemons,Ran out of disk space on EC2 master due to Ganglia logs
+Ran out of disk space on EC2 master due to Ganglia logs,Possible bugs in zip() transformation
+Possible bugs in zip() transformation,Various improvements to Spark EC2 Scripts
+Various improvements to Spark EC2 Scripts,Automatically infer AMI ids based on Region; HVM/Non-HVM etc.
+Automatically infer AMI ids based on Region; HVM/Non-HVM etc.,Closures not always serialized at capture time
+Closures not always serialized at capture time,Unit testing failure
+Unit testing failure,CheckpointRDD with zero partitions test failure
+Recomputation of RDDs may result in duplicated accumulator updates,Add documentation on use of accumulators in lazy transformation
+Add documentation on use of accumulators in lazy transformation,Adjust default timeouts to be more sane
+Adjust default timeouts to be more sane,memory leak in KryoSerializer
+memory leak in KryoSerializer,Killing tasks in spark
+Silence expected exceptions for unit tests,Spark should detect and squash nonserializable exceptions
+Spark should detect and squash nonserializable exceptions,Have quickstart standalone read README instead of log file
+Have quickstart standalone read README instead of log file,Spark block manager UI has bug when enabling Spark Streaming
+Spark block manager UI has bug when enabling Spark Streaming,DiskStore should use > 8kB buffer when doing writes
+DiskStore should use > 8kB buffer when doing writes,Task Metrics should not employ per-record timing by default
+Task Metrics should not employ per-record timing by default,An Akka-cluster based masterless standalone mode for Spark.
+An Akka-cluster based masterless standalone mode for Spark.,BlockManagerUI with no RDD: java.lang.UnsupportedOperationException: empty.reduceLeft
+BlockManagerUI with no RDD: java.lang.UnsupportedOperationException: empty.reduceLeft,Document Scala environment configuration when Scala is installed from RPM
+Document Scala environment configuration when Scala is installed from RPM,Automatically Use Avro Serialization for Avro Objects
+Automatically Use Avro Serialization for Avro Objects,Throw an exception on slaves if a message is sent that is larger than akka's max frame size
+Throw an exception on slaves if a message is sent that is larger than akka's max frame size,Add documentation page describing interoperability with other software (e.g. HBase; JDBC; Kafka; etc.)
+Add documentation page describing interoperability with other software (e.g. HBase; JDBC; Kafka; etc.),spark-ec2 fails to detect cluster after ssh error during launch
+spark-ec2 fails to detect cluster after ssh error during launch,LocalSparkContext should be included in Spark JAR
+Consolidate shuffle files,CoalescedRDD should maximize locality
+CoalescedRDD should maximize locality,ClusterSchedulerSuite unit test will failed in some scenarios
+ClusterSchedulerSuite unit test will failed in some scenarios,Multiple Spark Contexts active in a single Spark Context
+Kryo serialization failing - MLbase,JAR file appears corrupt to workers. - MLbase
+JAR file appears corrupt to workers. - MLbase,Deserialization Exception partway into long running job with Netty - MLbase
+Deserialization Exception partway into long running job with Netty - MLbase,ALS scalability for MLbase
+ALS scalability for MLbase,Change how we track AMI ids in the EC2 scripts
+Change how we track AMI ids in the EC2 scripts,Include a simple PageRank example in Spark
+Include a simple PageRank example in Spark,Print a nicer error message when incompatible Spark binaries try to talk
+The simple tutorial doesn't say anything about including the Spark jar or the Spark codepath,Built-in support for saving with compression
+Built-in support for saving with compression,Fix SPARK_EXAMPLES_JAR in 0.7.2
+Fix SPARK_EXAMPLES_JAR in 0.7.2,Test suite should run Spark example programs
+Test suite should run Spark example programs,Add executor info for the task completed message
+Add executor info for the task completed message,Standardize web ui port
+Standardize web ui port,Fail a task when the remote block it is fetching is not serializable
+Fail a task when the remote block it is fetching is not serializable,block manager UI should contain the locations for each RDD block
+block manager UI should contain the locations for each RDD block,Extend and Consolidate Spark Web UI
+Extend and Consolidate Spark Web UI,Throw a more meaning message when SparkContext cannot connect to the master
+Throw a more meaning message when SparkContext cannot connect to the master,groupByKey should disable map side combine
+groupByKey should disable map side combine,Add fair scheduler pool information UI similar with hadoop
+Add fair scheduler pool information UI similar with hadoop,cogroup should also disable map side combine by default
+cogroup should also disable map side combine by default,Support adding jars to Spark shell
+Support adding jars to Spark shell,spark.util.AkkaUtils not usable out of spark package
+spark.util.AkkaUtils not usable out of spark package,run script should try java executable from JAVA_HOME first
+run script should try java executable from JAVA_HOME first,Monitoring and logging improvement
+Monitoring and logging improvement,stdout log should contain the command to launch the worker JVM
+stdout log should contain the command to launch the worker JVM,"Log the temp directory path when Spark says ""Failed to create temp directory"""
+"Log the temp directory path when Spark says ""Failed to create temp directory""",Multiple versions of ASM being put on classpath
+Multiple versions of ASM being put on classpath,Web UI should report whether a job/task has failed
+Web UI should report whether a job/task has failed,"foldByKey does not clone the ""zero value"" for each key; leading to overwriting"
+"foldByKey does not clone the ""zero value"" for each key; leading to overwriting",ClosureCleaner not invoked on most PairRDDFunctions
+ClosureCleaner not invoked on most PairRDDFunctions,Clean up old work directories in standalone worker
+Add EC2 Script Option to Push EC2 Credentials to Spark Nodes,Add spark metrics system
+Add spark metrics system,ApplicationRemoved message shouldn't be sent to terminated application driver actor
+ApplicationRemoved message shouldn't be sent to terminated application driver actor,Implement the reregistered() callback in MesosScheduler to support master failover
+Implement the reregistered() callback in MesosScheduler to support master failover,add DenseVector and SparseVector to mllib; and replace all Array[Double] with Vectors
+PairRDDFunctions should expect Product2 instead of Tuple2,DAGScheduler doesn't release ActiveJob inside idToActiveJob
+DAGScheduler doesn't release ActiveJob inside idToActiveJob,Remove sleep() in ClusterScheduler.stop
+Remove sleep() in ClusterScheduler.stop,Numerous tests failing in maven build
+Numerous tests failing in maven build,Jobs are always marked as SUCCEEDED even it's actually failed on Yarn.
+Jobs are always marked as SUCCEEDED even it's actually failed on Yarn.,ML failures if libfortran is not installed
+ML failures if libfortran is not installed,AMI: ami-530f7a3a and Mesos
+AMI: ami-530f7a3a and Mesos,Windows versions of the deploy scripts
+Windows versions of the deploy scripts,Improve Quickstart Docs to Make Full Deployment More Clear
+Improve Quickstart Docs to Make Full Deployment More Clear,Time columns in web UI tables don't sort properly
+Time columns in web UI tables don't sort properly,Link to job UI from standalone deploy cluster web UI
+Link to job UI from standalone deploy cluster web UI,Open ports 33000-33010 on EC2 clusters for accessing job UI
+Open ports 33000-33010 on EC2 clusters for accessing job UI,Show task status in the Stage Details table on job UI
+Show task status in the Stage Details table on job UI,When determining the Spark method for a stage or RDD; look only in spark.* classes
+When determining the Spark method for a stage or RDD; look only in spark.* classes,Show application name in HTML page titles on job web UI
+Show application name in HTML page titles on job web UI,Show totals for shuffle data and CPU time in Stage pages of UI
+Show totals for shuffle data and CPU time in Stage pages of UI,"Add an ""executors"" tab to job UI that shows executor stats"
+"Add an ""executors"" tab to job UI that shows executor stats",Give newly registered apps a set of executors right away
+Give newly registered apps a set of executors right away,Ensure thread safety of Spark UI
+Ensure thread safety of Spark UI,Job UI should show running tasks
+Job UI should show running tasks,Netty shuffle creates a lot of open file handles
+Netty shuffle creates a lot of open file handles,Poor locality in master due to ClusterScheduler changes
+Poor locality in master due to ClusterScheduler changes,Result stages should be named after the action that invoked them
+Result stages should be named after the action that invoked them,PySpark's parallelize() should batch objects after partitioning (instead of before)
+PySpark's parallelize() should batch objects after partitioning (instead of before),Add Documentation Page for Building and Deploying with a CDH/HDP Cluster
+Add Documentation Page for Building and Deploying with a CDH/HDP Cluster,Consistently invoke bash with /usr/bin/env bash in scripts
+Consistently invoke bash with /usr/bin/env bash in scripts,Design Spark Job Server
+Design Spark Job Server,netty: ChannelInboundByteHandlerAdapter no longer exist in 4.0.3.Final
+netty: ChannelInboundByteHandlerAdapter no longer exist in 4.0.3.Final,Use Bootstrap progress bars in web UI
+Use Bootstrap progress bars in web UI,Driver program should not put a block in memory
+Driver program should not put a block in memory,defaultMinSplits can't be set higher than 2
+defaultMinSplits can't be set higher than 2,spark.default.parallelism's default is inconsistent across scheduler backends
+spark.default.parallelism's default is inconsistent across scheduler backends,Make less copies of blocks during remote reads
+Make less copies of blocks during remote reads,DoubleRDDFunctions.sampleStdev() actually computes regular stdev()
+DoubleRDDFunctions.sampleStdev() actually computes regular stdev(),fold(); reduce(); collect() always attempt to use java serialization
+fold(); reduce(); collect() always attempt to use java serialization,MAX_TASK_FAILURES not configurable
+MAX_TASK_FAILURES not configurable,Clean up web UI page headers
+Clean up web UI page headers,scheduler shouldn't hang if a task contains unserializable objects in its closure
+scheduler shouldn't hang if a task contains unserializable objects in its closure,Annotate developer and experimental API's [Core]
+Annotate developer and experimental API's [Core],Move certain classes into more appropriate packages
+Move certain classes into more appropriate packages,PySpark should set worker PYTHONPATH from SPARK_HOME instead of inheriting it from the master
+PySpark should set worker PYTHONPATH from SPARK_HOME instead of inheriting it from the master,"Web UI's ""Application Detail UI"" link may use internal EC2 hostname"
+"Web UI's ""Application Detail UI"" link may use internal EC2 hostname",TaskMetrics should report compressed (not uncompressed) shuffle read bytes.
+TaskMetrics should report compressed (not uncompressed) shuffle read bytes.,RDD$parallelize() should use object serializer (not closure serializer) for collection objects
+RDD$parallelize() should use object serializer (not closure serializer) for collection objects,ResultTask's serialization forget to handle generation
+Add DoubleRDDFunctions methods to PySpark,Bug in how failed executors are removed by ID from standalone cluster
+Bug in how failed executors are removed by ID from standalone cluster,Exporting 'SPARK_LAUNCH_WITH_SCALA=1' by default in 'spark-shell' causes 'run' in distribution to fail.
+Exporting 'SPARK_LAUNCH_WITH_SCALA=1' by default in 'spark-shell' causes 'run' in distribution to fail.,Use a smaller job UI port than 33000 by default
+Use a smaller job UI port than 33000 by default,Maven assembly is including examples libs and dependencies
+Maven assembly is including examples libs and dependencies,Show time the app has been running for in job UI
+Show time the app has been running for in job UI,Occasional hang on shuffle fetches in master branch
+Occasional hang on shuffle fetches in master branch,Removing an executor can result in a negative number of cores used 
+Removing an executor can result in a negative number of cores used ,Set `spark.job.annotation` and display it in the web UI.
+Set `spark.job.annotation` and display it in the web UI.,Zombie workers
+Zombie workers,The StageTable should sort by submitted time by default
+The StageTable should sort by submitted time by default,Variety of small fixes in the Web UI
+Variety of small fixes in the Web UI,WARN cluster.ClusterScheduler: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered
+WARN cluster.ClusterScheduler: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered,Summary count at the top for active completed stages should link to corresponding sections in page
+Summary count at the top for active completed stages should link to corresponding sections in page,Remove `Stored RDD` Column
+Remove `Stored RDD` Column,"Should say ""Running/Succeeded"" instead of ""Running/Completed"""
+"Should say ""Running/Succeeded"" instead of ""Running/Completed""","For some reason; header says ""Jobs"" in RDD storage page"
+"For some reason; header says ""Jobs"" in RDD storage page","Page should have two titles: ""Data Distribution Summary"" (top part); ""Partitions"" (bottom part)"
+"Page should have two titles: ""Data Distribution Summary"" (top part); ""Partitions"" (bottom part)",Sort all tables by the first column (A -> Z) by default
+Sort all tables by the first column (A -> Z) by default,Move Jobs tab before storage
+Move Jobs tab before storage,"Right-align the ""Application name"" part if possible"
+"Right-align the ""Application name"" part if possible",Remove the executor count from the header
+Remove the executor count from the header,Clicking Spark logo should go to default page
+Clicking Spark logo should go to default page,Task progress should be overlaid with progress bar
+Task progress should be overlaid with progress bar,Could not use spark-ec2 to launch clusters with instance type 'cc1.4xlarge'
+Have Synchronous Versions of `stop-all.sh` and `start-all.sh`,DAGScheduler Exception if A Node is Added then Deleted
+DAGScheduler Exception if A Node is Added then Deleted,Add the equivalent of ADD_JARS to PySpark
+Add the equivalent of ADD_JARS to PySpark,Add the equivalent of ADD_JARS to PySpark
+Add the equivalent of ADD_JARS to PySpark,Add a native Python way to create input RDDs in PySpark
+Add a native Python way to create input RDDs in PySpark,Document fair scheduler
+Retrofit rest of RDD api to use proper serializer type,Jobs UI shows incorrect task count if #tasks is not #partitions
+Jobs UI shows incorrect task count if #tasks is not #partitions,Add a link to the stdout/stderr log on the job level web ui
+Add a link to the stdout/stderr log on the job level web ui,Should revive offer after tasks finish in Mesos fine-grained mode 
+Should revive offer after tasks finish in Mesos fine-grained mode ,Add a way to specify rack topology in Mesos and standalone modes
+Add a way to specify rack topology in Mesos and standalone modes,Have a --wait flag in ./sbin/stop-all.sh that polls until Worker's are finished
+Have a --wait flag in ./sbin/stop-all.sh that polls until Worker's are finished,Disk mounts can be wonky on EC2
+Disk mounts can be wonky on EC2,Install Missing Features on AMI
+Install Missing Features on AMI,java.lang.UnsupportedOperationException: empty.reduceLeft in UI
+java.lang.UnsupportedOperationException: empty.reduceLeft in UI,PySpark does not add Python *.zip and *.egg files to PYTHONPATH
+PySpark does not add Python *.zip and *.egg files to PYTHONPATH,"Typo in slaves file: ""listes"" instead of ""listed"""
+"Typo in slaves file: ""listes"" instead of ""listed""",When built with Hadoop2; spark-shell and examples don't initialize log4j properly
+When built with Hadoop2; spark-shell and examples don't initialize log4j properly,Add documentation for new monitoring capabilities
+Add documentation for new monitoring capabilities,Have link for feedback/suggestions in docs
+Have link for feedback/suggestions in docs,Remove dependency on Scala json library
+Remove dependency on Scala json library,unit test to validate various Spark json output
+unit test to validate various Spark json output,PySpark shell should capture ctrl-c to prevent users from accidentally killing the Java gateway
+PySpark shell should capture ctrl-c to prevent users from accidentally killing the Java gateway,NullpointerExceptions in InputFormatInfo.computePreferredLocations/SparkHDFSLR 
+NullpointerExceptions in InputFormatInfo.computePreferredLocations/SparkHDFSLR ,mvn package doesn't include yarn in the repl-bin shaded jar
+mvn package doesn't include yarn in the repl-bin shaded jar,Killing jobs on standalone cluster
+Bring back DFS broadcast,Allow multiple parallel commands in spark-shell
+Allow multiple parallel commands in spark-shell,Update Windows launch scripts to use assembly
+Update Windows launch scripts to use assembly,Add docs page for fair scheduler
+Create a docs page on monitoring and metrics,Not all WebUI fields delivered VIA JSON
+Not all WebUI fields delivered VIA JSON,Add a Ganglia sink to Spark Metrics
+Add a Ganglia sink to Spark Metrics,ADD_JARS does not add all classes to classpath in the spark-shell for cluster on Mesos.
+ADD_JARS does not add all classes to classpath in the spark-shell for cluster on Mesos.,Preemptively serialize closures to help users identify non-serializable errors early on
+Preemptively serialize closures to help users identify non-serializable errors early on,Add jets3t dependency to Spark Build
+Add jets3t dependency to Spark Build,Outdated Bagel documentation
+Outdated Bagel documentation,Use coarser grained naming for metrics
+Use coarser grained naming for metrics,"UISuite ""jetty port increases under contention"" fails if startPort is in use"
+"UISuite ""jetty port increases under contention"" fails if startPort is in use",java.lang.AbstractMethodError when using FlatMapFunction from Java
+java.lang.AbstractMethodError when using FlatMapFunction from Java,Inconsistent spark assembly
+Inconsistent spark assembly,Not able to Start/Stop Spark Worker from Remote Machine
+Not able to Start/Stop Spark Worker from Remote Machine,Not able to run Job on  remote machine
+Not able to run Job on  remote machine,How to recover Spark Master in case of machine failure; where Spark Master was running
+How to recover Spark Master in case of machine failure; where Spark Master was running,Add JSON endpoints to SparkUI
+local metrics test has race condition due to new SparkListener architecture,add task serialization footprint (time and size) into TaskMetrics
+add task serialization footprint (time and size) into TaskMetrics,hadoopFile creates RecordReader key and value at the wrong scope
+hadoopFile creates RecordReader key and value at the wrong scope,Support map pruning on sorted (K; V) RDD's
+Support map pruning on sorted (K; V) RDD's,Take stage breakdown functionality and runLocally out of the main event loop in DAGScheduler
+Take stage breakdown functionality and runLocally out of the main event loop in DAGScheduler,log the size of each shuffle block in block manager
+log the size of each shuffle block in block manager,Make RDD implement Scala and Java Iterable interfaces
+Make RDD implement Scala and Java Iterable interfaces,Tidy up the scripts
+Tidy up the scripts,Better Support for Flat/Tabular RDD's
+Better Support for Flat/Tabular RDD's,API docs for Spark/MLLib/Streaming should point to package URL
+API docs for Spark/MLLib/Streaming should point to package URL,hadoop-client dependency should be explained for Scala in addition to Java in quickstart
+hadoop-client dependency should be explained for Scala in addition to Java in quickstart,spark-ec2 launch --resume doesn't re-initialize all modules
+spark-ec2 launch --resume doesn't re-initialize all modules,JSON endpoint URI scheme part (spark://) duplicated
+JSON endpoint URI scheme part (spark://) duplicated,Add Application UI URL to ApplicationInfo Json output
+Add Application UI URL to ApplicationInfo Json output,Update Spark AMI to Python 2.7
+Update Spark AMI to Python 2.7,Bytes columns in web UI tables don't sort properly
+Bytes columns in web UI tables don't sort properly,Nested RDD
+Nested RDD,Allow ec2 scripts to load default options from a json file
+Allow ec2 scripts to load default options from a json file,spark_ec2 script when ssh/scp-ing should pipe UserknowHostFile to /dev/null
+PySpark sample() doesn't work if numpy is installed on master but not on workers,Add support for Unsafe-based serializer in Kryo 2.22
+Add support for Unsafe-based serializer in Kryo 2.22,Deprecate SPARK_MEM
+Deprecate SPARK_MEM,Unicode failing in pyspark - UnicodeEncodeError: 'ascii' codec can't encode character u'\ufffd' in position 440: ordinal not in range(128)
+Unicode failing in pyspark - UnicodeEncodeError: 'ascii' codec can't encode character u'\ufffd' in position 440: ordinal not in range(128),Potential bug with Spark streaming example
+Potential bug with Spark streaming example,Consolidate local scheduler and cluster scheduler
+Consolidate local scheduler and cluster scheduler,Doesn't compile
+Doesn't compile,spark-mllib occasionally throw java.io.IOException (java.io.IOException: Corrupt data: overrun in decompress; input offset 51381; output offset 57509)
+spark-mllib occasionally throw java.io.IOException (java.io.IOException: Corrupt data: overrun in decompress; input offset 51381; output offset 57509),Typo in documentation
+Typo in documentation,Please publish jars for Scala 2.10
+OpenStack Swift Storage Support,Allow user jars to take precedence over Spark jars; if desired
+Allow user jars to take precedence over Spark jars; if desired,Do not directly pass Stage objects to SparkListener
+Do not directly pass Stage objects to SparkListener,Add javadoc and user docs for JobLogger
+Add javadoc and user docs for JobLogger,Do not materialize partitions when DISK_ONLY storage level is used
+Do not materialize partitions when DISK_ONLY storage level is used,Add `coalesce` and `repartition` to the streaming API
+Add `coalesce` and `repartition` to the streaming API,Give example of writing to HBase from Spark Streaming
+Give example of writing to HBase from Spark Streaming,Fix confusing behavior when assembly jars already exist
+Fix confusing behavior when assembly jars already exist,Reduce memory footprint of DiskBlockManager.blockToFileSegmentMap
+Reduce memory footprint of DiskBlockManager.blockToFileSegmentMap,Class path issue in case assembled with specific hadoop version
+Class path issue in case assembled with specific hadoop version,"Move ""Classpath Entries"" in WebUI"
+"Move ""Classpath Entries"" in WebUI",Turn DAGScheduler into an Actor
+Turn DAGScheduler into an Actor,Use faster random number generator for sampling in K-means
+Use faster random number generator for sampling in K-means,Gaussian Mixture Model
+One repeated sampling; and I am not sure if it is correct.,Paritions increase expotentially when doing cartisian product in loop program
+Paritions increase expotentially when doing cartisian product in loop program,The Spark python program for Lasso
+The Spark python program for Lasso,The problem that repeated computation among iterations
+The problem that repeated computation among iterations,When iteration in ALS increases to 10 running in local mode; spark throws out error of StackOverflowError
+Ivy fails to download javax.servlet.orbit dependency,"JobCancellationSuite ""two jobs sharing the same stage"" is broken"
+"JobCancellationSuite ""two jobs sharing the same stage"" is broken",Add a Vector.random() method or make our website examples show something else
+Add a Vector.random() method or make our website examples show something else,debian package contains old version of executable scripts
+debian package contains old version of executable scripts,Races in JobLoggerSuite
+Races in JobLoggerSuite,Investigate the potential for using JDK 8 lambda expressions for the Java/Scala APIs
+Investigate the potential for using JDK 8 lambda expressions for the Java/Scala APIs,Race in DAGSchedulerSuite
+Race in DAGSchedulerSuite,Sometimes DAGScheduler throws NullPointerException 
+Sometimes DAGScheduler throws NullPointerException ,start-slaves.sh uses local path from master on remote slave nodes
+start-slaves.sh uses local path from master on remote slave nodes,In stage UI; add an overview section that shows task stats grouped by executor id
+In stage UI; add an overview section that shows task stats grouped by executor id,Persistent web ui
+PySpark's saveAsTextFile() throws UnicodeEncodeError when saving unicode strings,Link to Confluence wiki from project website / documentation
+Link to Confluence wiki from project website / documentation,"PySpark's ""cannot run multiple SparkContexts at once"" message should give source locations"
+"PySpark's ""cannot run multiple SparkContexts at once"" message should give source locations",Mark fields in RDD class that are not used in workers as @transient to reduce task size
+Mark fields in RDD class that are not used in workers as @transient to reduce task size,error in script spark-0.8.0-incubating/make-distribution.sh
+error in script spark-0.8.0-incubating/make-distribution.sh,Spark Replay Debugger
+Spark Replay Debugger,WikipediaPageRand doesn't work anymore
+WikipediaPageRand doesn't work anymore,Add ZippedRDD / zip to PySpark
+Add ZippedRDD / zip to PySpark,PySpark's cartesian method throws ClassCastException exception
+PySpark's cartesian method throws ClassCastException exception,Add some randomization to scheduler to better balance in-memory partition distributions
+Add some randomization to scheduler to better balance in-memory partition distributions,NullPointerException for single-host setup with S3 URLs
+NullPointerException for single-host setup with S3 URLs,"Seemingly spurious ""Duplicate worker ID"" error messages"
+Typo on Hadoop third-party page,Support external sorting for RDD#sortByKey()
+SPARK_TOOLS_JAR not set if multiple tools jars exists,Support Job Cancellation on Mesos Scheduler
+Support Job Cancellation on Mesos Scheduler,Add job cancellation to PySpark
+Add job cancellation to PySpark,Cannot start workers successfully with hadoop 2.2.0
+Cannot start workers successfully with hadoop 2.2.0,Write PySpark profiling guide
+Write PySpark profiling guide,Executors table in application web ui is wrong
+Executors table in application web ui is wrong,JavaPairRDD.top produces ClassNotFoundException
+JavaPairRDD.top produces ClassNotFoundException,Report call sites of operators in Python
+Report call sites of operators in Python,Implement toString for Python and Java RDDs
+Implement toString for Python and Java RDDs,Don't reuse Writable objects in HadoopRDDs by default
+Improve Support for YARN 2.2,Delete Underlying Blocks When Cleaning Shuffle Meta-Data
+Delete Underlying Blocks When Cleaning Shuffle Meta-Data,Write integration tests for HDFS-based recovery
+Write integration tests for HDFS-based recovery,Support Launching Driver Inside of Standalone Mode
+Support Launching Driver Inside of Standalone Mode,Report More Instrumentation for Task Execution Time in UI
+Report More Instrumentation for Task Execution Time in UI,Crash when running SparkPi example with local-cluster
+Crash when running SparkPi example with local-cluster,Memory leak when reading sequence file and then sorting
+Memory leak when reading sequence file and then sorting,Remove binary artifacts from build
+Remove binary artifacts from build,Spark application is blocked when running on yarn
+Spark application is blocked when running on yarn,PySpark on YARN
+PySpark on YARN,Update Ning compress package to 1.0.0
+Update Ning compress package to 1.0.0,MLlib ALS gets stack overflow with too many iterations
+spark-class2.cmd should change SCALA_VERSION to be 2.10,Provide good default logging if log4j properties is not present
+Provide good default logging if log4j properties is not present,Updated MLlib docs to show how to use it in Python
+Updated MLlib docs to show how to use it in Python,Update all unit tests to use SparkConf instead of system properties
+MatrixFactorizationModel in pyspark throws serialization error,DAGScheduler Exception
+DAGScheduler Exception,Have DEVELOPERS.txt file with documentation for developers
+Visualize the DAG of RDD ,When running examples jar (compiled with maven) logs don't initialize properly
+When running examples jar (compiled with maven) logs don't initialize properly,Set the permgen even if we are calling the users sbt (via SBT_OPTS)
+Set the permgen even if we are calling the users sbt (via SBT_OPTS),take and collect don't work on HadoopRDD
+pyspark RDD take() throws NPE,SparkListener interfaces should not expose internal types/objects
+sortByKey() launches a cluster job when it shouldn't,Add unit tests for kafka streaming
+Add unit tests for kafka streaming,Remove Thread.sleep(5000) from TaskSchedulerImpl
+Remove Thread.sleep(5000) from TaskSchedulerImpl,-XX:+UseCompressedStrings is actually dropped in jdk7
+-XX:+UseCompressedStrings is actually dropped in jdk7,pyspark hangs when parent base file is unavailable
+pyspark hangs when parent base file is unavailable,PySpark using deprecated mapPartitionsWithSplit
+PySpark using deprecated mapPartitionsWithSplit,Standalone cluster should use default spark home if not specified by user
+Standalone cluster should use default spark home if not specified by user,spark-shell automatically set MASTER  fails
+spark-shell automatically set MASTER  fails,spark Window shell script errors regarding shell script location reference
+spark Window shell script errors regarding shell script location reference,unneeded file required when running pyspark program using yarn-client
+unneeded file required when running pyspark program using yarn-client,FileNotFoundException when running simple Spark app on Yarn
+FileNotFoundException when running simple Spark app on Yarn,If Yarn app fails before registering; app master stays around long after
+If Yarn app fails before registering; app master stays around long after,Ask for cores in Yarn container requests 
+Ask for cores in Yarn container requests ,Py4JException on PySpark Cartesian Result
+Py4JException on PySpark Cartesian Result,Use a single mechanism for distributing jars on Yarn
+Use a single mechanism for distributing jars on Yarn,.gitignore is overly aggressive
+.gitignore is overly aggressive,the name of findTaskFromList & findTask in TaskSetManager.scala is confusing
+the name of findTaskFromList & findTask in TaskSetManager.scala is confusing,Add more fields in JsonProtocol and add tests that verify the JSON itself
+Add more fields in JsonProtocol and add tests that verify the JSON itself,In-cluster driver will retry infinitely when failed to start unless the user kill it manually
+In-cluster driver will retry infinitely when failed to start unless the user kill it manually,Collect as Map throws a casting exception when run on a JavaPairRDD object
+Collect as Map throws a casting exception when run on a JavaPairRDD object,ec2-related lines in start-*.sh no longer work 
+ec2-related lines in start-*.sh no longer work ,spark cleans all java broadcast variables when it hits the spark.cleaner.ttl 
+spark cleans all java broadcast variables when it hits the spark.cleaner.ttl ,Pyspark RDD's cannot deal with strings greater than 64K bytes.
+Pyspark RDD's cannot deal with strings greater than 64K bytes.,Default spark logs location in EC2 AMI leads to out-of-disk space pretty soon
+Default spark logs location in EC2 AMI leads to out-of-disk space pretty soon,ExternalAppendOnlyMap Iterator throw no such element on joining two large rdd
+Enable to build behind a proxy.,Ability to disable the spark ui server (unit tests)
+Create spark-site.xml or spark-site.yaml for configuration,spark on yarn - yarn-client mode doesn't always exit properly
+spark on yarn - yarn-client mode doesn't always exit properly,Investigate AnyRefMap
+Investigate AnyRefMap,On Yarn; executors don't doAs as submitting user
+On Yarn; executors don't doAs as submitting user,Spark on Mesos with CDH4.5.0 cannot start the Tasks properly
+Spark on Mesos with CDH4.5.0 cannot start the Tasks properly,Should not require SPARK_YARN_APP_JAR when running on YARN
+Should not require SPARK_YARN_APP_JAR when running on YARN,Get Cassandra support in Spark Core/Spark Cassandra Module
+Get Cassandra support in Spark Core/Spark Cassandra Module,Spark version on Dockerfile does not match release
+Spark version on Dockerfile does not match release,Header comment in Executor incorrectly implies it's not used for YARN
+Header comment in Executor incorrectly implies it's not used for YARN,Remove Fastutil
+Remove Fastutil,Fix Style Errors and Add Scala Style to Spark Build
+Fix Style Errors and Add Scala Style to Spark Build,Now that we submit core requests to YARN; fix usage message in ClientArguments
+Now that we submit core requests to YARN; fix usage message in ClientArguments,JettyUtil is not using host information to start server
+JettyUtil is not using host information to start server,allow Hadoop RDDs to be read w/ a partitioner
+allow Hadoop RDDs to be read w/ a partitioner,Add rdd.intersection(otherRdd) method
+Add rdd.intersection(otherRdd) method,Add .sortBy(f) method on RDD
+Add .sortBy(f) method on RDD,Make it possible to use cluster's Hadoop jars when running against YARN
+Make it possible to use cluster's Hadoop jars when running against YARN,PySpark runs out of memory with large broadcast variables
+PySpark runs out of memory with large broadcast variables,Improve Developer Documentation
+Worker.scala should kill drivers in method postStop(),Provide binary compatibility in Spark 1.X releases
+Provide binary compatibility in Spark 1.X releases,Add check for JIRA ticket in the Github pull request title/summary with CI
+Add check for JIRA ticket in the Github pull request title/summary with CI,Tidy logging strategy and use of log4j
+Use binary search for RangePartitioner when there is more than 1000 partitions,GitHub PR squasher has bad titles
+GitHub PR squasher has bad titles,JavaPairRDD as Object File
+JavaPairRDD as Object File,Fix simple doc typo in Spark Streaming Custom Receiver
+Fix simple doc typo in Spark Streaming Custom Receiver,Adding zipWithIndex and zipWithUniqueId to RDD
+Adding zipWithIndex and zipWithUniqueId to RDD,Highlighted codes are not displayed properly in docs
+Highlighted codes are not displayed properly in docs,Replace lift-json with json4s-jackson
+Replace lift-json with json4s-jackson,EC2 scripts should allow mounting as XFS or EXT4
+EC2 scripts should allow mounting as XFS or EXT4,ZK PersistenceEngine does not respect zookeeper dir
+ZK PersistenceEngine does not respect zookeeper dir,Allow inferring number of cores with local[*]
+Allow inferring number of cores with local[*],Use Curator for ZK interaction in standalone cluster
+Use Curator for ZK interaction in standalone cluster,Build fail
+Build fail,Fix most build warnings
+Fix most build warnings,Fix Jenkins pull request builder for branch-0.9 (scalastyle command not found)
+Fix Jenkins pull request builder for branch-0.9 (scalastyle command not found),Some corner case during HA master switching?
+Separate file for traceback and callsite related functions,Create a script for running tests
+Create a script for running tests,ADD_JARS regression in Spark 0.9.0
+ADD_JARS regression in Spark 0.9.0,spark-shell should print help information about parameters and should allow user to configure exe memory
+spark-shell should print help information about parameters and should allow user to configure exe memory,Cloudpickle does not work correctly for some methods that use a splat
+SparkContext should not read SPARK_MEM to set memory usage of executors,API Stability in Spark 1.X (Umbrella)
+API Stability in Spark 1.X (Umbrella),Enforce Binary Compatibility in Spark Build
+Enforce Binary Compatibility in Spark Build,Ensure all public methods return explicit types
+Add Scalastyle Plug-in For Spaces after Comments,ConcurrentModificationException
+Cleanup and document ClassTag stuff in Java API,Add a new small files input for MLlib; which will return an RDD[(fileName; content)]
+Add a new small files input for MLlib; which will return an RDD[(fileName; content)],saveAsTextFile shouldn't clobber by default
+saveAsTextFile shouldn't clobber by default,Umbrella for hardening Spark on YARN
+Umbrella for hardening Spark on YARN,Create a saveAsNewAPIHadoopDataset method
+Create a saveAsNewAPIHadoopDataset method,Garbage collect RDD information inside of Spark
+Garbage collect RDD information inside of Spark,Worker should not block while killing executors
+Worker should not block while killing executors,config.yml has an error version number
+config.yml has an error version number,check key name and identity file before launch a cluster
+check key name and identity file before launch a cluster,Add shutdown hook on executor stop to stop running tasks
+Add shutdown hook on executor stop to stop running tasks,saveAsNewAPIHadoopFile throws NPE with TableOutputFormat
+saveAsNewAPIHadoopFile throws NPE with TableOutputFormat,wrong API docs for pyspark map function
+wrong API docs for pyspark map function,Clean up and clarify use of SPARK_HOME
+Clean up and clarify use of SPARK_HOME,URL Validation Throws Error for HDFS URL's
+URL Validation Throws Error for HDFS URL's,When spark.akka.frameSize > 10; task results bigger than 10MiB block execution
+When spark.akka.frameSize > 10; task results bigger than 10MiB block execution,External Spilling Bug - hash collision causes NoSuchElementException
+Patch to allow PySpark to use existing JVM and Gateway,Better error message when python worker process dies
+Better error message when python worker process dies,The spark-shell will fail to start when Spark is deployed using the tar.gz file built by ./make-distribution.
+The spark-shell will fail to start when Spark is deployed using the tar.gz file built by ./make-distribution.,Update accumulator docs
+Update accumulator docs,Executor state shows as KILLED even the application is finished normally
+Make examples and assembly jar naming consistent between maven/sbt,Send all dependency logging through slf4j
+Only add avro if the build is for Hadoop 0.23.X and SPARK_YARN is set,Collect the RDD and send to each partition to form a new RDD
+Collect the RDD and send to each partition to form a new RDD,saveAsNewAPIHadoopFile throws java.lang.InstantiationException all the time
+saveAsNewAPIHadoopFile throws java.lang.InstantiationException all the time,Infinite NullPointerException failures due to a null in map output locations
+Infinite NullPointerException failures due to a null in map output locations,The maven build error for Spark Examples
+The maven build error for Spark Examples,spark-submit script for running compiled binaries
+spark-submit script for running compiled binaries,Add saveAsHBase to PairRDDFunctions
+hadoop task properties not set while using InputFormat,use a predefined seed when seed is zero in XORShiftRandom
+use a predefined seed when seed is zero in XORShiftRandom,Clean up project documentation navigation menu
+Clean up project documentation navigation menu,Better document the --args option for yarn-standalone mode
+Better document the --args option for yarn-standalone mode,Persisting Web UI through refactoring the SparkListener interface
+Use Iterable[X] in co-group and group-by signatures,ipython won't run standalone python script
+ipython won't run standalone python script,Anchors broken in latest docs due to bad JavaScript code
+Anchors broken in latest docs due to bad JavaScript code,Fix FaultToleranceTest for Docker 0.8.1
+Fix FaultToleranceTest for Docker 0.8.1,ZK Persistence Engine crashes if stored data has wrong serialVersionUID
+ZK Persistence Engine crashes if stored data has wrong serialVersionUID,Spark 0.9.0 does not work with Hadoop / HDFS
+Spark 0.9.0 does not work with Hadoop / HDFS,APIs like saveAsNewAPIHadoopFile are actually a mixture of old and new Hadoop API
+APIs like saveAsNewAPIHadoopFile are actually a mixture of old and new Hadoop API,Remove references to ClusterScheduler
+Remove references to ClusterScheduler,Parallelize Task Serialization
+Allow adding jars on app submission; outside of code,ClusterSchedulerSuite (soon to be TaskSchedulerImplSuite) does not actually test the ClusterScheduler/TaskSchedulerImpl
+ClusterSchedulerSuite (soon to be TaskSchedulerImplSuite) does not actually test the ClusterScheduler/TaskSchedulerImpl,Run Apache RAT In SBT Build to Catch License Errors
+Run Apache RAT In SBT Build to Catch License Errors,Memory mapping with many small blocks can cause JVM allocation failures
+Memory mapping with many small blocks can cause JVM allocation failures,Vagrant to setup Spark cluster locally
+Vagrant to setup Spark cluster locally,spark-project.org still goes to http://spark.incubator.apache.org/
+spark-project.org still goes to http://spark.incubator.apache.org/,Suggestions for exception handling (avoid potential bugs)
+Bad partitioners can cause Spark to hang,repo location in create_release script out of date
+repo location in create_release script out of date,dev merge_spark_pr.py still references incubator-spark
+dev merge_spark_pr.py still references incubator-spark,ArrayStoreException on mapping RDD on cluster
+Clean up and document use of SparkEnv,Allow spark-ec2 to login to a cluster with 0 slaves
+Allow spark-ec2 to login to a cluster with 0 slaves,L-BFGS Optimizer
+L-BFGS Optimizer,Fix flaky RateLimitedOutputStreamSuite
+Fix flaky RateLimitedOutputStreamSuite,Add Shortest-path computations to graphx.lib
+Deprecate RDD.toArray,Add saveAsObjectFile and SparkContext.objectFile in Python
+Add saveAsObjectFile and SparkContext.objectFile in Python,Add top() and takeOrdered() to PySpark
+Add top() and takeOrdered() to PySpark,Miscellaneous missing PySpark methods
+Miscellaneous missing PySpark methods,Deprecate RDD.reduceByKeyToDriver
+Deprecate RDD.reduceByKeyToDriver,leftover vpc_id may block the creation of new ec2 cluster
+leftover vpc_id may block the creation of new ec2 cluster,Remove metrics-ganglia from default build due to LGPL issue
+Remove metrics-ganglia from default build due to LGPL issue,Add foldByKey to PySpark
+Add foldByKey to PySpark,Add countApproxDistinctByKey to PySpark
+Add countApproxDistinctByKey to PySpark,Add histogram() to PySpark
+when executor is removed; we should reduce totalCores instead of just freeCores on that executor ,Improve naming of the BlockManager classes
+Improve naming of the BlockManager classes,Improve scala streaming docs
+Improve scala streaming docs,Adding port configuration for HttpFileServer
+Adding port configuration for HttpFileServer,on shutting down a long running job; the cluster does not accept new jobs and gets hung
+on shutting down a long running job; the cluster does not accept new jobs and gets hung,Adding port configuration for HttpBroadcast
+Adding port configuration for HttpBroadcast,Allow SPARK_JAR to be set in system properties
+Allow SPARK_JAR to be set in system properties,missing document about spark.scheduler.revive.interval
+missing document about spark.scheduler.revive.interval,Allow SPARK_YARN_APP_JAR to be set in system properties
+Allow SPARK_YARN_APP_JAR to be set in system properties,Allow to provide a custom persistence engine
+'mvn test' fails out of the box since sbt assembly does not necessarily exist,Sort the configuration parameters in configuration.md
+Sort the configuration parameters in configuration.md,"Inconsistent meaning of ""worker"" in docs"
+"Inconsistent meaning of ""worker"" in docs",Update the distribution tar.gz to include spark-assembly jar
+Update the distribution tar.gz to include spark-assembly jar,"In Spark Programming Guide; ""Master URLs"" should mention yarn-client"
+"In Spark Programming Guide; ""Master URLs"" should mention yarn-client",Enrich the Spark Shell to support additional arguments.
+Enrich the Spark Shell to support additional arguments.,Missing Pyspark methods
+Missing Pyspark methods,GraphX triplets not working properly
+Support authentication between Spark components,Do not initialize log4j if slf4j log4j backend is not being used
+Convert configs to use SparkConf,Around 30 parameters in Spark are used but undocumented and some are having confusing name
+Around 30 parameters in Spark are used but undocumented and some are having confusing name,Inconsistent indendation between pom.xmls
+Inconsistent indendation between pom.xmls,The same-RDD rule for cache replacement is not properly implemented
+The same-RDD rule for cache replacement is not properly implemented,set map_input_file environment variable in PipedRDD
+set map_input_file environment variable in PipedRDD,val variables not available within RDD map on cluster app; are on shell or local
+val variables not available within RDD map on cluster app; are on shell or local,Rename yarn-standalone and fix up docs for running on YARN
+Rename yarn-standalone and fix up docs for running on YARN,Allow pipes tasks to run in different sub-directories
+Allow pipes tasks to run in different sub-directories,Type mismatch in Spark shell when using case class defined in shell
+Make it possible to use unmanaged AM in yarn-client mode,Do not materialize partitions whenever possible in BlockManager
+"Add a ""cancel"" button in the UI for stages",spark-shell on yarn-client race in properly getting hdfs delegation tokens
+spark-shell on yarn-client race in properly getting hdfs delegation tokens,EC2 scripts upload private key
+EC2 scripts upload private key,Clean up callSite/origin/generator
+Clean up callSite/origin/generator,Add python support for  average and other summary satistics
+Add python support for  average and other summary satistics,Make python support for histograms
+after some hours of working the :4040 monitoring UI stops working.,SparkHadoop{MapRed;MapReduce}Util should not use package org.apache.hadoop
+SparkHadoop{MapRed;MapReduce}Util should not use package org.apache.hadoop,Prevent ContextClassLoader of Actor from becoming ClassLoader of Executor
+"In ApplicationMaster; set spark.master system property to ""yarn-cluster""",Support sparse data in MLlib
+Support sparse data in MLlib,loss function error of logistic loss
+loss function error of logistic loss,0-1 labels 
+0-1 labels ,Clustering: Index out of bounds error
+Add proximal gradient updater.,Minibatch SGD with random sampling
+Minibatch SGD with random sampling,Minibatch SGD with disjoint partitions
+Minibatch SGD with disjoint partitions,Principal Component Analysis
+Principal Component Analysis,SVMs (+ regularized variants)
+SVMs (+ regularized variants),Logistic Regression (+ regularized variants)
+Logistic Regression (+ regularized variants),Linear Regression (+ regularized variants)
+Linear Regression (+ regularized variants),Improving Documentation for MLlib
+Improving Documentation for MLlib,ROC AUC and Average Precision for Binary classification models
+ROC AUC and Average Precision for Binary classification models,Import breeze to Spark mllib
+Import breeze to Spark mllib,Diagnostics for Classification&Regression
+Diagnostics for Classification&Regression,confusion matrix
+confusion matrix,train on array (in addition to RDD)
+train on array (in addition to RDD),Enable SparkContext.addJars() to load classes not in CLASSPATH
+Enable SparkContext.addJars() to load classes not in CLASSPATH,DEAD worker should recover automaticly
+maven hadoop 0.23 yarn-alpha build broken,spark on hadoop 0.23 yarn fails to run: java.lang.NoSuchFieldException: DEFAULT_MAPREDUCE_APPLICATION_CLASSPATH
+spark on hadoop 0.23 yarn fails to run: java.lang.NoSuchFieldException: DEFAULT_MAPREDUCE_APPLICATION_CLASSPATH,clean up typos and grammar issues in Spark on YARN page
+clean up typos and grammar issues in Spark on YARN page,DAGScheduler ignores exceptions thrown in handleTaskCompletion
+DAGScheduler ignores exceptions thrown in handleTaskCompletion,Update Jetty to 9
+Implicit ALS is not efficient in computing YtY,User should be able to set a random seed in ALS
+User should be able to set a random seed in ALS,Improve fetching of map output statuses
+Improve fetching of map output statuses,takeSample called on empty RDD never ends
+takeSample called on empty RDD never ends,Support sliding in RDD
+Support sliding in RDD,Add aggregate to python API
+Add aggregate to python API,spark compilation error
+spark compilation error,Log an exception if map output status message exceeds frame size
+Log an exception if map output status message exceeds frame size,Can't read EMR HBase cluster from properly built Cloudera Spark Cluster.
+Can't read EMR HBase cluster from properly built Cloudera Spark Cluster.,Add min max to the stat counter.
+Add min max to the stat counter.,Support some of the RDD double functions on float and int as well.
+Support some of the RDD double functions on float and int as well.,Spark build error with Apache Hadoop(Cloudera CDH4)
+Spark build error with Apache Hadoop(Cloudera CDH4),Cannot create graphx.Graph with no edges
+Cannot create graphx.Graph with no edges,Misleading comments in Spark startup scripts
+Misleading comments in Spark startup scripts,Support for optimizing and executing structured queries
+Support for optimizing and executing structured queries,On YARN; use container-log4j.properties for executors
+On YARN; use container-log4j.properties for executors,Need to load mapred-site.xml for reading mapreduce.application.classpath
+Need to load mapred-site.xml for reading mapreduce.application.classpath,Consolidate; order; and harmonize repository declarations in Maven/SBT builds
+Consolidate; order; and harmonize repository declarations in Maven/SBT builds,Allow user to pass Serializer object instead of class name for shuffle.
+Allow user to pass Serializer object instead of class name for shuffle.,Master web UI and Worker web UI returns a 404 error
+Endless running task when using pyspark with input file containing a long line,RDD.countByValue optimization
+RDD.countByValue optimization,Make RDD locally iterable
+Make RDD locally iterable,faster construction of features with intercept
+faster construction of features with intercept,Docs don't explain how to run Python examples
+Docs don't explain how to run Python examples,Numerical drift in computation of matrix inverse leads to invalid results in ALS
+Numerical drift in computation of matrix inverse leads to invalid results in ALS,Implicit ALS unnecessarily recomputes factor matrices
+Documentation for setting heap sizes across all configurations,Fix 404 not found error in UI introduced in Jetty 9.0 upgrade
+Persist factors in implicit ALS,Add a pip installer for PySpark
+Add a pip installer for PySpark,Adding XOR and AND-NOT operations to spark.util.collection.BitSet
+Adding XOR and AND-NOT operations to spark.util.collection.BitSet,Add Ability to Make Distribution with Tachyon
+Add Ability to Make Distribution with Tachyon,An optimized gradient descent implementation
+An optimized gradient descent implementation,[STREAMING] Annotate developer and experimental API's
+Don't fail job if some local directories are buggy,MLlib v0.9.1 release
+MLlib v0.9.1 release,Add dev scripts to merge PRs and create releases from master to branch-0.9
+Add dev scripts to merge PRs and create releases from master to branch-0.9,Made SPARK_HOME/dev/tests executable
+Made SPARK_HOME/dev/tests executable,Add a Simple History Server for the UI for Yarn / Mesos
+Add a Simple History Server for the UI for Yarn / Mesos,Automatically set the UI persistence directory based on cluster settings
+Automatically set the UI persistence directory based on cluster settings,Improper use of SimpleDateFormat
+Improper use of SimpleDateFormat,"Stage.name return  ""apply at Option.scala:120"""
+"Stage.name return ""apply at Option.scala:120""",Partitioning in ALS
+Partitioning in ALS,Create spark-contrib repo for 1.0
+pyspark hangs after IOError on Executor,Back porting streaming doc updates to 0.9
+Back porting streaming doc updates to 0.9,Make usage of spark-env.sh idempotent
+Make usage of spark-env.sh idempotent,yarn alpha and stable Client calculateAMMemory routines are different
+yarn stable finishApplicationMaster incomplete,improve yarn stable error logging when passing bad arguments
+improve yarn stable error logging when passing bad arguments,PythonAccumulatorParam throws uncaught exception
+PythonAccumulatorParam throws uncaught exception,Link the spark UI to RM ui in yarn-client mode
+Link the spark UI to RM ui in yarn-client mode,In-Memory Columnar Representation for Catalyst
+In-Memory Columnar Representation for Catalyst,Support for reading/writing complex types in Parquet
+Support for reading/writing complex types in Parquet,Case insensitive resolution in HiveContext breaks the ability to access fields with upper case letters
+Case insensitive resolution in HiveContext breaks the ability to access fields with upper case letters,Progress values on Spark UI progress bar wander off-screen
+Progress values on Spark UI progress bar wander off-screen,Make RDDs Covariant
+Remove duplicate partition id checking,making comments of RDD.doCheckpoint consistent with its usage
+making comments of RDD.doCheckpoint consistent with its usage,Clean-up and clarify private vs public fields in MLLib
+Added discretization capability to MLlib.,Job fails with spot instances (due to IllegalStateException: Shutdown in progress)
+Support persisting RDD's directly to Tachyon,no instructions provided for sbt assembly with Hadoop 2.2
+no instructions provided for sbt assembly with Hadoop 2.2,don't use term 'standalone' to refer to a Spark Application
+don't use term 'standalone' to refer to a Spark Application,Add getNumPartitions() method to PySpark RDDs
+Add getNumPartitions() method to PySpark RDDs,sbt assemble-deps no longer works
+Add support for  cross validation to MLLibb,Use map side distinct in collect vertex ids from edges graphx
+Use map side distinct in collect vertex ids from edges graphx,Batch should read based on the batch interval provided in the StreamingContext
+Batch should read based on the batch interval provided in the StreamingContext,Shark- JDBC driver 
+Shark- JDBC driver ,sbt assembly builds hive jar
+sbt assembly builds hive jar,spark on yarn-alpha with mvn on master branch won't build
+Remove use of Commons IO,sbt doesn't work for building Spark programs
+sbt doesn't work for building Spark programs,Alignment of the Spark Shell with Spark Submit.
+Alignment of the Spark Shell with Spark Submit.,The current code effectively ignores spark.task.cpus
+The current code effectively ignores spark.task.cpus,cogroup and groupby should pass an iterator
+Use Guava's top k implementation rather than our custom priority queue,Fix ordering of top() in Python
+Fix ordering of top() in Python,Job hangs with java.io.UTFDataFormatException when reading strings > 65536 bytes. 
+Job hangs with java.io.UTFDataFormatException when reading strings > 65536 bytes. ,Spark UI Should Not Try to Bind to SPARK_PUBLIC_DNS
+Spark UI Should Not Try to Bind to SPARK_PUBLIC_DNS,The maven build error for Spark Tools
+make-distribution.sh's Tachyon support relies on GNU sed,GLM needs to check addIntercept for intercept and weights
+GLM needs to check addIntercept for intercept and weights,Current implementation of Standard Deviation in MLUtils may cause catastrophic cancellation; and loss precision.
+Current implementation of Standard Deviation in MLUtils may cause catastrophic cancellation; and loss precision.,ArrayIndexOutOfBoundsException if graphx.Graph has more edge partitions than node partitions
+ArrayIndexOutOfBoundsException if graphx.Graph has more edge partitions than node partitions,compute_classpath.sh has extra echo which prevents spark-class from working
+compute_classpath.sh has extra echo which prevents spark-class from working,Graceful shutdown of Spark Streaming computation
+Graceful shutdown of Spark Streaming computation,Improve Spark Streaming's Network Receiver and InputDStream API for future stability
+Improve Spark Streaming's Network Receiver and InputDStream API for future stability,Java API for running SQL queries
+Java API for running SQL queries,RDD names should be settable from PySpark
+RDD names should be settable from PySpark,Also increase perm gen / code cache for scalatest when invoked via Maven build
+Also increase perm gen / code cache for scalatest when invoked via Maven build,Reduce Verbosity of QA Scripts
+Reduce Verbosity of QA Scripts,Application web UI garbage collects newest stages instead old ones
+Create Additional Style Rules,Build error: org.eclipse.paho:mqtt-client
+Build error: org.eclipse.paho:mqtt-client,Some Spark Streaming receivers are not restarted when worker fails
+Some Spark Streaming receivers are not restarted when worker fails,Ability to control the data rate in Spark Streaming 
+Ability to control the data rate in Spark Streaming ,Bump Scala version to 2.10.4
+Bump Scala version to 2.10.4,PySpark OOMs without caching
+PySpark OOMs without caching,Scala API docs for top methods
+Scala API docs for top methods,spark on yarn 0.23 using maven doesn't build
+spark on yarn 0.23 using maven doesn't build,Backport SPARK-1210 into 0.9 branch
+Backport SPARK-1210 into 0.9 branch,SHARK error when running in server mode: java.net.BindException: Address already in use
+SHARK error when running in server mode: java.net.BindException: Address already in use,Spark UI's do not bind to localhost interface anymore
+Spark UI's do not bind to localhost interface anymore,spark-shell's repl history is shared with the scala repl
+spark-shell's repl history is shared with the scala repl,YARN ContainerLaunchContext should use cluster's JAVA_HOME
+YARN ContainerLaunchContext should use cluster's JAVA_HOME,Documentation Improvements for Spark 1.0
+Documentation Improvements for Spark 1.0,Improve robustness of spark-submit script
+Improve robustness of spark-submit script,IllegalArgumentException when writing to disk
+Fail to resolve attribute when query with table name as a qualifer in SQLContext,Switch website to the Apache CMS
+Switch website to the Apache CMS,[MLLIB] Annotate developer and experimental API's
+[MLLIB] Annotate developer and experimental API's,[streaming] Add deployment subsection to streaming
+Continuous integrated test should be involved in Spark ecosystem ,SGD implementation is not efficient
+SGD implementation is not efficient,Add Timestamp Support
+Add Timestamp Support,DAGScheduler throws NullPointerException occasionally
+DAGScheduler throws NullPointerException occasionally,Web UI should provide page of showing statistics and stage list for a given job
+DataTypes missing from ScalaReflection,Fix RateLimitedOutputStream Test
+Fix RateLimitedOutputStream Test,The sql function should be consistent between different types of SQLContext
+The sql function should be consistent between different types of SQLContext,NPE when joining Parquet Relations
+NPE when joining Parquet Relations,HiveTableScan is slow
+HiveTableScan is slow,HiveUDF wrappers are slow
+HiveUDF wrappers are slow,HashJoin should stream one relation
+HashJoin should stream one relation,HashAggregate should stream tuples and avoid doing an extra count
+HashAggregate should stream tuples and avoid doing an extra count,Expose in-memory columnar caching for tables.
+Expose in-memory columnar caching for tables.,Compression for In-Memory Columnar storage
+Compression for In-Memory Columnar storage,Python API for running SQL queries
+Python API for running SQL queries,spark-submit script additional cleanup
+spark-submit script additional cleanup,"In the yarn-cluster submitter; rename ""args"" option to ""arg"""
+"In the yarn-cluster submitter; rename ""args"" option to ""arg""",Upgrade Jetty to 8.1.14v20131031
+Build error: org.eclipse.paho:mqtt-client,Calling .cache() on a SchemaRDD should do something more efficient than caching the individual row objects.
+Calling .cache() on a SchemaRDD should do something more efficient than caching the individual row objects.,Add sort-merge based cogroup/joins.
+Add sort-merge based cogroup/joins.,Spark to Shark direct streaming
+Spark to Shark direct streaming,NullPointerException when calling DStream.slice() before StreamingContext.start()
+NullPointerException when calling DStream.slice() before StreamingContext.start(),Spark-SQL: ParquetRelation improvements
+Spark-SQL: ParquetRelation improvements,spark-shell on yarn on spark 0.9 branch doesn't always work with secure hdfs
+spark-shell on yarn on spark 0.9 branch doesn't always work with secure hdfs,Use existing code-path for JSON de/serialization of BlockId
+Use existing code-path for JSON de/serialization of BlockId,Spark Streaming UI
+Spark Streaming UI,Update build plugins;  avoid plugin version warning; centralize versions
+Update build plugins;  avoid plugin version warning; centralize versions,ConcurrentModificationException in hadoop_common exposed by Spark
+Make numPartitions in Exchange configurable,Refactor RDD backed matrices
+Refactor RDD backed matrices,BlockManager cannot transfer blocks larger than 2G in size
+fix computePreferredLocations signature to not depend on underlying implementation,calling system.platform on worker raises IOError
+calling system.platform on worker raises IOError,"Cannot launch jobs on Yarn cluster with ""local:"" scheme in SPARK_JAR"
+"Cannot launch jobs on Yarn cluster with ""local:"" scheme in SPARK_JAR",DAGScheduler has a memory leak for cancelled jobs
+DAGScheduler has a memory leak for cancelled jobs,SparkListeners should be notified when stages are cancelled
+SparkListeners should be notified when stages are cancelled,Remove FindBugs jsr305 dependency
+Remove FindBugs jsr305 dependency,Reason for Stage Failure should be shown in UI
+Reason for Stage Failure should be shown in UI,Spark Streaming's received data is not cleaned up from BlockManagers when not needed any more
+3 more compression algorithms for in-memory columnar storage,Spark on Mesos does not set Thread's context class loader
+Spark on Mesos does not set Thread's context class loader,Non-exported spark-env.sh variables are no longer present in spark-shell
+Non-exported spark-env.sh variables are no longer present in spark-shell,parallel Latent Dirichlet Allocation (LDA) atop of spark in MLlib
+PMML model evaluation support via MLib,EventLogging to HDFS doesn't work properly on yarn
+Modify Spark on Yarn to point to the history server when app finishes,"Flaky Test: ""actor input stream"" test in org.apache.spark.streaming.InputStreamsSuite"
+"Flaky Test: ""actor input stream"" test in org.apache.spark.streaming.InputStreamsSuite",Class not found exception with application launched from sbt 0.13.x
+Class not found exception with application launched from sbt 0.13.x,When using spark.ui.retainedStages=n only the first n stages are kept; not the most recent.
+Disable partial aggregation automatically when reduction factor is low,Parquet messes up stdout and stdin when used in Spark REPL
+Parquet messes up stdout and stdin when used in Spark REPL,Python API for SparkContext.wholeTextFiles
+Python API for SparkContext.wholeTextFiles,Add a minSplits parameter to wholeTextFiles
+Add a minSplits parameter to wholeTextFiles,Add support for SequenceFiles and binary Hadoop InputFormats in PySpark
+Add support for SequenceFiles and binary Hadoop InputFormats in PySpark,Spark on Yarn - spark UI link from resourcemanager is broken
+Spark on Yarn - spark UI link from resourcemanager is broken,Python MLlib's _get_unmangled_rdd should uncache RDDs when training is done
+Python MLlib's _get_unmangled_rdd should uncache RDDs when training is done,Apache parent POM to version 14
+Apache parent POM to version 14,The maven build error for Spark Catalyst
+The maven build error for Spark Catalyst,Make MLlib work on Python 2.6
+Make MLlib work on Python 2.6,Add scripts for launching Spark on Google Compute Engine
+Add scripts for launching Spark on Windows Azure,InsertInto should work on JavaSchemaRDD as well.
+InsertInto should work on JavaSchemaRDD as well.,PySpark can crash Executors if worker.py fails while serializing data
+PySpark can crash Executors if worker.py fails while serializing data,Make MLlib work with NumPy versions older than 1.7
+Make MLlib work with NumPy versions older than 1.7,HQL Examples Don't Work
+HQL Examples Don't Work,MLlib should convert non-float64 NumPy arrays to float64 instead of complaining
+MLlib should convert non-float64 NumPy arrays to float64 instead of complaining,"Spark shell fails to start after ""sbt clean assemble-deps package"""
+Support sparse data in Python MLlib,Allow merging pull requests that have conflicts
+Allow merging pull requests that have conflicts,Potential memory leak in stageIdToExecutorSummaries in JobProgressTracker
+Potential memory leak in stageIdToExecutorSummaries in JobProgressTracker,Upgrade Mesos dependency to 0.17.0
+Make labelParser Java friendly.,Don't assume context class loader is set when creating classes via reflection
+Compression code broke in-memory store,Jenkins should build with Java 6
+Jenkins should build with Java 6,Update RDD.sample() API to make seed parameter optional
+Update RDD.sample() API to make seed parameter optional,Aggregate Scaladocs across projects
+Aggregate Scaladocs across projects,Generate JavaDoc instead of ScalaDoc for Java API
+Generate JavaDoc instead of ScalaDoc for Java API,Compile Spark Core error with Hadoop 0.23.x when not using YARN
+Compile Spark Core error with Hadoop 0.23.x when not using YARN,Add Window function support
+Unable to Access MongoDB GridFS data with Spark using mongo-hadoop API,Update branch-0.9's SBT to 0.13.1 so that it works with Java 8
+compute-classpath.sh should not print error if lib_managed not found,Spark examples should not do a System.exit
+Spark examples should not do a System.exit,Update Java programming guide to explain Java 8 syntax
+Update Java programming guide to explain Java 8 syntax,KEYS file to be added to dist directory
+KEYS file to be added to dist directory,Please delete old releases from mirroring system
+Please delete old releases from mirroring system,Specify the default zone in the EC2 script help
+Specify the default zone in the EC2 script help,Multinomial Logistic Regression Support
+dynamic partition creation not working on cached table,Improve the way Spark on Yarn waits for executors before starting
+PySpark accumulators fail to update when runJob takes serialized/captured closures,Determine which test suites to run based on code changes
+Clean up use of Ordered/Ordering in OrderedRDDFunctions,Change APIs for training algorithms to take optimizer as parameter 
+Change APIs for training algorithms to take optimizer as parameter ,Expose sc.version in PySpark
+Expose sc.version in PySpark,"EventLoggingListener does not work with ""file://"" target dir"
+"EventLoggingListener does not work with ""file://"" target dir",Set operations on SchemaRDDs are needlessly destructive of schema information.
+Set operations on SchemaRDDs are needlessly destructive of schema information.,Support Short-circuit Expression Evaluation
+Support Short-circuit Expression Evaluation,Examples of ML algorithms are using deprecated APIs
+cleanup unnecessary dependency jars in the spark assembly jars,Update MLLib Examples to Use Breeze
+Spark compilation is broken with the latest hadoop-2.4.0 release,Pyspark doesn't check if gateway process launches correctly
+Pyspark doesn't check if gateway process launches correctly,Make StorageLevel.apply() factory methods developer API's
+Make StorageLevel.apply() factory methods developer API's,The hash method used by partitionBy in Pyspark doesn't deal with None correctly.
+The hash method used by partitionBy in Pyspark doesn't deal with None correctly.,Scheduler mode should accept lower-case definitions and have nicer error messages
+Scheduler mode should accept lower-case definitions and have nicer error messages,Use the scala-logging wrapper instead of the directly sfl4j api
+Use the scala-logging wrapper instead of the directly sfl4j api,Worker not  recognize Driver state at standalone mode
+Worker not  recognize Driver state at standalone mode,Go through YARN api used in Spark to make sure we aren't using Private Apis
+Go through YARN api used in Spark to make sure we aren't using Private Apis,Feature selection for high dimensional datasets
+Feature selection for high dimensional datasets,Spark on yarn assembly doesn't include org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+Spark on yarn assembly doesn't include org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter,Drain event logging queue before stopping event logger
+Drain event logging queue before stopping event logger,2GB limit in spark for blocks
+Add the lifecycle interface,Upgrade FlumeInputDStream's FlumeReceiver to support FLUME-1915
+Upgrade FlumeInputDStream's FlumeReceiver to support FLUME-1915,building spark on 2.0.0-cdh4.4.0 failed
+building spark on 2.0.0-cdh4.4.0 failed,Choose classloader consistently inside of Spark codebase
+Add Naive Bayes to MLlib documentation,Potential resource leaks in saveAsHadoopDataset and saveAsNewAPIHadoopDataset
+Potential resource leaks in saveAsHadoopDataset and saveAsNewAPIHadoopDataset,Rename minSplits to minPartitions in public APIs
+Rename minSplits to minPartitions in public APIs,MLlib should warn if you are using an iterative algorithm on non-cached data
+MLlib should warn if you are using an iterative algorithm on non-cached data,Implement AllReduce
+Implement AllReduce,Support multi-model training in MLlib
+Support multi-model training in MLlib,Support record filtering via predicate pushdown in Parquet
+Support record filtering via predicate pushdown in Parquet,Resolve scalac feature warnings during build
+Resolve scalac feature warnings during build,Fix the HistoryServer view acls
+Fix the HistoryServer view acls,Add kerberos support to the HistoryServer
+Add kerberos support to the HistoryServer,maven hadoop-provided profile fails to build
+maven hadoop-provided profile fails to build,running-on-yarn doc should use spark-submit script for examples
+running-on-yarn doc should use spark-submit script for examples,Apache RAT excludes don't work with file path (instead of file name)
+Apache RAT excludes don't work with file path (instead of file name),Hive Dependencies being checked by MIMA
+Hive Dependencies being checked by MIMA,support leftsemijoin for sparkSQL
+support leftsemijoin for sparkSQL,SparkContext.jarOfClass should return Option instead of a sequence
+SparkContext.jarOfClass should return Option instead of a sequence,Spark YARN code isn't checked with Scalastyle and has many style violations
+Spark YARN code isn't checked with Scalastyle and has many style violations,Spark can hang if pyspark tasks fail
+Spark can hang if pyspark tasks fail,Workers continuously produce failing executors
+ add with-hive argument to make-distribution.sh,Assertions in Graph.apply test are never executed
+Assertions in Graph.apply test are never executed,Spark on Yarn: add config option to not include yarn/mapred cluster classpath
+Spark on Yarn: add config option to not include yarn/mapred cluster classpath,Implement Nesterov's accelerated first-order method
+Implement Nesterov's accelerated first-order method,[streaming] Add 0.9 to 1.0 migration guide for streaming receiver
+[streaming] Add 0.9 to 1.0 migration guide for streaming receiver,jblas's DoubleMatrix(double[]) ctor creates garbage; avoid
+jblas's DoubleMatrix(double[]) ctor creates garbage; avoid,Documentation improvements for MLlib 1.0
+Documentation improvements for MLlib 1.0,Spark on Yarn: Add support for user to specify # cores for ApplicationMaster
+Spark on Yarn: Add support for user to specify # cores for ApplicationMaster,Add support for reading from SparkConf
+Add support for reading from SparkConf,add zipWithIndex zipWithUniqueId methods to java api
+add zipWithIndex zipWithUniqueId methods to java api,Add Spark Streaming metrics source for metrics system
+Add Spark Streaming metrics source for metrics system,Update TestUtils.createCompiledClass() API to work with creating class file on different filesystem
+Update TestUtils.createCompiledClass() API to work with creating class file on different filesystem,improve spark sql to support table with more than 22 fields
+improve spark sql to support table with more than 22 fields,Specialized ColumnType for Timestamp
+Standardize process for creating Spark packages,Specialized ColumnTypes for Array; Map and Struct
+Specialized ColumnTypes for Array; Map and Struct,Yarn Client should not call System.exit; should throw exception instead.
+Yarn Client should not call System.exit; should throw exception instead.,Publish nightly snapshots of documentation; maven artifacts; and binary builds
+Spark master doesn't compile against hadoop-common trunk,support minPartitions parameter of wholeTextFiles() in pyspark
+support minPartitions parameter of wholeTextFiles() in pyspark,Assembly Jar with more than 65536 files won't work when compiled on  JDK7 and run on JDK6
+Take character set size into account when compressing in-memory string columns,YARN ClientBase will throw a NPE if there is no YARN application specific classpath.
+YARN ClientBase will throw a NPE if there is no YARN application specific classpath.,improve the readability of code in AkkaUtil 
+improve the readability of code in AkkaUtil ,TaskSetManager'd better not schedule tasks which has no preferred executorId using PROCESS_LOCAL in the first search process
+TaskSetManager'd better not schedule tasks which has no preferred executorId using PROCESS_LOCAL in the first search process,TaskSchedulerImpl should decrease availableCpus by spark.task.cpus not 1
+TaskSchedulerImpl should decrease availableCpus by spark.task.cpus not 1,Running spark driver program from my local machine
+Running spark driver program from my local machine,rootDirs in DiskBlockManagerSuite doesn't get full path from rootDir0; rootDir1
+rootDirs in DiskBlockManagerSuite doesn't get full path from rootDir0; rootDir1,Spark on Yarn: Add option for user to specify additional namenodes to get tokens from
+Spark on Yarn: Add option for user to specify additional namenodes to get tokens from,Support DFS based shuffle in addition to Netty shuffle
+Support DFS based shuffle in addition to Netty shuffle,Streaming UI test can hang indefinitely
+Streaming UI test can hang indefinitely,GraphX should have messageRDD to enable OutOfCore messages
+GraphX should have messageRDD to enable OutOfCore messages,provide option for more restrictive firewall rule in ec2/spark_ec2.py
+The (kill) button in the web UI is visible to everyone.,spark-submit for yarn prints warnings even though calling as expected 
+[streaming] Update custom receiver guide with new Receiver API,Add multiclass classification tree support to MLlib
+Add multiclass classification tree support to MLlib,Add integration with Yarn's Application Timeline Server
+Add integration with Yarn's Application Timeline Server,SparkUI forgets about all persisted RDD's not directly associated with the Stage
+SparkUI forgets about all persisted RDD's not directly associated with the Stage,RDDPage.scala contains RddPage
+RDDPage.scala contains RddPage,Investigate whether we should require keys in PairRDD to be Comparable
+Investigate whether we should require keys in PairRDD to be Comparable,sortByKey requires all data to fit in memory
+Add support for deep decision trees.,Add Random Forest algorithm to MLlib
+Add Random Forest algorithm to MLlib,Add AdaBoost algorithm to Spark MLlib
+Add Partial Random Forest algorithm to MLlib,Add python support to spark-submit script
+Add python support to spark-submit script,Successive creation of spark context fails in pyspark; if the previous initialization of spark context had failed.
+Successive creation of spark context fails in pyspark; if the previous initialization of spark context had failed.,Spark master does not build in sbt
+Spark master does not build in sbt,GraphX performs type comparison incorrectly
+GraphX performs type comparison incorrectly,Support alternating nonnegative least-squares
+Support alternating nonnegative least-squares,Update doc overview page to not mention building if you get a pre-built distro
+Update doc overview page to not mention building if you get a pre-built distro,enable ec2/spark_ec2.py to stop/delete cluster non-interactively
+enable ec2/spark_ec2.py to stop/delete cluster non-interactively,jets3t dep doesn't update properly with newer Hadoop versions
+jets3t dep doesn't update properly with newer Hadoop versions,Set permissions on event log files/directories
+Set permissions on event log files/directories,[MLlib] ALS: Estimate communication and computation costs given a partitioner
+[MLlib] ALS: Estimate communication and computation costs given a partitioner,Add conf dir to CLASSPATH in compute-classpath.sh dependent on whether SPARK_CONF_DIR is set
+PySpark SQL depends on Java 7 only jars,sbt/sbt assembly generates too many local files
+sbt/sbt assembly generates too many local files,Exclude internal catalyst classes from scaladoc; or make them package private
+Exclude internal catalyst classes from scaladoc; or make them package private,Add package-info.java and package.scala files for all packages that appear in docs
+Add package-info.java and package.scala files for all packages that appear in docs,Add JavaScript into Javadoc to turn ::Experimental:: and such into badges
+Spark examples should be changed given spark-submit,Consolidate the Spark Programming Guide with tabs for all languages
+Consolidate the Spark Programming Guide with tabs for all languages,Add language tabs to quick start guide
+Add language tabs to quick start guide,Spark 0.9.0 hangs reading s3
+Spark 0.9.0 hangs reading s3,Spark on Yarn; authentication broken by pr299
+Spark on Yarn; authentication broken by pr299,Class loading issue when using Spark SQL Java API
+Class loading issue when using Spark SQL Java API,UnresolvedException when running JavaSparkSQL example
+UnresolvedException when running JavaSparkSQL example,Uncaught IO exceptions in Pyspark kill Executor
+Uncaught IO exceptions in Pyspark kill Executor,slight modification with regards to sbt/sbt test
+slight modification with regards to sbt/sbt test,ec2/spark_ec2.py should provide option to control number of attempts for ssh operations
+ec2/spark_ec2.py should provide option to control number of attempts for ssh operations,failing tests with master branch 
+failing tests with master branch ,Passing of JAVA_OPTS to YARN on command line
+Passing of JAVA_OPTS to YARN on command line,GraphX mapVertices with KryoSerialization
+GraphX mapVertices with KryoSerialization,Do not require setting of cleaner TTL when creating StreamingContext
+Do not require setting of cleaner TTL when creating StreamingContext,PySpark should distinguish expected IOExceptions from unexpected ones in the worker
+PySpark should distinguish expected IOExceptions from unexpected ones in the worker,Compare Option[Partitioner] and Partitioner directly
+Compare Option[Partitioner] and Partitioner directly,Allow One Flume Avro RPC Server for Each Worker rather than Just One Worker
+Allow One Flume Avro RPC Server for Each Worker rather than Just One Worker,Job cancellation does not interrupt threads
+Job cancellation does not interrupt threads,Use java.util.HashMap.remove by mistake in BlockManagerMasterActor.removeBlockManager
+Use java.util.HashMap.remove by mistake in BlockManagerMasterActor.removeBlockManager,Upgrade Flume dependency to 1.4.0
+Upgrade Flume dependency to 1.4.0,Not robust Lasso causes Infinity on weights and losses
+Not robust Lasso causes Infinity on weights and losses,Fix issues with spark development under windows
+Fix issues with spark development under windows,Fix thread leak in spark
+Fix thread leak in spark,SPARK_JAVA_OPTS and SPARK_YARN_USER_ENV are not getting propagated
+SPARK_JAVA_OPTS and SPARK_YARN_USER_ENV are not getting propagated,"EOFException when file size 0 exists when use sc.sequenceFile[K;V](""path"")"
+"EOFException when file size 0 exists when use sc.sequenceFile[K;V](""path"")",Recommend to use FindBugs
+Recommend to use FindBugs,scala.MatchError executing custom UDTF
+scala.MatchError executing custom UDTF,Old streaming input blocks not removed automatically from the BlockManagers
+Old streaming input blocks not removed automatically from the BlockManagers,Add status command to Spark Daemons(master/worker)
+Add status command to Spark Daemons(master/worker),Cleaning up MLlib APIs and guide
+Cleaning up MLlib APIs and guide,Remove VectorRDDs
+Remove VectorRDDs,Re-arrange public methods in evaluation.
+Re-arrange public methods in evaluation.,Add a version of reduceByKey that takes the Partitioner as a second argument
+Add a version of reduceByKey that takes the Partitioner as a second argument,Mark main methods experimental
+Allow to use intercept in Ridge and Lasso,"flaky ""recovery with file input stream"" test in streaming.CheckpointSuite"
+"flaky ""recovery with file input stream"" test in streaming.CheckpointSuite",CacheManager#getOrCompute() does not return an InterruptibleIterator
+CacheManager#getOrCompute() does not return an InterruptibleIterator,Cancelled jobs can lead to corrupted cached partitions
+Cancelled jobs can lead to corrupted cached partitions,Flaky test: o.a.s.streaming.StreamingContextSuite
+Flaky test: o.a.s.streaming.StreamingContextSuite,Couldn't run spark-submit with yarn cluster mode when built with assemble-deps
+Couldn't run spark-submit with yarn cluster mode when built with assemble-deps,Improve mllib.linalg.Vector
+Improve mllib.linalg.Vector,spark-submit needs `--arg` for every application parameter
+spark-submit needs `--arg` for every application parameter,Remove use of octal literals; deprecated in Scala 2.10 / removed in 2.11
+Remove use of octal literals; deprecated in Scala 2.10 / removed in 2.11,Cast.nullable should be true when cast from StringType to NumericType/TimestampType
+Cast.nullable should be true when cast from StringType to NumericType/TimestampType,Executor fails to start when Command.extraJavaOptions contains multiple Java options
+Cast from BooleanType to NumericType should use exact type value.,Incorrect initialization order in AppendOnlyMap
+Incorrect initialization order in AppendOnlyMap,Potential resource leaks in Utils.copyStream and Utils.offsetBytes
+Potential resource leaks in Utils.copyStream and Utils.offsetBytes,Difficulty starting up cluster on Amazon EC2
+Difficulty starting up cluster on Amazon EC2,Move Mesos protobufs out of TaskState
+Move Mesos protobufs out of TaskState,Very subtle race condition in SparkListenerSuite
+Very subtle race condition in SparkListenerSuite,input file not found issue 
+input file not found issue ,Exposing receiver state and errors in the streaming UI
+Exposing receiver state and errors in the streaming UI,Socket receiver not restarting properly when connection is refused
+Socket receiver not restarting properly when connection is refused,Spark shell should use spark-submit
+Spark shell should use spark-submit,Uncaught exception from Akka scheduler
+Uncaught exception from Akka scheduler,Update Chill to 0.3.6
+Update Chill to 0.3.6,Expose input split(s) accessed by a task in UI or logs
+Expose input split(s) accessed by a task in UI or logs,SPARK-1623. Broadcast cleaner should use getCanonicalPath when deleting files by name
+SPARK-1623. Broadcast cleaner should use getCanonicalPath when deleting files by name,addShutdownHook in DiskBlockManager Doesn't work the way it is supposed to work
+addShutdownHook in DiskBlockManager Doesn't work the way it is supposed to work,Ensure all legacy YARN options are supported with spark-submit
+Ensure all legacy YARN options are supported with spark-submit,Update Spark YARN docs to use spark-submit
+Missing hashCode methods in Partitioner subclasses,Spark should inline use of commons-lang `SystemUtils.IS_OS_WINDOWS` 
+Spark should inline use of commons-lang `SystemUtils.IS_OS_WINDOWS` ,PythonRDDs don't handle nulls gracefully
+PythonRDDs don't handle nulls gracefully,App name set in SparkConf (not in JVM properties) not respected by Yarn backend
+App name set in SparkConf (not in JVM properties) not respected by Yarn backend,Avoid boxing in ExternalAppendOnlyMap compares
+Avoid boxing in ExternalAppendOnlyMap compares,Various examples for Scala and Java custom receiver; etc. 
+Various examples for Scala and Java custom receiver; etc. ,Java API docs contain test cases
+Java API docs contain test cases,Java API docs do not show annotation.
+Clean up examples for 1.0,"Executors fail to come up if ""spark.executor.extraJavaOptions"" is set "
+Some tidying of Spark on YARN code,In yarn-client mode; pass preferred node locations to AM
+In yarn-client mode; pass preferred node locations to AM,Spark submit warning tells the user to use spark-submit
+Upgrade FlumeInputDStream's FlumeReceiver to support FLUME-2083,"hql(""show tables"") throw an exception"
+"hql(""show tables"") throw an exception",The org.datanucleus:*  should not be packaged into spark-assembly-*.jar
+The org.datanucleus:*  should not be packaged into spark-assembly-*.jar,Improve Spark Streaming compatibility with Flume
+Improve Spark Streaming compatibility with Flume,ALS micro-optimisation
+ALS micro-optimisation,Prevent data loss when Streaming driver goes down
+Support closing JIRA's as part of merge script,Figure out Nullability semantics for Array elements and Map values
+Figure out Nullability semantics for Array elements and Map values,Correctly identify maven project version in distribution script
+Correctly identify maven project version in distribution script,Delete existing (tar) deployment directory in distribution script
+Delete existing (tar) deployment directory in distribution script,Fixes and improvements for spark-submit/configs
+Spark submit should not use SPARK_CLASSPATH internally (creates warnings),Spark shell doesn't correctly pass quoted arguments to spark-submit
+Spark shell doesn't correctly pass quoted arguments to spark-submit,In naive Bayes; store conditional probabilities distributively.
+In naive Bayes; store conditional probabilities distributively.,Potential resource leak in HttpBroadcast; SparkSubmitArguments; FileSystemPersistenceEngine and DiskStore
+Potential resource leak in HttpBroadcast; SparkSubmitArguments; FileSystemPersistenceEngine and DiskStore,Spark submit should fail gracefully if YARN support not enabled
+Spark submit should fail gracefully if YARN support not enabled,Correctly identify if maven is installed and working
+Correctly identify if maven is installed and working,improvements spark-submit usage
+improvements spark-submit usage,Centralize the definition of property names and default values
+Centralize the definition of property names and default values,the result of querying table created with RegexSerDe is all null
+the result of querying table created with RegexSerDe is all null,PySpark fails if python class is used as a data container
+PySpark fails if python class is used as a data container,Spark Streaming docs code has several small errors
+Spark Streaming docs code has several small errors,spark-submit --name doesn't work in yarn-client mode
+document examples,Jobs never finish successfully once bucket file missing occurred
+Jobs never finish successfully once bucket file missing occurred,Add implicit preference as an option to examples/MovieLensALS
+Add implicit preference as an option to examples/MovieLensALS,SQLContext.cacheTable() should be idempotent
+SQLContext.cacheTable() should be idempotent,PySpark Fails to Create SparkContext Due To Debugging Options in conf/java-opts
+PySpark Fails to Create SparkContext Due To Debugging Options in conf/java-opts,Cached tables should follow write-through policy
+Cached tables should follow write-through policy,Support separate partitioners (and numbers of partitions) for users and products
+Support separate partitioners (and numbers of partitions) for users and products,GLMNET implementation in Spark
+Interrupted system call error in pyspark's RDD.pipe,Make clear whether computePrincipalComponents requires centered data
+Make clear whether computePrincipalComponents requires centered data,HDFS FileSystems continually pile up in the FS cache
+HDFS FileSystems continually pile up in the FS cache,Allow users to avoid Hadoop output checks if desired
+Allow users to avoid Hadoop output checks if desired,Compression loses repeated values.
+Compression loses repeated values.,In-Memory compression needs to be configurable.
+In-Memory compression needs to be configurable.,Clean up use of setExecutorEnvs in SparkConf 
+Clean up use of setExecutorEnvs in SparkConf ,Handle hive support correctly in ./make-distribution.sh
+Handle hive support correctly in ./make-distribution.sh,Add gradient descent w/o sampling and RDA L1 updater
+Add gradient descent w/o sampling and RDA L1 updater,Display filesystem read statistics with each task
+Display filesystem read statistics with each task,Merge script should standardize SPARK-XXX prefix
+Merge script should standardize SPARK-XXX prefix,retryTimer not canceled on actor restart in Worker and AppClient
+retryTimer not canceled on actor restart in Worker and AppClient,Master switches thread when ElectedLeader
+Master switches thread when ElectedLeader,Support NamedTuples in RDDs
+Support NamedTuples in RDDs,PySpark throws unhelpful exception when pyspark cannot be loaded
+PySpark throws unhelpful exception when pyspark cannot be loaded,AppClient does not respond correctly to RemoveApplication
+AppClient does not respond correctly to RemoveApplication,RDD.saveAsTextFile throws scala.MatchError if RDD contains empty elements
+RDD.saveAsTextFile throws scala.MatchError if RDD contains empty elements,Support quoted arguments inside of spark-submit
+Support quoted arguments inside of spark-submit,Enable external sorting in Spark SQL aggregates
+Dependent on multiple versions of servlet-api jars lead to throw an SecurityException when Spark built for hadoop 2.3.0 ; 2.4.0 ,Simplify ColumnBuilder/Accessor class hierarchy
+Simplify ColumnBuilder/Accessor class hierarchy,java8-tests compiler error: package com.google.common.collections does not exist
+java8-tests compiler error: package com.google.common.collections does not exist,RowMatrix.dspr is not using parameter alpha for DenseVector
+RowMatrix.dspr is not using parameter alpha for DenseVector,Driver error org.apache.spark.scheduler.TaskSetManager - Loss was due to java.io.FileNotFoundException
+Improve spark integration,Python relative should be independence from the core; becomes subprojects
+Python relative should be independence from the core; becomes subprojects,PythonRDD leaks socket descriptors during cancellation
+PythonRDD leaks socket descriptors during cancellation,"Inconsistent naming: ""slice"" or ""partition"""
+"Inconsistent naming: ""slice"" or ""partition""",Mesos executor won't start because of a ClassNotFoundException
+Mesos executor won't start because of a ClassNotFoundException,Warn users if Spark is run on JRE6 but compiled with JDK7
+Warn users if Spark is run on JRE6 but compiled with JDK7,Support EXPLAIN in Spark SQL
+Support EXPLAIN in Spark SQL,Allow multiple instances per node with SPARK-EC2
+Allow multiple instances per node with SPARK-EC2,Allow multiple executors per worker in Standalone mode
+Allow multiple executors per worker in Standalone mode,Remove 3 second sleep before starting app on YARN
+Remove 3 second sleep before starting app on YARN,Add ClassTag parameter on accumulator and broadcast methods
+Add ClassTag parameter on accumulator and broadcast methods,"spark-submit should use ""main class"" attribute of JAR if no --class is given"
+"spark-submit should use ""main class"" attribute of JAR if no --class is given","spark-submit should print better errors than ""InvocationTargetException"""
+"spark-submit should print better errors than ""InvocationTargetException""",We should not use two build tools at the same time; should remove one of them
+We should not use two build tools at the same time; should remove one of them,ParallelCollectionRDD operations hanging forever without any error messages 
+ParallelCollectionRDD operations hanging forever without any error messages ,YarnAllocationHandler starts a thread for every executor it runs
+YarnAllocationHandler starts a thread for every executor it runs,Take advantage of AMRMClient APIs to simplify logic in YarnAllocationHandler
+Ensure actor is self-contained in DAGScheduler,EC2 script should exit with non-zero code on UsageError
+EC2 script should exit with non-zero code on UsageError,spark-ec2.py sometimes doesn't wait long enough for EC2 to stand up
+spark-ec2.py sometimes doesn't wait long enough for EC2 to stand up,pyspark doesn't work with assembly jar containing over 65536 files/dirs built on redhat 
+spark.executor.extraLibraryPath isn't applied on yarn,Classloaders not used correctly in Mesos
+Classloaders not used correctly in Mesos,Unable to create KafkaStream
+Unable to create KafkaStream,Add saveAsLibSVMFile
+Add saveAsLibSVMFile,Add appendBias
+Add appendBias,Can't use broadcast variables in pyspark on Mesos because pyspark isn't added to PYTHONPATH
+Can't use broadcast variables in pyspark on Mesos because pyspark isn't added to PYTHONPATH,Tasks that fail to serialize remain in active stages forever.
+Tasks that fail to serialize remain in active stages forever.,Correct small compile errors; typos; and markdown issues in (primarly) MLlib docs
+Correct small compile errors; typos; and markdown issues in (primarly) MLlib docs,JavaRDDLike.mapPartitionsWithIndex requires ClassTag
+JavaRDDLike.mapPartitionsWithIndex requires ClassTag,Make Flume pull data from source; rather than the current push model
+Make Flume pull data from source; rather than the current push model,Make receiver store data reliably to avoid data-loss on executor failures
+Make receiver store data reliably to avoid data-loss on executor failures,PySpark broadcast values with custom classes won't depickle properly
+PySpark broadcast values with custom classes won't depickle properly,Support for primitive nulls in SparkSQL
+Support for primitive nulls in SparkSQL,Pluggable storage support for BlockManager
+Pluggable storage support for BlockManager,"spark-submit throws an exception: Exception in thread ""main"" java.lang.ClassNotFoundException: org.apache.spark.broadcast.TorrentBroadcastFactory"
+"spark-submit throws an exception: Exception in thread ""main"" java.lang.ClassNotFoundException: org.apache.spark.broadcast.TorrentBroadcastFactory",Make distribution script has missing profiles for special hadoop versions
+Make distribution script has missing profiles for special hadoop versions,spark-submit on Windows
+spark-submit on Windows,Warn rather than fail when Java 7+ is used to create distributions
+Warn rather than fail when Java 7+ is used to create distributions,Is spark-debugger still available?
+Is spark-debugger still available?,Close PR's after period of inactivity
+Close PR's after period of inactivity,Pyspark cancellation kills unrelated pyspark workers
+Pyspark cancellation kills unrelated pyspark workers,Add predict(JavaRDD) to predictive models
+Add predict(JavaRDD) to predictive models,Profiler for Spark
+Profiler for Spark,Add mllib.util.MLUtils.{loadLibSVMFile; saveAsLibSVMFile} to pyspark
+Add mllib.util.MLUtils.{loadLibSVMFile; saveAsLibSVMFile} to pyspark,Document how to pass in preferredNodeLocationData
+Document how to pass in preferredNodeLocationData,TaskContext.interrupted should probably not be a constructor argument
+TaskContext.interrupted should probably not be a constructor argument,Support setting SPARK_JAVA_OPTS on executors for backwards compatibility
+Support setting SPARK_JAVA_OPTS on executors for backwards compatibility,check for Spark on Yarn ApplicationMaster split brain
+check for Spark on Yarn ApplicationMaster split brain,I installed the spark_standalone;but I did not know how to use sbt to compile the programme of spark?
+I installed the spark_standalone;but I did not know how to use sbt to compile the programme of spark?,DAGScheduler supervisor strategy broken with Mesos
+DAGScheduler supervisor strategy broken with Mesos,EdgePartition is not serialized properly
+EdgePartition is not serialized properly,spark ec2 scripts should check for SSh to be up
+spark ec2 scripts should check for SSh to be up,Standardize input/output format for vectors and labeled points
+Standardize input/output format for vectors and labeled points,PySpark on YARN does not work on assembly jar built on Red Hat based OS
+PySpark on YARN does not work on assembly jar built on Red Hat based OS,Add missing arithmetic DSL operations.
+Add missing arithmetic DSL operations.,Spark-submit --name does not resolve to application name on YARN
+Support saving null primitives with .saveAsParquetFile(),failing test org.apache.spark.JavaAPISuite.wholeTextFiles
+failing test org.apache.spark.JavaAPISuite.wholeTextFiles,sbt/sbt package fail cause by directory
+sbt/sbt package fail cause by directory, mvn  -Dsuites=*  test throw an ClassNotFoundException
+ mvn  -Dsuites=*  test throw an ClassNotFoundException,Add broadcast information on SparkUI storage tab
+Add functionality to pin RDDs in cache,SparkSubmit arguments do not propagate to python files on YARN
+SparkSubmit arguments do not propagate to python files on YARN,EOF reached before Python server acknowledged
+EOF reached before Python server acknowledged,Modify a typo in monitoring.md
+Modify a typo in monitoring.md,Move reduceByKey definitions next to each other in PairRDDFunctions
+Move reduceByKey definitions next to each other in PairRDDFunctions,Prefer HDFS-cached replicas when scheduling data-local tasks
+Prefer HDFS-cached replicas when scheduling data-local tasks,History Server enhancements
+History Server enhancements,Executor loss can cause race condition in Pool
+Executor loss can cause race condition in Pool,repartition and coalesce(shuffle=true) put objects with the same key in the same bucket
+repartition and coalesce(shuffle=true) put objects with the same key in the same bucket,CoarseGrainedSchedulerBackend is not resilient to Akka restarts
+CoarseGrainedSchedulerBackend is not resilient to Akka restarts,Spark executors do not successfully die on OOM
+Spark executors do not successfully die on OOM,Standalone cluster docs should be updated to reflect Spark Submit
+Standalone cluster docs should be updated to reflect Spark Submit,SparkSubmit --jars not working for yarn-client
+SparkSubmit --jars not working for yarn-client,Unneeded lock in ShuffleMapTask.deserializeInfo
+Unneeded lock in ShuffleMapTask.deserializeInfo,Have Spark's SBT build read dependencies from Maven
+Have Spark's SBT build read dependencies from Maven,"Pass ""cached"" blocks directly to disk if memory is not large enough"
+Add 'limit' transformation to SchemaRDD.,Warning when spark.storage.memoryFraction is not between 0 and 1
+Warning when spark.storage.memoryFraction is not between 0 and 1,Non-existent SPARK_DAEMON_OPTS is referred to in a few places
+Non-existent SPARK_DAEMON_OPTS is referred to in a few places,Generalized validity checking for configuration parameters
+Generalized validity checking for configuration parameters,svd for sparse matrix using ARPACK
+svd for sparse matrix using ARPACK,Title contains html code in MLlib guide
+Title contains html code in MLlib guide,Add a partitioner which partitions an RDD with each partition having specified # of keys
+Add a partitioner which partitions an RDD with each partition having specified # of keys,Streaming requires receivers to be serializable
+Streaming requires receivers to be serializable,Kryo Serialization Error in GraphX
+Kryo Serialization Error in GraphX,Build failure on JDK8 :: SBT fails to load build configuration file
+Upgrade Parquet to 1.4.3,Multiple versions of Netty dependencies cause FlumeStreamSuite failure
+Multiple versions of Netty dependencies cause FlumeStreamSuite failure,Update EC2 scripts to support r3 instance types
+Update EC2 scripts to support r3 instance types,SVM implementation does not use threshold parameter
+SVM implementation does not use threshold parameter,Missing Spark-Shell Configure Options
+Missing Spark-Shell Configure Options,Heavily duplicated test setup code in SVMSuite
+Heavily duplicated test setup code in SVMSuite,Generic ADMM implementation for SVM; lasso; and L1-regularized logistic regression
+streaming on hdfs can detected all new file; but the sum of all the rdd.count() not equals which had detected,Tests should clean up temp files
+Tests should clean up temp files,Add init script to the debian packaging
+Add init script to the debian packaging,Add broadcast hash join operator
+Open up some private APIs related to creating new RDDs for developers,Audit dependency graph when Spark is built with -Phive
+Rename test resources to be compatible with Windows FS,Mark 0.9.1 as released in JIRA
+Mark 0.9.1 as released in JIRA,Error launching cluster when master and slave machines are of different virtualization types
+Modify SPARK_EXECUTOR_URI to allow for script execution in Mesos.,bin/pyspark does not load default configuration properties
+bin/pyspark does not load default configuration properties,Mesos backend doesn't respect HADOOP_CONF_DIR
+Mesos backend doesn't respect HADOOP_CONF_DIR,The spark tar ball does not unzip into a separate folder when un-tarred.
+The spark tar ball does not unzip into a separate folder when un-tarred.,Support resizable output buffer for kryo serializer
+Splash page should include correct syntax for launching examples,SparkContext shouldn't be marked DeveloperApi
+SparkContext shouldn't be marked DeveloperApi,LiveListenerBus dies if a listener throws an exception
+LiveListenerBus dies if a listener throws an exception,RDD zip erroneous when partitions do not divide RDD count
+RDD zip erroneous when partitions do not divide RDD count,Freshen Mesos docs
+Freshen Mesos docs,Fix GetField.nullable.
+Fix GetField.nullable.,Make GenerateMimaIgnore @DeveloperApi annotation aware.
+Make GenerateMimaIgnore @DeveloperApi annotation aware.,Document History Server
+Document History Server,SchemaRDD.count() should use the optimizer.
+SchemaRDD.count() should use the optimizer.,ExternalAppendOnlyMap can still OOM if one key is very large
+ExternalAppendOnlyMap can still OOM if one key is very large,Python examples still take in <master>
+Python examples still take in <master>,Windows Spark fails to work with Linux YARN
+Some bad head notations in sparksql ,LICENSE and NOTICE files need a refresh to contain transitive dependency info
+LICENSE and NOTICE files need a refresh to contain transitive dependency info,Created forked version of hive-exec that doesn't bundle other dependencies
+"Sub-second durations shouldn't round to ""0 s""",Deploy failover; Make Persistence engine and LeaderAgent Pluggable.
+"add the security guide to the ""More"" drop down menu",Executor UI improvement suggestions
+Have an empty SparkContext constructor instead of relying on new SparkContext(new SparkConf()),NoSuchMethodError when invoking JavaPairRDD.reduce() in Java
+sbt gen-idea includes both mesos and mesos with shaded-protobuf into dependencies,REPL $outer type mismatch causes lookup() and equals() problems
+NumericRange should be partitioned in the same way as other sequences,On a YARN cluster; Spark doesn't run on local mode
+On a YARN cluster; Spark doesn't run on local mode,PySpark take() does not launch a Spark job when it has to
+PySpark take() does not launch a Spark job when it has to,SparkListenerBus prints out scary error message when terminating normally
+SparkListenerBus prints out scary error message when terminating normally,update scalatest to version 2.1.5
+update scalatest to version 2.1.5,update scala-logging-slf4j to version 2.1.2
+update scala-logging-slf4j to version 2.1.2,Provide a simpler alternative to assemble-deps
+Provide a simpler alternative to assemble-deps,Support maven-style dependency resolution in sbt build
+Use AllScalaRegistrar for SparkSqlSerializer to register serializers of Scala collections.,RAT checks should exclude logs/ directory
+RAT checks should exclude logs/ directory,Pushdown filters on non-required parquet columns
+Pushdown filters on non-required parquet columns,Executors are mysteriously dying when using Spark on Mesos
+Executors are mysteriously dying when using Spark on Mesos,sc.textFile does not support non UTF-8 encodings
+Bad exception if multiple jars exist when running PySpark,Upgrade Avro dependency to 1.7.6 so Spark can read Avro files
+Upgrade Avro dependency to 1.7.6 so Spark can read Avro files,SparkSQL Queries with Sorts run before the user asks them to
+SparkSQL Queries with Sorts run before the user asks them to,Show Streaming application code context (file; line number) in Spark Stages UI
+Show Streaming application code context (file; line number) in Spark Stages UI,Add a version of StreamingContext.fileStream that take hadoop conf object
+Add a version of StreamingContext.fileStream that take hadoop conf object,Provide memory-and-local-disk RDD checkpointing
+Standardize MLlib interfaces,map() with lookup() causes exception
+map() with lookup() causes exception,"Update ""third-party Hadoop distros"" doc to list more distros"
+"Update ""third-party Hadoop distros"" doc to list more distros",Linear; Ridge and Lasso Regressions with SGD yield unexpected results
+Linear; Ridge and Lasso Regressions with SGD yield unexpected results,Standalone Worker cleanup should not clean up running executors
+ArrayIndexOutOfBoundsException when reading bzip2 files,Add build support for MapR
+Add build support for MapR,Allowing user jars to take precedence over Spark jars does not work as expected
+Classpath not correctly sent to executors.,Improve behavior of cleanup of disk state
+Improve behavior of cleanup of disk state,Closure cleaner does not null shadowed fields when outer scope is referenced
+Closure cleaner does not null shadowed fields when outer scope is referenced,Spark Documentation Error causes java.lang.IllegalStateException: unread block data
+Spark Documentation Error causes java.lang.IllegalStateException: unread block data,Users should be allowed to cogroup at least 4 RDDs
+Users should be allowed to cogroup at least 4 RDDs,`spark-shell --help` fails if called from outside spark home
+`spark-shell --help` fails if called from outside spark home,Jars specified via --jars in spark-submit are not added to executor classpath for YARN
+Jars specified via --jars in spark-submit are not added to executor classpath for YARN,Improve MLlib guide for v1.0
+Improve MLlib guide for v1.0,Update api links for unidoc
+Update api links for unidoc,Add README.md file when making distributions
+Add README.md file when making distributions,Clean up MLlib sample data
+Clean up MLlib sample data,NoClassDefFoundError: StringUtils when building against Hadoop 1
+NoClassDefFoundError: StringUtils when building against Hadoop 1,Update Windows scripts to deal with latest distribution layout changes
+Update Windows scripts to deal with latest distribution layout changes,ClassNotFoundException when loading RDD with serialized objects
+ClassNotFoundException when loading RDD with serialized objects,Incorrect initialization order in JavaStreamingContext
+Incorrect initialization order in JavaStreamingContext,Default PermGen size too small when using Hadoop2 and Hive
+Default PermGen size too small when using Hadoop2 and Hive,Eliminate unnecessary job executions.
+Eliminate unnecessary job executions.,Executor caching
+Executor caching,Support dynamic memory sharing in Mesos
+Support dynamic memory sharing in Mesos,spark graph.triplets does not return correct values
+Shark failed to start,GraphX reduce function not working properly -- returns only 1 element
+GraphX reduce function not working properly -- returns only 1 element,workers keep dying for uncaught exception of executor id not found 
+workers keep dying for uncaught exception of executor id not found ,"Update ""Contributors Guide"" with useful data from past threads"
+"Update ""Contributors Guide"" with useful data from past threads",enhance MEMORY_AND_DISK mode by dropping blocks in parallel
+Apply splitConjunctivePredicates to join condition while finding join keys.,"add modify acls to the web UI for the ""kill"" button"
+"add modify acls to the web UI for the ""kill"" button",Add admin acls to the Web UI
+Add admin acls to the Web UI,Add an OWL-QN optimizer for L1 regularized optimizations.
+Add an OWL-QN optimizer for L1 regularized optimizations.,Explain why running Spark Hive locally freezes
+Explain why running Spark Hive locally freezes,The default ec2 set-up ignores --driver-class-path
+The default ec2 set-up ignores --driver-class-path,Run tests on windows
+Run tests on windows,MASTER masks spark.master in spark-shell
+MASTER masks spark.master in spark-shell,Spark shell --jars (or spark.jars) doesn't work
+Spark shell --jars (or spark.jars) doesn't work,In deploy.yarn.Client; use YarnClient rather than YarnClientImpl
+In deploy.yarn.Client; use YarnClient rather than YarnClientImpl,Default log4j.properties incorrectly sends all output to stderr and none to stdout
+Default log4j.properties incorrectly sends all output to stderr and none to stdout,Fix running PySpark files on YARN 
+Fix running PySpark files on YARN ,Standalone worker update exector's state ahead of executor process exit
+Standalone worker update exector's state ahead of executor process exit,Spark shell prints error when :4040 port already in use
+Spark shell prints error when :4040 port already in use,Document Spark's network connections
+Document Spark's network connections,ZooKeeper URI in spark-env.sh no longer working w/ bin/pyspark
+ZooKeeper URI in spark-env.sh no longer working w/ bin/pyspark,Issues with `spark-submit`
+spark-submit doesn't send master URL to Driver in standalone cluster mode,spark-submit: add exec at the end of the script
+spark-submit: add exec at the end of the script,Support local app jar in standalone cluster mode
+Support local app jar in standalone cluster mode,#NAME?
+#NAME?,Add onBlockComplete API to receiver
+Add onBlockComplete API to receiver,Warn users if their assembly jars are not built with Java 6
+Warn users if their assembly jars are not built with Java 6,Compression memory issue during reduce
+Compression memory issue during reduce,Parquet table column pruning error caused by filter pushdown
+Parquet table column pruning error caused by filter pushdown,Simplify CountFunction not to traverse to evaluate all child expressions.
+Simplify CountFunction not to traverse to evaluate all child expressions.,AverageFunction should not count if the evaluated value is null.
+AverageFunction should not count if the evaluated value is null.,SparkFlumeEvent with body bigger than 1020 bytes are not read properly
+SparkFlumeEvent with body bigger than 1020 bytes are not read properly,PySpark fails to import functions from {{scipy.special}}
+PySpark fails to import functions from {{scipy.special}},PySpark shell --py-files does not work for zip files
+PySpark shell --py-files does not work for zip files,In Windows; Spark shell cannot load classes in spark.jars (--jars)
+In Windows; Spark shell cannot load classes in spark.jars (--jars),Spark JAR compiled with Java 7 leads to PySpark not working in YARN
+Allow duplicate jar files among the app jar and secondary jars in yarn-cluster mode,"hql query throws ""RuntimeException: Unsupported dataType"" if struct field of a table has a column with underscore in name"
+"hql query throws ""RuntimeException: Unsupported dataType"" if struct field of a table has a column with underscore in name",ClassNotFoundException when running with sbt and Scala 2.10.3
+ClassNotFoundException when running with sbt and Scala 2.10.3,Make local:/ scheme work in more deploy modes
+Make local:/ scheme work in more deploy modes,Typo in org.apache.spark.mllib.tree.DecisionTree.isSampleValid
+Typo in org.apache.spark.mllib.tree.DecisionTree.isSampleValid,Nullability of Max/Min/First should be true.
+Nullability of Max/Min/First should be true.,Implicits declared in companion objects not found in Spark shell
+DAGScheduler suspended by local task OOM,DAGScheduler suspended by local task OOM
+The Container is running beyond physical memory limits; so as to be killed.,Graph.partitionBy does not reconstruct routing tables
+Graph.partitionBy does not reconstruct routing tables,Race conditions in BlockManager.cachedPeers and ConnectionManager.onReceiveCallback
+Race conditions in BlockManager.cachedPeers and ConnectionManager.onReceiveCallback,FileNotFoundException when a directory is passed to SparkContext.addJar/addFile
+FileNotFoundException when a directory is passed to SparkContext.addJar/addFile,"this reference escape to ""selectorThread"" during construction in ConnectionManager"
+"this reference escape to ""selectorThread"" during construction in ConnectionManager",Explicitly add commons-codec 1.5 as a dependency
+Explicitly add commons-codec 1.5 as a dependency,Add apache header and remove author tags
+Add apache header and remove author tags,Tasks can be submitted before executors are registered
+Tasks can be submitted before executors are registered,ApproxCountDistinctMergeFunction should return Int value.
+ApproxCountDistinctMergeFunction should return Int value.,Refactor takeSample method in RDD to use ScaSRS
+Refactor takeSample method in RDD to use ScaSRS,Enable rolling of executor logs (stdout / stderr)
+Enable rolling of executor logs (stdout / stderr),Update streamlib to 2.7.0 and use HyperLogLogPlus instead of HyperLogLog
+Update streamlib to 2.7.0 and use HyperLogLogPlus instead of HyperLogLog,Stop clearing spark.driver.port in unit tests
+Stop clearing spark.driver.port in unit tests,Testing use of target version field
+Testing use of target version field,Document --verbose in spark-shell -h
+Document --verbose in spark-shell -h,Add full Java examples in MLlib docs
+Add full Java examples in MLlib docs,Submit stage after executors have been registered
+Child of SumDistinct or Average should be widened to prevent overflows the same as Sum.,Scalac crashes when building Spark in IntelliJ IDEA
+Scalac crashes when building Spark in IntelliJ IDEA,Servlet 2.5 vs 3.0 conflict in SBT build
+Servlet 2.5 vs 3.0 conflict in SBT build,spark on yarn can't start 
+spark on yarn can't start ,slf4j version conflicts with pig
+slf4j version conflicts with pig,yarn client mode Application Master memory size is same as driver memory size
+VertexRDD can incorrectly assume index sharing,Enable shuffle consolidation by default
+Enable shuffle consolidation by default,Pluggable disk store for BlockManager
+Pluggable disk store for BlockManager,Calling .collect() on a SchemaRDD should call executeCollect() on the underlying query plan.
+Calling .collect() on a SchemaRDD should call executeCollect() on the underlying query plan.,"String ""NULL"" is interpreted as null value"
+"String ""NULL"" is interpreted as null value",[Duplicate] Support cross-building with Scala 2.11
+[Duplicate] Support cross-building with Scala 2.11,when data return from map is about 10 kb; reduce(_ + _) would always pending
+when data return from map is about 10 kb; reduce(_ + _) would always pending,Add RDD cache reference counting
+Add RDD cache reference counting,Job aborted with NullPointerException from DAGScheduler.scala:1020
+Job aborted with NullPointerException from DAGScheduler.scala:1020,Timestamp missing from HiveMetastore types parser
+Timestamp missing from HiveMetastore types parser,Spark UI throws NPE on trying to load the app page for non-existent app
+Spark UI throws NPE on trying to load the app page for non-existent app,Cannot cancel tasks running locally
+Cannot cancel tasks running locally,Using parallelize method to create RDD; wordcount app just hanging there without errors or warnings
+Using parallelize method to create RDD; wordcount app just hanging there without errors or warnings,SQL commands for caching tables
+SQL commands for caching tables,Public available online summarizer for mean; variance; min; and max
+Public available online summarizer for mean; variance; min; and max,Update unit test in XORShiftRandomSuite to use ChiSquareTest from commons-math3
+Update unit test in XORShiftRandomSuite to use ChiSquareTest from commons-math3,Update MIMA to compare against Spark 1.0.0
+Update MIMA to compare against Spark 1.0.0,Add support for setting and visualizing custom task-related metrics
+Add support for setting and visualizing custom task-related metrics,Add randomSplit to JavaRDD (with tests; and tidy Java tests)
+Add randomSplit to JavaRDD (with tests; and tidy Java tests),Most examples fail at startup because spark.master is not set
+Most examples fail at startup because spark.master is not set,Spark streaming with kafka source stuck at runJob at ReceiverTracker.scala:275
+Spark streaming with kafka source stuck at runJob at ReceiverTracker.scala:275,misleading streaming document
+misleading streaming document,mutable.BitSet in ALS not serializable with KryoSerializer
+mutable.BitSet in ALS not serializable with KryoSerializer,In some cases; spark-yarn does not automatically restart the failed container
+In some cases; spark-yarn does not automatically restart the failed container,Error message needs to be updated when user specifies --arg ( which is no longer required to run spark submit jobs).Spark documentation needs to be updated to reflect this change.
+Error message needs to be updated when user specifies --arg ( which is no longer required to run spark submit jobs).Spark documentation needs to be updated to reflect this change.,problems introduced by broadcast
+problems introduced by broadcast,Add AWS Kinesis streaming support
+Add AWS Kinesis streaming support,saveToParquetFile doesn't support ByteType
+saveToParquetFile doesn't support ByteType,Expose private `inferSchema` method in SQLContext for Scala and Java API
+Expose private `inferSchema` method in SQLContext for Scala and Java API,Maven build requires SCALA_HOME to be set even though it's not needed
+Maven build requires SCALA_HOME to be set even though it's not needed,SPARK_HOME shouldn't be required when spark.executor.uri is provided
+SPARK_HOME shouldn't be required when spark.executor.uri is provided,lib.Analytics should be in org.apache.spark.examples
+lib.Analytics should be in org.apache.spark.examples,More memory-efficient graph construction
+More memory-efficient graph construction,Enable storing edges out-of-core
+Enable storing edges out-of-core,Exit executors faster if they get into a cycle of heavy GC
+spark-ec2 should only need Python 2.6; not 2.7,Support custom StorageLevels for vertices and edges
+Support custom StorageLevels for vertices and edges,Support for Pivotal HD in the Maven build
+Support for Pivotal HD in the Maven build,Let users skip checking output directory
+Let users skip checking output directory,Aggregates return incorrect results on first execution
+Aggregates return incorrect results on first execution,Add native support for UPPER() LOWER() and MIN() MAX()
+Add native support for UPPER() LOWER() and MIN() MAX(),Remove use of special Maven repo for Akka
+Remove use of special Maven repo for Akka,Update breeze to version 0.9
+Update breeze to version 0.9,SparkFlumeEvent with body bigger than 1020 bytes are not read properly
+SparkFlumeEvent with body bigger than 1020 bytes are not read properly,UI : StorageLevel in storage tab and RDD Storage Info never changes 
+UI : StorageLevel in storage tab and RDD Storage Info never changes ,cannot connect to cluster in Standalone mode when run spark-shell in one of the cluster node without specify master
+cannot connect to cluster in Standalone mode when run spark-shell in one of the cluster node without specify master,Remove docs/spark-debugger.md from master since it is obsolete
+Remove docs/spark-debugger.md from master since it is obsolete,Race condition in accessing cache locations in DAGScheduler
+SparkContext(SparkConf) doesn't work in pyspark,Automate QA of Spark Build/Deploy Matrix
+Automate QA of Spark Build/Deploy Matrix,Investigate linux container-based solution
+Investigate linux container-based solution,Spark Sql example throws ClassCastException: Long -> Int
+Spark Sql example throws ClassCastException: Long -> Int,Spark on YARN picks up hadoop log4j.properties even if SPARK_LOG4J_CONF is set
+Spark on YARN picks up hadoop log4j.properties even if SPARK_LOG4J_CONF is set,Enhance spark-ec2 to be able to add and remove slaves to an existing cluster
+Enhance spark-ec2 to be able to add and remove slaves to an existing cluster,Key not found exception when slow receiver starts
+Key not found exception when slow receiver starts,Support for nested data in PySpark SQL
+Support for nested data in PySpark SQL,Eliminate duplicate join in Pregel
+Eliminate duplicate join in Pregel,PySpark StatCounter with numpy arrays
+PySpark StatCounter with numpy arrays,Add Python pickleFile to programming guide
+Add Python pickleFile to programming guide,Make PySpark store RDDs in MEMORY_ONLY_SER with compression by default
+Make PySpark store RDDs in MEMORY_ONLY_SER with compression by default,Spark UI issues at scale
+rdd in-memory storage UI becomes unresponsive when the number of RDD partitions is large,web ui stage page becomes unresponsive when the number of tasks is large
+Big-Endian (IBM Power7)  Spark Serialization issue,Spark workers die/disappear when job fails for nearly any reason
+Spark workers die/disappear when job fails for nearly any reason,Spark 1.0.0 fails to run in coarse-grained mesos mode
+PySpark reduce does a map side reduce and then sends the results to the driver for final reduce; instead do this more like Scala Spark.,Add saveAsSequenceFile to PySpark
+Add saveAsSequenceFile to PySpark,EdgeRDD persists after pregel iteration
+EdgeRDD persists after pregel iteration,"Maven ""hadoop*"" Profiles Should Set the expected Hadoop Version."
+Let users of HadoopRDD access the partition InputSplits,Bump pom.xml version number of master branch to 1.1.0-SNAPSHOT.
+Bump pom.xml version number of master branch to 1.1.0-SNAPSHOT.,Bump SparkBuild.scala version number of branch-1.0 to 1.0.1-SNAPSHOT.
+Bump SparkBuild.scala version number of branch-1.0 to 1.0.1-SNAPSHOT.,DAGScheduler supports pluggable clock
+DAGScheduler supports pluggable clock,Add an RDD.samplePartitions method for partition-level sampling
+Add an RDD.samplePartitions method for partition-level sampling,Automatically cleanup checkpoint 
+Automatically cleanup checkpoint ,KafkaInputDStream doesn't close resources and may prevent JVM shutdown
+KafkaInputDStream doesn't close resources and may prevent JVM shutdown,Make a stage's call stack available on the UI
+Make a stage's call stack available on the UI,CaseConversionExpression should check if the evaluated value is null.
+CaseConversionExpression should check if the evaluated value is null.,yarn client mode doesn't support spark.yarn.max.executor.failures
+yarn client mode doesn't support spark.yarn.max.executor.failures,"Don't shadow ""conf"" variable in saveAsHadoop functions"
+"Don't shadow ""conf"" variable in saveAsHadoop functions",Run hadoop output checks for all formats
+Run hadoop output checks for all formats,[MLLIB] Univariate kernel density estimation
+Exception when querying when tableName == columnName,Take triggers unneeded shuffle.
+Take triggers unneeded shuffle.,ExternalAppendOnlyMap doesn't always find matching keys
+ExternalAppendOnlyMap doesn't always find matching keys,Pluggable interface for shuffles
+Pluggable interface for shuffles,Sort-based shuffle implementation
+Sort-based shuffle implementation,Support config properties that are changeable across tasks/stages within a job
+Support config properties that are changeable across tasks/stages within a job,Use less memory in AppendOnlyMap.destructiveSortedIterator
+Use less memory in AppendOnlyMap.destructiveSortedIterator,Optimizations to CPU usage of external spilling code
+Optimizations to CPU usage of external spilling code,avg function in aggregation may cause overflow 
+LIKE; RLIKE; IN; BETWEEN and DIV in HQL should not be case sensitive,spark.yarn.dist.* configs are not supported in yarn-cluster mode
+Add optimization for CaseConversionExpression's.,Add Catalyst expression for CASE WHEN
+Add Catalyst expression for CASE WHEN,Code Generation for Expression Evaluation
+Code Generation for Expression Evaluation,bin$ ./run-example is bad.  must run SPARK_HOME$ bin/run-example. look at the file run-example at line 54.
+bin$ ./run-example is bad.  must run SPARK_HOME$ bin/run-example. look at the file run-example at line 54.,Set RDD name to input path
+Set RDD name to input path,run-example can only be run within spark_home
+run-example can only be run within spark_home,SPARK_CONF_DIR should override all present configs
+Unresolved Attributes should cause a failure before execution time,Querying JSON Datasets with SQL and DSL in Spark SQL
+Querying JSON Datasets with SQL and DSL in Spark SQL,Deprecate `splits` in JavaRDDLike and add `partitions`
+Deprecate `splits` in JavaRDDLike and add `partitions`,VertexRDD.apply does not use the mergeFunc
+VertexRDD.apply does not use the mergeFunc,Creating a SchemaRDD via sql() does not correctly resolve nested types
+Have spark-ec2 set EC2 instance names,Better error message for non-aggregated attributes with aggregates
+Better error message for non-aggregated attributes with aggregates,Spark logo in application UI uses absolute path
+Spark logo in application UI uses absolute path,Remove other uses of @transient lazy val in physical plan nodes
+Remove other uses of @transient lazy val in physical plan nodes,MIMA false positives (umbrella)
+MIMA false positives (umbrella),Package private methods are not excluded correctly
+Package private methods are not excluded correctly,Package private classes that are deleted from an older version of Spark trigger errors
+Package private classes that are deleted from an older version of Spark trigger errors,Streaming not processing a file with particular number of entries
+Streaming not processing a file with particular number of entries,Streaming not processing a file with particular number of entries
+Streaming not processing a file with particular number of entries,Streaming not processing a file with particular number of entries
+Streaming not processing a file with particular number of entries,Anonymous classes are missing from Spark distribution
+Anonymous classes are missing from Spark distribution,Push Down the Predicate & Join Filter for OuterJoin
+Push Down the Predicate & Join Filter for OuterJoin,Log serializer in use on application startup
+Log serializer in use on application startup,Use ISO8601 date formats in logging
+Use ISO8601 date formats in logging,Support batching when serializing SchemaRDD to Python
+Support batching when serializing SchemaRDD to Python,Yarn: history UI link missing; wrong reported user
+Yarn: history UI link missing; wrong reported user,Undefine output() from the abstract class Command and implement it in concrete subclasses
+Undefine output() from the abstract class Command and implement it in concrete subclasses,Stratified sampling implementation in PairRDDFunctions
+Allow local task to retry after failure.,Mention SPARK_JAR in env var section on configuration page
+Mention SPARK_JAR in env var section on configuration page,Apply user-specific regularization instead of uniform regularization in Alternating Least Squares (ALS)
+Apply user-specific regularization instead of uniform regularization in Alternating Least Squares (ALS),Improve output of toDebugString to make shuffle boundaries more clear
+Improve output of toDebugString to make shuffle boundaries more clear,Clean Multi-user semantics for thrift JDBC/ODBC server.
+NPE in toString when creationSiteInfo is null after deserialization,With YARN; preferredNodeLocalityData isn't honored 
+With YARN; preferredNodeLocalityData isn't honored ,spark-shell input text entry not showing on REPL
+spark-shell input text entry not showing on REPL,pyspark/mllib is not compatible with numpy-1.4
+pyspark/mllib is not compatible with numpy-1.4,This is a test issue
+This is a test issue,NullPropagation should use exact type value.
+NullPropagation should use exact type value.,Ensure exactly once semantics for DDL / Commands
+Ensure exactly once semantics for DDL / Commands,sc.getExecutorCPUCounts()
+sc.getExecutorCPUCounts(),Correctly parse dot notations for accessing an array of structs
+Correctly parse dot notations for accessing an array of structs,UDF Support
+UDF Support,All Spark processes should support spark-defaults.conf; config file
+All Spark processes should support spark-defaults.conf; config file,Report TaskMetrics for running tasks
+Report TaskMetrics for running tasks,Allow users to disable Jetty Spark UI in local mode
+Python unit tests fail on Python 2.6 because of lack of unittest.skipIf(),Caching with GENERIC column type causes query execution to slow down significantly
+Caching with GENERIC column type causes query execution to slow down significantly,Java + Kafka + Spark Streaming NoSuchMethodError in java.lang.Object.<init>
+Java + Kafka + Spark Streaming NoSuchMethodError in java.lang.Object.<init>,RangePartitioner should use user specified serializer to serialize range bounds
+RangePartitioner should use user specified serializer to serialize range bounds,SparkUI doesn't remove active stages that failed
+SparkUI doesn't remove active stages that failed,Unify the HiveContext
+Unify the HiveContext,FilterPushdownSuite imports Junit and leads to compilation error
+FilterPushdownSuite imports Junit and leads to compilation error,Mark SparkContext methods that return block information as developer API's
+Mark SparkContext methods that return block information as developer API's,Setting SPARK_MEM for bin/pyspark does not work. 
+Setting SPARK_MEM for bin/pyspark does not work. ,Misleading help displayed for interactive mode pyspark --help
+Misleading help displayed for interactive mode pyspark --help,pyspark errors when SPARK_PRINT_LAUNCH_COMMAND=1
+pyspark errors when SPARK_PRINT_LAUNCH_COMMAND=1,ParquetTypesConverter should not create its own conf
+ParquetTypesConverter should not create its own conf,awaitTermination() after stop() will hang in Spark Stremaing
+awaitTermination() after stop() will hang in Spark Stremaing,groupByKey and joins on raw data
+Stage kill link is too close to stage details link,Load spark-defaults.conf from directory specified by SPARK_CONF_DIR
+Load spark-defaults.conf from directory specified by SPARK_CONF_DIR,UTF8 Characters Break PySpark
+UTF8 Characters Break PySpark,If tools jar is not present; MIMA build should exit with an exception
+If tools jar is not present; MIMA build should exit with an exception,Reading Parquet InputSplits dominates query execution time when reading off S3
+Reading Parquet InputSplits dominates query execution time when reading off S3,Not fully cached when there is enough memory
+Not fully cached when there is enough memory,Not fully cached when there is enough memory in ALS
+Not fully cached when there is enough memory in ALS,Move aggregation into shuffle implementation
+Basic pluggable interface for shuffle,Move aggregation into ShuffleManager implementations
+Add sorting flag to ShuffleManager; and implement it in HashShuffleManager,Move MapOutputTracker behind ShuffleManager interface
+Move MapOutputTracker behind ShuffleManager interface,Use application specific folders to dump metrics via CsvSink
+No plan for DESCRIBE,NPE thrown while lookup a view
+NPE thrown while lookup a view,Clarify PySpark docs for RDD.getStorageLevel
+Clarify PySpark docs for RDD.getStorageLevel,Collect per-task filesystem-bytes-read/written metrics
+Collect per-task filesystem-bytes-read/written metrics,Color GC time red when over a percentage of task time
+FileNotFoundException in BlockObjectWriter,Report metrics before application finishes
+Report metrics before application finishes,InMemoryColumnarScan does not get planned correctly
+InMemoryColumnarScan does not get planned correctly,Spark SQL does not disply the job description on web ui/ event log
+Spark SQL does not disply the job description on web ui/ event log,Timestamp UDFs broken
+Timestamp UDFs broken,The KMeans algorithm in the MLlib can lead to the Serialized Task size become bigger and bigger
+The KMeans algorithm in the MLlib can lead to the Serialized Task size become bigger and bigger,spark.yarn.dist.* configs are not documented
+Add sc.getPersistentRDDs() to PySpark,Give better indicator of how GC cuts into task time
+Give better indicator of how GC cuts into task time,Display Spark version on Driver web page
+Display Spark version on Driver web page,SparkUI Executors tab displays incorrect RDD blocks
+SparkUI Executors tab displays incorrect RDD blocks,Add lower bound on sampling rate to guarantee sampling performance
+Add lower bound on sampling rate to guarantee sampling performance,Fix the takeOrdered doc
+Fix the takeOrdered doc,Master UI forgets about Executors when application exits cleanly
+Master UI forgets about Executors when application exits cleanly,Document custom class as key needing equals() AND hashcode()
+Document custom class as key needing equals() AND hashcode(),[Core] Disable partial aggregation automatically when reduction factor is low
+[Core] Disable partial aggregation automatically when reduction factor is low,Provide direct link to finished application UI in yarn resource manager UI
+Provide direct link to finished application UI in yarn resource manager UI,spark-submit issue (int format expected for memory parameter)
+spark-submit issue (int format expected for memory parameter),the error of comput rightNodeAgg about  Decision tree algorithm  in Spark MLlib 

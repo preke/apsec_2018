@@ -1,0 +1,1640 @@
+Killing tasks in spark - request for comment,Killing tasks in spark
+support external sort,Support external sorting for RDD#sortByKey()
+Update docs to say that you need to set MESOS_NATIVE_LIBRARY when running standalone apps on Mesos,MESOS_NATIVE_LIBRARY env var needs to be set when running on Mesos
+Update examples to pass JARs when building a SparkContext in 0.6 and master,Update examples to pass JAR file to SparkContext in master and 0.6 branches
+Default SPARK_MEM on AMI too high,Spark runs out of memory on fork/exec (affects both pipes and python)
+Add mechanism to run system management/configuration tasks on all workers,"Add a ""setup hook"" API for running initialization code on each executor"
+Add mechanism to run system management/configuration tasks on all workers,Provide a utility for running a function once on each executor
+Propagate exceptions from PySpark workers to the driver,PySpark should capture and re-throw Python exceptions
+Implement co-partitioning aware joins in PySpark,Pyspark does not support narrow dependencies
+"Executor gets stuck in a ""zombie"" state after running out of memory",Exit executors faster if they get into a cycle of heavy GC
+Have a DSL or other language support for OLAP expressions,Support for optimizing and executing structured queries
+Memoize results of getPreferredLocations,Exponential recursion in getPreferredLocations
+Let deploy scripts set alternate conf; work directories,SPARK_CONF_DIR is not effective in spark-submit
+RDD should be covariant in T,Make RDDs Covariant
+LocalSparkContext should be included in Spark JAR,Move common unit test utilities into their own package / module
+Multiple Spark Contexts active in a single Spark Context,Support multiple SparkContexts in the same JVM
+Print a nicer error message when incompatible Spark binaries try to talk,Spark returns misleading message when client is incompatible with server
+Clean up old work directories in standalone worker,Standalone Worker cleanup should not clean up running executors
+add DenseVector and SparseVector to mllib; and replace all Array[Double] with Vectors,Cloudpickle does not work correctly for some methods that use a splat
+ResultTask's serialization forget to handle generation,"ResultTask's serialization forget about handling ""generation"" field; while ShuffleMapTask does"
+Document fair scheduler,Add docs page for fair scheduler
+Killing jobs on standalone cluster,Offer user the ability to kill application in master web UI for standalone mode
+Add JSON endpoints to SparkUI,REST API for Spark application info (jobs / stages / tasks / storage info)
+spark_ec2 script when ssh/scp-ing should pipe UserknowHostFile to /dev/null,Ignore UserKnownHostsFile in SSH calls
+spark_ec2 script when ssh/scp-ing should pipe UserknowHostFile to /dev/null,Ignore UserKnownHostsFile in SSH calls
+Please publish jars for Scala 2.10,Upgrade Spark to Scala 2.10
+Executors that exit cleanly should not have KILLED status,Executor state shows as KILLED even the application is finished normally
+Gaussian Mixture Model,Gaussian Mixture Model clustering
+Python version of Gaussian Mixture Model,Gaussian Mixture Model clustering
+Latent Dirichlet Association (LDA model),parallel Latent Dirichlet Allocation (LDA) atop of spark in MLlib
+When iteration in ALS increases to 10 running in local mode; spark throws out error of StackOverflowError,MLlib ALS gets stack overflow with too many iterations
+Persistent web ui,Persisting Web UI through refactoring the SparkListener interface
+"Seemingly spurious ""Duplicate worker ID"" error messages",Worker registration failed: Duplicate worker ID error during Master failover
+Support external sorting for RDD#sortByKey(),sortByKey requires all data to fit in memory
+Don't reuse Writable objects in HadoopRDDs by default,take and collect don't work on HadoopRDD
+MLlib ALS gets stack overflow with too many iterations,The simple test error
+Update all unit tests to use SparkConf instead of system properties,Clean up uses of System.setProperty in unit tests
+Have DEVELOPERS.txt file with documentation for developers,Improve Developer Documentation
+MultilogisticRegressionWithSGD,Generalize the binary logistic regression into multinomial logistic regression
+take and collect don't work on HadoopRDD,Cached Hadoop RDD always return rows with the same value
+SparkListener interfaces should not expose internal types/objects,Persisting Web UI through refactoring the SparkListener interface
+ExternalAppendOnlyMap Iterator throw no such element on joining two large rdd,External Spilling Bug - hash collision causes NoSuchElementException
+Ability to disable the spark ui server (unit tests),Alleviate port collisions during tests
+Ability to disable the spark ui server (unit tests),Allow users to disable Jetty Spark UI in local mode
+Default log4j initialization causes errors for those not using log4j,Do not initialize log4j if slf4j log4j backend is not being used
+Tidy logging strategy and use of log4j,Send all dependency logging through slf4j
+Some corner case during HA master switching?,Support HA in standalone cluster mode
+Ensure all public methods return explicit types,"Add to style checker ""public method must have explicit type defined"""
+ConcurrentModificationException,ConcurrentModificationException in hadoop_common exposed by Spark
+Add saveAsHBase to PairRDDFunctions,Add common solution for sending upsert actions to HBase (put; deletes; and increment)
+Parallelize Task Serialization,Investigate using multiple threads for task serialization
+Suggestions for exception handling (avoid potential bugs),Suspicious exception handlers
+ArrayStoreException on mapping RDD on cluster,Prevent ContextClassLoader of Actor from becoming ClassLoader of Executor
+Generalize VertexId in GraphX so that UUIDs can be used as vertex IDs.,Enable String ID's for GraphX
+Spark fills up disk with app-* folders,Standalone Worker cleanup should not clean up running executors
+Add Shortest-path computations to graphx.lib,Shortest Path between two vertices; using distance and results carries shortest path and distance
+Add histogram() to PySpark,Missing API in PySpark
+Add histogram() to PySpark,Make python support for histograms
+Allow to provide a custom persistence engine,Deploy failover; Make Persistence engine and LeaderAgent Pluggable.
+GraphX triplets not working properly,spark graph.triplets does not return correct values
+Type mismatch in Spark shell when using case class defined in shell,REPL $outer type mismatch causes lookup() and equals() problems
+Type mismatch in Spark shell when using case class defined in shell,Spark shell has weird scala semantics
+Do not materialize partitions whenever possible in BlockManager,"Pass ""cached"" blocks directly to disk if memory is not large enough"
+Clustering: Index out of bounds error,Check for the number of clusters to avoid ArrayIndexOutOfBoundsException
+Add a OneHotEncoder for handling categorical features,Add OneHotEncoder as a Transformer
+DEAD worker should recover automaticly,Workers should reconnect to Master if disconnected
+Update Jetty to 9,Upgrade Jetty to 8.1.14v20131031
+Master web UI and Worker web UI returns a 404 error,Fix 404 not found error in UI introduced in Jetty 9.0 upgrade
+Implicit ALS unnecessarily recomputes factor matrices,Persist factors in implicit ALS
+[STREAMING] Annotate developer and experimental API's,cogroup and groupby should pass an iterator
+"Stage.name return  ""apply at Option.scala:120""","Stage.name return ""apply at Option.scala:120"""
+Create spark-contrib repo for 1.0,Create spark-contrib repo for 1.0
+yarn alpha and stable Client calculateAMMemory routines are different,yarn stable client doesn't properly handle MEMORY_OVERHEAD for AM
+Upgrade HBase dependency to 0.98.0,spark-examples should depend on HBase modules for HBase 0.96+
+Clean-up and clarify private vs public fields in MLLib,[streaming] Add deployment subsection to streaming
+"Add UI elements to collapse ""Aggregated Metrics by Executor"" pane on stage page",Add quick-links to StagePage to jump to Accumulator/Task tables
+httpd doesn't start in spark-ec2 (cc2.8xlarge),EC2: Ganglia-httpd broken on hvm based machines like r3.4xlarge
+Job fails with spot instances (due to IllegalStateException: Shutdown in progress),java.io.IOException: Filesystem is thrown when ctrl+c or ctrl+d spark-sql on YARN 
+sbt assemble-deps no longer works,"Spark shell fails to start after ""sbt clean assemble-deps package"""
+spark on yarn-alpha with mvn on master branch won't build,The maven build error for Spark Tools
+Application web UI garbage collects newest stages instead old ones,When using spark.ui.retainedStages=n only the first n stages are kept; not the most recent.
+IllegalArgumentException when writing to disk,2GB limit in spark for blocks
+Web UI should provide page of showing statistics and stage list for a given job,Create jobs overview and job details pages on the web UI
+Add streaming support for Spark SQL module,Structured Streaming (aka Streaming DataFrames)
+BlockManager cannot transfer blocks larger than 2G in size,Address various 2G limits
+Local spark-shell Runs Out of Memory With Default Settings,"Pass ""cached"" blocks directly to disk if memory is not large enough"
+Spark Streaming's received data is not cleaned up from BlockManagers when not needed any more,Old streaming input blocks not removed automatically from the BlockManagers
+EventLogging to HDFS doesn't work properly on yarn,FileLogger throws a invocation target exception.
+Add scripts for launching Spark on Google Compute Engine,Add scripts for launching Spark on Google Compute Engine (GCE)
+Upgrade Mesos dependency to 0.17.0,Upgrade to Mesos 0.18.1 with Shaded Protobuf
+Don't assume context class loader is set when creating classes via reflection,Choose classloader consistently inside of Spark codebase
+Add Window function support,Spark SQL can't support lead() over() window function
+Update branch-0.9's SBT to 0.13.1 so that it works with Java 8,Build failure on JDK8 :: SBT fails to load build configuration file
+Multinomial Logistic Regression Support,Generalize the binary logistic regression into multinomial logistic regression
+Improve the way Spark on Yarn waits for executors before starting,Submit stage after executors have been registered
+Determine which test suites to run based on code changes,Avoid running MLlib and Streaming tests when testing SQL PRs
+Examples of ML algorithms are using deprecated APIs,Update MLLib Examples to Use Breeze
+Workers continuously produce failing executors,Skip bad workers when re-launching executors
+Specialized ColumnType for Timestamp,Specialized ColumnType for Timestamp
+Publish nightly snapshots of documentation; maven artifacts; and binary builds,Post nightly releases
+Assembly Jar with more than 65536 files won't work when compiled on  JDK7 and run on JDK6,pyspark doesn't work with assembly jar containing over 65536 files/dirs built on redhat 
+Assembly Jar with more than 65536 files won't work when compiled on  JDK7 and run on JDK6,PySpark fails due to  zipimport not able to load the assembly jar (/usr/bin/python: No module named pyspark)
+provide option for more restrictive firewall rule in ec2/spark_ec2.py,Default spark-ec2 security group permissions are too open
+spark-submit for yarn prints warnings even though calling as expected ,Spark submit warning tells the user to use spark-submit
+Add ADMM for solving Lasso (and elastic net) problem,Add ADMM for solving Lasso (and elastic net) problem
+Add ADMM for solving Lasso (and elastic net) problem,Generic ADMM implementation for SVM; lasso; and L1-regularized logistic regression
+Add AdaBoost algorithm to Spark MLlib,AdaBoost.MH; a multi-class multi-label classifier
+Add gradient boosting algorithm to MLlib,Gradient boosting in MLLib
+Add conf dir to CLASSPATH in compute-classpath.sh dependent on whether SPARK_CONF_DIR is set,SPARK_CONF_DIR should override all present configs
+Add JavaScript into Javadoc to turn ::Experimental:: and such into badges,Java API docs do not show annotation.
+Mark main methods experimental,Move main methods to examples
+Executor fails to start when Command.extraJavaOptions contains multiple Java options,"Executors fail to come up if ""spark.executor.extraJavaOptions"" is set "
+Support external aggregation in Spark SQL,Enable external sorting in Spark SQL aggregates
+Prevent data loss when Streaming driver goes down,Prevent data loss in Spark Streaming on driver failure using Write Ahead Logs
+Fixes and improvements for spark-submit/configs,Issues with `spark-submit`
+spark-submit --name doesn't work in yarn-client mode,Spark-submit --name does not resolve to application name on YARN
+add a config to replace SPARK_YARN_USER_ENV,Clean up use of setExecutorEnvs in SparkConf 
+GLMNET implementation in Spark,Add an OWL-QN optimizer for L1 regularized optimizations.
+Driver error org.apache.spark.scheduler.TaskSetManager - Loss was due to java.io.FileNotFoundException,Support multiple SparkContexts in the same JVM
+Take advantage of AMRMClient APIs to simplify logic in YarnAllocationHandler,after receving allocated containers;amClient should remove ContainerRequest.
+Add missing description to spark-env.sh.template,spark-submit does not set driver memory correctly
+Add broadcast information on SparkUI storage tab,Broadcast variable memory usage not reflected in UI
+Add recursive directory file search to fileInputStream,Support nested directories in Spark Streaming
+Add broadcast hash join operator,Broadcast Join (aka map join)
+Add broadcast hash join operator,rename Equals to EqualTo in Spark SQL expressions
+Audit dependency graph when Spark is built with -Phive,Created forked version of hive-exec that doesn't bundle other dependencies
+Error launching cluster when master and slave machines are of different virtualization types,Specifying the master instance type
+Support resizable output buffer for kryo serializer,Allow user to set maximum Kryo buffer size
+Support cross-building with Scala 2.11,[MLLIB] Univariate kernel density estimation
+Add a utility to SparkConf that makes using Kryo really easy,spark.kryo.registrator shall use comma separated value to support multiple registrator
+Windows Spark fails to work with Linux YARN,YARN | Spark job submits from windows machine to a linux YARN cluster fail
+Executor UI improvement suggestions,Color GC time red when over a percentage of task time
+NoSuchMethodError when invoking JavaPairRDD.reduce() in Java,JavaDoubleRDD doesn't contain max()
+sc.textFile does not support non UTF-8 encodings,"add a parameter for  SparkContext(conf).textFile() method ; support for multi-language  hdfs file ;   e.g. ""gbk"""
+Provide memory-and-local-disk RDD checkpointing,Provide operator to truncate lineage without persisting RDD's
+Allowing user jars to take precedence over Spark jars does not work as expected,spark.files.userClassPathFirst doesn't work correctly
+enhance MEMORY_AND_DISK mode by dropping blocks in parallel,Drop old blocks to disk in parallel when memory is not large enough for caching new blocks
+Spark JAR compiled with Java 7 leads to PySpark not working in YARN,Add pyspark archives path to PYTHONPATH
+Implicits declared in companion objects not found in Spark shell,Strange implicit resolution behavior in Spark REPL
+spark on yarn can't start ,spark on yarn can't start 
+yarn client mode Application Master memory size is same as driver memory size,generalize the type of categoricalFeaturesInfo to PartialFunction[Int; Int]
+Make it easier to get Spark on YARN code to compile in IntelliJ,"Maven ""hadoop*"" Profiles Should Set the expected Hadoop Version."
+Race condition in accessing cache locations in DAGScheduler,Race condition in DAGScheduler
+Spark UI issues at scale,Improve Spark UI behavior at scale
+web ui stage page becomes unresponsive when the number of tasks is large,SparkUI stage page hangs with many tasks
+Spark 1.0.0 fails to run in coarse-grained mesos mode,Spark 1.0.0 is failing if mesos.coarse set to true
+External hashing in PySpark,External aggregation in Python
+spark-ec2 puts Hadoop's log4j ahead of Spark's in classpath,Spark's log4j.properties should always appear ahead of Hadoop's on classpath
+spark.yarn.dist.* configs are not supported in yarn-cluster mode,spark.yarn.dist.* configs are not documented
+Creating a SchemaRDD via sql() does not correctly resolve nested types,Case insensitivity breaks when unresolved relation contains attributes with uppercase letters in their names
+web ui should not remove executors if they are dead,Driver UI should enable viewing of dead executors' logs
+Stratified sampling implementation in PairRDDFunctions,Stratified sampling
+Clean Multi-user semantics for thrift JDBC/ODBC server.,Thrift server doesn't reset current database for each connection
+Clean Multi-user semantics for thrift JDBC/ODBC server.,spark.sql.shuffle.partitions is global; not per connection
+Clean Multi-user semantics for thrift JDBC/ODBC server.,ThriftServer use only one SessionState to run sql using hive 
+groupByKey and joins on raw data,Add MR-style (merge-sort) SortShuffleReader for sort-based shuffle
+groupByKey and joins on raw data,In sort-based shuffle; store map outputs in serialized form
+Move aggregation into shuffle implementation,Move aggregation into ShuffleManager implementations
+Use application specific folders to dump metrics via CsvSink,Metrics can be accidentally aggregated against our intention
+the error of comput rightNodeAgg about  Decision tree algorithm  in Spark MLlib ,error of  Decision tree algorithm  in Spark MLlib 
+Null values when using App trait.,"Closure problems when running Scala app that ""extends App"""
+Public API for DataTypes and Schema,user should be able to provide schema for table creation
+Multi-way join,MultiWayBroadcastInnerHashJoin
+Cost-based join reordering,Cost-based Optimizer Framework
+Fix remaining Hive Commands,"Support ""dfs"" command"
+Spark fails on windows YARN (HortonWorks 2.4),Spark AM not launching on Windows
+Building and running tests with maven is extremely slow,Parallelize Scala/Java test execution
+HAVING should be able to contain aggregate expressions that don't appear in the aggregation list. ,Support HAVING clause generated by Tableau
+onStageSubmitted does not properly called so NoSuchElement will be thrown in onStageCompleted,StorageStatusListener should avoid O(blocks) operations
+Running sc.parallelize(..).count() hangs pyspark,pyspark - RDD action hangs (after previously succeeding)
+Running sc.parallelize(..).count() hangs pyspark,pyspark - RDD action hangs (after previously succeeding)
+Support multiple SparkContexts in the same JVM,Multiple SparkContexts can coexist in one process
+Data frame (or Pandas) like API for structured data,Adding data frame APIs to SchemaRDD
+Feature scaling which standardizes the range of independent variables or features of data.,Add normalizeByCol method to mllib.util.MLUtils
+Do not send SPARK_HOME from driver to executors,Separate driver spark home from executor spark home
+Do not send SPARK_HOME from driver to executors,Separate driver spark home from executor spark home
+Add KMeans MiniBatch clustering algorithm to MLlib,Implement the Mini-Batch KMeans
+StorageStatusListener should avoid O(blocks) operations,JobProgressListener gets permanently out of sync with long running job
+Design a proper progress reporting & event listener API,enhance spark listener API to gather more spark job information
+Utils.getLocalDir had better check the directory and choose a good one instead of choosing the first one directly,Utils.getLocalDir() may return non-existent spark.local.dir directory
+DiskBlockManager could add DiskChecker function for kicking off bad directories,Block Manager should catch exceptions in putValues
+k-Nearest Neighbor classification and regression for MLLib,Approximate k-NN Models for MLLib
+Add Artificial Neural Network (ANN) to Spark,"In ""local[N]""; free cores of the only executor should be touched by ""spark.task.cpus"" for every finish/start-up of tasks."
+"In ""local[N]""; free cores of the only executor should be touched by ""spark.task.cpus"" for every finish/start-up of tasks.",Artificial neural networks for MLlib deep learning
+"In ""local[N]""; free cores of the only executor should be touched by ""spark.task.cpus"" for every finish/start-up of tasks.",Add Convolutional Neural network to Spark MLlib
+"In ""local[N]""; free cores of the only executor should be touched by ""spark.task.cpus"" for every finish/start-up of tasks.",Integrate convolutional deep belief networks for visual recognition tasks  
+ArrayIndexOutOfBoundsException in scheduler,getAllowedLocalityLevel() throws ArrayIndexOutOfBoundsException
+Exception: Could not locate executable null\bin\winutils.exe in the Hadoop ,Cannot save data to parquet files when executing from Windows from a Maven Project
+Exception: Could not locate executable null\bin\winutils.exe in the Hadoop ,.save() Procedure fails
+Exception: Could not locate executable null\bin\winutils.exe in the Hadoop ,NullPointerException while trying to launch local spark job
+CSV import to SchemaRDDs,Implement functionality to read csv files
+With auto.offset.reset; KafkaReceiver potentially deletes Consumer nodes from Zookeeper,KafkaReceiver minor changes to align with Kafka 0.8 
+"globally shared SparkContext / shared Spark ""application""",Support a shared RDD store among different Spark contexts
+Trouble running Spark 1.0 on Yarn ,Modify default YARN memory_overhead-- from an additive constant to a multiplier
+Spark should treat writable as serializable for keys,Add a Hadoop Writable serializer
+ApplicationState.MAX_NUM_RETRY should be configurable,Make ApplicationState.MAX_NUM_RETRY configurable
+Hierarchical Implementation of KMeans,Bisecting k-means clustering
+Apriori algorithm for frequent itemset mining,Add FP-growth algorithm to Spark MLlib
+MesosExecutorBackend crashes in fine grained mode,Spark on Mesos not correctly setting heap overhead
+MesosExecutorBackend crashes in fine grained mode,BlockManagerMasterActor: Got two different block manager registrations with Mesos
+"Table name is not getting applied to their attributes after ""registerAsTable""","For a registered table in OverrideCatalog; the Analyzer failed to resolve references in the format of ""tableName.fieldName"""
+Provide link to YARN executor logs on UI,Add executor log url to Executors page on Yarn
+Multi-statement input to spark repl does not work,Compound lines in spark-shell cause compilation errors
+Creating then stopping StreamingContext multiple times from shell generates duplicate Streaming tabs in UI,Multiple spark streaming tabs on UI when reuse the same sparkcontext
+Use long as user / item ID for ALS,JavaRDDLike.groupBy[K](f: JFunction[T; K]) may fail with typechecking errors
+Build should not run hive compatibility tests by default.,Hive should not be enabled by default in the build.
+Model SerDe in MLlib,Ability to re-create ML models
+Unsupported parquet datatype optional fixed_len_byte_array,Cannot handle Parquet type FIXED_LEN_BYTE_ARRAY
+Standalone mode can't access secure HDFS anymore,Support for accessing secured HDFS in Standalone Mode
+Add Date datatype support to Spark SQL,Add Date type support
+Can't delete local dir on executor automatically when running spark over Mesos.,Should delete temporary local directories
+OUTER JOINs cause ClassCastException,scala.collection.mutable.HashSet cannot be cast to scala.collection.mutable.BitSet
+Reading from S3 returns an inconsistent number of items with Spark 0.9.1,Distinct is broken
+Remove special handling of Hadoop JobConf,Remove all unnecessary broadcasts
+Add config property to disable incremental collection used in Thrift server,Add config property to disable incremental collection used in Thrift server
+Mesos doesn't handle spark.executor.extraJavaOptions correctly (among other things),Mesos doesn't handle spark.executor.extraJavaOptions correctly (among other things)
+VPC Issue while creating an ec2 cluster,EC2 cluster creation on VPC
+case class cannot be used as key for reduce,Type mismatch when defining classes in Spark REPL
+case class cannot be used as key for reduce,Closure inside RDD doesn't properly close over environment
+Stacked Auto Encoder (Deep Learning ),Autoencoder
+Input data size of CoalescedRDD is incorrect,Input metrics don't work for coalesce()'d RDD's
+BasicBlockFetchIterator#next can wait forever,Spark can hang when fetching shuffle blocks
+`Spark-submit` overrides user application options,spark-shell doesn't accept flags
+`Spark-submit` overrides user application options,spark-submit processes app cmdline options
+Add Length support to Spark SQL and HQL and Strlen support to SQL,Add LENGTH and DATALENGTH functions to Spark SQL
+Make unidoc part of our test process,Build docs on doc changes
+Improve compatibility with parquet file/table,Add a conf to configure if we always read Binary columns stored in Parquet as String columns
+Upgrade Tachyon dependency to 0.5.0,Update build script to Tachyon 0.5.0
+Upgrade Tachyon dependency to 0.5.0,Update make-distribution.sh to download Tachyon 0.5.0
+Upgrade Tachyon dependency to 0.5.0,Update Tachyon dependency to 0.5.0
+Upgrade to Akka 2.3,Update akka to version 2.3.4
+Add Mima binary checks to Flume-Sink,Add Mima test for Spark Sink after 1.1.0 is released
+Mechanism for escaping spark configs is not consistent,spark.*.extraJavaOptions are evaluated too many times
+Document standalone-cluster mode now that it's working,Update documentation to clarify whether standalone-cluster mode is now officially supported
+TorrentBroadcast cannot broadcast very large objects,Address various 2G limits
+HiveContext does not support dots in column names. ,Special chars in column names is broken
+Add location filtering to Twitter streams,Add locations parameter to Twitter Stream
+Add location filtering to Twitter streams,streaming-twitter pass twitter4j.FilterQuery argument to TwitterUtils.createStream()
+Add location filtering to Twitter streams,Add filter by location boundingbox in TwitterInputDStream.scala
+Add location filtering to Twitter streams,Twitter Streaming Geoloaction Filter
+"add  ""show create table"" support","SPARK SQL Hive misses ""SHOW CREATE TABLE"" command"
+GraphX jobs throw IllegalArgumentException,Can't zip RDDs with unequal numbers of partitions in ReplicatedVertexView.upgrade()
+Emulate Hive type coercion in native reimplementations of Hive functions,Improve expression type coercion; casting & checking
+Fix conflict between code and doc in YarnClientSchedulerBackend,Yarn client config prioritization is backwards
+Support disk spilling in Spark SQL aggregation,Sort-based Aggregation
+Support disk spilling in Spark SQL aggregation,spark SQL shuffle OOM
+Inconsistent Kryo serialisation with custom Kryo Registrator,Kryo deserialization without using the custom registrator
+Spark Support for ORCFile format,support ORC in spark sql
+Daemon failed to launch worker,Failed to connect to daemon
+"org.apache.spark.broadcast.TorrentBroadcast does use the serializer class specified in the spark option ""spark.serializer""",TorrentBroadcast should use the user specified serializer
+Spark's log4j.properties should always appear ahead of Hadoop's on classpath,Check if Spark's conf needs to be put ahead of Hadoop's (for log4j purposes)
+Refactor and cleanup Yarn AM code,Don't pass null jar to executor in yarn-client mode
+Allow specifying * for --num-executors in YARN,Add option for requesting full YARN cluster
+DAGScheduler resubmit the stage into an infinite loop,FetchFailed stages could show up multiple times in failed stages in web ui
+DAGScheduler resubmit the stage into an infinite loop,FetchFailed stages could show up multiple times in failed stages in web ui
+Spark executables fail to start via symlinks,Allow symlinking to scripts (spark-shell; spark-submit; ...)
+Use LocalRelation for all ExecutedCommands; avoid job for take/collect(),Calling take on ExecutedCommand and OneRowRelation should not trigger job execution
+Python support for chi-squared test,Python API for Hypothesis testing 
+Standalone and Yarn have different settings for adding the user classpath first,Add inferSchema support for RDD[Map[String; Any]]
+Standalone and Yarn have different settings for adding the user classpath first,spark.files.userClassPathFirst doesn't work correctly
+Standalone and Yarn have different settings for adding the user classpath first,Reconcile spark.files.userClassPathFirst with spark.yarn.user.classpath.first
+CLI interface to Driver,Expose JSON representation of data shown in WebUI
+Potential bug when running sort-based shuffle with sorting using TimSort,IllegalArgumentException when I using sort-based shuffle
+Spark assembly for new hadoop API (hadoop 2) contains avro-mapred for hadoop 1 API,Spark assembly for hadoop2 contains avro-mapred for hadoop1
+Support recommendAll in matrix factorization model,Add RankingMetrics to examples.MovieLensALS
+ArrayIndexOutOfBoundsException in ALS for Large datasets,ArrayIndexOutOfBoundsException in ALS
+shuffle will run out of space when disks have different free space,Output directory for shuffle should consider left space of each directory set in conf
+Support DecisionTree pruning,CLONE - Support DecisionTree pruning
+Add Robust Regression Algorithm with Tukey bisquare weight  function (Biweight Estimates) ,Add Robust Regression Algorithm with Turkey bisquare weight  function (Biweight Estimates) 
+Creation of large graph(> 2.15 B nodes) seems to be broken:possible overflow somewhere ,Integer overflow in VertexRDDImpl.count
+Class defined with reference to external variables crashes in REPL.,Assigning spark context to variable results in serialization error
+Class defined with reference to external variables crashes in REPL.,Using Companion Objects throws ambiguous reference error in REPL when an instance of Class is initialized
+ClassNotFoundException in spark-shell with Cassandra,ClassNotFoundException in standalone mode when running groupByKey with class defined in REPL.
+K-Means clusterer should perform K-Means initialization in parallel,kmeans|| hangs for a long time if both k and vector dimension are large
+When DStream save RDD to hdfs ; don't create directory and empty file if there are no data received from source in the batch duration .,JavaStreamingContext.fileStream run task loop repeated  empty when no more new files found
+Fix links in ScalaDoc that cause warning messages in `sbt/sbt unidoc`,Unhelpful error messages generated by JavaDoc while doing sbt unidoc
+CREATE VIEW is not supported but the error message is not clear,support view in HiveQL
+Provide a API to specify MIN_REMEMBER_DURATION for files to consider as input in streaming,File source dstream can not include the old file which timestamp is before the system time
+saveAsParquetFile not working on windows,Cannot save data to parquet files when executing from Windows from a Maven Project
+"yarn's web show ""SUCCEEDED"" when the driver throw a exception in yarn-client",spark on yarn reports success even though job fails
+yarn website's Tracking UI links to the Standby RM,Link to Spark UI sometimes fails when using H/A RM's
+[SQL] bug in CaseWhen resolve,Binding Exception when running PythonUDFs
+Paranoid quoting in shell to allow install dirs with spaces within.,./sbt/sbt assembly command fails if path has <space> in the name
+Support user-defined SparkListeners properly,Allow spark listeners to be added before spark context gets initialized.
+Allow running maven tests in run-tests,Allow running Maven or SBT in run-tests
+`sbt/sbt unidoc` doesn't work with Java 8,Unhelpful error messages generated by JavaDoc while doing sbt unidoc
+Spark on Yarn remove deprecated configs for 2.0,Remove YARN Client / ClientArguments
+Implement 'POWER' for sql,Support math functions in DataFrames
+Add matrix operations for large data set,Distributed matrix multiplication
+Distributed matrix multiplication,Block Matrix addition and multiplication
+Support for accessing secured HDFS in Standalone Mode,Allow for keytab-based HDFS security in Standalone mode
+Provide a way to easily change the log level in the Spark shell while running,Support changing Spark's log level programatically
+ConcurrentModificationException starting up pyspark,Handle ConcurrentModificationExceptions in SparkEnv.environmentDetails 
+Allow symlinking to scripts (spark-shell; spark-submit; ...),Make scripts symlinkable 
+Block replication fails continuously when the replication target node is dead,Block always replicated to the same node
+yarn-client through socks proxy,PySpark does not handle SOCKS proxy
+Display cache hit ratio on WebUI,Record cacheable RDD reads and display RDD miss rates
+Throw exception for concurrently-running SparkContexts / StreamingContexts in the same JVM,SparkContext constructor should throw exception if another SparkContext is already running
+appendReadColumnIDs and appendReadColumnNames introduce unnecessary columns in the lists of needed column ids and column names stored in hiveConf,Spark Hive SQL readColumn is not reset each time for a new query
+Allow for pluggable execution contexts in Spark,Support plugging in Spark scheduler 
+Shuffle data not always be cleaned,Highlight in Spark documentation that by default Spark does not delete its temporary files
+Add task metric to report spill time,Time to write shuffle spill files is not captured in ShuffleWriteMetrics
+Gaussian Mixture Model clustering,Add expectation maximization for Gaussian mixture models to MLLib clustering
+ConnectionManager threads.max configs on the thread pools don't work,Specify more clearly about the max thread meaning in the ConnectionManager
+Don't record the size of each shuffle block for large jobs,Error communicating with MapOutputTracker when run a big spark job
+In some cases; the RDD.checkpoint does not work,checkpoint should still be available after rdd actions
+spark on yarn reports success even though job fails,yarn-client mode reports success even though job fails
+Identify cause of Kryo+Snappy PARSING_ERROR,PARSING_ERROR(2)  in Spark Streaming
+Identify cause of Kryo+Snappy PARSING_ERROR,noisy logging when context is stopped
+Importing pandas breaks included pi.py example,pyspark.mllib.random conflicts with random module
+Java API for GraphX,graphx should be supported with java
+Allow starting JDBC server on an existing context,HiveThriftServer2 may expose Inheritable methods
+Yarn app name reported in RM is different between cluster and client mode,YARN client and cluster modes have different app name behaviors
+RBF Kernel implementation to SVM,Spark's MLlib SVM classification to include Kernels like Gaussian / (RBF) to find non linear boundaries
+Allow printing object graph of tasks/RDD's with a debug flag,Add utility to help with NotSerializableException debugging
+"Spark UI: ""complete/failed stages"" is better to show the total number of stages ",Completed Stages Number are misleading webUI when stages are more than 1000
+Trees and ensembles: More prediction functionality,functions returning the category with weights
+Support for programmatically submitting Spark jobs,Factor out code to launch Spark applications into a separate library
+Spark Streaming fileSystem API is not callable from Java,JavaStreamingContext.fileStream won't work because type info isn't propagated
+Do not bind port 1 - 1024 to server in spark,Utils.startServiceOnPort should check whether the tryPort is less than 1024
+newAPIHadoopRDD doesn't properly pass credentials for secure hdfs on yarn,"when use saveAsNewAPIHadoopFile; sometimes it throws ""Delegation Token can be issued only with kerberos or web authentication"""
+YarnAllocator should look at the container completed diagnostic message,Warn when YARN is killing containers for exceeding memory limits
+Support off-loading computations to a GPU,Support off-loading computations to a GPU
+Support off-loading computations to a GPU,Explore GPU-accelerated Linear Algebra Libraries
+Support off-loading computations to a GPU,Proposal of GPU exploitation for Spark
+Yarn dist cache code is not friendly to HDFS HA; Federation,uploading jar when set spark.yarn.jar 
+PySpark fails to start in Windows,"spark-shell.cmd fails giving error ""!=x was unexpected at this time"""
+Develop an automated way of creating Spark images (AMI; Docker; and others),Bake common tools like ganglia into Spark AMI
+Reimplement HashOuterJoin to construct hash table of only one relation,Optimization about reduce memory costs during the HashOuterJoin
+[PYSPARK] PySpark's sample methods do not work with NumPy 1.9,Enabling spark.sql.codegen throws ClassNotFound exception
+Automate remaining Spark Code Style Guide rules,run-tests scala style must fail if it does not adhere to Spark Code Style Guide
+Use consistent config names for duration (with units!),Use consistent naming for time properties
+The exit code of spark-submit is still 0 when an yarn application fails,The exit code of spark-submit is still 0 when an yarn application fails
+If deploy mode is cluster; --driver-memory shouldn't apply to client JVM,In spark-submit; the driver-memory value is used for the SPARK_SUBMIT_DRIVER_MEMORY value
+If deploy mode is cluster; --driver-memory shouldn't apply to client JVM,spark-class should ignore driver-memory when running in YARN cluster mode.
+Support Hive Percentile UDAF with array of percentile values,PERCENTILE is not working
+NPE caused by SessionState.out not set in thriftserver2,NPE in JDBC server when calling SET
+Make the external-* jars fat jars,"Mark spark dependency as ""provided"" in external libraries"
+Python API for Distributed Matrix,Distributed linear algebra in PySpark/MLlib
+Remove duplicate removal of local dirs,Occasionally spark.local.dir can be deleted twice and causes test failure
+PySpark Error on Windows with sc.wholeTextFiles,Cannot save data to parquet files when executing from Windows from a Maven Project
+Add FP-growth algorithm to Spark MLlib,add Apriori algorithm to MLLib
+Don't show accumulator values in the task table on the stage detail page when there are no accumulators,Hide Accumulators column on stage page when no accumulators exist
+NPE in JDBC server when calling SET,Clean up SessionState in HiveContext
+KMeans support sparse cluster centers,Changes to support KMeans with large feature space
+Incorrect Java example on site,Java example for Streaming on site uses map instead of mapToPair
+"Storage web UI ""fraction cached"" shows as > 100%","spark 1.4.1 ""Storage Fraction Cached""  was greater than 120%.And I recache the talbe in memory and find querying faster than before;May be its a bug."
+New FsPermission instance w/o FsPermission.createImmutable in eventlog,Spark uses incompatible HDFS API
+Input metrics don't work for coalesce()'d RDD's,Task input statistics incomplete when a task reads from multiple locations
+FAILED_TO_UNCOMPRESS(5) errors when fetching shuffle data with sort-based shuffle,spark shuffle FAILED_TO_UNCOMPRESS
+Show dependency changes in pull requests,Enumerate Spark's dependencies in a file and diff against it for new pull requests 
+"Support ""Writing data into the filesystem from queries""","Spark2.0 doesn't support the following SQL statement:""insert into directory ""/u_qa_user/hive_testdata/test1/t1"" select * from d_test_tpc_2g_txt.auction"" while Hive supports"
+PARSING_ERROR(2) when upgrading issues from 1.0.2 to 1.1.0,A FileNotFoundException happened in Hash Shuffle Manager
+Dynamic allocation: tone down scary executor lost messages when killing on purpose,Spark prints misleading error messages about losing executors
+Document the dynamic allocation feature,Adding documentations about dynamic resource allocation
+Add string operation function trim; ltrim; rtrim; length to support SparkSql (HiveQL) ,Improve expression function coverage (Spark 1.5)
+Standalone cluster mode does not upload all needed jars to driver node,#NAME?
+Standalone cluster mode does not upload all needed jars to driver node,Allow spark-submit to upload jars to nodes in cluster mode
+"[SQL] use beeline execute ""create table as""  thriftserver is not use ""hive""  user ;but the new hdfs dir's owner is ""hive""  ",jetty Server can't tryport+1
+"[SQL] use beeline execute ""create table as""  thriftserver is not use ""hive""  user ;but the new hdfs dir's owner is ""hive""  ",Utils.isBindCollision misjudges at Non-English environment
+EdgePartitionBuilder uses wrong value for first clustered index,A problem of EdgePartitionBuilder in Graphx
+Support decimals with precision > 18 in Parquet,Suport storing decimals in Parquet that don't fit in a LONG
+Create separate options to control the client-mode AM resource allocation request,
+Improve Spark Streaming documentation to address commonly-asked questions ,Allow AWS credentials to be passed to KinesisUtils.createStream()
+Shuffle fetches should be retried at a lower level,Perform network-level retry of shuffle file fetches
+Shuffle fetches should be retried at a lower level,retry to fetch blocks's result when fetchfailed's reason is connection timeout
+Disable doclint in Java 8 to prevent from build error.,Javadoc failure for network-common causes publish-local to fail
+stack over flow error while using sqlContext.sql,allCaseVersions function in  SqlLexical  leads to StackOverflow Exception
+Result of SparkSQL is incorrect after a table join and group by operation,SparkSQL behaves differently from Hive when encountering illegal record
+SparkSQL - Add support for subqueries in predicates,TPC-DS Query 35 fails with the following compile error
+SparkSQL - Add support for subqueries in predicates,Support subquery in select/where/having
+SparkSQL - Add support for subqueries in predicates,Support exists condition
+SparkSQL - Add support for subqueries in predicates,SparkSQL - Support for Not Exists in a Correlated Subquery
+Providing ExternalSet to avoid OOM when count(distinct),SQL select count(distinct ) won't work for a normal load
+In dynamic allocation; add option to never kill executors with cached blocks,Dynamic allocation: longer timeout for executors with cached blocks
+Support External Shuffle Service with Mesos integration,Support external shuffle service in fine-grained mode on mesos cluster
+Add Sparse Autoencoder algorithm to MLlib ,Autoencoder
+"Throw ""Expression not in GROUP BY"" when using same expression in group by clause and  select clause",Struct fields can't be used as sub-expression of grouping fields
+Support numpy/scipy in all Python API of MLlib,Python serialization updates make Python ML API more brittle to types
+Correctly log number of iterations in RuleExecutor,RuleExecutor correctly logs trace iteration num
+auto detect type from json string,Support inference schema from a single json string
+connection ack timeout improvement; replace Timer with ScheudledExecutor...,Memory leak in connection manager timeout thread
+Spark driver hangs on sc.parallelize() if exception is thrown during serialization,Prevent serialization errors from ever crashing the DAG scheduler
+Aggregation Improvement,Support user-defined aggregators in AggregateFunction
+Put external modules behind build profiles,Put external projects and examples behind a build flag
+Add tooltips to explain maxMemory / usedMemory columns in executor UI,Spark UI Shows incorrect memory under Yarn
+Event proration based on event timestamps,DStreams should provide windowing based on timestamps from the data (as opposed to wall clock time)
+Support Mesos framework authentication,Support framework authentication and role in Mesos framework
+Shuffle data structures can starve others on the same thread for memory ,Cooperative Memory Management for Spillables
+Number of elements read is never reset in ExternalSorter,OOM/GC errors with sort-based shuffle
+Use MapType for dict in json which has unique keys in each row.,Automatically convert a StructType to a MapType when the number of fields exceed a threshold.
+Spark SQL reads unneccesary nested fields from Parquet,Parquet column pruning should work for Map and Struct
+Add --version to spark-submit,Add an option to print the spark version in spark script
+Spark JVM Metrics doesn't have context.,Allow for configuring MetricsSystem's use of app ID to namespace all metrics
+query for empty parquet table in spark sql hive get IllegalArgumentException,Querying  non-existent partition produces exception in v1.2.0-rc1
+History Server waits ~10s before starting up,Accelerate the History Server start
+Allow spark driver to bind to different ip then advertise ip,Be able to specifie IP for spark-shell(spark driver) blocker for Docker integration
+Allow spark driver to bind to different ip then advertise ip,Ability to run driver programs within a container
+Scheduling Delay appears negative,Scheduler Delay column in tasks table on Stage detail page showing negative numbers
+Scheduling Delay appears negative,Scheduler delay is incorrect for running tasks
+Model export/import,ML model import/export
+Paginate stage page to avoid OOM with > 100;000 tasks,Viewing specific stage information which contains thousands of tasks will freak out the driver and CPU cores from where it runs
+Paginate stage page to avoid OOM with > 100;000 tasks,Task table pagination for the Stage page
+Add random seed to GBTClassifier; GBTRegressor,spark.ml GBT algs need to use random seed
+Job can not finish if there is one bad slave in clusters,Skip bad workers when re-launching executors
+SPARK_CONF_DIR is not effective in spark-submit,Scripts do not use SPARK_CONF_DIR where they should
+Add the some error infomation if using spark-sql in yarn-cluster mode,Add the some error infomation if using spark-sql in yarn-cluster mode
+Dynamically determine optimal number of partitions,Adaptive execution in Spark
+Upgrade MQTT dependency to use mqtt-client 1.0.1,spark-1.1.0 does not compile any more
+Support COALESCE function in Spark SQL and HiveQL,add parser for COALESCE()
+Clean up DAGScheduler's getMissingParentStages() and stageDependsOn() methods,abstract RDD's DAG graph iteration in DAGScheduler
+JavaSerializer uses wrong classloader,Spark Streaming Java Application : java.lang.ClassNotFoundException
+Turn on executor level blacklisting by default,Add blacklist mechanism for task scheduling
+Turn on executor level blacklisting by default,Add Blacklisting of Executors & Nodes within one TaskSet
+Driver retries in cluster mode always fail if event logging is enabled,Spark History Server support multiple application attempts
+Spark SQL support error reading Parquet with timestamp type field,Parquet support for timestamp type
+Spark SQL support error reading Parquet with timestamp type field,Add Support For Impala Encoded Timestamp (INT96)
+spark-ec2 script creates empty spark folder,Spark 1.1.1 launches broken EC2 clusters
+Support dynamic allocation for standalone mode,Spark standalone should support dynamic resource scaling
+ML Estimator Params should be distinct from Transformer Params,Separate Transformer; Estimator params
+Add Support For Impala Encoded Timestamp (INT96),Parquet support for timestamp type
+System.exit() calls in SparkContext disrupt applications embedding Spark,StackOverflowError (VirtualMachineError) or NoClassDefFoundError (LinkageError) should not System.exit() in local mode
+System.exit() calls in SparkContext disrupt applications embedding Spark,System.exit(1) on error
+System.exit() calls in SparkContext disrupt applications embedding Spark,System.exit() still disrupt applications embedding Spark
+Spark does not remove temp files,Highlight in Spark documentation that by default Spark does not delete its temporary files
+Spark should not rely on local host being resolvable on every node,Allow setting Akka host name from env vars
+Add CTE capability to HiveContext,Support CTE
+StringContext method to allow using Strings for column names in catalyst DSL,"Support expressing unresolved attributes using $""attribute name"" notation in SQL DSL"
+Custom UDTFs not working in Spark SQL,Using Hive UDTF may throw ClassNotFoundException
+Join operation should use iterator/lazy evaluation,Join should use `Iterator` rather than `Iterable`
+"Remove Guava's ""Optional"" from public API",Add more exceptions to Guava relocation
+"Spark build encounters ""File name too long"" on some encrypted filesystems",Spark build fails
+"Spark build encounters ""File name too long"" on some encrypted filesystems","CLONE - Spark build encounters ""File name too long"" on some encrypted filesystems"
+Streaming saveAs*HadoopFiles() methods may throw FileAlreadyExistsException during checkpoint recovery,[Spark SQL] show poor performance when multiple table do join operation
+Web UI should display separate information for all stage attempts,In Web UI job history; the total job duration is incorrect (much smaller than the sum of its stages)
+"When the vocabulary size is large; Word2Vec may yield ""OutOfMemoryError: Requested array size exceeds VM limit""",In some cases ;The value of word's vector representation is too big
+Pass partitioning information (distribute by) to In-memory caching,Set InMemoryColumnarTableScan's outputPartitioning and outputOrdering
+Custom UDTF with Lateral View throws ClassNotFound exception in Spark SQL CLI,Using Hive UDTF may throw ClassNotFoundException
+Add version information to driver log,Add spark version information in log for standalone mode
+userClassPathFirst doesn't handle user classes inheriting from parent,spark.files.userClassPathFirst doesn't work correctly
+PySpark broadcast breaks when using KryoSerializer,Python broadcast does not work with Kryo serializer
+Fix incorrect event log path,eventLog file not found after merging into a single file
+Support dynamic allocation for coarse-grained Mesos,Add support for dynamic allocation in the Mesos coarse-grained scheduler
+Adding optimization to simplify the filter condition,Adding optimization to simplify the filter condition
+Python updateStateByKey example hang in local mode,Spark Streaming: simple application stalls processing
+"Table Not Found exception in ""Create Table Like registered RDD table""",`Create Table Like` in HiveContext need support `like registered temporary table`
+Vector Initialization error when initialize a Sparse Vector by calling Vectors.sparse(size; indices; values),Validate indices before constructing a SparseVector
+Add sleep() before tagging EC2 instances to allow instance metadata to propagate,Reduce number of tagging calls in spark-ec2
+PySpark does not handle SOCKS proxy,Example does not work when using SOCKS proxy
+GaussianMixture (GMM) improvements,Gaussian Mixture Model (GMM) improvements
+Approximated cardinality with HyperLogLog UDAF,approx count distinct function
+Spark 1.1.0/1.1.1/1.2.0 can't run well in HDP on Windows,Spark AM not launching on Windows
+Add Flume to the Python Streaming API,Add Spark Flume Python API
+Typos and broken URL,kafka link in streaming docs goes to nowhere
+Typos and broken URL,Broken link in documentation
+Display more helpful error messages for several invalid operations,Display more helpful error messages for several invalid operations
+Race condition in TaskSchedulerImpl.dagScheduler,Race condition in TaskSchedulerImpl.dagScheduler
+Race condition in TaskSchedulerImpl.dagScheduler,Race condition in TaskSchedulerImpl.dagScheduler
+Shuffle write increases,Upgrade Snappy Java to 1.1.1.7 to fix bug that resulted in worse compression
+Shuffle write increases,Shuffle size increase; performance loss from Spark 1.1.0 to Spark 1.2.0 (and 1.2.1)
+A better log info for the start of receiver,A trick log info for the start of Receiver
+Audit and document use of hostnames and IP addresses in Spark,"Driver's Block Manager does not use ""spark.driver.host"" in Yarn-Client mode"
+Audit and document use of hostnames and IP addresses in Spark,Spark should  support NAT (via akka improvements)
+A typo in configuration doc,typo in spark streaming configuration parameter
+Two RDDs which are scheduled concurrently should be able to wait on parent in all cases,"Spark should offer a ""sync"" method that guarantees that RDDs are eagerly evaluated and persisted"
+spark-yarn module should be published,Backport publishing of repl; yarn into branch-1.2
+Parquet Predicate Pushdown Does Not Work with Nested Structures.,Parquet filter push down doesn't handle struct fields
+Python yarn-cluster mode,support python application running on yarn cluster mode
+Add support for rollup and cube in sqlcontext,Support the ROLLUP/CUBE/GROUPING SETS/grouping() in SQLContext
+Integrate Python unit tests into Jenkins,JUnit output for Python tests
+Partitioning support for tables created by the data source API,Add partition support in saveAsParquet
+pyspark --jars does not add classes to driver class path,pyspark - class loading on driver failing with --jars and --packages
+pyspark --jars does not add classes to driver class path,SparkSubmit --jars not present on driver in python
+pyspark --jars does not add classes to driver class path,Make KafkaUtils work in Python with kafka-assembly provided as --jar or maven package provided as --packages
+pyspark --jars does not add classes to driver class path,Unable to load external jars while submitting Spark Job
+Parquet fails to parse schema contains '\r',Aggregation attribute name including special chars '(' and ')' should be replaced before generating Parquet schema
+Input metrics should show up for InputFormats that return CombineFileSplits,InputMetrics bug when inputSplit is not instanceOf FileSplit
+Accumulators are not re-registered during recovering from checkpoint,ClassCast Exception when restarting spark streaming from checkpoint
+Add support of schema-less; custom field delimiter and SerDe for HiveQL transform,HiveQL transform doesn't support the non output clause
+Pluggable SQL Parser Support,Support dialect in SQL
+concat support in sqlcontext,string function: concat
+Use tableIdentifier as the reference of a table ,Using `tableIdentifier` in hive metastore 
+UDTF don't work with multi-alias of multi-columns as output on SparK SQL,support alias for udfs with multi output columns
+"JdbcRDD throws ""java.lang.AbstractMethodError: oracle.jdbc.driver.xxxxxx.isClosed()Z""",JdbcRDD requires JDBC 4 APIs; limiting compatible JDBC Drivers
+ec2/spark_ec2.py lauch does not work with VPC if no public DNS or IP is available,Private VPC's and subnets currently don't work with the Spark ec2 script
+Move Decimal from types.decimal to types package,moving Decimal from types.decimal to types package
+Submitting applications on Standalone cluster controlled by Zookeeper forces to know active master,start-all script not working properly on Standalone HA cluster (with Zookeeper)
+Submitting applications on Standalone cluster controlled by Zookeeper forces to know active master,Support HA in standalone cluster mode
+pyspark.streaming is not included in assembly jar,pyspark.streaming is not included in assembly jar
+check ambiguous reference to fields in Spark SQL is incompleted,Got error when one table's alias name is the same with other table's column name
+Registering table on RDD is giving MissingRequirementError,Executing functions in sparkSQL registered in sqlcontext gives scala.reflect.internal.MissingRequirementError: class org.apache.spark.sql.catalyst.ScalaReflection
+optimize join for table that are already sharded/support for hive bucket,Support writing out pre-hash-partitioned data and exploit that in join optimizations to avoid shuffle (i.e. bucketing in Hive)
+EventLoggingListener throws exception if log directory does not exist,"Spark ""spark.eventLog.dir"" dir should create the directory if it is different from ""spark.history.fs.logDirectory"""
+EventLoggingListener throws exception if log directory does not exist,Support to automatically create the directory where the event logs go (`spark.eventLog.dir`) 
+EventLoggingListener throws exception if log directory does not exist,create event log directory automatically if not exists
+EventLoggingListener throws exception if log directory does not exist,Create spark.eventLog.dir if it does not exist
+EventLoggingListener throws exception if log directory does not exist,EventLoggingListener to auto create log base dir if it does not exist
+s3a:// protocol and hadoop-aws dependency,Add spark-hadoop-cloud module to pull in object store support
+remove allocatedHostToContainersMap.synchronized in YarnAllocator,Remove some unnecessary synchronization in YarnAllocator
+abstract RDD's DAG graph iteration in DAGScheduler,Eliminate redundant code in DAGScheduler's getParentStages and getAncestorShuffleDependencies methods.
+spark-shell.cmd does not run from DOS Windows 7,spark-shell broken on Windows
+spark-shell.cmd does not run from DOS Windows 7,Can't start spark shell or pyspark in Windows 7
+tree Losses strings should match loss names,Stabilize DecisionTree and ensembles APIs
+Add support for floor function in Spark SQL,Support math functions in DataFrames
+Break sql.py into multiple files,Split pyspark/sql.py into multiple files
+PySpark on yarn mode need to support non-local python files,--py-files doesn't seem to work in YARN cluster mode
+PySpark on yarn mode need to support non-local python files,YARN cluster python --py-files does not work
+java.lang.NoSuchMethodError: scala.Predef$.ArrowAssoc(Ljava/lang/Object;)Ljava/lang/Object;,KMeans clustering java.lang.NoSuchMethodError: scala.runtime.IntRef.create  (I)Lscala/runtime/IntRef;
+Arrays and Maps stored with Hive Parquet Serde may not be able to read by the Parquet support in the Data Souce API,Implement Parquet complex types backwards-compatiblity rules
+wholeTextFiles should recognize multiple input paths delimited by ;,SparkContext's newAPIHadoopFile does not support comma-separated list of files; but the other API hadoopFile does.
+With assembly jar to run example throws an exception,Servlet API classes now missing after jetty shading
+Fix testPackage in StreamingContextSuite,Calling graceful stop() immediately after start() on StreamingContext should not get stuck indefinitely
+Replace an obsolete mapReduceTriplets with a new aggregateMessages in GraphSuite,Remove deprecate APIs from GraphX
+Add spark-ec2 action to return info about an existing cluster,spary_ec2.py should expose/return master and slave lists (e.g. write to file)
+not able to resolve dot('.') in field name,Special chars in column names is broken
+Calling graceful stop() immediately after start() on StreamingContext should not get stuck indefinitely,Fix a bug that ssc.stop(true; stopGracefully = true) may block forever
+Add encrypted shuffle in spark,Implement OpensslAesCtrCryptoCodec to enable encrypted shuffle algorithms which openssl provides
+Add encrypted shuffle in spark,Implement the shuffle encryption with AES-CTR crypto using JCE key provider.
+Add encrypted shuffle in spark,Support shuffle spill encryption in Spark
+Propagate missing external shuffle service errors to client,ExecutorRunnable should catch YarnException while NMClient start container
+Size exceeds Integer.MAX_VALUE in File Map,Remote Shuffle Blocks cannot be more than 2 GB
+Fix Bash word splitting bugs in compute-classpath.sh,word split problem in run-example and compute-classpath
+add basic support to JDBCRDD for postgresql types: uuid; hstore; and array,Add support for more postgres column types
+Spark AM not launching on Windows,Spark 1.3.0 on YARN: Application failed 2 times due to AM Container
+GenericRow cannot be cast to SpecificMutableRow when nested data and partitioned table,beeline client class cast exception on partitioned table Spark SQL
+Shuffle creates too many nested directories,Don't create unnecessary directory for local root dir
+Fix the type error in the final example given in MLlib - Clustering documentation,Backport of SPARK-5805 to branch-1.2
+Highlight in Spark documentation that by default Spark does not delete its temporary files,Out of disk space due to Spark not deleting shuffle files of lost executors
+HTTP 500 if try to access Spark UI in yarn-cluster or yarn-client mode,HTTP500 revisit when open web-UI in yarn-cluster yarn-client mode (1.2-1.3) 
+Memory leak in DiskBlockManager,Exception when deleting Spark local dirs when shutting down DiskBlockManager
+Memory leak in DiskBlockManager,Luigi triggering resolved Blockmanager bug
+Allow for configuring MetricsSystem's use of app ID to namespace all metrics,Using AppName instead of AppId in the name of all metrics
+Improve performance of convertToScala codepath.,Speed up toDF() and rdd() functions by constructing converters in ScalaReflection
+GradientBoostedTrees should cache residuals from partial model,Cache residuals for GradientBoostedTrees during training
+Implement feature transformers to ML pipelines for Spark 1.4,Add new feature transformers in ML package
+Add support for Decimal type in SQL Table caching,Specialized in-memory column type for fixed-precision decimal
+Spark Thrift server reports metadata for VARCHAR column as STRING in result set schema,Spark Thrift GetResultSetMetadata describes a VARCHAR as a STRING
+Remote Shuffle Blocks cannot be more than 2 GB,org.apache.spark.shuffle.FetchFailedException: Too large frame
+Create a ReliableKinesisReceiver similar to the ReliableKafkaReceiver,Implement WAL-free Kinesis receiver that give at-least once guarantee
+[MLLIB] Python support for Power Iteration Clustering,Spark-submit deploy-mode incorrectly affecting submission when master = local[4] 
+[MLLIB] Python support for Power Iteration Clustering,Python API for PowerIterationClustering
+Allow spark-daemon.sh to support foreground operation,Would be very useful if spark-daemon.sh supported foreground operations
+Allow spark-daemon.sh to support foreground operation,change sbin scripts to allow running spark foregroud
+Temporary directories are not removed (but their content is),Spark doesn't clean up Application Directories (local dirs) 
+zip two rdd with AutoBatchedSerializer will fail,zip two rdds derived from pickleFile fails
+"Batch K-Means clusters should support ""mini-batch"" updates",Implement the Mini-Batch KMeans
+Optimize count distinct in case of high cardinality columns,Use more robust plan for single distinct aggregation
+IllegalArgumentException thrown by TimSort when SQL ORDER BY RAND (),If order by clause has non-deterministic expressions; we should add a project to materialize results of these expressions 
+IllegalArgumentException thrown by TimSort when SQL ORDER BY RAND (),TimSort Comparison method violates its general contract with CLUSTER BY
+java.io.IOException: Filesystem is thrown when ctrl+c or ctrl+d spark-sql on YARN ,Hadoop Filesystem for eventlog closed before sparkContext stopped
+java.io.IOException: Filesystem is thrown when ctrl+c or ctrl+d spark-sql on YARN ,IOException: Filesystem closed  is thrown while existing spark-sql console
+java.io.IOException: Filesystem is thrown when ctrl+c or ctrl+d spark-sql on YARN ,Spark-sql throws IOException on exit when using HDFS to store event log.
+NoSuchMethodError in Spark app is swallowed by YARN AM,Driver OOM results in reported application result SUCCESS
+"java.util.NoSuchElementException: key not found: xyz  ;this error is came most  number of times in cluster mode  while working with 1.2.1 latest version .please solve this.""","java.util.NoSuchElementException: key not found: xyz ;this error is came most number of times in cluster mode while working with 1.2.1 latest version .please solve this."" "
+MLlib doesn't pass mvn scalastyle check due to UTF chars in LDAModel.scala,LDAModel.scala fails scalastyle on Windows
+Spark sql hive dynamic partitions job will fail if task fails,LeaseExpiredException when using dynamic partition with speculative execution
+Enable hash joins for null-safe equality predicates,Fast null-safe join
+spark-shell broken on Windows,"Error message when launching: ""find: 'version' : No such file or directory"""
+event log file ends with .inprogress should be able to display on webUI for standalone mode,Spark application history cannot be found even for finished jobs
+Improve FP-Growth for mining closed-forms of frequent patterns,Add maximal frequent itemsets filter in Spark MLib FPGrowth
+Not cache in memory again if put memory_and_disk level block after put it in disk after unroll unsuccess in memory.,Unrolling with MEMORY_AND_DISK should always release memory
+No class def found for HiveConf in Spark shell,NoClassDefFoundError when launching spark shell w/o hive
+Improve doc: Python ALS; MatrixFactorizationModel,Make Parameter Descriptions Consistent for PySpark MLlib FPM and Recommendation
+Skip bad workers when re-launching executors,Handling fatal errors of executors and decommission datanodes
+" Deltele repeated TOKEN. ""TOK_CREATEFUNCTION"" has existed at Line 84;",Sort these tokens in alphabetic order to avoid further duplicate in HiveQl
+Report full executor exceptions to the driver,Propagate user exceptions in tasks back to driver
+handle json parse exception for eventlog file not finished writing ,Failed to load application log data from FileStatus
+Check Python version in worker before run PySpark job,Warn users about mixed python versions when running PySpark
+Avoid Build warning- enable implicit value scala.language.existentials visible,Resolve most build warnings; 1.3.0 edition
+Address various 2G limits,OutOfMemory thrown by Closure Serializer without proper failure propagation
+Spark MLlib fpm#FPGrowth minSupport should use long instead,another constructor for FPGrowth algorithm to support the absolute value for support
+Support replace (drop) column for parquet table,Metastore schema should only be a subset of parquet schema to support dropping of columns using replace columns
+Get Kafka offsets from consumer group in ZK when using direct stream,Need how-to for resuming direct Kafka streaming consumers where they had left off before getting terminated; OR actual support for that mode in the Streaming API
+Get Kafka offsets from consumer group in ZK when using direct stream,Kafka Direct API support offset in zookeeper
+Standalone Master hangs when streaming job completes and event logging is enabled,Stopping Streaming Context (sometimes) crashes master
+"Miss expressions flag ""s"" at logging string ",Kafka directInputStream logs what appear to be incorrect warnings
+PySpark task may hang while call take() on in Java/Scala,Pyspark local stalls when take() before count() on cached rdd
+ClassNotFoundException in standalone mode when running groupByKey with class defined in REPL.,Case Classes Cannot be Repartitioned/Shuffled in Spark REPL
+Executers fetches the same rdd-block 100's or 1000's of times,RDD.cartesian is much slower than join
+ChiSqTest should check for too few counts,ChiSqTest should check for too few counts
+ChiSqTest should check for too few counts,ChiSqTest should check for too few counts
+newParquetRelation gets incorrect FileSystem,ParquetRelation2 does not support paths for different file systems
+newParquetRelation gets incorrect FileSystem,Spark Sql hive query is not working on spark1.3 version
+spark-local dir not getting cleared during ALS,Clear shuffle files after checkpointing in ALS
+Enable useFeatureScaling in SVMWithSGD,Handling feature scaling properly for GLMs
+hashCode and equals for Matrices,SparseMatrix should override equals
+add Apriori algorithm to MLLib,add association rule mining algorithm to MLLib
+Few examples on Dataframe operation give compiler errors ,Spark SQL prog guide code error
+ISO 8601 timestamp parsing does not support arbitrary precision second fractions,ISO DateTime parser is too strict
+add association rule mining algorithm to MLLib,Support association rule generation in FPGrowth
+It would be great if you could share your test jars in Maven central repository for the Spark SQL module,hive tests to import spark-sql test JAR for QueryTest access
+Streaming ALS for Collaborative Filtering,Support parallelized online matrix factorization for Collaborative Filtering 
+Add simple per-stage visualization to the UI,Timeline view for Stage page
+Couldn't find leader offsets exception when creating KafkaDirectStream,When I build Spark 1.3 sbt gives me to following error   : unresolved dependency: org.apache.kafka#kafka_2.11;0.8.1.1: not found  org.scalamacros#quasiquotes_2.11;2.0.1: not found [error] Total time: 27 s; completed 27-Mar-2015 14:24:39
+Indicate which tasks ran on which executors in per-stage visualization in UI,Timeline view for Stage page
+Show per-task metrics when you hover over a task in the web UI visualization,Timeline view for Stage page
+MLlib Local Linear Algebra Package,Add the dot and hadamard products to the Vectors object
+Support HA in standalone cluster mode,Standalone cluster worker does not accept multiple masters on launch
+Support HA in standalone cluster mode,spark-submit is not able to identify Alive Master in case of multiple master
+spark.executorEnv.PATH in spark-defaults.conf is not pass to mesos,Spark on Mesos may need more tests for spark 1.3.1 release
+Spark fileserver not started on same IP as using spark.driver.host,Spark fileserver not started on same IP as configured in spark.driver.host
+Remove synchronization of Hive Native commands,Create separate Hive Driver instance for each SQL query in HiveThriftServer2
+error handling issue running python in yarn cluster mode ,Exception not failing Python applications (in yarn cluster mode)
+"Publish ""hadoop provided"" build with instructions for different distros","Document how to use ""hadoop provided"" builds"
+Incorrect aggregate results if seqOp(...) mutates its first argument, Change RDD.aggregate() to do reduce(mapPartitions()) instead of mapPartitions.fold()
+Update Spark to use the latest version of Parquet libraries,SparkSQL and Spark sometimes throw exceptions when reading Parquet files.
+Update Spark to use the latest version of Parquet libraries,Use latest parquet release 1.6.0 in spark
+Support aggregated function in order by,order by should support aggregate functions
+SQLUserDefinedType failed in spark-shell,java.lang.ClassNotFoundException: $line22.$read$$iwC$$iwC$movie_row
+explicit checkpoint does not work,mlllib explicit ALS checkpoint does not work
+DataFrame created through SQLContext.jdbc() failed if columns table must be quoted,Spark does not enclose column names when fetchting from jdbc sources
+Update Kinesis Streaming impls (both KCL-based and Direct) to use latest aws-java-sdk and kinesis-client-library,Update AWS SDK and KCL versions to 1.2.1
+repeated asking to remove non-existent executor,Local cluster mode is broken with SPARK_PREPEND_CLASSES
+Use different types to represent rows used inside and outside Catalyst,Decouple internal Row from external Row
+Be able to specifie IP for spark-shell(spark driver) blocker for Docker integration,Ability to run driver programs within a container
+Add checkpointing to GradientBoostedTrees,Gradient boosted trees: increasing input size in 1.4
+spark-sql script ends up throwing Exception when event logging is enabled.,Thrift Server couldn't strip .inprogress suffix after being stopped
+flaky test: run Python application in yarn-cluster mode ,Flaky test: o.a.s.deploy.yarn.YarnClusterSuite Python application
+Using Hive UDTF may throw ClassNotFoundException,Hive UDTF with Lateral View cause ClassNotFoundException
+Improve the test on normL1/normL2 of summary statistics,PySpark MultivariateStatisticalSummary unit test for normL1 and normL2
+Model export/import for spark.ml: HashingTF,Model export/import for spark.ml: all basic Transformers
+Scala existentials warning during compilation,Suppression of usage of Scala existential code should be done
+Throw exception if the user tries to concurrently start multiple StreamingContexts in same JVM.,Throw unambiguous exception when attempting to start multiple StreamingContexts in the same JVM
+Block jetty's log as we have already shaded it,Spark shell prints error when :4040 port already in use
+Do not borrow/release a kryo instance for every value in a complex type value when doing serialization/deserialization in in-memory columnar store,performance bottleneck in SparkSQL using columnar storage
+Sketch algorithms for SQL/DataFrames,Add the streaming implementation for estimating quantiles and median
+Approximate quantile,Univariate Statistics: Adding median & quantile support as UDAF
+CountMinSketch,Implement Bloom filter and count-min sketch in DataFrames
+Implement Parquet complex types backwards-compatiblity rules,Read array struct data from parquet error
+SQL contexts in spark-shell and pyspark should both be called sqlContext,sqlCtx -> sqlContext in pyspark shell
+Make sure values of partitioning columns are correctly converted based on their data types,when use dynamic partitions; the partition string can be wrong without looking at the type
+User Defined Aggregate Function Refactoring,Add support for UDAFs in Python
+Random forest: predict class probabilities,
+ExecutorAllocationManager will request negative number executors,ExecutorAllocationManager can end up requesting a negative number of executors
+building error because of guava import,Build with Hive Thrift Server error; because of missing guava
+SparkSql - HiveContext - optimize reading partition data from metastore,Support for pushing predicates down to metastore for partition pruning
+Support for pushing predicates down to metastore for partition pruning,Operations on tables with many partitions _very_slow
+DataFrame.withColumn should take metadata,support adding metadata in withColumn
+Spark SQL CLI does not read Data Source schema correctly,Support setting the right schema & serde when writing to Hive metastore
+driver hangs when net is broken,driver process will be suspend when driver network has down
+Word2Vec's transform method throw IllegalStateException if a word not in vocabulary; but  findSynonyms(word: String; num: Int) method neither try catch exception nor throw exception. ,Word2Vec's transform method throw IllegalStateException if a word not in vocabulary; but  findSynonyms(word: String; num: Int) method neither try catch exception nor throw exception. 
+Alias for more complex expression causes attribute not been able to resolve,move the auto alias logic into Analyzer
+PySpark CrossValidator,Make ml.tuning accessible from Python API
+Provide SQL tab in the Spark UI,Add a web UI page that visualizes physical plans (SparkPlan)
+Add visualization of logical and physical plans for SQL/DataFrames,Add a web UI page that visualizes physical plans (SparkPlan)
+History server slow startup if the event log directory is large,Spark HistoryServer load logs too slow and can load the latest logs
+History server slow startup if the event log directory is large,Inprove HistoryServer with multithread to relay logs
+ExecutorAllocationManager can end up requesting a negative number of executors,Attempt to request negative number of executors with dynamic allocation
+Cannot save data to parquet files when executing from Windows from a Maven Project,Cannot save ML PipelineModel in pyspark;  PipelineModel.params still return null values
+resetProb error in pagerank,resetProb error in pagerank
+Inconsistent behavior for ctrl-c in Spark shells,Allow Ctrl-C in spark-shell to kill running job
+Build assembly JAR via ant to avoid zip64 problems,Allow Spark to be built without assemblies
+Multiclass to Binary Reduction,Multiclass SVM - One vs All wrapper
+Build docs on doc changes,Test Java 8 unidoc build on Jenkins master builder
+Avoid writing empty files in BypassMergeSortShuffleWriter,Prevent generate empty file
+Avoid writing empty files in BypassMergeSortShuffleWriter,Avoid writing a shuffle file if a partition has no output (empty)
+Support Compression write for Parquet,Support for specifying compression codec for Parquet/ORC via option()
+Support Compression write for Parquet,Parquet compression does not work for Spark SQL loading
+Binary processing external sort-merge join,SortMergeJoin operator should support UnsafeRow
+Introduce LDAOptimizer to LDA to improve extensibility,Introduce LDAOptimizer to LDA to further improve extensibility
+Partitioned tables should only consider referred partitions in query during size estimation for checking against autoBroadcastJoinThreshold,Populate statistics info of hive tables if it's needed to be
+Support model save/load in Python's Word2Vec,word2vec model save for python
+Should ML sharedParams be a public API?,Traits generated by SharedParamsCodeGen should not be private
+Correlation methods for DataFrame,Statistic functions for DataFrames
+SerializationDebugger fails with ArrayOutOfBoundsException,ArrayIndexOutOfBoundsException in SerializationDebugger
+UTF8String backed by binary data,Enable UTF8String to work against memory address directly
+Rank for DataFrames,Add the streaming implementation for estimating quantiles and median
+Add support for creating new Hive and HBase delegation tokens,Support long-running of the Spark On HBase and hive meta store.
+Issue with duplicated fields in interpreted json schemas,json to DataFrame to parquet does not respect case sensitiveness
+Dataframe should support partitioned JSON Relation,Migrate JSON data source to the new partitioning data source
+Add missing items to pyspark.mllib.linalg.Vectors,Add missing items to pyspark.mllib.linalg.Vectors
+JDBC RDD could lead to NPE when the date field is null,NPE when reading null DATE columns from JDBC
+Flaky test: o.a.s.deploy.SparkSubmitSuite --jars,Flaky test: o.a.s.deploy.SparkSubmitSuite --jars
+FlakyTest - o.a.s.DriverSuite,Flaky test: o.a.s.DriverSuite
+Support multi-line JSON objects,Parse normal; multi-line JSON files (not just JSON Lines)
+Add missing input information report back to ReceiverInputDStream due to SPARK-7139,Fix the bug that ReceiverInputDStream doesn't report InputInfo
+Master fails on 2.11 with compilation error,CLONE - Master fails on 2.11 with compilation error
+spark.ml classification; regression abstractions should add metadata to output column,Numerical models should preserve label attributes
+spark.ml Predictor should support other numeric types for label,Auto convert int to Double when required in pyspark.ml
+Should delete temporary local directories,Resources in .sparkStaging directory can't be cleaned up on error
+createPhysicalRDD should use RDD output as schema instead of relation.schema,DataSourceStrategy.createPhysicalRDD should use output schema when performing row conversions; not relation schema
+Provide DataFrame.zip (analog of RDD.zip) to merge two data frames,Support appending new columns from other DataFrames
+DAG visualization: show call site information,DAG visualization: display RDD callsite
+Add spark-hadoop-cloud module to pull in object store support,No FileSystem for scheme: s3n or s3a  spark-2.0.0 and spark-1.6.1
+test_count_by_value_and_window is flaky,PySpark Streaming tests are flaky.
+Wrong detection of REPL mode in ClosureCleaner,"Repartition operation failing on RDD with ""argument type mismatch"" error"
+pyspark.sql.types.Row should implement __getitem__,[Spark SQL] All result records will be popluated into ONE line during the script transform due to missing the correct line/filed delimiter
+Let AM's Reporter thread to wake up from sleep if new executors required,Reduce latency between executor requests and RM heartbeat
+Streaming Logistic Regression- Python bindings,Streaming Logistic Regression- Python bindings
+[MLLIB] feature.Word2Vec throws empty iterator error when the vocabulary size is zero,Yarn App Master Logs are not displayed in the spark historyserver UI
+Failure when building with scala 2.11 (after 1.3.1,[SQL] Use PartialFunction literals instead of objects in Catalyst
+Confusing behavior of fold function of RDD in pyspark,fold should pass arguments to op in the correct order
+Task failure caused by block fetch failure in BlockManager.doGetRemote() when using TorrentBroadcast,Job failed for exception during getting Broadcast variable
+SparkUI stage page hangs with many tasks,Enable GZip for Web UI
+Avoid inner classes in RuleExecutor,[Mesos] Allow provisioning of executor logging configuration 
+Executor which has been killed should also be displayed on Executors Tab.,Driver UI should enable viewing of dead executors' logs
+Executor which has been killed should also be displayed on Executors Tab.,UI Executor page should keep links around to executors that died
+Executor which has been killed should also be displayed on Executors Tab.,Make able to refer lost executor log
+Complex Teradata queries throwing Analysis Exception when running on spark,Complex Teradata queries throwing Analysis Exception when running on spark
+Exception not failing Python applications (in yarn cluster mode),Yarn logs say that Spark Python job has succeeded even though job has failed in Yarn cluster mode
+Exception not failing Python applications (in yarn cluster mode),Yarn application status is misreported for failed PySpark apps.
+Ensure Spark runs clean on IBM Java implementation,Http SSLfailure with IBM java
+Failed to start thrift server when metastore is postgre sql,Failed to start thrift server when metastore is postgre sql
+Make user-defined type (UDT) API public,Expose UserDefinedType make sure could extends it
+"Remove ""actorSystem"" from SparkEnv",Remove the developer api SparkEnv.actorSystem and AkkaUtils
+"Move ""AkkaRpcEnv"" to a separate project",Remove AkkaRpcEnv and remove Akka from the dependencies of Core
+Speed up SQL code generation,Use Janino to compile SQL expression
+Push code generation into expression definition,Push codegen into Expression
+Turn code generation on by default,ClassNotFoundException when code generation is enabled
+Java 8 test suite compile error under SBT,Java8-tests suite compile error under SBT
+Isolated Hive Client Loader appears to cause Native Library libMapRClient.4.0.2-mapr.so already loaded in another classloader error,IsolatedClientLoader could not load shared JNI libraries
+Hide private SQL JDBC classes from Javadoc,Minimize exposure of internal SQL classes
+SparkSQL cli built against Hive 0.13 throws exception when using with Hive 0.12 HCat,Spark SQL conf in spark-defaults.conf make metadataHive get constructed too early
+KMeans API for spark.ml Pipelines,KMeans API for spark.ml Pipelines
+add config to control map aggregation in spark sql,Add configuration for initial size and limit of hash for aggregation
+Jobs progress of apps on complete page of HistoryServer shows uncompleted,HistoryServer caches incomplete App UIs
+Python class in __main__ may trigger AssertionError,TransformFunctionSerializer.loads doesn't restore the function's module name if it's '__main__'
+SQL UDF doesn't support UDT in PySpark,PythonUDT shouldn't get serialized on the Scala side
+Exclude parquet 1.3.2 from Hive,Exclude parquet 1.3.2 from Hive
+Exclude parquet 1.3.2 from Hive,Exclude parquet 1.3.2 from Hive
+ALSModel in the pipeline API should return DataFrames for factors,ALSModel in the pipeline API should return DataFrames for factors
+Serdes Command not working ,Serdes Command not working in Spark 1.3.1
+Dynamic allocation: longer timeout for executors with cached blocks,Cached RDD partitions are lost when executors are dynamically deallocated
+Improve DataFrame Python exception,Generate better error message in Python for AnalysisException 
+[SparkR] Create worker R processes with a command other then Rscript,Allow additional uris to be fetched with mesos
+spark-sql thriftserver security authorization bugs!,spark-sql security authorization bug
+"Ignores files whose name starts with ""."" while enumerating files in HadoopFsRelation","Ignores files whose name starts with ""."" while enumerating files in HadoopFsRelation"
+Explicit partitionning of an RDD with 0 partition will yield empty outer join,Left Outer Join with empty JavaPairRDD returns empty RDD
+Hive on Spark: CAST string AS BIGINT produces wrong value,Column.cast(LongType) does not work for large values
+Call TaskAttemptContext.getTaskAttemptID using Reflection,saveAsTextFile with Hadoop1 could lead to errors
+"sqlContext.table(""databaseName.tableName"") broke with SPARK-6908",sqlContext.table() should be able to take a database name as an additional argument.
+"sqlContext.table(""databaseName.tableName"") broke with SPARK-6908",[SparkR] SparkSQL tests fail in R 3.2
+Turn off noisy log output produced by Parquet 1.7.0,Giant pile of parquet log when trying to read local data
+Turn off noisy log output produced by Parquet 1.7.0,Log for parquet relation reading files is too verbose
+HeartbeatReceiver should not adjust application executor resources,The total number of  executor(s) requested by  the driver may be negative
+HeartbeatReceiver should not adjust application executor resources,Spark Yarn : Spark reducing total executors count even when Dynamic Allocation is disabled.
+HeartbeatReceiver should not adjust application executor resources,Job frequently hangs after YARN preemption
+Accelerate ParquetRelation2 metadata discovery,spark load of existing parquet files extremely slow if large number of files
+Schema Merging Broken: Dataframe Fails to Recognize Column in Schema,Parquet filters push-down may cause exception when schema merging is turned on
+Improve expression function coverage (Spark 1.5),Add built-in UDF
+Ctrl-C in pyspark shell doesn't kill running job,Allow Ctrl-C in pyspark shell to kill running job
+date/time function: unix_timestamp,unix_timestamp throws AnalysisException
+date/time function: date_add,Spark SQL DATE_ADD function - Spark 1.3.1 & 1.4.0
+misc function: hash,add Hash expression that can calculate hash value for a group of expressions
+NPE in YarnClientSchedulerBackend.stop,YarnClientSchedulerBackend doesn't stop gracefully in failure conditions
+Filters not pushed with substitution through aggregation,Filter pushdown does not work with aggregation with alias
+Authorization Support(on all operations not only DDL) in Spark Sql,Authorization Support(on all operations not only DDL) in Spark Sql version 2.1.0
+EC2 script not fully updated for 1.4.0 release,Tachyon version mismatch
+Add a CheckAnalysis rule to ensure that Union branches have the same schema,Analysis should detect when set operations are performed on tables with different numbers of columns
+pyspark does not retain --packages or --jars passed on the command line as of 1.4.0,ClassNotFoundException in closure for map 
+ClassNotFoundException in closure for map ,MissingRequirementError for ScalaReflection on user classes
+Update DirectKafkaWordCount examples to show how offset ranges can be used,java#KafkaUtils.createDirectStream Java(Pair)RDDs do not implement HasOffsetRanges
+spark-submit documentation is incorrect,start-slave.sh changed API in 1.4 and the documentation got updated to mention the old API
+Show executor logs on Web UI when Yarn log aggregation is enabled,Spark History Server does not show the logs of completed Yarn Jobs
+Show executor logs on Web UI when Yarn log aggregation is enabled,Enable the ability to view centrally aggregated YARN logs for Spark Executors in the History Server UI
+Add blacklist mechanism for task scheduling,Add blacklist mechanism for YARN container allocation
+TimSort Comparison method violates its general contract with CLUSTER BY,TimSort Comparison method violates its general contract
+GenerateMutableProjection Exceeds JVM Code Size Limits,if set `spark.sql.codegen` is true;More than 100 aggregation operation; it exceeds JVM code size limits
+No suitable driver found for write.jdbc,DataFrameWriter jdbc method ignore options that have been set
+ScalaReflectionException with DataFrames in 1.4,ScalaReflection.mirror should be a def
+Documentation for DCT,DCT User Guide
+Add setName for Dataframe,support optional dataframe name
+Add setName for Dataframe,Cache method could specified name
+NaiveBayes implementation for MLPipeline,Naive Bayes API for spark.ml Pipelines
+Support for array types in JDBCRDD,NPE in JDBCRDD when array column contains nulls (postgresql)
+ML attribute API in PySpark,Add Python API for ml.attribute
+Using incorrect database in multiple sessions,Thrift Server cannot do isolation for different users
+"Prevent accidental use of ""and"" and ""or"" to build invalid expressions in Python",For PySpark's DataFrame API; we need to throw exceptions when users try to use and/or/not
+Improve MLlib Local Matrix Documentation.,"Update mllib-data-types docs to include missing ""matrix"" Python examples"
+Optimize checkpointing to avoid computing an RDD twice,checkpointing does not take advantage of persisted/cached RDDs
+Support LATERAL VIEW in Spark SQL parser,Create a full-fledged built-in SQL parser
+SQL add jar command does not work well with Scala REPL,Add the ability to add a jar to the current class loader
+History Server doesn't show complete application when one attempt inprogress,History Server doesn't show complete application when one attempt inprogress
+DataFrame partitionBy memory pressure scales extremely poorly,Reduce memory consumption for dynamic partition insert
+SQLContext doesn't handle tricky column names when loading from JDBC,Reserved words (like table) throws error when writing a data frame to JDBC
+SQLContext doesn't handle tricky column names when loading from JDBC,DataFrames : Mysql JDBC not support column names with special characters
+Handle history files better,Spark history server file cleaner excludes in-progress files
+Handle history files better,Add configuration property to allow the history server to delete .inprogress files
+ALS model predict error,ALS model predict error
+Poor Python UDF performance because of RDD caching,Misaligned data with RDD.zip and DataFrame.withColumn after repartition
+Poor Python UDF performance because of RDD caching,Multiple Python UDFs together with aggregation or sort merge join may cause OOM (failed to acquire memory)
+Adding Python support for 1-sample; 2-sided Kolmogorov Smirnov Test,Add Python API for Kolmogorov-Smirnov Test
+Add configuration for limiting the maximum number of active stages in a fair scheduling queue,Job Scheduling Within Application Suffers from Priority Inversion
+Expose all Mesos DockerInfo options to Spark,Allow configuration of Docker networking for Mesos
+Deregister Codahale metrics for streaming when StreamingContext is closed ,MetricsSystem.removeSource not called in StreamingContext.stop
+Streaming application from checkpoint will fail to load in security mode.,in Yarn client mode; Client.scala does not login even when credentials are specified
+allow moving and symlinking binaries,spark-submit can not support symbol link
+Throw type mismatch in check analysis for expressions with expected input types defined,Good errors for invalid input to ExpectsInput expressions
+Add documentation for Python's FP-growth,Add Python example for mllib FP-growth user guide
+"Sorting float/double column containing NaNs can lead to ""Comparison method violates its general contract!"" errors",NaN should be greater than all other values
+Support combine text/parquet format file in sql,Combine files when there're many small files in table
+Combine files when there're many small files in table,Simplify and Speedup HadoopFSRelation
+Throttle DStreams dynamically through back-pressure information,Implement a mechanism to send a new rate from the driver to the block generator
+Add config to enable/disable merging part-files when merging parquet schema,spark load of existing parquet files extremely slow if large number of files
+Float type coercion with hiveContext,SparkR DataFrame fail to return data of float type
+String concatination with column in SparkR,Add expression functions in SparkR
+DataFrameWriter save action makes DataFrameReader load failed,Jets3t hangs with more than 1 core
+Reduce memory consumption for dynamic partition insert,dynamic partitioning in spark sql performance issue due to the high GC overhead
+sparkPackages flag name is wrong in the documentation,[Windows] Application with Appname including whiteSpace fails in Yarn-client mode
+Add @since tags to mllib.linalg,Add @since tags to mllib.linalg
+cast from double/float to timestamp should not go through decimal,use double not decimal when cast double and float to timestamp
+Standalone cluster worker does not accept multiple masters on launch,start-slave.sh changed API in 1.4 and the documentation got updated to mention the old API
+Rollup produces incorrect result when group by contains expressions,Incorrect result for rollup
+Disallow Class.forName,Use of Class.forName(String) should be replaced with version taking classloader
+move type-check from BinaryArithmetic and BinaryComparison to BinaryOperator,More comprehensive type checking in expressions
+Improve cartesian performance ,Minimum ratio of registered resources [ spark.scheduler.minRegisteredResourcesRatio] is not enabled for Mesos Coarse Grained mode
+Use of non-standard LIMIT keyword in JDBC tableExists code,JDBC DataFrameWriter does not save data to Oracle 11 Database
+Use of non-standard LIMIT keyword in JDBC tableExists code,DataFrame write to teradata using jdbc not working; tries to create table each time irrespective of table existence
+Use of non-standard LIMIT keyword in JDBC tableExists code,Cannot save data via MSSQL JDBC
+Use of non-standard LIMIT keyword in JDBC tableExists code,Sparksql-1.4.1 DataFrameWrite.jdbc() bug
+Inconsistent Dense Vectors hashing between PySpark and Scala,PySpark DenseVector; SparseVector should override __eq__ and __hash__
+python UDT in __main__ cannot be serialized by PySpark,Vector is converted to tuple when extracted from Row using __getitem__
+Spark HistoryServer load logs too slow and can load the latest logs,Spark HistoryServer load logs too slow and can load the latest logs
+Spark HistoryServer load logs too slow and can load the latest logs,Spark HistoryServer load logs too slow and can load the latest logs
+Implement code gen for Conv,Implement code generation for Conv
+DatetimeExpressionsSuite: function current_timestamp is flaky,Flaky test: o.a.s.sql.DatetimeExpressionsSuite.function current_timestamp
+HiveComparisonTest generates incorrect file name for golden answer files on Windows,Tests using golden files can fail depending on new line characters in queries
+ClassCastException in instance of org.apache.spark.rdd.MapPartitionsRDD,CLONE - ClassCastException in instance of org.apache.spark.rdd.MapPartitionsRDD
+ClassCastException in instance of org.apache.spark.rdd.MapPartitionsRDD,java.lang.ClassCastException: cannot assign instance of scala.collection.immutable.List$SerializationProxy to field
+HiveUDAF support for AggregateFunction2,use new aggregate interface for hive UDAF
+sbt-launch-lib.bash should use `curl --location` to support HTTP/HTTPS redirection,The curl command in sbt-launch-lib.bash doesn't download sbt-launch jar
+CatalystTypeConverters.toScala does not work on UnsafeRows,Support get(ordinal; dataType) generic getter in UnsafeRow
+Aliases from SELECT not available in GROUP BY,The alias created in SELECT could be used in GROUP BY and followed expressions
+The curl command in sbt-launch-lib.bash doesn't download sbt-launch jar,sbt/sbt assembly Error: Invalid or corrupt jarfile sbt/sbt-launch-0.13.6.jar
+Support IntervalType for Parquet,Support Parquet logical type INTERVAL
+Support DecimalType in UnsafeRow,Support DecimalType in UnsafeRow
+ExternalShuffleService should be robust to NodeManager restarts in yarn,Job can't finish when restart all nodemanages with using external shuffle services
+Expose sampleByKey in SparkR,Implement sampleBy() in DataFrameStatFunctions
+RemoveEvaluationFromSort reorders sort order,RemoveEvaluationFromSort reorders sort order
+Python RandomForestClassifier probabilityCol; rawPredictionCol,pyspark.ml.classification.RandomForestClassifer does not return `rawPrediction` column
+Remove InternalRow's generic getter (the one without data type),do not expose generic getter in internal row
+Remove InternalRow.toSeq,update InternalRow.toSeq to make it accept data type info
+'spark-ec2 launch' fails with anaconda python 3.4,spark_ec2.py breaks with python3 and m3 instances
+Possible file handle leak in spilling/sort code,Too many open files in TungstenExchange
+DataFrames : Mysql JDBC not support column names with special characters,Reserved words (like table) throws error when writing a data frame to JDBC
+Dynamic allocation kills busy executors on race condition,Using dynamic-executor-allocation;When jobs are submitted parallelly; executors will be removed before tasks finish
+Dynamic allocation kills busy executors on race condition,Task failed because executor kill by driver
+Add IndexToString in Pyspark,Add Python API for ml.feature.IndexToString
+GenerateUnsafeProjection seems to corrupt MapType data,copy UTF8String when convert unsafe array/map to safe
+Unsupported dataType: char(X) in Hive,spark-sql do not support for column datatype of CHAR
+Unsupported dataType: char(X) in Hive,spark-sql do not support for column datatype of CHAR
+System.exit() still disrupt applications embedding Spark,StackOverflowError (VirtualMachineError) or NoClassDefFoundError (LinkageError) should not System.exit() in local mode
+allow not automatically using HiveContext with spark-shell when hive support built in,Provide user an option to init SQLContext or HiveContext in spark shell
+outdated Python 3 and IPython information,Update doc about supported Python versions
+Spark should create local temporary directories in Mesos sandbox when launched with Mesos,Shuffle files left behind on Mesos without dynamic allocation
+NullPointerException when using --packages,SparkSubmit doesn't work with --packages when --repositories is not specified 
+Applications hangs when the last executor fails with dynamic allocation,Dynamic allocation: avoid double counting when killing same executor twice
+Add Python API for ml.feature.CountVectorizer,Add Python interface for CountVectorizer
+isSrcLocal parameter in loadTable / loadPartition is incorrect for HDFS source data,After recent hive patches PySpark fails with IllegalArgumentException: Wrong FS: hdfs:
+Incorrect UNION ALL behavior,UnionAll operation on DataFrame doesn't check for column names
+Too many open files in TungstenExchange,Too many open files in Spark SQL
+Support Poisson family in SparkR:::glm,GLM model family; link function support in SparkR:::glm
+Support Gamma family in SparkR:::glm,GLM model family; link function support in SparkR:::glm
+Support popular link functions in SparkR:::glm,GLM model family; link function support in SparkR:::glm
+File appender race condition during SparkWorker shutdown,Race condition when driver rapidly shutdown after started.
+User guide for Multilayer Perceptron Classifier,User Guide for Multilayer Perceptron Classifier
+Join: Handling data skew,Spark SQL doesn't handle skewed dataset joins properly
+Join: Handling data skew,RangePartitioner results in few very large tasks and many small to empty tasks 
+Matrices should respect Java's equals and hashCode contract,DenseMatrix gives different hashcode even though equals returns true
+Parallelize file listing for partitioned Hive table,Use S3 bulk listing for S3-backed Hive tables
+create function do not work,Resolve permanent Hive UDFs
+Allow Ctrl-C in spark-shell to kill running job,spark-sql ctrl+c does not exit
+Allow Ctrl-C in spark-shell to kill running job,Spark Shell Ctrl-C behaviour suggestion
+Locality broken in spark 1.4.x for NewHadoopRDD,"Locality Level is ANY on ""Details for Stage"" WebUI page"
+Add Python API missing methods for ml.feature,"StringIndexerModel lacks of method ""labels"""
+Add Python API missing methods for ml.feature,"StringIndexer lacks of parameter ""handleInvalid""."
+Managed memory leak detected when cache table,String column in InMemoryColumnarCache needs to override clone method
+Add support for DataFrameStatFunctions in SparkR,SparkR: Add correlation function to dataframe
+Can't create HiveContext with spark-shell or spark-sql on snapshot,spark-shell throws java.lang.RuntimeException: The root scratch dir: /tmp/hive on HDFS should be writable.
+PySpark Streaming doesn't support Context recovery from checkpoint in HDFS,Python Streaming checkpoint recovery does not work with non-local file path
+Spark JDBC writer mapping String to TEXT or VARCHAR,Allow user to specify database column type for data frame fields when writing data to jdbc data sources. 
+NPE when saving Parquet To HDFS,FileFormatWriter.ExecuteWriteTask.releaseResources() implementations to be re-entrant
+Add optional getters to the spark.sql.Row,[Spark SQL] the value of 'hiveconf' parameter in CLI can't be got after enter spark-sql session
+Add support for more postgres column types,cannot handle postgis raster type
+Failed to save json data with a decimal type in the schema,PySpark can't JSON serialize a DataFrame with DecimalType columns.
+Add null check in wrapperFor (inside HiveInspectors).,NPE while save a DataFrame as ORC
+Avoid creating empty files during overwrite into Hive table with group by query,Writing empty Dataframes doesn't save any _metadata files
+Avoid creating empty files during overwrite into Hive table with group by query,Useless empty files in hive table
+For struct type; if parquet's global schema has less fields than a file's schema; data reading will fail,Struct fields read from parquet are mis-aligned
+Enhance SerDe to handle atomic vector,"SparkR Ser/De fail to handle ""columns(df)"""
+Getting issue in spark connectivity with cassandra,"sparkSession.read() .jdbc(***) use the sql syntax ""where 1=0"" that Cassandra does not support"
+GraphX Connected Components fail with large number of iterations,ConnectedComponents fails to compute graph with 200 vertices (but long paths)
+Cooperative memory management,Replace addOnCompleteCallback with addTaskCompletionListener() in UnsafeExternalSorter
+SparkR mutate and transform should replace column with same name to match R data.frame behavior,Enhance mutate() to support replace existing columns
+SparkR mutate and transform should replace column with same name to match R data.frame behavior,Enhance mutate() to support replace existing columns
+Optimize sequential projections,DataFrame recompute UDF in some situation.
+Gradient boosted trees: increasing input size in 1.4,GradientBoostedTrees stuck with 2958359 features train data
+Gradient boosted trees: increasing input size in 1.4,Gradient boosted trees: mapPartitions input size increasing 
+spark-submit overwrites spark.files defaults with the job script filename,spark.files in properties file is not distributed to driver in yarn-cluster mode
+Would like to know if a given Spark Context is stopped or currently stopping,Expose SparkContext#stopped flag with @DeveloperApi
+make sure `input.primitive` is always variable name not code at GenerateUnsafeProjection,Getting CompileException when feed an UDF with an array and another paramter
+Multiple Python UDFs together with aggregation or sort merge join may cause OOM (failed to acquire memory),Misaligned data with RDD.zip and DataFrame.withColumn after repartition
+Multiple Python UDFs together with aggregation or sort merge join may cause OOM (failed to acquire memory),Refactor PythonRDD to decouple iterator computation from PythonRDD
+There exits some potential resource leak  in jsonExpressions.scala,JsonParser/Generator should be closed for resource recycle
+SparkR formula syntax to turn strings/factors into numerics,Support transform string label for RFormula
+Add Python example for VectorSlicer to user guide,Add python example for VectorSlicer
+spark-shell throws java.lang.RuntimeException: The root scratch dir: /tmp/hive on HDFS should be writable.,Installing Spark
+spark-shell throws java.lang.RuntimeException: The root scratch dir: /tmp/hive on HDFS should be writable.,spark does not start cleanly windows 7 64 bit
+Kill other task attempts when one taskattempt belonging the same task is succeeded in speculation,TaskSetManager should kill the other running task attempts if any one task attempt succeeds for the same task
+AppId is set as AppName in status rest api,Spark REST / JSON API mixes up application names and application ids
+AppId is set as AppName in status rest api,Spark history uses the application name instead of the ID
+Intersection Optimization is Wrong,Dataframe count is zero after 'except' operation
+Intersection Optimization is Wrong,DataFrame's except method does not work; returns 0
+Allow ApplicationHistoryProviders to provide their own text when there aren't any complete apps,"History Server ""no histories"" message to be dynamically generated by ApplicationHistoryProviders"
+The  PySpark 1.5 closure serializer can't serialize a namedtuple instance.,Serialization of Python namedtuple subclasses in functions / closures is broken
+HashingTF should use MurmurHash3,Use MurmurHash3 for hashing String features
+Remove Bagel,Remove Bagel
+Univariate statistics as UDAFs: single-pass continuous stats,skewness and kurtosis support
+collect_list() and collect_set() should accept struct types as argument,Optimize Data Frames collect_list and collect_set with declarative aggregates
+Race condition between scheduler and YARN executor status update,"When driver sends message ""GetExecutorLossReason"" to AM; the AM stops."
+DataFrames: saving with nested User Data Types,Dataframe fails with nested User Defined Types
+Support remote application download in client mode spark submit,Make spark-submit download remote files to local in client mode
+Spark-SQL JDBC fails to set a default precision and scale when they are not defined in an oracle schema.,Spark sql jdbc fails for Oracle NUMBER type columns
+Specialize PrefixSpan for single-item patterns,Major improvements to Spark's Prefix span
+When loading a json dataset as a data frame; if the input path is wrong; the error message is very confusing,Uninformative exception when specifing non-exist input for JSON data source
+When loading a json dataset as a data frame; if the input path is wrong; the error message is very confusing,SQL data source gives confusing error message when file not found
+When loading a json dataset as a data frame; if the input path is wrong; the error message is very confusing,Uninformative exception when specifing non-exist input for JSON data source
+Uncaught exception: RDDBlockId not found in driver-heartbeater,LinearRegressionWithSGD fails on files more than 12Mb data 
+SQL's floor() returns DOUBLE,[streaming] [flume] Gracefully shutdown Flume receiver threads
+word2vec model save for python,CLONE - Support model save/load in Python's Word2Vec
+ML Param validate should print better error information,ML Param validate should print better error information
+Implement freqItems() and sampleBy() in DataFrameStatFunctions,Export freqItems() for DataFrameStatFunctions in SparkR
+add search keywords in history page ui,Change history to use datatables to support sorting columns and searching
+add search keywords in history page ui,add Search box to History Page
+order by fails when column is aliased and projection includes windowed aggregate,Sorting column can't be resolved if it's not in projection
+Flaky test: org.apache.spark.deploy.StandaloneDynamicAllocationSuite,Flaky test: StandaloneDynamicAllocationSuite
+Let ALS recommend for subset of data,Could MatrixFactorizationModel support recommend for some users only ?
+Spark Hadoop Util does not support stopping a non-yarn Spark Context & starting a Yarn spark context.,StreamContext.getOrCreate is broken is yarn-client mode
+SparkSQL doesn't work well with JSON,Parse normal; multi-line JSON files (not just JSON Lines)
+Eliminate create duplicate stage while generate job dag,Make DAGScheduler not to create duplicate stage.
+Allow user to specify database column type for data frame fields when writing data to jdbc data sources. ,Support for string length when writing to JDBC
+Predicates pushed to InmemoryColumnarTableScan are not evaluated correctly,Filter operation on StringType after groupBy PERSISTED brings no results
+Derby error (XSDB6) when creating new HiveContext after restarting SparkContext,SparkContext stop method does not close HiveContexts
+Race condition when resolving Maven coordinates via Ivy,Exception when using spark.jars.packages 
+spark on yarn support priority option,Support to set priority when submit spark application to YARN
+Support prediction on single instance for regression and classification related models,Change the access level of the predict method in spark.ml.Predictor to public
+Lag Analytic function broken,RowNumber in HiveContext returns negative values in cluster mode
+Add 'drop' support for DataFrame's subset function,py4j.Py4JException: Method createDirectStream([class org.apache.spark.streaming.api.java.JavaStreamingContext; class java.util.HashMap; class java.util.HashSet; class java.util.HashMap]) does not exist
+Support JDBC pushdown for additional commands,JDBC datasource processes filters only commonly pushed down.
+UnsafeRow serialization breaks when two machines have different Oops size,String fields in Dataframe behaves weirdly when executor-memory >= 32GB
+UnsafeRow serialization breaks when two machines have different Oops size,High spark.executor.memory causes wrong result
+UnsafeRow serialization breaks when two machines have different Oops size,DataFrame losing string data in yarn mode
+UnsafeRow serialization breaks when two machines have different Oops size,Very strange broadcast join behaviour
+Exception when joining DataFrames,Exception when joining DataFrames derived form the same DataFrame
+Exception when joining DataFrames,Exception when joining DataFrames derived form the same DataFrame
+Exception when joining DataFrames,Exception when Joining dataframe with another dataframe generated by applying groupBy transformation on original one
+PySpark ML Models should contain Param values,PySpark JavaModel fails to extract params from Spark side automatically
+PySpark ML Models should contain Param values,getParamMap in Pyspark ML API returns empty dictionary in example for Documentation
+Spark Streaming Kinesis: Allow specifying separate credentials for Kinesis and DynamoDB,Add builder interface for Kinesis DStreams
+SparkR: Add merge to DataFrame,join returns schema with duplicated and ambiguous join columns
+RowNumber in HiveContext returns negative values in cluster mode,orderBy with multiple columns in WindowSpec does not work properly
+RowNumber in HiveContext returns negative values in cluster mode,Window functions give invalid values
+Canonicalize view definitions,Unable to create views
+Launcher: add support for monitoring Mesos apps,SparkAppHandle.getState() doesnt return the right state when the launch is done on a mesos master in cluster mode
+Launcher: add support for monitoring Mesos apps,Spark App Handle from SparkLauncher always returns UNKNOWN app state when used with Mesos in Client Mode 
+AttributeReference should not be created outside driver,Incorporate per-JVM id into ExprId to prevent unsafe cross-JVM comparisions
+"Document all UI ""retained*"" configurations",Limit the number of queries on SQL UI
+"Hive Thrift Server will log warn ""Couldn't find log associated with operation handle""",Thrift server does not support operationLog
+Use mixing hash-based and sort-based aggregation in TungstenAggregationIterator,Improve hybrid aggregation (sort-based after hash-based)
+Use mixing hash-based and sort-based aggregation in TungstenAggregationIterator,TungstenAggregate may fail when switching to sort-based aggregation when there are string in grouping columns and no aggregation buffer columns
+baidu,spark streaming checkpoint question
+Flaky test: o.a.s.launcher.LauncherServerSuite,Flaky test: o.a.s.launcher.LauncherServerSuite
+insert overwrite table failed when beeline reconnect,insert into table does not work on second session of beeline
+Add connection established callback to lower level RPC layer so we don't need to check for new connections in NettyRpcHandler.receive,Add connectionEstablished callback to RpcHandler to monitor the new connections
+RPC message ordering is not guaranteed,Add Outbox to cache the sending messages to resolve the message disorder issue
+Parquet filters push-down may cause exception when schema merging is turned on,Schema Merging Broken for Some Queries
+A memory leak in SQLListener._stageIdToStageMetrics,LongSQLMetricValue cause memory leak on Spark 1.5.1
+A memory leak in SQLListener._stageIdToStageMetrics,Spark sql seems to leak org.apache.spark.sql.execution.ui.SQLTaskMetrics objects over time
+TestHive fails on machines with few cores,Page size calculation is wrong in local mode
+Warm-start support for ML estimator,Umbrella: Allow user to specify initial model when training
+Make StreamingContext.stop() exception-safe,Make SparkContext.stop() exception-safe
+Make StreamingContext.stop() exception-safe,Make SparkContext.stop() exception-safe
+    EOFException on History server reading in progress lz4,Spark history server fails to render compressed inprogress history file in some cases.
+Delegate to scala DataFrame API rather than print in python,Match the output of DataFrame#explain() in both scala api and python
+PySpark CrossValidatorModel does not output metrics for every param in paramGrid,PySpark CrossValidatorModel should support avgMetrics
+[Launcher] Launcher library fails is app resource is not added,Invoke the right sameResult function when plan is warpped with SubQueries
+MapStatus too large for driver,Make MapStatus use less memory uage
+Implement trackStateByKey for improved state management,Implement trackStateByKey for improvement state management
+YARN HBase token code shouldn't swallow invocation target exceptions,Improve failure reporting in Yarn client obtainTokenForHBase()
+PySpark silently accepts null values in non-nullable DataFrame fields.,add null check for _verify_type in types.py
+spark-dispatcher doesn't pass along some spark properties,#NAME?
+Expand Star when creating a struct,Alias do not work with udf with * parameter
+Kryo serializer broken with StringTypes,Bad Dataframe data read from parquet
+numRunningTasks can't be less than 0; or it will affect executor allocation,ExecutorAllocationManager.numRunningTasks can be negative when stage retry
+numRunningTasks can't be less than 0; or it will affect executor allocation,Spark job stuck with no executor due to bug in Executor Allocation Manager
+Include path to the source file in generated example code,Add link to the source file at the end of included example code
+codegen.GeneratePredicate fails due to unquoted comment,Regexp functions don't support patterns containing '*/'
+Writing to S3 buckets; which only support AWS4-HMAC-SHA256 fails with s3n URLs,saveAsTextFile(s3n://) doesn't support s3 Signature Version 4
+skip.header.line.count is ignored in HiveContext,skip.header.line.count is ignored in HiveContext
+Support merge schema for ORC, read orc when some of the columns are missing in some files
+Add the ability to add a jar to the current class loader,spark can not load alluxio fileSystem after adding jar
+Locality waits should be based on task set creation time; not last launch time,Delay scheduling should not delay some executors indefinitely if one task is scheduled before delay timeout
+Expose R-like summary statistics in SparkR::glm for linear regression,R style summary stats in GLM package SparkR
+Bucket Join,Support writing out pre-hash-partitioned data and exploit that in join optimizations to avoid shuffle (i.e. bucketing in Hive)
+Replace example code in mllib-collaborative-filtering.md using include_example,Replace example code in mllib-collaborative-filtering.md using include_example
+StringIndexer transform fails when column contains nulls,StringIndexer should handle null
+Just do final aggregation when there is no Exchange,Skip unnecessary final group-by when input data already clustered with group-by keys
+Resolve permanent Hive UDFs,Can't register UDF from Hive thrift server
+Resolve permanent Hive UDFs,Permanent UDF not work
+Python API for bisecting k-means,Python API for mllib.clustering.BisectingKMeans
+Python API for bisecting k-means,Python API for mllib.clustering.BisectingKMeans
+MEMORY LEAK: ByteBuf.release() was not called before it's garbage-collected,IllegalReferenceCountException in Spark workloads
+ORC filter pushdown not working properly after new unhandled filter interface.,We should still pushdown filters returned by a data source's unhandledFilters
+Spark SQL CLI will set sessionstate twice,Exception throws when executing    exit;    in spark-sql
+Make simple transformers and estimators implement default read/write,Model export/import for spark.ml: all basic Transformers
+Remote code execution with InvokerTransformer,Commons-collections object deserialization may expose remote command execution vulnerability
+Remote code execution with InvokerTransformer,commons-collections has vulnerability: CVE-2015-6420
+Would be very useful if spark-daemon.sh supported foreground operations,Allow start-master/slave scripts to start in the foreground
+Bad Dataframe data read from parquet,String may not be serialized correctly with Kyro
+Allow to specify compression codec in HadoopFsRelation when saving ,Support to specify the (writing) option for compression codec for TEXT
+YARN - dynamic allocation and speculation active task accounting wrong,Always post TaskEnd event for tasks in cancelled stages
+Optimize the Cartesian Join,Improve performance of CartesianProduct
+Finalizer memory leak is pyspark,streaming driver with checkpointing unable to finalize leading to OOM
+Casting integer types to timestamp has unexpected semantics,Casting Unix timestamp to SQL timestamp fails
+String may not be serialized correctly with Kyro,In SparkSQL; it can't be select column of String type because of UTF8String when setting more than 32G for executors.
+Understand why allowNonNumericNumbers JSON option doesn't work,Upgrade to Jackson 2.7.3
+Master Web UI should link to correct Application UI in cluster mode,Master Web UI does not link to correct Application UI in standalone cluster mode
+HiveThriftBinaryServerSuite tests timing out; leaves hanging processes,org.apache.spark.sql.hive.thriftserver.HiveThriftBinaryServerSuite.test jdbc cancel is sometimes very slow
+Spark shell does not work from sbt with scala 2.11,Pass additional Scala REPL options to the underlying REPL (2.11)
+Unable to start spark thrift server against secured hive metastore(GSS initiate failed),Thrift Server + Hive Metastore + Kerberos doesn't work
+Expose feature importances API for decision trees,Expose featureImportances on org.apache.spark.mllib.tree.RandomForest
+Checkpoint support for DataFrame/Dataset,Query planning slows down dramatically for large query plans even when sub-trees are cached
+Allow for running Spark applications against a custom coarse grained scheduler,Add support for pluggable cluster manager
+UDAF may nondeterministically generate wrong results,UDAF result differs in SQL if alias is used
+[SQL] Support Persist/Cache and Unpersist in Dataset APIs,Add missing APIs in Dataset
+Better error from WLS for cases like singular input,java.lang.AssertionError: assertion failed: lapack.dppsv returned 105. when running glm using gaussian link function.
+   Python API for ml.feature.QuantileDiscretizer,Python API update for ChiSqSelector and QuantileDiscretizer
+Python API for ml.feature.ChiSqSelector,Python API update for ChiSqSelector and QuantileDiscretizer
+configure log4j properties with spark-submit ,Configurable log4j settings
+Add getAsOpt[T] functions to org.apache.spark.sql.Row,Add missing APIs in Dataset
+Expose numFeatures in all ML PredictionModel for PySpark,Add missing numFeatures & numClasses to wrapped JavaClassificationModel
+Python API for ml.clustering.LDA,keepLastCheckpoint Param for Python LDA with EM
+ALS recommend all methods spend most of time in GC,Optimize the process of MLLIB ALS recommendForAll
+Partitioning Parquet by DateType,Support for inferring type date/timestamp/decimal for partition column
+Spark SQL query containing semicolon is broken in Beeline (related to HIVE-11100),thriftServer does not support semicolon in sql 
+word2vec load model can't use findSynonyms to get words ,"Loading Word2Vec model in pyspark gives ""ValueError: too many values to unpack"" in  findSynonyms"
+Incorrect results when aggregate joined data,TimSort failing with error when writing a partitioned data set
+Group by Column Number identifier is not successfully parsed,Support group by ordinal in SQL
+bug in spark/python/pyspark/rdd.py portable_hash(),PYTHONHASHSEED is not propgated to python worker
+Add a DataFrame.show() with argument for output PrintStream,Add showString() to DataSet API.
+Spark Sql MongoDB Cross Join Not Working,Spark sql Support Cross join with Mongo DB
+REGEX Column Specification for Hive Queries,REGEX Column Specification
+Upgrade to Jersey 2,Can spark-mllib upgrade to Jersey 2.x
+Support numpy types as return values of Python UDFs,Numpy types fail to be casted to any other types
+Embedded Spark on JBoss server cause crashing due system.exit when SparkUncaughtExceptionHandler called,Add new flag to Spark that identify if the driver run on application servers.
+FPGrowth unusable on some datasets without extensive tweaking of the support threshold,Guidance on adding a stopping criterion (maximul literal length or itemset count) for FPGrowth
+Update KafkaDStreams to new Kafka 0.10 Consumer API,kafka-spark consumer with SSL problem
+Streaming WebUI shows incorrect batch statistics when using Window operations,Some InputInfo missed with window operation applied
+User guide section for KMeans in spark.ml,Add documentation for spark.ml.clustering.kmeans
+Spark failed to delete temp directory ,ShutdownHookManager   Exception while deleting Spark temp dir  
+Update aws-java-sdk version,Spark Streaming Kinesis Example broken due to wrong AWS Java SDK version
+ParquetFormat options should be exposed through the DataFrameReader/Writer options API,Simplify configuration API
+Don't assign default value for non-nullable columns of a Dataset,Nulls in dataframes getting converted to 0 with spark 2.0 SNAPSHOT
+VectorAssembler#transform() initially throws an exception,IllegalArgumentException: requirement failed: File not found: ...sql/catalyst/expressions/GeneratedClass.class when df.show
+Reuse the result of split in SQL,UDFs are run too many times
+Implement unhandledFilter interface for JDBC,Implement JdbcRelation#unhandledFilters for removing unnecessary Spark Filter
+PowerIterationClustering test case failed if we deprecated KMeans.setRuns,MLLib PowerIteration Clustering depends on deprecated KMeans setRuns API
+IllegalArgumentException: requirement failed: File not found: ...sql/catalyst/expressions/GeneratedClass.class when df.show,Codegen'd classes can't be found under REPL
+NoSuchElementException during prediction with Random Forest Regressor,VectorIndexer: allow unknown categories
+Copy public decision tree helper classes from spark.mllib to spark.ml and make private,migrate internal API for MLlib trees from spark.mllib to spark.ml
+Move unit tests for GBT from spark.mllib to spark.ml,migrate internal API for MLlib trees from spark.mllib to spark.ml
+Support writing out pre-hash-partitioned data and exploit that in join optimizations to avoid shuffle (i.e. bucketing in Hive),bucketed table support
+Spark 1.6 with tachyon 0.8.2 uses deprecated client,Fix Tachyon deprecations; pull Tachyon dependency into one class
+Mesos executor home should not be resolved on the driver's file system,Paths are resolved relative to the local file system
+Mesos executor home should not be resolved on the driver's file system,Paths are resolved relative to the local file system
+Reserved words (like table) throws error when writing a data frame to JDBC,Reserved SQL words are not escaped by JDBC writer
+Pushing down arbitrary logical plans to data sources,select count(*) ; requests 1 for each row
+Pushing down arbitrary logical plans to data sources,Support push down join optimizations in DataFrameReader when loading from JDBC
+Add ExpressionDescription to datetime functions,All functions should show usages by command `DESC FUNCTION`
+Add ExpressionDescription to string functions,All functions should show usages by command `DESC FUNCTION`
+Add ExpressionDescription to aggregate functions,All functions should show usages by command `DESC FUNCTION`
+Add ExpressionDescription to math functions,All functions should show usages by command `DESC FUNCTION`
+Add ExpressionDescription to misc non-aggregate functions,All functions should show usages by command `DESC FUNCTION`
+Get rid of sorting in Row's constructor in pyspark,Fields order in Row(**kwargs) is not consistent with Schema.toInternal method
+Get rid of sorting in Row's constructor in pyspark,Schema issues when fields are queries in different order
+SQL page of Spark-sql is always blank ,The SQL page is empty
+Fix compiler warnings in Kinesis ASL module due to @transient annotations,Add private val after @transient for kinesis-asl module
+Build break at Spark-Master-Maven-Snapshots from #1293,Generating scaladoc using sbt fails for network-common and catalyst modules
+Join-key Pushdown via Predicate Transitivity,Pushdown predicate propagation in SparkSQL with join
+Recovered driver's resource is not counted in the Master,Spark HA: Jobs state is in WAITING status after reconnecting to standby master
+Recovered driver's resource is not counted in the Master,leader master lost the leadership; when the slave become master; the perivious app's state display as waitting
+Recovered driver's resource is not counted in the Master,the running application status changed  from running to waiting when a master is down and it change to another standy by master
+Datasets: data is corrupted when input data is reordered,Accept Dataset[_] in joins
+No suitable driver when calling JdbcUtils.saveTable in isolation,User-specified JDBC driver should always take precedence
+spark shuffle fails with mesos after 2mins,External shuffle service broken w/ Mesos
+Convert basic resolved logical plans back to SQL query strings,Optimizing count distinct changes the resulting column name
+Outer Join Elimination by Filter Condition,Push filter throughout outer join when the condition can filter out empty row 
+Use udf to replace callUDF for ML,Remove the use of the deprecated callUDF in MLlib
+Java count(AprroxDistinct)ByKey methods return Scala Long not Java,Java sampleByKey methods take ju.Map but with Scala Double values; results in type Object
+Make R to JVM timeout configurable ,Make timeout to RBackend configurable in SparkR
+Union logical plan should support arbitrary number of children (rather than binary),Multiple unionAll on Dataframe goes growingly slow.
+Clean up build warnings: 2.0.0 edition,mllib deprecation messages mention non-existent version 1.7.0
+Combine small files in a hadoop directory into single split ,Add config to control maximum number of files when coalescing partitions
+java.lang.ClassCastException: [B cannot be cast to java.lang.String,'/applications/[app-id]/stages' in REST API;add description.
+Streaming batch ui can't be opened in jobs page in yarn mode.,Prepending base URI of job description is missing
+Prepending base URI of job description is missing,URL address error in Spark web ui in YARN mode
+The detailed rest API documentation for each field is missing,Document ?params for the v1 REST API
+No encoder implicits for Seq[Primitive],sqlCtx.real.json() doesn't work with PythonRDD
+Populate statistics for DataFrame when reading CSV,CSVRelation should be based on HadoopFsRelation
+ArrayType(_; true) should also accept ArrayType(_; false),ArrayType(_; true) should also accept ArrayType(_; false) fix for branch-1.6
+Implement Python API for Datasets,Python Dataset
+Support order by ordinal in SQL,TPCDS query 49 returns wrong results compared to TPC official result set 
+Support order by ordinal in SQL,TPCDS query 74 returns wrong results compared to TPC official result set 
+Simplify various string output for expressions,prettyString of IN is not good
+ml.classification.LogisticRegression fails when FitIntercept with same-label dataset,LogisticRegression fails when a DataFrame has only a one-class label
+Spark SQL UDF does not work with struct input parameters,Cannot create UDF with StructType input
+Configurable bind address for WebUI,WebUI should use the local ip not 0.0.0.0
+Mesos cluster mode should handle constraints,Support constraints in spark-dispatcher
+Spark driver requires large memory space for serialized results even there are no data collected to the driver,Caching a table with 1;100 columns and a few million rows fails
+Spark documentation should be more precise about the algebraic properties of functions in various transformations,Clarify commutative / associative operator requirements for reduce; fold
+ADD JAR via sparkSQL JDBC will fail when using a HDFS URL,Can't use UDF that jar file in hdfs
+Improve HiveInspectors.unwrap for StringObjectInspector.getPrimitiveWritableObject,Fix HiveInspectors.unwrap
+add spark.yarn.hdfs.home.directory property,Make the SPARK YARN STAGING DIR as configurable
+Indexer setInputCol() doesn't resolve column names like DataFrame.col(),columns with name having dots caused issues with VectorAssemblor
+Update org.apache.httpcomponents.httpclient; commons-io,Upgrade apache httpclient version to the latest 4.5 for security
+Drop fails when columns contain dots,Can't drop columns that contain dots
+Can't drop columns that contain dots,Periods in dataframe column names breaks df.drop(<string>)
+Enable OrcRelation when connecting via spark thrift server,Use ORC data source for SQL queries on ORC tables
+Replace example code in mllib-clustering.md using include_example,Add an example for LDA in PySpark
+Shade jackson core,Spark Cannot be used with software that requires jackson-databind 2.6+: RDDOperationScope
+Always post TaskEnd event for tasks in cancelled stages,Executors show up active tasks indefinitely after stage is killed
+CoarsedExecutorBackend register to driver should wait Executor was ready?,CoarsedExecutorBackend register to driver should wait Executor was ready
+Add scalastyle command used in build testing,Upgrade scalastyle to 1.0.0
+DAG viz does not work with latest version of chrome,DAG Diagram not shown properly in Chrome
+spark.ml Naive Bayes user guide,Missing ml.NaiveBayes in MLlib guide
+CoarsedExecutorBackend register to driver should wait Executor was ready,"Driver may send ""LaunchTask"" before executor receive ""RegisteredExecutor"""
+CoarsedExecutorBackend register to driver should wait Executor was ready,Executors self-killing after being assigned tasks while still in init
+Upgrade Parquet to 1.9 (Fixes parquet sorting),Update Parquet to 1.9.0
+Upgrade Parquet to 1.9 (Fixes parquet sorting),Parquet NPE / Update to 1.9
+Upgrade Parquet to 1.9 (Fixes parquet sorting),Upgrade parquet to 1.9
+Add API and options for csv data sources,Support for loading CSV with a single function call
+Migrate away from SynchronizedMap which is deprecated,Replace use of mutable.SynchronizedMap with ConcurrentHashMap
+Cleanup build references to Scala 2.10,Update pom.xml to reference Scala 2.11
+Cleanup build references to Scala 2.10,Update LICENSE with Scala 2.11 dependencies
+Cleanup build references to Scala 2.10,Update Docker tests to use Scala 2.11
+Cleanup build references to Scala 2.10,Update release audit tools to use Scala 2.11
+Unify DataFrame and Dataset API,Datasets cannot be sorted
+Bump up Kafka to 0.9.0.0,Bump up Kafka to 0.9.0.0
+Expose more executor stats in stable status API,Improve SparkStatusTracker to also track executor information
+Reuse the shuffle for duplicated exchange,Reuse the exchanges in a query
+Use Apache Arrow as In-memory columnar store implementation,Implement Apache Arrow serializer for Spark DataFrame for use in DataFrame.toPandas
+NPE in LazilyGeneratedOrdering,LazilyGenerateOrdering throws NullPointerException
+SQL generation for uncorrelated scalar subqueries,SQL generation for subquery
+Expose ml summary function in PySpark for classification and regression models,Expose regression summary classes in Pyspark
+Spark need to support reading data from Hive 2.0.0 metastore,Spark2.x does not support read data from Hive 2.x metastore
+Spark need to support reading data from Hive 2.0.0 metastore,Upgrade Hive dependence to Hive 2.x
+Spark need to support reading data from Hive 2.0.0 metastore,Support Hive 2.x's metastore
+Document MLlib behavior changes in Spark 2.0,ML/MLlib breaking changes between 1.6 & 2.0
+Some DataFrame joins stopped working with UnsupportedOperationException: No size estimation available for objects,Can't load a json dataset with nested wide schema
+Deadlock between MemoryStore and BlockManager,Deadlock when retreiving shuffled cached data
+Deadlock between MemoryStore and BlockManager,Spark driver hangs up periodically (cannot receive any reply in 120 seconds)
+Deadlock between MemoryStore and BlockManager,Spark executor deadlocks itself in memory management
+Deadlock between MemoryStore and BlockManager,DeadLock happens when    StaticMemoryManager    release in-memory block
+Support virtualenv in PySpark,virtualenv example does not work in yarn cluster mode
+Delete spark.sql.parquet.cacheMetadata,Remove `spark.sql.parquet.cacheMetadata`
+Job will always fail in the external shuffle service unavailable situation,Spark AM launching containers on node where External spark shuffle service failed to initialize
+Finalize the public API for FileFormat,Simplify and Speedup HadoopFSRelation (follow-up)
+Possible unsafe bytesRead increment in StreamInterceptor,SQLContext.range should return Dataset[Long]
+"Spark SQL drops the table in ""overwrite"" mode while writing into table",DataFrameWriter's jdbc method drops table in overwrite mode
+Spark 1.6.0 stopping working for HiveThriftServer2 and registerTempTable,Spark 1.6.0 stopping working for HiveThriftServer2 and registerTempTable
+Set hive conf failed use --hiveconf when beeline connect to thriftserver,"HiveThriftServer2 can not get ""--hiveconf"" or ''--hivevar"" variables since 1.6 version (both multi-session and single session)"
+Pyspark ml.tuning support export/import,CrossValidator and TrainValidationSplit Persist Nested Estimators such as OneVsRest
+Lock release errors occur frequently in executor logs,mapWithState causes block lock warning
+Lock release errors occur frequently in executor logs,Managed Memory Leak Msg Should Only Be a Warning
+using a regexp_replace in a group by clause raises a nullpointerexception,Regular expression replace throws NullPointerException when serialized
+Upgrade to Scala 2.11.8,Upgrade to Scala 2.11.8
+TPC-DS Query 36 fails with Parser error,SPARK-SQL CLI returns NPE
+Feature parity for ALS ML with MLLIB,Review spark.ml parity for recommendation
+TPCDS query 49 returns wrong results compared to TPC official result set ,TPCDS query 74 returns wrong results compared to TPC official result set 
+Failed to bind reference when cume_dist is used,Window functions failed in cluster
+Failed to bind reference when cume_dist is used,Physical Window operator uses global SizeBasedWindowFunction.n attribute generated on both driver and executor side
+Issue an exception when hitting max iteration limit in testing,Fail the tests if the any catalyst rule reach max number of iteration.
+Add support for pluggable cluster manager,[PYSPARK] Make Lambda Serializer Configurable
+spark.hadoop.* configurations are not applied for Parquet Data Frame Readers,Propagate data source options to Hadoop configurations
+Resolving the Conflicts of ColumnPruning and PushPredicateThroughProject ,ColumnPruning is conflict with PushPredicateThroughProject
+Other clients' connection hang up when someone do huge load,"Multi-session can not work when one session is moving files for ""INSERT ... SELECT"" clause"
+do not remove sub-queries added by user when generate SQL,SQLBuilder should add subquery to Aggregate child when necessary
+"HiveThriftServer2 can not get ""--hiveconf"" or ''--hivevar"" variables since 1.6 version (both multi-session and single session)","SparkThriftServer2 can not get ''--hivevar"" variables in spark 2.1"
+"Multi-session can not work when one session is moving files for ""INSERT ... SELECT"" clause",Spark's HiveThriftServer should be able to use multiple sqlContexts
+Add parameter check to GradientDescent,Add parameter check to several MLlib implementations
+sql time stamps do not respect time zones,Infrastructure for session local timezone support
+Parallel training jobs in model selection,Optimizations for ML Pipeline Tuning
+The optimization method of convex function,The optimization method of convex function 
+SPARK-SQL CLI returns NPE,StackOverflowError in Kryo when executing TPC-DS
+[Table related commands] Describe table,Implement TRUNCATE TABLE Command
+Generated SpecificColumnarIterator code can exceed JVM size limit for cached DataFrames,Code-Generated SpecificColumnarIterator fails for wide pivot with caching
+Imported implicits can't be found in Spark REPL in some cases,Implicit resolution doesn't work in multiple Statements in Spark Repl 
+Imported implicits can't be found in Spark REPL in some cases,Can not define class variable in repl
+Imported implicits can't be found in Spark REPL in some cases,Cannot use imported class as parameter of case class in spark-shell
+My dataset does not provide proper predictions in ALS,RegressionEvaluator returns NaN for ALS in Spark ml
+java.lang.IllegalStateException: Did not find registered driver with class oracle.jdbc.OracleDriver,Association with remote system [akka.tcp://sparkDriver@192.168.1.81:34047] has failed; address is now gated for [5000] ms. Reason is: [Association failed$
+UDAF aggregates argument object inspector not parsed correctly,RewriteDistinctAggregates UnresolvedException when a UDAF has a foldable TypeCheck
+Hive table partition predicate not passed down correctly,Improvement a special case for non-deterministic projects in optimizer
+spark csv reader not working properly if CSV content contains CRLF character (newline) in the intermediate cell,multi line support for CSV
+Cannot project all columns from a parquet files with ~1;100 columns,Cherry-pick Wide Table Support for Parquet Codegen from Spark 2.0
+Output of monotonically_increasing_id lacks stable relation with rows of DataFrame,'monotonicallyIncreasingId()' should be deterministic
+Evaluate GaussianMixtureModel with LogLikelihood,Expose log likelihood of EM algorithm in mllib
+Add FileFormat.isSplittable to indicate whether a format is splittable,Reading gzipped files results in duplicate rows
+Empty ORC table join throws exception,Problem select empty ORC table
+Dataframe returns wrong results due to parsing incorrectly,Wrong result can be returned or AnalysisException can be thrown after self-join or similar operations
+approxQuantile should support multi columns,Add API to calculate the approximate quantiles for multiple columns
+Repartition by column,SparkR - Implement repartitionByColumn on DataFrame
+Use FunctionIdentifier in FunctionRegistry/SessionCatalog,UnresolvedFunction should use FunctionIdentifier rather than just a string for function name
+Enable Hive-1.x ORC compatibility with spark.sql.hive.convertMetastoreOrc,"Error occurs when using Spark sql ""select"" statement on orc file after hive sql ""insert overwrite tb1 select * from sourcTb"" has been executed on this orc file"
+Enable Hive-1.x ORC compatibility with spark.sql.hive.convertMetastoreOrc,"Spark2.0 cannot ""select"" data from a table stored as an orc file which has been created by hive while hive or spark1.6 supports"
+User guide doc and examples for GaussianMixture in spark.ml,Add documentaion and examples for GaussianMixture
+Python OneVsRest should train multiple models at once,Parallel One vs. Rest Classifier
+DataFrameWriter JDBC doesn't Quote/Escape column names,jdbc datasource read fails when  quoted  columns (eg:mixed case; reserved words) in source table are used  in the filter.
+Remove mllib-local from mima project exclusion,Move sketch and mllibLocal out from mima exclusion
+The alias created in SELECT could be used in GROUP BY and followed expressions,alais cannot use in group by
+GLM supports output link prediction,GLM should support predict link
+The catalog of SQLContext should not be case-sensitive ,SparkSession should be case insensitive by default
+RowMatrix.computeCovariance inaccurate when values are very large,RowMatr  x Covariance
+SQL/Hive insertInto has unexpected results,Spark/Hive insert Into has unexpected results
+Cooperative Memory Management for Spillables,spark leak memeory and led to OOM
+abstract class Receiver should be explicit about the return type of its methods,Code style: public abstract methods should have explicit return types
+when executor lost DagScheduer may submit one stage twice even if the first running taskset for this stage is not finished,DAGScheduler should avoid sending conflicting task set.
+Expose SparkLauncher's ProcessBuilder for user flexibility,SparkLauncher should allow setting working directory for spark-submit process
+Linear algebra: clarify light vs heavy constructors and accessors,Bug in SparseMatrix multiplication with SparseVector
+Revert SPARK-12130 to make 2.0 shuffle service compatible with 1.x,"spark-shell unresponsive after ""FetchFailedException: java.lang.UnsupportedOperationException: Unsupported shuffle manager"" with YARN and spark.shuffle.service.enabled"
+Improve delegation token handling in secure clusters,Add a new Configurable Token Manager  for Spark Running on YARN
+Improve delegation token handling in secure clusters,Introduce a way for users to easily add support for new services that need delegation tokens
+LazilyGenerateOrdering throws NullPointerException,Spark-SQL: Get com.esotericsoftware.kryo.KryoException: java.lang.NullPointerException when runing query_1.sql of TPC-DS
+LazilyGenerateOrdering throws NullPointerException,java.lang.NullPointerException when run spark 2.0 setting spark.serializer=org.apache.spark.serializer.KryoSerializer
+Fail to parse TPCDS Q90,Cannot drop a table which has the name starting with 'or'
+Fail to parse TPCDS Q90,HiveContext cannot create a table named sort
+Spark SQL documentation should be more precise about which SQL features it supports,Spark SQL DDL/DML docs non-existent
+"Codegen ""no constructor found"" errors with Maps inside case classes in Datasets",Datasets - crash (compile exception) when mapping to immutable scala map
+Support correlated scalar subquery,TPC-DS query 1 resolved attribute(s) missing
+Disable Passing to Hive the queries that can't be parsed,Remove HiveNativeCommand
+Graph vertexRDD/EdgeRDD checkpoint results ClassCastException: ,Cannot perform RDD operations on a checkpointed VertexRDD.
+"Improve the ""SET"" and ""SET -v"" command",Fix SET command to show a result correctly and in a sorted order
+Generated SpecificUnsafeProjection Exceeds JVM Code Size Limits,Generated SpecificColumnarIterator code can exceed JVM size limit for cached DataFrames
+Generated SpecificUnsafeProjection Exceeds JVM Code Size Limits,CodeGenerator - failed to compile: org.codehaus.janino.JaninoRuntimeException: Code of method Error
+Python GaussianMixture summary,Add model summaries for Python GMM and BisectingKMeans
+SparkSession Python API,Python SparkSession API
+Tasks that fail due to CommitDeniedException (a side-effect of speculation) can cause job to never complete,Task with commit failed will retry infinite when speculation set to true
+Alter Table Drop Partition Using Predicate-based Partition Spec,ALTER TABLE DROP PARTITION should support comparators
+JDBCRelation should report an IllegalArgumentException if stride equals 0,JDBC source: Wrong Partition Generation when numPartitions is More than the number of rows between upper and lower bounds
+   Problem Reading partitioned ORC or Parquet files,Dataset.partitionBy.csv raise a java.io.FileNotFoundException when launched on an hadoop cluster
+YarnShuffleService should use YARN getRecoveryPath() for leveldb location,Shuffle Service fails to start if first yarn.nodemanager.local-dirs is bad
+YarnShuffleService should use YARN getRecoveryPath() for leveldb location,YARNShuffleService doesn't get current local-dirs from NodeManager
+Document spark.sql.broadcastTimeout configuration,"add ""spark.sql.broadcastTimeout"" into docs/sql-programming-guide.md to help people to how to fix this timeout error when it happenned"
+Usage of Temp Table twice in Hive query fails with bad error,Usage of Temp Table twice in Hive query 
+Use the value of spark.sql.warehouse.dir as the warehouse location instead of using hive.metastore.warehouse.dir,Use proper metastore warehouse path
+Use SparkSession instead of SQLContext in testsuites,Use SparkSession instead of SQLContext in Python tests
+History Server would OOM due to unlimited TaskUIData in some stages,spark HistoryServer memory increases until gets killed by OS.
+CSV data source recognizes empty quoted strings in the input as null. ,Reading empty string from csv has changed behaviour
+Spark Mesos dispatcher becomes unusable when the Mesos master restarts,Mesos dispatcher should handle DRIVER_ABORTED status from mesosDriver.run()
+option nullValue for CSV data source not working for several types.,Spark 2.0 CSV does not cast null values to certain data types properly
+SparkR spark.naiveBayes throws error when label is numeric type,SparkR NaiveBayes should not require label to have NominalAttribute
+String fields in Dataframe behaves weirdly when executor-memory >= 32GB,String fields in Dataframe behaves weirdly when executor-memory >= 32GB
+String fields in Dataframe behaves weirdly when executor-memory >= 32GB,String fields in Dataframe behaves weirdly when executor-memory >= 32GB
+Deprecate registerTempTable and add dataset.createTempView,Replace the usage of deprecated DataSet API in tests
+Adding outputMode to structure Streaming Experimental Api,Add support for complete output mode 
+Implement code generation for Generate,"select($""column1""; explode($""column2"")) is extremely slow"
+Can not delete jar and list jar in spark Thrift server,Add DELETE FILE command support in spark
+CSV file data-line with newline at first line load error,Support multline csv records
+Back quoted column with dot in it fails when running distinct on dataframe,Weird behaviour of the DataFrame when a column name contains dots.
+UDF executed twice when filter on new column created by withColumn and the final value may be not correct,Add deterministic to ScalaUDF
+Generated SpecificSafeProjection.apply method grows beyond 64 KB,GeneratedIterator grows beyond 64 KB
+JobProgressListener takes a huge amount of memory with iterative DataFrame program in local; standalone,monotonicallyIncreasingId should use less memory with multiple partitions
+OutOfMemory in TimSort ,Spark executor OOM during TimSort
+Should print spark-submit usage when no arguments is specified,spark-submit --help throws exception
+physical object operator should define `reference` correctly,"Codegen CompileException ""mapelements_isNull"" is not an rvalue"
+monotonicallyIncreasingId doesn't work when data is upsampled,Dataset.sample with seed: result seems to depend on downstream usage
+"Codegen CompileException ""mapelements_isNull"" is not an rvalue",Codegen failure with a Dataframe program using an array
+Remove unnecessary calculation of stage's parents,Improve readability of DAGScheduler stage creation methods
+Default value mismatch of param linkPredictionCol for  GeneralizedLinearRegression,Flaky test:pyspark.ml.tests.DefaultValuesTests.test_java_params
+Support for creating a dataframe from CSV in Dataset[String],catalyst using BigInteger.longValueExact that not supporting java 7 and compile error
+Add support for writing partitioned `csv`; `json`; `text` formats in Structured Streaming,Support all file formats in structured streaming
+CSV fails to write and read back empty dataframe,Spark 2.0.2 writes empty file if no record is in the dataset
+CSV fails to write and read back empty dataframe,Add tests for writing and reading back empty data for Parquet; Json and Text data sources
+only one notebook can define a UDF; java.sql.SQLException: Another instance of Derby may have already booted the database,pyspak hiveContext can not create UDF: Py4JJavaError: An error occurred while calling None.org.apache.spark.sql.hive.HiveContext. 
+repartition(0) should raise IllegalArgumentException.,Repartiton call w/ 0 partitions drops data
+TopicAndPartition should provide __hash__ method,fromOffsets parameter in Kafka's Direct Streams does not work in python3
+Paginate Job Table in Jobs tab,"Completed Jobs and ""Completed Stages"" support pagination"
+CatalogRelation should fallback to HDFS size of partitions that are involved in Query if statistics are not available.,Partition pruning for metastore relation size estimates for better join selection.
+ALTER TABLE RENAME doesn't work for datasource tables,Not able to access table's data after ALTER TABLE RENAME in Spark 1.6.2
+Ensure FileSystem is gotten from path in InMemoryCatalog,spark sql local FS spark.sql.warehouse.dir throws on YARN
+Throw exception if columns number of outputs mismatch the inputs,better error message if the number of columns in SELECT clause doesn't match the table schema
+Make ListenerBus event queue size configurable,Make the queue capacity of LiveListenerBus configurable.
+"Error occurs when using Spark sql ""select"" statement on orc file after hive sql ""insert overwrite tb1 select * from sourcTb"" has been executed on this orc file",OrcConversions should not convert an ORC table represented by MetastoreRelation to HadoopFsRelation if metastore schema does not match schema stored in ORC files
+Add DELETE FILE command support in spark,delete jar unable
+Make continuous Parquet writes consistent with non-continuous Parquet writes,Consolidate streaming and batch write path
+Spark 2.0 thrift server not starting in cluster mode.,Spark 2.0 thrift server not starting in hadoop cluster.
+joinWith bytecode generation calling ByteBuffer.wrap with InternalRow,Schema is not checked when converting DataFrame to Dataset using Kryo encoder
+update the whole sql programming guide,Update SQL programming guide for Spark 2.0
+Hang while enable blacklistExecutor and DynamicExecutorAllocator ,Job should not be aborted when dynamic allocation is enabled or spark.executor.instances larger then current allocated number by yarn
+Spark 2.0/master maven snapshots are broken,Maven doc JAR generation fails when JAVA_7_HOME is set
+Spark unable to read partitioned table in avro format and column name in upper case,Spark unable to read partitioned table in avro format and column name in upper case
+spark.createDataFrame raises an exception in Spark 2.0 tests on Windows,file scheme should be used correctly
+file scheme should be used correctly,spark 2.0.1 fails in windows when using file:/// scratchdir in hive-site.xml
+Add a deprecation warning for Python 2.6,More officially deprecate support for Python 2.6; Java 7; and Scala 2.10
+Remove additional Project to be consistent with SQL when insert into table,use by-position resolution when insert into hive table
+unionAll returns wrong result when two dataframes has schema in different order,Union uses column order rather than schema
+"Spark Application rest api returns ""no such app: <appId>""",Spark History server Rest Api gives Application not found error for yarn-cluster mode
+Eliminate unreachable code at projection for complex types,"Use `ev.isNull = ""false""` if possible for Janino to have a chance to optimize."
+GroupedData's member incorrectly named,Fix GroupedData Documentation
+GroupedData varargs arguments misnamed,Fix GroupedData Documentation
+Disallow Duplicate Columns in `partitionBy`; `bucketBy` and `sortBy`,unify logical plans for CREATE TABLE and CTAS
+Eliminate nullcheck code at projection for an array type,Reduce runtime overhead of a program that creates an primitive array in DataFrame
+Yarn cluster mode should return consistent result for command line and SparkLauncher,SparkAppHandle.getState() returns wrong state in standalone mode if Spark application terminates unexpectedly
+Refactoring CSV data source to be consistent with JSON data source,Share a single Row for CSV data source rather than creating every time
+Can't join describe() of DataFrame in Scala 2.10,"unionAll raises ""Task not serializable"""
+Incorrect behavior for isNull filter,Full Outer join with literal column results in incorrect result
+Expose information schema,basic INFORMATION_SCHEMA support
+regexp_extract to return an ArrayType(StringType()),Add match Column expression for regular expression matching in Scala API 
+Reduce runtime overhead of a program that writes an primitive array in Dataframe/Dataset,Optimize SerializeFromObject for primitive array
+CSV data source does not write date and timestamp correctly,DataFrame DateType is written as an int(Days since epoch) by csv writer
+CSV data source does not write date and timestamp correctly,dateFormat should be used when writing dataframes as csv files
+CSV data source does not write date and timestamp correctly,dateFormat unexpected kwarg to df.write.csv
+Speculative Task may not be able to overwrite file,Failed to saveAsHadoop when speculate is enabled
+model loading backward compatibility for ml.feature.PCA,model loading backward compatibility for ml.feature.PCA
+Can't use escapeQuotes option in DataFrameWriter.csv(),Cleanup options for DataFrame reader API in Python
+Full Outer join with literal column results in incorrect result,Bug in left-outer join
+Capture errors from R workers in daemon.R to avoid deletion of R session temporary directory,Capture errors from R workers in daemon.R to avoid deletion of R session temporary directory
+LinkageError should not crash Spark executor,LinkageError should not crash Spark executor
+Improve testing for DecisionTree variances,Improve testing for DecisionTree variances
+SparkR csv source should have the same default na.string as R,SparkR csv source should have the same default na.string as R
+Docs for Kafka 0.10 consumer integration,Spark streaming kafka version compatibility. 
+Docs for Kafka 0.10 consumer integration,Kafka Direct Stream is not experimental anymore
+the history server of spark2.0-preview (may-24 build) consumes more than 1000% cpu,Excessive Spark history event/json data size (5GB each)
+Excessive Spark history event/json data size (5GB each),Remove internal.metrics.updatedBlockStatuses accumulator from history files
+Excessive Spark history event/json data size (5GB each),Spark event logs are huge compared to 1.5.2
+DataFrame allows duplicate column-names,DataFrame Row StructType check duplicate name
+FROM_UNIXTIME reports incorrect days,from_unixtime function gives wrong answer
+DataFrameWriter's jdbc method drops table in overwrite mode, Support `truncate` option in Overwrite mode for JDBC DataFrameWriter
+EnsureRequirements adds extra Sort to already sorted cached table,Planner adds un-necessary Sort even if child ordering is semantically same as required ordering
+Build failes for Mesos 0.28.x,Support Mesos Unified Containerizer
+Reuse the uncorrelated scalar subqueries with the same logical plan in a query,Reuse subqueries within single query
+Spark 2.0 CSV does not cast null values to certain data types properly,nullValue in first field is not respected by CSV source when read
+Spark 2.0 CSV does not cast null values to certain data types properly,cannot read null dates from csv file
+Spark 2.0 CSV does not cast null values to certain data types properly,Spark CSVInferSchema does not always respect nullValue settings
+Inconsistent nullability in schema after being read,Users schema with non-nullable properties is overidden with true
+No way to load CSV data without dropping whole rows when some of data is not matched with given schema,Spark CSV parsing types other than String throws exception when malformed
+Spark application not handling preemption messages,Driver hangs after executors are lost
+Support for conversion from compatible schema for Parquet data source when data types are not matched,SparkSQL cannot handle schema evolution from Int -> Long when parquet files have Int as its type while hive metastore has Long as its type
+java.io.CharConversionException: Invalid UTF-32 character  prevents me from querying my data,Inconsistent error handling in JSON parsing SQL functions
+"spark-class crash with ""[: too many arguments"" instead of displaying the correct error message",Refactor PySpark accumulator API to be on top of AccumulatorV2 API
+Making JVM backend calling functions public,Expose JVM SparkR API functions 
+Spark History server Rest Api gives Application not found error for yarn-cluster mode,"Spark2 History server got ""Failed to load application attempt"""
+Single function for parsing timestamps/dates,Single Function for Parsing Dates and Times with Formats
+Upgrade to Avro 1.8.x,NoSuchMethodError: org.apache.avro.Schema.getLogicalType()
+LAST_VALUE(FALSE) OVER () throws IndexOutOfBoundsException,Multiple Aggregation Using 'countDistinct' and 'first' result in error 
+Spark 1.6.2 - Persist call on Data frames with more than 200 columns is wiping out the data.,Incorrect results returned following a join of two datasets and a map step where total number of columns >100
+Spark 1.6.2 - Persist call on Data frames with more than 200 columns is wiping out the data.,Cannot call zipWithIndex on RDD with more than 200 columns (get wrong result)
+Spark 1.6.2 - Persist call on Data frames with more than 200 columns is wiping out the data.,Caching a DataFrame with >200 columns ~nulls the contents
+Spark 1.6.2 - Persist call on Data frames with more than 200 columns is wiping out the data.,Caching invalidates data on mildly wide dataframes
+Spark 1.6.2 - Persist call on Data frames with more than 200 columns is wiping out the data.,Spark 2.0 data corruption with cache and 200 columns
+Spark 1.6.2 - Persist call on Data frames with more than 200 columns is wiping out the data.,calling cache on joined dataframe can lead to data being blanked
+python import pyspark fails in context.py ,cannot import name accumulators error
+Remove defunct audit-release dir,converter and access code out of sync: createDataFrame on RDD[Option[C]] fails with MatchError
+redundant RDD computation in LDAOptimizer,OnlineLDAOptimizer reads the same broadcast data after deletion
+"json parsing regression - ""."" in keys",Expecting same behavior after loading a dataframe with dots in column name
+"json parsing regression - ""."" in keys","Can't read Parquet data with fields containing periods ""."""
+Fix doc link in docs/ml-guide.md,Pipeline guide link is broken in MLlib Guide main page
+java launched by PySpark as gateway may not be the same java used in the spark environment,Upgrade Py4J to 0.10.3
+Can't run saveAsTable with database name,SaveAsTable does not work when source DataFrame is built on a Hive Table
+Dataset containing a Case Class with a List type causes a CompileException (converting sequence to list),CodeGenerator - failed to compile when constructor has scala.collection.mutable.Seq vs. scala.collection.Seq
+Select features according to a percentile of the highest scores of ChiSqSelector,Add a chiSquare Selector based on False Positive Rate (FPR) test
+"org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificOrdering"" grows beyond 64 KB",GeneratedIterator grows beyond 64 KB
+"org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificOrdering"" grows beyond 64 KB",DataFrame with large number of columns causing code generation error
+"org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificOrdering"" grows beyond 64 KB",Code generation fails when running SQL expressions against a wide dataset (thousands of columns)
+"org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificOrdering"" grows beyond 64 KB",grows beyond 64 KB with data frame with many columns
+Incorrect threshould length in 'setThresholds()' evoke Exception ,ProbabilisticClassifier.fit check threshoulds' length
+force spill NPE,spark.util.collection.ExternalSorter leak memory when task force spilling in-memory map to disk 
+Hive settings in hive-site.xml may be overridden by Hive's default values,Spark cannot connect to secure metastore when using custom metastore jars
+Cannot resolve column name after a join,distinct() operator fails on Dataframe with column names containing periods
+fromOffsets parameter in Kafka's Direct Streams does not work in python3,Cannot set fromOffsets in createDirectStream function
+Fix bound checking for SparseVector,SparseVectors.apply and SparseVectors.toArray have different returns when creating with a illegal indices
+"App Name is a randomUUID even when ""spark.app.name"" exists",Create spark context with random uuid app name if app name is not set in configuration
+Load only catalog table partition metadata required to answer a query,Consider improving partition pruning in HiveMetastoreCatalog
+"Started time; ""Completed"" time and ""Last Updated"" time in history server UI are not user local time",HistoryServer use GMT time all time
+"Started time; ""Completed"" time and ""Last Updated"" time in history server UI are not user local time",Wrong time display on Spark History Server web UI
+Add spark-default.conf property to define https port for spark history server,Additional SSL port on HistoryServer should be configurable
+Full outer join followed by inner join produces wrong results,Incorrect result when HAVING clause is added to group by query
+Full outer join followed by inner join produces wrong results,Analyzer incorrectly optimizes plan to empty LocalRelation
+Full outer join followed by inner join produces wrong results,Call inner join after outer join will miss rows with null values
+cannot read null dates from csv file,cannot read null dates from csv file
+Fetch Parquet schema within driver-side when there is single file to touch without another Spark job,Improve performance for reading parquet schema
+Convert IN predicate to equivalent Parquet filter,Convert IN predicate to equivalent Parquet filter
+Provide consistent format identifiers for TextFileFormat and ParquetFileFormat,Provide consistent format output for all file formats
+select if(true; null; null) via JDBC triggers IllegalArgumentException in Thriftserver,Cannot SELECT NULL
+Spark Streaming Kafka 0.10 Consumer Can't Handle Non-consecutive Offsets (i.e. Log Compaction),kafka.maxRatePerPartition for compacted topic cause exception
+Provide support for Timestamp type Column in add_months function to return HH:mm:ss,Spark  - Truncate date by Day / Hour
+Support multline csv records,multi line support for CSV
+Support skipping multiple header rows in csv,multi line support for CSV
+Support multiple null values in csv files,Support for multiple null values when reading CSV data
+Allow configuring record delimiter in csv,Text and CSV formats do not support custom end-of-line delimiters
+Add native Scala enum support to Dataset Encoders,Encoders.bean() throws UnsupportedOperationException if Java Bean Class contains an enum
+Left join where ON clause does not reference the right table produces analysis error,Spark SQL: cross join + two joins = BUG
+Hadoop 2.7 profile to depend on Hadoop 2.7.3,Bump Hadoop 2.7 version from 2.7.2 to 2.7.3
+better error message for NPE during ScalaUDF execution,Clarify window/slide duration as absolute time; not relative to a calendar
+PySpark sc.AddFile method does not support the recursive keyword argument,PySpark SparkContext.addFile supports adding files recursively
+Spark SQL: cross join + two joins = BUG,SQL - Running query with outer join from 1.6 fails
+Spark SQL: cross join + two joins = BUG,SQL - Running query with outer join from 1.6 fails
+Support spark-shell on cluster mode,Support spark-shell on cluster mode
+Support spark-shell on cluster mode,Support spark-shell on cluster mode
+YARN shuffle service should use good disk from yarn.nodemanager.local-dirs,Yarn ShuffleService failed to start when the chosen directory become read-only
+fix MultivariantOnlineSummerizer.numNonZeros,fix MultivariateOnlineSummerizer.numNonZeros
+Cannot define value classes in REPL,Scala value classes create encoder problems and break at runtime
+Star Join Optimization,TPC-DS performance improvements using star-schema heuristics
+Threads number keep increasing when query on external CSV partitioned table,Thread and memory leak in WindowDstream (UnionRDD ) when parallelPartition computation gets enabled. 
+Event Timeline will be very slow when there are too many executor events,using spark thrift server gets memory leak problem in `ExecutorsListener`
+Set type is not supported for creating data frames,RuntimeException with Set and Case Class in Spark 2.1.1
+"Spark 2.0.0 is not supporting the ""partition"" keyword on a ""describe"" statement when using Hive Support",Support `DESCRIBE table PARTITION` SQL syntax
+Alias specified for aggregates in a pivot are not honored,DataFrame pivot output column names should respect aliases
+Specifying remote files for Python based Spark jobs in Yarn cluster mode not working,"--master yarn --deploy-mode cluster gives ""Launching Python applications through spark-submit is currently only supported for local files"""
+Compiler warning in UnsafeInMemorySorter class,Use Static member not via instance reference
+Janino exception when calculating metrics for large generated class, WARN CodeGenerator: Error calculating stats of compiled class
+Add spark-submit option for user to override ivy settings used to resolve packages/artifacts,spark.jars.ivy explanation is incorrect and missleading.
+Modify default value of spark.app.name in configuration for spark session,Assign random App name while creating spark context
+Folder deletion after globbing may fail StructuredStreaming jobs,querying from parquet partitioned table throws FileNotFoundException when some partitions' hdfs locations do not exist
+"Getting ""java.lang.RuntimeException: Distinct columns cannot exist in Aggregate ""","Getting ""java.lang.RuntimeException: Distinct columns cannot exist in Aggregate """
+Parquet filter push down doesn't handle struct fields,Filter pushdown not working for struct fields
+Web UI prevents spark-submit application to be finished,FileSystem$Statistics$StatisticsDataReferenceCleaner hangs on s3 write
+UDFs are run too many times,UDF multiple evaluations causes very poor performance
+UDFs are run too many times,UDF multiple evaluations causes very poor performance
+ALTER TABLE DROP PARTITION should support comparators,AlterTableDropPartitions fails for non-string columns
+WeightCol support non-double datatypes,getNumClasses support non-double datatypes
+Write ahead log exception on a toy project,"Close ""kryo auto pick"" feature for Spark Streaming"
+Spark SQL ExternalCatalog API custom implementation support,Allow configuring non-hive and non-local SessionState and ExternalCatalog
+Incorrect result when work with data from parquet,DataFrame/Dataset join not producing correct results in Spark 2.0/Yarn
+Incorrect result when work with data from parquet,SQL-based three column join loses first column
+Default spark.sql.warehouse.dir is relative to local FS but can resolve as HDFS path,Default Warehouse location apparently in HDFS 
+Json serialzation of accumulators are failing with ConcurrentModificationException,NettyRpcEndpointRef: Error sending message and Caused by: java.util.ConcurrentModificationException
+Specified database in JDBC URL is ignored when connecting to thriftserver,Spark beeline: table was created  at default database  even though specifing a database name
+R API for global temp view,expose createOrReplaceGlobalTempView/createGlobalTempView and dropGlobalTempView in SparkR
+The url linking to `AccumulatorV2` in the document is incorrect.,The requested URL /docs/latest/api/scala/org/apache/spark/AccumulatorV2.html was not found on this server.
+Aggregation function for generating string histograms,Aggregation function for computing bins (distinct value; count) pairs for equi-width histograms
+scala.ScalaReflectionException,Dataset.flatMap can't work with types from customized jar
+Filter/join expressions can return incorrect results when comparing strings to longs,Improve the implicit type conversion between numeric type and string to avoid precesion loss
+Filter/join expressions can return incorrect results when comparing strings to longs,Wired SELECT equal behaviour. 
+Filter/join expressions can return incorrect results when comparing strings to longs,Implicit type conversion during comparision between Integer type column and String type column
+CSV data source treats empty string as null no matter what nullValue option is,spark.csv.read Empty String Parsed as NULL when nullValue is Set
+Typo in LAST function error message,Add examples (extend) in each function and improve documentation
+I think it's user unfriendly to process standard json file with DataFrame ,Parse normal; multi-line JSON files (not just JSON Lines)
+.sparkStaging not clean on RM ApplicationNotFoundException,.sparkStaging quickly fill up HDFS
+Dataset.flatMap can't work with types from customized jar,INSERT [INTO|OVERWRITE] TABLE ... PARTITION for Datasource tables cannot handle partitions with custom locations
+Spark Thriftserver needs to create SPNego principal,Support spnego for ThriftServer thrift/http auth
+UDF doesn't work on non-local spark,ClassCast exception when interpreting UDFs from a String in spark-shell
+UDF doesn't work on non-local spark,java.lang.ClassCastException in a simple spark application
+Locality Sensitive Hashing (LSH) User Guide,Add Scala/Java/Python examples for MinHash and RandomProjection
+SPIP: Better History Server scalability for many / large applications,Spark history Server load too slow when eventlog is large
+SPIP: Better History Server scalability for many / large applications,Speed up the restart of HistoryServer using ApplicationAttemptInfo checkpointing
+Wrong ApproximatePercentile answer when multiple records have the minimum value,Wrong ApproximatePercentile answer when multiple records have the minimum value(for branch 2.0)
+org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils.saveTable  the case senstivity issue,Unable to write to Hive table where column names contains period (.)
+Add hooks and extension points to Spark,Spark SQL expose interface for plug-gable parser extension 
+Flaky test when hive partition pruning is enabled,Revert the change of SPARK-18167
+Make Column.expr public,Make Column.expr public
+Optimise PartitionedAppendOnlyMap implementation,Optimise PartitionedPairBuffer implementation
+Add Summary of BiKMeans and GMM in pyspark,Add model summaries for Python GMM and BisectingKMeans
+Update R vignettes and programming guide for 2.1.0 release,SparkR 2.1 QA: Programming guide; migration guide; vignettes updates
+Scheme of DataFrame generated from RDD is different between master and 2.0,Dataset map does not respect nullable field 
+approxQuantile in R support multi-column,SparkR approxQuantile supports input multiple columns
+"SparkR glm predict should output original label when family = ""binomial""",SparkR GLM model predict should support type as a argument
+ClassCastException during count distinct,Joining to a unioned DataFrame does not produce expected result.
+SparkR 2.1 QA: Update user guide for new features & APIs,SparkR 2.1 QA: Programming guide; migration guide; vignettes updates
+Spark SQL fails to read data from a ORC hive table that has a new column added to it,spark.sql.hive.convertMetastoreOrc is causing NullPointerException while reading ORC tables
+Let user specify locale in CSV parsing,Spark ignores JVM Locale parsing CSV data
+Upgrade netty to 4.0.42.Final ,Memory leak in Spark streaming
+Batch mode SQL source for Kafka,Batch Source for Kafka
+Provide Spark Streaming Monitor Rest Api,Add a REST api to spark streaming
+OOM killer may leave SparkContext in broken state causing Connection Refused errors,An error occurred while trying to connect to the Java server
+OOM killer may leave SparkContext in broken state causing Connection Refused errors,Again: OOM killer may leave SparkContext in broken state causing Connection Refused errors
+limit + groupBy leads to java.lang.NullPointerException,DataSet Limit into Aggregate Results in NPE in Codegen
+limit + groupBy leads to java.lang.NullPointerException,Run count(distinct x) from sub query found some errors
+na.fill miss up original values in long integers,na.fill() should not change the data type of column
+Downgrade the memory leak warning message,Managed memory leak - spark-2.0.2
+Receiver data can not be dataSerialized properly.,"Close ""kryo auto pick"" feature for Spark Streaming"
+Receiver data can not be dataSerialized properly.,"Serialization setting ""spark.serializer"" ignored in Spark 2.x"
+Keep same style: adjust the position of ,Keep same style: adjust the position of driver log links
+spark-csv strips whitespace (pyspark) ,"DataFrameWriter - CSV options ""ignoreLeadingWhiteSpace"" and ""ignoreTrailingWhiteSpace"" Not working"
+spark-csv strips whitespace (pyspark) ,Spark CSV writer trims trailing spaces
+"persist() resolves ""java.lang.RuntimeException: Invalid PythonUDF <lambda>(...); requires attributes from more than one child""", PythonUDF with multiple parents shouldn't be pushed down when used as a predicate
+Encoding a Java Bean with extra accessors; produces inconsistent Dataset; resulting in AssertionError,Encoder generated using Java beans causes corruption in MapGroupsWithState
+Spark ML algorithms that check RDD cache level for internal caching double-cache data,KMeans performance regression (5-6x slowdown) in Spark 2.2
+Cannot connect to Hive metastore in client mode with proxy user,spark-shell use proxy-user failed
+ExecutorClassLoader for spark-shell does not honor spark.executor.userClassPathFirst,ExecutorClassLoader loads classes from SystemClassLoader
+spark-shell --jars option does not add jars to classpath on windows,spark-shell --packages option does not add jars to classpath on windows
+Writing to a text DataSource buffers one or more lines in memory,Concat with ds.write.text() throw exception if column contains null data
+Throw Filtering is supported only on partition keys of type string exception,Throw Filtering is supported only on partition keys of type string exception
+Backward compatibility - creating a Dataframe on a new SQLContext object fails with a Derby error,Python API should reuse existing SparkSession while creating new SQLContext instances
+Upgrade sbt plugins,Upgrade sbt plugins
+Spark CSV parsing types other than String throws exception when malformed,Permissive mode is not replacing corrupt record with null
+Spark CSV parsing types other than String throws exception when malformed,"CSV parser should return null for empty (or with """") numeric columns."
+Insertion/CTAS against Hive Tables: Staging Directories and Data Files Not Dropped Until Normal Termination of JVM,Create empty staging directory in partitioned table on insert
+Deadlock when SparkContext.stop is called in Utils.tryOrStopSparkContext,master UI kill link stops spark context but leave it active
+SparkR vignette update: logit,Update spark.logit in sparkr-vignettes
+Cann't read broadcast if broadcast blocks are stored on-disk,exception about reading task serial data(broadcast) value when the storage memory is not enough to unroll
+High latency of event processing for large jobs,Spark never finishes jobs and stages; JobProgressListener fails
+PageRank gives incorrect results for graphs with sinks,PageRank gives incorrect results for graphs with sinks
+PageRank gives incorrect results for graphs with sinks,Add support for IS [NOT] DISTINCT FROM to SPARK SQL
+Codegen fails with cryptic error if regexp_replace() output column is not aliased,regex strings not properly escaped in codegen for aggregations
+An error occurred while trying to connect to the Java server,Again: OOM killer may leave SparkContext in broken state causing Connection Refused errors
+Spark SQL support for Hive hooks regressed,Support Hive Hooks in Spark thrift server again
+Support for specific collection types, CompileException with Map and Case Class in Spark 2.1.0
+Support for specific collection types,Dataframe/Dataset unserialization failing with Map
+"Not support ""alter table .. add columns .."" ",SparkSQL unsupports  to change hive table's name\dataType
+"Not support ""alter table .. add columns .."" ",Support `ALTER TABLE table_name ADD COLUMNS(..)` statement
+Suppress ScalaCheck warning -- Unknown ScalaCheck args provided when executing tests using sbt,"Local UDTs test (org.apache.spark.sql.UserDefinedTypeSuite) fails due to ""ClassCastException: java.lang.Integer cannot be cast to org.apache.spark.sql.UDT$MyDenseVector"""
+Fix flaky test: o.a.s.sql.streaming.FileStreamSourceSuite max files per trigger - incorrect values,It's hard for the user to see the failure if StreamExecution fails to create the logical plan
+regex strings not properly escaped in codegen for aggregations,codehaus fails to generate code because of unescaped strings
+PullOutNondeterministic should work for Aggregate operator,rand() function in case when cause failed
+Netty issue may cause the shuffle client hang,Executor is waiting for lock
+Netty issue may cause the shuffle client hang,Executor is waiting for lock
+in standlone mode;executor expired by HeartbeanReceiver that still take up cores but no tasks assigned to ,worker clean up app directory block the heartbeat sending 
+Couldn't find leader offsets exception when the one of kafka cluster brokers is down,Couldn't find leader offsets exception when the one of kafka cluster brokers is down
+Couldn't find leader offsets exception when the one of kafka cluster brokers is down,[spark UI]In the SQL table page; modify jobs trace information
+Failed in `delay in months and years handled correctly`,Fix EventTimeWatermarkSuite 'delay in months and years handled correctly'
+SparkSession initialization will be associated with invalid SparkContext when new SparkContext is created to replace stopped SparkContext,Python: new HiveContext will use a stopped SparkContext
+Fix pip install issue with ml sub components,setup.py missing reference to pyspark.ml.param
+Large number of executors causing a ton of ERROR scheduler.LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(41;WrappedArray()),Drop more elements when stageData.taskData.size > retainedTasks to reduce the number of times on call drop
+virtualenv example does not work in yarn cluster mode,Kmeans.py application fails with virtualenv and due to  parse error 
+virtualenv example does not work in yarn cluster mode,virtualenv example failed with conda due to ImportError: No module named ruamel.yaml.comments
+ CompileException with Map and Case Class in Spark 2.1.0,Cannot convert a Seq of Map whose value type is again a seq; into a dataset 
+Styling for the configuration docs is broken,Web site headers not rendered correctly in some pages
+Styling for the configuration docs is broken,Fix formatting of headers in configuration.html page
+add codec for ZStandard,Support ZStandard Compression
+columns changed orc table encouter 'IndexOutOfBoundsException' when read the old schema files,columns changed orc table encouter 'IndexOutOfBoundsException' when read the old schema files
+columns changed orc table encouter 'IndexOutOfBoundsException' when read the old schema files,columns changed orc table encouter 'IndexOutOfBoundsException' when read the old schema files
+columns changed orc table encouter 'IndexOutOfBoundsException' when read the old schema files,columns changed orc table encouter 'IndexOutOfBoundsException' when read the old schema files
+columns changed orc table encouter 'IndexOutOfBoundsException' when read the old schema files,columns changed orc table encouter 'IndexOutOfBoundsException' when read the old schema files
+columns changed orc table encouter 'IndexOutOfBoundsException' when read the old schema files,columns changed orc table encouter 'IndexOutOfBoundsException' when read the old schema files
+columns changed orc table encouter 'IndexOutOfBoundsException' when read the old schema files,columns changed orc table encouter 'IndexOutOfBoundsException' when read the old schema files
+columns changed orc table encouter 'IndexOutOfBoundsException' when read the old schema files,columns changed orc table encouter 'IndexOutOfBoundsException' when read the old schema files
+ConcurrentModificationExceptions with CachedKafkaConsumers when Windowing,Unable to do windowing operation on Spark 2.1.1 and kafka 0.10.2.0
+Hive bucketing support,Support writing data into hive bucket table.
+The type of CatalogStorageFormat.locationUri should be java.net.URI instead of String,table's location should check if a URI is legal
+DAGScheduler should handle stage's pendingPartitions properly in handleTaskCompletion.,Take rows from DataFrame with empty first partition
+FetchFailures can be hidden by user (or sql) exception handling,FileFormatWriter hides FetchFailedException from scheduler
+Failed Recovery from checkpoint caused by the multi-threads issue in Spark Streaming scheduler,Failed Recovery from checkpoint caused by the multi-threads issue in Spark Streaming scheduler
+Spark 2.1.x unstable with spark.speculation=true,Executors failing stage on interrupted exception thrown by cancelled tasks
+improve LocalLDAModel save/load scaling for large models,mllib lda's LocalLDAModel's save: out of memory. 
+Executor is waiting for lock,Executor is waiting for lock
+SPARK-17387 caused ignorance of conf object passed to SparkContext:,SparkConf not getting properly initialized in PySpark 2.1.0
+SPARK-17387 caused ignorance of conf object passed to SparkContext:,spark submit not considering user defined Configs (Pyspark)
+UnsupportedOperationException: empty.reduceLeft in LinearSeqOptimized,UnsupportedOperationException: empty.reduceLeft when caching a dataframe
+Upgrade breeze to 0.13,Upgrade breeze version to 0.13.1
+StatFunctions.multipleApproxQuantiles can give NoSuchElementException: next on empty iterator,Make NaN/null handling consistent in approxQuantile
+Killed tasks are getting marked as FAILED,Executor should not fail stage if killed task throws non-interrupted exception
+Spark 2.X does not support stored by clause,Syntax error regression when creating Hive storage handlers on Spark shell
+Cannot read external tables with VARCHAR columns if they're backed by ORC files written by Hive 1.2.1,ORC tables cannot be read when they contain char/varchar columns
+Add option for case-insensitive Parquet field resolution,Spark 2.1.0 breaks some Hive tables backed by case-sensitive data files
+loading hive jars from the local repo which has already downloaded,Customizable remote repository url for hive versions unit test
+ORC tables cannot be read when they contain char/varchar columns,Issue with reading Hive ORC tables having char/varchar columns in Spark SQL
+Several DataFrame Methods still fail with dot in column names ,Dot in DataFrame Column title causes errors
+Hive partition columns are case-sensitive,sparksql 2.1 can not prune hive partition 
+add a config for tableRelation cache size in SessionCatalog,Authorization Support(on all operations not only DDL) in Spark Sql version 2.1.0
+Discussion: Making MLlib APIs extensible for 3rd party libraries,Expanding Spark ML under Different Namespace
+pyspark.sql.types._verify_type() exceptions too broad to debug collections or nested data,Improve error message in verify_type to indicate which field the error is for
+codegen for compare structs fails,codegen bug surfaced by GraphFrames issue 165
+Error with embedded line break (multi-line record) in csv file.,multi line support for CSV
+Make NaN/null handling consistent in approxQuantile,"approxQuantiles throws ""next on empty iterator"" on empty data"
+Fix a http error in a paged table when using a `Go` button to search.,In the page of 'jobs' or 'stages' of history server web ui;;click the 'Go' button;  query paging data; the page error
+structured streaming job restart bug,HDFSBackedStateStoreProvider fails to overwrite existing file
+Spark-2.1.0 can not connect hbase,SparkSQL unsupports to create a hive table which is mapped for HBase table
+Multiple NGram sizes,Spark ML ngram feature extractor should support ngram range like scikit
+change 'var' to 'val' for better Specification,change 'var' to 'val' for better Specification
+Spark on Yarn Credentials File set to different application directory,Streaming applications read stale credentials file when recovering from checkpoint.
+Join a streaming DataFrame with a batch DataFrame may not work,Ensure all leaf nodes that are derived from streaming sources have isStreaming=true
+Add Suppress/Revive support to the Mesos Spark Driver,spark mesos scheduler suppress call
+EXISTS and Left Semi join do not produce the same plan,SQL Planner is including unnecessary columns in the projection
+OrcGetSplits fails with 0 size files,NullPointerException on zero-size ORC file
+HiveClientImpl does not work with Hive 2.2.0 metastore,Spark2.x does not support read data from Hive 2.2 and 2.3
+Add OneTime trigger executor,Spark structured steaming from kafka - last message processed again after resume from checkpoint
+Support Dynamic Partition Inserts params with SET command,set hive.exec.max.dynamic.partitions lose effect
+Add from_json in FunctionRegistry,Add from_json APIs to SQL
+nullable ignored when df.load() is executed for file-based data source,Spark CSV is not able to Override Schema while reading data
+Add map_keys and map_values functions  to Python ,Support map_keys and map_values functions in DataSet
+Add map_keys and map_values functions  to Python ,add spark.sql.functions.map_keys and spark.sql.functions.map_values
+Using real user to connect HiveMetastore in HiveClientImpl,proxy-user failed connecting to a kerberos configured metastore
+Spark Hive tests aborted due to lz4-java on ppc64le,Update  lz4-java to remove custom LZ4BlockInputStream
+impossible to read a whole kafka topic using kafka 0.10 and spark 2.0.0 ,impossible to set kafka offsets using kafka 0.10 and spark 2.0.0
+Kafka 0.10 DirectStream doesn't commit last processed batch's offset when graceful shutdown,Some InputDStream needs closing processing after processing all batches when graceful shutdown
+Trigger without delay when falling behind ,Execute next trigger immediately if previous batch took longer than trigger interval
+Unexpected Cartesian product when using eqNullSafe in join with a derived table,Join with null safe equality fails with AnalysisException
+Incremental update of LDA model; by adding initialModel as start point,The training continuation for saved LDA model
+"Java String toLowerCase ""Turkish locale bug"" causes Spark problems",JVM locale affects SQL type names 
+Catalog recoverPartitions should allow specifying the database name,Remove the inconsistency in table/function name conventions in SparkSession.Catalog APIs
+DataFrameWriter operations do not show up in SQL tab,No SQL tab in Spark UI
+query optimizer calls udf with null values when it doesn't expect them,Catalyst EliminateOuterJoin optimization can cause NPE
+Broaden support for Hive partition pruning predicate pushdown,Hive partition filter very slow
+DAGScheduler sends SparkListenerTaskEnd before updating task's accumulators,SparkListenerTaskEnd.taskInfo.accumulables might not be accurate
+Support squared hinge loss (L2 loss) for LinearSVC,Adding LBFGS optimizer and Squared_hinge loss for LinearSVC
+Unioning two identical Streaming DataFrames fails during attribute resolution,Within the same streaming query; one StreamingRelation should only be transformed to one StreamingExecutionRelation
+pyspark.sql.utils.IllegalArgumentException: u'DecisionTreeClassifier was given input with invalid label column label; without the number of classes specified. See StringIndexer,pyspark.sql.utils.IllegalArgumentException: u'DecisionTreeClassifier was given input with invalid label column label; without the number of classes specified. See StringIndexer
+Worker should not use the received Master address,Spark master shouldn't send its address back to the workers over proxied connections
+Speed up the restart of HistoryServer using ApplicationAttemptInfo checkpointing,Spark history Server load too slow when eventlog is large
+Make rpc timeout and retry for shuffle registration configurable,External shuffle server timeout
+Incremental parsing of event logs in SHS,History server will be unavailable if there is an event log file with large size
+expose createOrReplaceGlobalTempView/createGlobalTempView and dropGlobalTempView in SparkR,Add createOrReplaceGlobalTempView and dropGlobalTempView for SparkR
+Misleading spurious errors when there are Javadoc (Unidoc) breaks,Spurious errors in unidoc causing PRs to fail
+Support specification of column names in INSERT INTO,Support insert into serial columns of table
+ Destroy broadcasted centers after computing cost,Remove unused param in `LDAModel.getTopicDistributionMethod`
+Parallel One vs. Rest Classifier,Parallel One vs. Rest Classifier Scala
+fix the potential OOM in UnsafeExternalSorter,OutOfMemoryError on very small data sets
+Allow filter pushdown filters through non deterministic functions for columns involved in groupby / join,Improvement a special case for non-deterministic filters in optimizer
+Master/Worker should handle and shutdown when any thread gets UncaughtException,Set SparkUncaughtExceptionHandler to the Master
+pmod(number; 0) should  be null,Pmod should not throw a divide by zero exception
+"Exception in thread ""main"" org.apache.spark.sql.AnalysisException: cannot resolve '","Exception in thread ""main"" org.apache.spark.sql.AnalysisException: cannot resolve"
+Upgrade to Py4J 0.10.6,new pyspark release
+Spark failing to query SQL Server. Query contains a column having space  in where clause ,Spark failing to query SQL Server. Query contains a column having space  in where clause 
+YARN can allocate too many executors,Spark may request extra containers if the rpc between YARN and spark is too fast
+spark (pyspark) crashes unpredictably when using show() or toPandas(),Multiple projections with CASE WHEN fails to run generated codes
+Java encoders - switch fields on collectAsList,Java encoders - switch fields on collectAsList
+Multiple projections with CASE WHEN fails to run generated codes,Support code generation also for complex CASE WHEN
+Add doc and example for FeatureHasher,Add ML Examples for FeatureHasher
+Mark LocalTableScanExec's input data transient,Fix StackOverflowError on MetadataOnlyQuery
+Fix bug of strong wolfe linesearch `init` parameter lose effectiveness,Multinomial logistic regression model fitting fails with ERROR StrongWolfeLineSearch
+Fix bug of strong wolfe linesearch `init` parameter lose effectiveness,inconsistent behavior of AFTsurvivalRegression algorithm
+Audit the places calling HDFSMetadataLog.get,Structured streaming terminates with Exception 
+Collecting column statistics for datasource tables may fail with java.util.NoSuchElementException,analyze hive table compute stats for columns with mixed case exception
+Let IntelliJ IDEA correctly detect Language level and Target byte code version,Explicitly specify Java version in maven compiler plugin so IntelliJ imports project correctly
+Corrupt records are not handled properly when creating a dataframe from a file,Count after filtering uncached CSV for isnull(columnNameOfCorruptRecord) always 0
+Add new type coercion rules to compatible with Hive,Test Coverage for Type Coercion Compatibility
+Filter predicate with many conditions throw stackoverflow error,Janino throws StackOverflowError on nested structs with many fields
+spark job blocked by updateDependencies,spark job blocked by updateDependencies
+FileFormatWriter/BasicWriteTaskStatsTracker metrics collection fails if a new file isn't yet visible,Writing empty dataset fails with ORC format
+Incorrect executor request in case of dynamic allocation,ExecutorAllocationManager does not requests new executors when executor fail and target has not change
+Stack Overflow when window function nested inside aggregate function,Using a window function inside of an aggregation causes StackOverflowError
+SinglePartition optimizations break certain Streaming Stateful Aggregation requirements,FileNotFoundException while reading from Kafka
+ConcurrentModificationException - Spark Streaming,Design Issue of Spark Streaming that Causes Random Run-time Exception
+Update checkstyle to 8.2; enable it; fix violations,Java style checks should be run in Jenkins
+PeriodicCheckpointer fails with FileNotFoundException in case of dependant RDDs,GraphX fails in case of insufficient memory and checkpoints enabled
+percentile_approx should choose the first element if it already reaches the percentage,Improve percentile_approx by not rounding up targetError and starting from index 0
+ObjectHashAggregate introduces unnecessary shuffle,Unnecessary repartitioning
+splitExpression can create too many method calls (generating a Constant Pool limit error),64KB JVM bytecode limit problem with GLM
+streaming job failed to restart from checkpoint,streaming job failed to restart from checkpoint
+Postgresql UUID[] to Cassandra: Conversion Error, java.lang.RuntimeException: hdfs://HdfsHA/logrep/1/sspstatistic/_metadata is not a Parquet file (too small)
+HDFSBackedStateStoreProvider stackoverflow due to reloading of very old state,HDFSBackedStateStoreProvider fails with StackOverflowException when attempting to recover state
+Upgrade Arrow to version 0.8.0,Upgrade Arrow to 0.8.0
+Partition directories with leading 0s cause wrong results,Type coercion for IN is not coherent between Literals and subquery
+Spark download page doesn't update package name based package type,Download page - updating package type does nothing
+Use position() and limit() to fix ambiguity issue in scala-2.12,Run spark-sql in scala-2.12 and JDK9
+Use position() and limit() to fix ambiguity issue in scala-2.12,Fix the putAll compile error when compiling with scala-2.12 and jdk9
+"When driver stopping; there is errors: ""Could not find CoarseGrainedScheduler"" and ""RpcEnv already stopped""","When driver stopping; there is errors: ""Could not find CoarseGrainedScheduler"" and ""RpcEnv already stopped"""
+Make MicroBatchExecution also support MicroBatchRead/WriteSupport,Support v2 streaming sources and sinks in MicroBatchExecution
+OneVsRestModel does not work with Structured Streaming,OneVsRestModel transform on streaming data failed.
