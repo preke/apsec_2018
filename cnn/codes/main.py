@@ -18,7 +18,7 @@ from gensim.models import Word2Vec
 import jieba
 
 wordvec_save = 'wordvec_save/spark_w2v.save'
-
+use_global_w2v = True
 
 def train_word2vec_model(df):
     '''
@@ -102,8 +102,10 @@ if __name__ == '__main__':
 
     # add
     glove_path = 'wordvec.txt'
-    embedding_dict = load_glove_as_dict(glove_path)
-    # embedding_dict = Word2Vec.load(wordvec_save)
+    if use_global_w2v:
+        embedding_dict = load_glove_as_dict(glove_path)
+    else:
+        embedding_dict = Word2Vec.load(wordvec_save)
     word_vec_list = []
     for idx, word in enumerate(issue1_field.vocab.itos):
         try:
