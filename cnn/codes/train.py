@@ -209,14 +209,14 @@ def eval_test(data_iter, model, args):
             else:
                 res.append(0)
     precision = 0.0
-    cnt_f1 = 0
+    cnt_true = 0
     for i in range(len(res)):
-        if res[i] == list(tmp['label'])[i]:
-            cnt_f1 += 1
-            if res[i] == 1:
+        if res[i] == 1:
+            cnt_true += 1
+            if res[i] == list(tmp['label'])[i]:    
                 precision += 1
     t = precision
-    precision = t / float(cnt_f1)
+    precision = t / float(cnt_true)
     recall = t /sum(list(tmp['label']))
     f1 = 2*precision*recall / (precision + recall)
     
