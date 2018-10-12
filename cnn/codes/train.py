@@ -10,7 +10,7 @@ import traceback
 
 
 
-to_path = 'models/hdfs/sim.csv'
+to_path = 'models/spark/spark_'
 
 def train(train_iter, dev_iter, model, args):
     if args.cuda:
@@ -194,16 +194,33 @@ def eval_test(data_iter, model, args):
     tmp['sim'] = [float(i) for i in sim_list]
     tmp['label'] = [float(i) for i in tar_list]
     tmp['pair_id'] = [int(i) for i in id_list]
-    tmp.to_csv(to_path)
-    # tmp.to_csv('models/spark/spark_'+str(args.kernel_sizes)+str(args.kernel_num)+'_.csv')
+    
+    tmp.to_csv(to_path+str(args.kernel_sizes)+str(args.kernel_num)+'_.csv')
+    res = []
     cnt = 0
     for i,r in tmp.iterrows():
         if i >= 0:
             if (r['sim'] >= 0.5) & (r['label'] == 1):
                 cnt += 1
+                res.append(1)
             elif (r['sim'] < 0.5) & (r['label'] == 0):
                 cnt += 1
+                res.append(1)
+            else:
+                res.append(0)
+    precision = 0.0
+    cnt_f1 = 0
+    for i in range(len(res)):
+        if res[i] == list(tmp['label'])[i]:
+            cnt_f1 += 1
+            if res[i] == 1:
+                precision += 1
+    t = precision
+    precision = t / float(float(sum(list(res))))
+    recall = t /sum(list(tmp['label']))
+    
     print('Test acc: %f' %(float(cnt)/len(tmp)) )
+    print('Test f1: %f' %(float(cnt)/len(tmp)) )
     return accuracy
 
 def predict(line, model, issue1_field, issue2_field, label_field, cuda_flag):
