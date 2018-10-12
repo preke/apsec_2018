@@ -1,0 +1,110 @@
+initial import of code from Nutch,Reused Keys and Values fail with a Combiner
+Reused Keys and Values fail with a Combiner,Output directories are not cleaned up before the reduces run
+Output directories are not cleaned up before the reduces run,tool to mount dfs on linux
+need commons-logging-api jar file,missing build directory in classpath
+missing build directory in classpath,MapReduce has a series of problems concerning task-allocation to worker nodes
+MapReduce has a series of problems concerning task-allocation to worker nodes,NDFS DataNode advertises localhost as it's address
+NDFS DataNode advertises localhost as it's address,mapred.local.dir  temp dir. space allocation limited by smallest area
+mapred.local.dir  temp dir. space allocation limited by smallest area,ndfs.replication is not documented within the nutch-default.xml configuration file.
+ndfs.replication is not documented within the nutch-default.xml configuration file.,InputFormat used in job must be in JobTracker classpath (not loaded from job JAR)
+InputFormat used in job must be in JobTracker classpath (not loaded from job JAR),InputFormat used in job must be in JobTracker classpath (not loaded from job JAR)
+InputFormat used in job must be in JobTracker classpath (not loaded from job JAR),RPC call times out while indexing map task is computing splits
+RPC call times out while indexing map task is computing splits,RPC call times out while indexing map task is computing splits
+RPC call times out while indexing map task is computing splits,RPC call times out while indexing map task is computing splits
+RPC call times out while indexing map task is computing splits,tool to mount ndfs on linux
+Crash with multiple temp directories,Datanode corruption
+Mapper; Reducer need an occasion to cleanup after the last record is processed.,the webapps need to be updated for the move from nutch
+the webapps need to be updated for the move from nutch,remove unused imports
+remove unused imports,single node cluster gets one reducer
+single node cluster gets one reducer,make Configuration an interface
+make Configuration an interface,a new map/reduce example and moving the examples from src/java to src/examples
+a new map/reduce example and moving the examples from src/java to src/examples,DFS node choice doesn't take available space into account effectively
+DFS node choice doesn't take available space into account effectively,MapRed tries to allocate tasks to nodes that have no available disk space
+webapps broken,JobConf newInstance() method imposes a default constructor
+JobConf newInstance() method imposes a default constructor,DFS shell: support for ls -r and cat
+DFS shell: support for ls -r and cat,Stipulate main class in a job jar when using 'hadoop jar JARNAME'
+Stipulate main class in a job jar when using 'hadoop jar JARNAME',Creating job with InputDir set to non-existant directory locks up jobtracker
+Creating job with InputDir set to non-existant directory locks up jobtracker,DF enhancement: performance and win XP support
+Build Paths Relative to PWD in build.xml,Files missing chunks can cause mapred runs to get stuck
+Adding some uniformity/convenience to environment management,A way to determine the size and overall activity of the cluster
+A way to determine the size and overall activity of the cluster,default splitter should incorporate fs block size
+default splitter should incorporate fs block size,Create a job-configurable best effort for job execution
+bufferSize argument is ignored in FileSystem.create(File; boolean; int),JAVA_OPTS for the TaskRunner Child
+JAVA_OPTS for the TaskRunner Child,PositionCache decrements its position for reads at the end of file
+PositionCache decrements its position for reads at the end of file,JobTracker dumps TaskTrackers if it takes too long to service an RPC call
+RPC exceptions should include remote stack trace,JobTracker should log task errors
+JobTracker should log task errors,user-specified job names
+user-specified job names,include records/second and bytes/second in  task reports
+add user data to task reports,JobClient cannot use a non-default server (unlike DFSShell)
+JobClient cannot use a non-default server (unlike DFSShell),dfs datanode should store blocks in multiple directories
+dfs datanode should store blocks in multiple directories,per-file replication counts
+per-file replication counts,mapred input and output dirs must be absolute
+SequenceFile should compress blocks; not individual entries,map-reduce job overhead is too high
+map-reduce job overhead is too high,hadoop nameserver does not recognise ndfs nameserver image
+hadoop dfs -ls / does not show root of file system,Hadoop requires configuration of hadoop-site.xml or won't run
+Hadoop requires configuration of hadoop-site.xml or won't run,support generic command-line options
+support generic command-line options,Specification of alternate conf. directory
+Bashless Hadoop Start Script,can't get environment variables from HADOOP_CONF_DIR
+problem with webapp when start a jobtracker,DataNode should be capable of managing multiple volumes
+add a record I/O framework to hadoop,dfs client writes all data for a chunk to /tmp
+dfs client writes all data for a chunk to /tmp,Added statistic/reporting info to DFS
+Added statistic/reporting info to DFS,"Cannot abandon block during write to <file> and ""Cannot obtain additional block for file <file>"" errors during dfs write test"
+"Cannot abandon block during write to <file> and ""Cannot obtain additional block for file <file>"" errors during dfs write test",Unchecked lookup value causes NPE in FSNamesystemgetDatanodeHints
+Unchecked lookup value causes NPE in FSNamesystemgetDatanodeHints,the two file system tests TestDFS and TestFileSystem take too long
+the two file system tests TestDFS and TestFileSystem take too long,The SequenceFileRecordReader uses the default FileSystem rather than the supplied one
+The SequenceFileRecordReader uses the default FileSystem rather than the supplied one,hadoop doesn't take advatage of distributed compiting in TestDFSIO
+hadoop doesn't take advatage of distributed compiting in TestDFSIO,bin/hadoop dfs -rm works only for absolute paths
+bin/hadoop dfs -rm works only for absolute paths,hash blocks into dfs.data.dirs
+dfs should check full file availability only at close,Implement speculative re-execution of reduces
+hang / crash when input folder does not exists.,rpc commands not buffered
+rpc commands not buffered,listFiles optimization
+listFiles optimization,binary key
+binary key,speculative execution is only controllable from the default config
+speculative execution is only controllable from the default config,JobTracker loses it: NoSuchElementException
+JobTracker loses it: NoSuchElementException,infinite retries accessing a missing block
+client should report file name in which IO exception occurs,a single client stuck in a loop blocks all clients on same machine
+If corrupted map outputs; reducers get stuck fetching forever,SequenceFile performance degrades substantially compression is on and large values are encountered
+SequenceFile performance degrades substantially compression is on and large values are encountered,Configuration: separate client config from server config (and from other-server config)
+Configuration: separate client config from server config (and from other-server config),files are not visible until they are closed
+files are not visible until they are closed,DFS is succeptible to data loss in case of name node failure
+DFS is succeptible to data loss in case of name node failure,Error Reporting/logging in MapReduce
+Error Reporting/logging in MapReduce,allow minimum split size configurable
+allow minimum split size configurable,disallow more than one datanode running on one computing sharing the same data directory
+dfs validation,name server should log decisions that affect data: block creation; removal; replication
+name server should log decisions that affect data: block creation; removal; replication,DFSShell.cat returns NullPointerException if file does not exist
+DFSShell.cat returns NullPointerException if file does not exist,The JobTracker's count of the number of running maps and reduces is wrong
+The JobTracker's count of the number of running maps and reduces is wrong,task trackers can only be assigned one task every heartbeat
+Inconsistent locking of the JobTracker.taskTrackers field,DFSck - fsck-like utility for checking DFS volumes
+DFSck - fsck-like utility for checking DFS volumes,Two identical consecutive loops in FSNamesystem.chooseTarget()
+Two identical consecutive loops in FSNamesystem.chooseTarget(),introduce a common parent class for Mapper and Reducer
+introduce a common parent class for Mapper and Reducer,Reflexive access to non-public class with public ctor requires setAccessible (with some JVMs)
+Data blocks should be record-oriented.,"Namenode errors ""Failed to complete filename.crc  because dir.getFile()==null and null"""
+"Namenode errors ""Failed to complete filename.crc  because dir.getFile()==null and null""",EOFException in DataNode$DataXceiver.run
+EOFException in DataNode$DataXceiver.run,Blocks are not replicated when...
+Blocks are not replicated when...,new key and value instances are allocated before each map
+new key and value instances are allocated before each map,JobClient.runJob() should return exit status for a job.
+JobClient.runJob() should return exit status for a job.,copyFromLocal should exclude .crc files
+copyFromLocal should exclude .crc files,Allow multiple Output Dirs to be specified for a job
+Allow multiple Output Dirs to be specified for a job,Non-informative error message
+Non-informative error message,permit reduce input types to differ from reduce output types
+permit reduce input types to differ from reduce output types,cleaning up /tmp/hadoop/mapred/system
+cleaning up /tmp/hadoop/mapred/system,mapred temporary files not deleted
+mapred temporary files not deleted,Namenode does not always clean up pendingCreates
+Namenode does not always clean up pendingCreates,ReduceTask.configure() is called twice
+ReduceTask.configure() is called twice,Reading an ArrayWriter does not work because valueClass does not get initialized
+Reading an ArrayWriter does not work because valueClass does not get initialized,mini map/reduce cluster for junit tests
+Failed to execute fsck with -move option,mini map/reduce cluster for junit tests
+mini map/reduce cluster for junit tests,don't permit two datanodes to run from same dfs.data.dir
+LocalFileSystem.makeAbsolute bug on Windows,hadoop dfs -cp does not copy crc files
+hadoop dfs -cp does not copy crc files,Unclear precedence of config files and property definitions
+Unclear precedence of config files and property definitions,Failure to replicate dfs block kills client
+Failure to replicate dfs block kills client,FileSystem should not name files with java.io.File
+FileSystem should not name files with java.io.File,"Should be able to specify ""wide"" or ""full"" replication"
+Separate start/stop-dfs.sh and start/stop-mapred.sh scripts,An API for reporting performance metrics
+An API for reporting performance metrics,the TaskTracker.Child.ping thread calls exit
+the TaskTracker.Child.ping thread calls exit,JobTracker trapped in a loop if it fails to localize a task
+JobTracker trapped in a loop if it fails to localize a task,Potential deadlock in JobTracker.
+Potential deadlock in JobTracker.,Overlong UTF8's not handled well
+Different TaskTrackers may get the same task tracker id; thus cause many problems.,stop all tasks
+stop all tasks,Deadlock in LocalFileSystem lock/release
+Deadlock in LocalFileSystem lock/release,General documentation

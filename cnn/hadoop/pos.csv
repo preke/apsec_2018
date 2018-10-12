@@ -1,0 +1,109 @@
+tool to mount dfs on linux,tool to mount ndfs on linux
+Datanode corruption,hadoop nameserver does not recognise ndfs nameserver image
+MapRed tries to allocate tasks to nodes that have no available disk space,The task tracker should track disk space used; and have a configurable cap
+Files missing chunks can cause mapred runs to get stuck,infinite retries accessing a missing block
+Create a job-configurable best effort for job execution,
+include records/second and bytes/second in  task reports,Standard set of Performance Metrics for Hadoop
+mapred input and output dirs must be absolute,
+MapReduce log files should be storable in dfs.,
+Specification of alternate conf. directory,can't get environment variables from HADOOP_CONF_DIR
+DataNode should be capable of managing multiple volumes,hash blocks into dfs.data.dirs
+DataNode should be capable of managing multiple volumes,starting one data node thread to manage multiple data directories
+Implement speculative re-execution of reduces,we need speculative execution for reduces
+disallow more than one datanode running on one computing sharing the same data directory,don't permit two datanodes to run from same dfs.data.dir
+task trackers can only be assigned one task every heartbeat,tasktracker waits for 10 seconds for asking for a task.
+Reflexive access to non-public class with public ctor requires setAccessible (with some JVMs),Static blocks do not automatically run when a class is loaded in Java 5.0
+DFS commands either do not support some popular unix commands or have inconsistent behaviors,
+"Should be able to specify ""wide"" or ""full"" replication",need standard API to set dfs replication = high
+Overlong UTF8's not handled well,class Text (replacement for class UTF8) was: HADOOP-136
+potential conflict in block id's; leading to data corruption,dfs should allocate a random blockid range to a file; then assign ids sequentially to blocks in the file
+Add a conf dir parameter to the scripts,the start up scripts should take a command line parameter --config making it easy to run multiple hadoop installation on same machines
+dfs should allocate a random blockid range to a file; then assign ids sequentially to blocks in the file,
+task trackers should not restart for having a late heartbeat,JobTracker dumps TaskTrackers if it takes too long to service an RPC call
+tasks are left over when a job fails,very long cleanup after a job fails
+Namespace check pointing is not performed until the namenode restarts.,Redesign the dfs namespace datastructures to be copy on write
+Add a interactive shell for admistrative access to the DFS,
+Speed up SequenceFile sort with memory reduction,
+jobs don't get executed in parallel,maps from second jobs will not run until the first job finishes completely
+Should be able to specify more than one jar into a JobConf file,
+should allow to specify different inputformat classes for different input dirs for Map/Reduce jobs,
+native support for gzipped text files,
+MiniMapReduce tests get stuck because of some timing issues with initialization of tasktrackers.,
+chukwa agent controller remove file does not work ,
+Chukwa log4j appender logs corrupted data if the system is under high stress,Hadoop Metrics Log file should be used by only one process
+chukwa metrics file get overwritten when process launch,Chukwa Log4JMetricsContext class should append new log to current log file
+FileSystem#copyToLocalFile shouldn't copy .crc files,
+Add md5sum facility in dfsshell,
+NPE when the namenode comes up but the filesystem is set to file://,
+BZip2CompressionOutputStream sometimes corrupts data,bzip2 codec (CBZip2OutputStream) creates corrupted output file for some inputs
+UserGroupInformation prints out excessive ERROR warnings,Lower the logging level from ERROR to WARN for UGI.doAs method
+RetryInvocationHandler should recognise that there is no point retrying to auth failures,
+TestMetricsSystemImpl#testInitFirstVerifyStopInvokedImmediately fails on trunk,TestMetricsSystemImpl#testInitFirstVerifyStopInvokedImmediately failed
+race condition in MetricsSystemImpl#publishMetricsNow that causes incorrect results,TestMetricsSystemImpl#testMultiThreadedPublish occasionally fails
+o.a.h.s.Groups should refresh in the background,
+hadoop-2.2.0-src build fails owing to wrong maven-site-plugin version,Fix 'mvn site'
+Update guava dependency to the latest version,
+remove httpclient dependency,
+hadoop-auth has a build break due to missing dependency,Unable to compile source code from stable 2.2.0 release
+hadoop-auth has a build break due to missing dependency,Unable to compile source code from stable 2.2.0 release.
+Exclude duplicate jars in hadoop package under different component's lib,
+Exclude duplicate jars in hadoop package under different component's lib,
+"fix ""inconsistent synchronization"" warnings in ZlibCompressor",Remove synchronized blocks from SnappyCodec and ZlibCodec buffering inner loop
+no need to process RPC request if the client connection has been dropped,
+Specification of HADOOP_CONF_DIR via the environment in hadoop_config.cmd,
+Create an API to separate encryption key storage from applications,A TokenKeyProvider for a Centralized Key Manager Server (BEE: bee-key-manager)
+Create CLI tools for managing keys via the KeyProvider API,A TokenKeyProvider for a Centralized Key Manager Server (BEE: bee-key-manager)
+FsShell CLI: add getfacl and setfacl with minimal support for getting and setting ACLs.,FsShell CLI: add setfacl flags for ACL entry modification and removal.
+FsShell CLI: add getfacl and setfacl with minimal support for getting and setting ACLs.,FsShell CLI: add setfacl flag for removal of default ACL entries.
+FsShell CLI: add getfacl and setfacl with minimal support for getting and setting ACLs.,FsShell CLI: add support for recursive flag in ACL commands.
+CLONE - setnetgrent in native code is not portable,Fix build native library on mac osx
+Port WASB HBase support to Hadoop 2.0,hadoop-azure: page blob support
+Fix findbugs in ActiveStandbyElector,Fix multithreaded correctness warnings in ActiveStandbyElector
+JavaKeyStoreProvider has to protect against corrupting underlying store,JavaKeyStoreProvider backing jceks file may get corrupted
+hadoop2.2 building error,hadoop2.2 building error
+hadoop2.2 building error,hadoop2.2 building error
+hadoop2.2 building error,hadoop2.2 building error
+hadoop2.2 building error,hadoop2.2 building error
+hadoop2.2 building error,hadoop2.2 building error
+hadoop2.2 building error,hadoop2.2 building error
+hadoop2.2 building error,hadoop2.2 building error
+hadoop2.2 building error,hadoop2.2 building error
+hadoop2.2 building error,hadoop2.2 building error
+hadoop2.2 building error,hadoop2.2 building error
+hadoop2.2 building error,hadoop2.2 building error
+hadoop2.2 building error,hadoop2.2 building error
+Fix 'mvn site',Bump the version of maven-site-plugin to 3.3
+Surefire steals focus on MacOS,
+Incorrect null check in SwiftRestClient#buildException(),SwiftRestClient#buildException() references wrong length
+Log the original exception when getGroups() fail in UGI.,
+libhadoop doesn't compile on Mac OS X,Fix build native library on mac osx
+Closing of Reader in HadoopArchives#HArchiveInputFormat#getSplits() should check against null,
+Deprecate S3 implementation.,
+Incorporate new S3A FileSystem implementation,
+Enable Kerberos profiled UTs to run with IBM JAVA,Update KerberosTestUtils for hadoop-auth tests when using IBM Java
+TestStreamingTaskLog#testStreamingTaskLogWithHadoopCmd is failing,TestStreamingTaskLog fails
+Key Management Server based on KeyProvider API,A TokenKeyProvider for a Centralized Key Manager Server (BEE: bee-key-manager)
+"Is it possible to use ""df"" to calculate the dfs usage instead of ""du""",
+limit symbol visibility in libhdfs-core.so and libyarn-core.so,Implement Namenode RPCs in HDFS native client
+native code for reading Hadoop configuration XML files,Implement Namenode RPCs in HDFS native client
+Implement C code for parsing Hadoop / HDFS URIs,Implement Namenode RPCs in HDFS native client
+S3N NPEs if you do a read() after a seek() past the EOF,NativeS3FileSystem throw NullPointerException when the file is empty
+Fix new findbugs warnings in hadoop-auth,
+Document for enabling node group layer in HDFS,Document usage of node-group layer topology
+TestSymlinkLocalFSFileContext tests are failing,RawLocalFileSystem fails to read symlink targets via the stat command when the format of stat command uses non-curly quotes
+A TokenKeyProvider for a Centralized Key Manager Server (BEE: bee-key-manager),A TokenKeyProvider for a Centralized Key Manager Server (BEE: bee-key-manager)
+Make hadoop trunk build on Java7+ only,
+Make hadoop trunk build on Java7+ only,
+AuthenticationFilterInitializer doesn't allow null signature secret file,Allow AuthenticationFilters to load secret from signature secret files
+implement TCP connection reuse for native client,Fix namenode-rpc-unit  warning reported by memory leak check tool(valgrind)
+Avro serialization does not flush buffered serialized values causing data lost,
+KMSClientProvider should respect a configurable timeout.,
+Fall back AesCtrCryptoCodec implementation from OpenSSL to JCE if non native support.,UnsatisfiedLinkError in cryptocodec tests with OpensslCipher#initContext
+Dynamically adjust distcp configuration by adding distcp-site.xml into code base,
+Optimize Hadoop RPC encryption performance,
+Optimize Hadoop RPC encryption performance,
+Shell operations to fail with meaningful errors on windows if winutils.exe not found,
+Shell operations to fail with meaningful errors on windows if winutils.exe not found,
+Add common tests for ACLs in combination with viewfs.,Add common tests for ACLs in combination with viewfs.
+Fix dead links to the javadocs of o.a.h.security.authorize,
+AliyunOSS: support user agent configuration and include that & Hadoop version information to oss server,AliyunOSS:  Add User-Agent header in HTTP requests to the OSS server
