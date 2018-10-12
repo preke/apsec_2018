@@ -203,7 +203,7 @@ def eval_test(data_iter, model, args):
                 cnt += 1
             elif (r['sim'] < 0.5) & (r['label'] == 0):
                 cnt += 1
-    print('Test acc:' float(cnt)/len(tmp))
+    print('Test acc: %f' %(float(cnt)/len(tmp)) )
     return accuracy
 
 def predict(line, model, issue1_field, issue2_field, label_field, cuda_flag):
