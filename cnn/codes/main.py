@@ -17,7 +17,7 @@ import pickle
 from gensim.models import Word2Vec
 import jieba
 
-wordvec_save = 'wordvec.txt'
+wordvec_save = 'wordvec_save/spark_w2v.save'
 
 
 def train_word2vec_model(df):
@@ -77,7 +77,7 @@ if __name__ == '__main__':
     parser.add_argument('-test', action='store_true', default=False, help='train or test')
     args = parser.parse_args()
     # load data
-    # load_data('../datas/hdfs.csv')
+    
     
     '''
     '''
@@ -102,8 +102,8 @@ if __name__ == '__main__':
 
     # add
     glove_path = 'wordvec.txt'
-    # embedding_dict = load_glove_as_dict(glove_path)
-    embedding_dict = Word2Vec.load(wordvec_save)
+    embedding_dict = load_glove_as_dict(glove_path)
+    # embedding_dict = Word2Vec.load(wordvec_save)
     word_vec_list = []
     for idx, word in enumerate(issue1_field.vocab.itos):
         try:
