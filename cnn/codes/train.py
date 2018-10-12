@@ -216,7 +216,7 @@ def eval_test(data_iter, model, args):
             if res[i] == 1:
                 precision += 1
     t = precision
-    precision = t / float(float(sum(list(res))))
+    precision = t / float(cnt_f1)
     recall = t /sum(list(tmp['label']))
     f1 = 2*precision*recall / (precision + recall)
     
