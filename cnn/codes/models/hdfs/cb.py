@@ -1,0 +1,92 @@
+
+import pandas as pd
+from sklearn.linear_model import LogisticRegression
+import numpy as np
+from sklearn import preprocessing
+
+
+pos = pd.read_csv('pos.csv')
+neg = pd.read_csv('neg.csv')
+sim = pd.read_csv('456_sim.csv')
+sim = sim[['sim', 'label', 'pair_id']]
+
+
+# pos['label'] = '1'
+# neg['label'] = '0'
+neg['idx'] = neg.index
+neg['pair_id'] = neg.idx
+pos['idx'] = pos.index
+pos['pair_id'] = pos.idx.apply(lambda x: x + len(neg))
+
+
+total = pd.concat([neg, pos])
+
+# print(sim.shape)
+# print(total.head())
+
+sim = pd.merge(sim, total, on='pair_id', how='left')
+sim = sim[['sim', 'label', 'pair_id', 'same_tw', 'same_prio', 'same_comp', 'Title_1', 'Title_2', 'Issue_id_1', 'Issue_id_2']]
+# print(sim.shape)
+
+# print(sim.head())
+sim['sim'] = sim['sim']
+sim_label = [1 if i > 0.5 else 0 for i in sim['sim']]
+sim['sim_label'] = sim_label
+sim['same_prio'] = sim['same_prio']
+train_set = sim.head(int(len(sim)))[['sim', 'same_comp', 'same_prio', 'same_tw', 'sim_label']].fillna(0)
+# train_set = sim.head(int(len(sim)))[['sim', 'sim_label']].fillna(0)
+train_label = sim.head(int(len(sim)))['label'].apply(lambda x: int(x))
+
+test_set = sim.tail(int(0.2*len(sim)))[['sim', 'same_comp', 'same_prio', 'same_tw', 'sim_label']].fillna(0)
+# test_set = sim.tail(int(0.2*len(sim)))[['sim', 'sim_label']].fillna(0)
+test_label = sim.tail(int(0.2*len(sim)))['label'].apply(lambda x: int(x))
+
+validation_label = test_label
+model = LogisticRegression(penalty='l1', dual=False, tol=0.0001, C=1.0, fit_intercept=True, intercept_scaling=1, random_state=1, solver='saga', max_iter=100, verbose=0, warm_start=True, n_jobs=1)
+model.fit(train_set, train_label)
+res = model.predict(test_set)
+
+# recall = float(sum(list(res)))/sum(list(validation_label))
+precision = 0.0
+
+cnt = 0
+for i in range(len(res)):
+    if res[i] == list(validation_label)[i]:
+        cnt += 1
+        if res[i] == 1:
+            precision += 1
+t = precision
+precision = t / float(float(sum(list(res))))
+recall = t /sum(list(validation_label))
+f1 = 2*precision*recall / (precision + recall)
+'''
+recall = float(sum(list(res)))/sum(list(validation_label))
+precision = 0.0
+
+cnt = 0
+for i in range(len(res)):
+    if res[i] == list(validation_label)[i]:
+        cnt += 1
+        if res[i] == 1:
+            precision += 1
+
+precision = precision / float(float(sum(list(res))))
+f1 = 2*precision*recall / (precision + recall)
+'''
+print('acc:{:.6f}'.format(float(cnt)/len(res)))
+print('f1:{:.6f}'.format(f1))
+
+print('===')
+print(len(train_set)/8*7)
+print(len(train_set)/8*1)
+print(len(test_set))
+print(len(sim))
+
+# cnn_test = sim[['Title_1', 'Title_2', 'label']]
+# cnn_test.to_csv('cnn_test.csv')
+cnn_train = sim.head(int(0.8*len(sim)))[['Title_1', 'Title_2', 'label']]
+cnn_train.to_csv('cnn_train_new.csv')
+
+cnn_test = sim.tail(int(0.2*len(sim)))[['Title_1', 'Title_2', 'label']]
+cnn_test.to_csv('cnn_test_new.csv')
+
