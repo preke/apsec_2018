@@ -1,0 +1,714 @@
+filenames with ':' colon throws java.lang.IllegalArgumentException,Naming convention for files being moved into HDFS
+many filelist calls to large directory killing the namenode,HDFS should issue multiple RPCs for listing a large directory
+NN should check a block's length even if the block is not a new block when processing a blockreport,Namenode does not recognize incorrectly sized blocks
+SecondaryNameNode should validate the downloaded files.,NN should verify images and edit logs on startup
+Datanode should verify block sizes vs metadata on startup,Support manually fsck in DataNode
+dfs.name.dir disk full,When the disk becomes full Namenode is getting shutdown and not able to recover
+HDFS does not support blocks greater than 2GB,large dfs.block.size doesn't work
+DFS write pipeline : DFSClient sometimes does not detect second datanode failure ,DFS Write pipeline does not detect defective datanode correctly in some cases (HADOOP-3339)
+Consistency of different replicas of the same block is not checked.,Namenode should mark the replica as corrupted if a DN has reported different length of a Complete block
+setPermssion locks FSNamesystem across logSync.,saveNamespace race can corrupt the edits log
+data node process should not die if one dir goes bad,better handling of volume failure in Data Node storage
+When a file is deleted; its blocks remain in the blocksmap till the next block report from Datanode,Block information displayed in UI is incorrect 
+When a file is deleted; its blocks remain in the blocksmap till the next block report from Datanode,BlocksMap.blockinfo is not getting cleared immediately after deleting a block.This will be cleared only after block report comes from the datanode.Why we need to maintain the blockinfo till that time.
+Stack trace on spaceQuota excced .,Ugly stacktrace when quota exceeds
+Block reports should be processed offline,0.20: Allow block reports to proceed without holding FSDataset lock
+Quota exceed exception creates file of size 0,A zero size file is created when SpaceQuota exceeded
+Quota exceed exception creates file of size 0,uploading file larger than the spaceQuota limit should not create 0 byte file
+HDFS Tmpreaper,HDFS File/Directory TTL
+Provide tool to view/change edits file,Create multi-format parser for edits logs file; support binary and XML formats initially
+Provide tool to view/change edits file,FSEditLog dump/restore tool
+API to get changes to the File System at NN for a window of time,inotify in HDFS
+API to get changes to the File System at NN for a window of time,HDFS notification 
+Random Write Access On Files,Random writes in HDFS
+Trigger block scans for datanode,Support manually fsck in DataNode
+Expose HDFS as a WebDAV store,HttpFS - a read/write Hadoop file system proxy
+Support for snapshots,Support for RW/RO snapshots in HDFS
+Namenode cluster(multi namenode working in active-active mode) to keep high availability and expansivity,NN Availability - umbrella Jira
+Namenode cluster(multi namenode working in active-active mode) to keep high availability and expansivity,HDFS scalability with multiple namenodes
+Automatically increase replication of often used files/blocks,dynamic replication
+Export the HDFS file system through a NFS protocol,Support NFSv3 interface to HDFS
+Method to retrieve all quotas active on HDFS,getAllHdfsQuotas() API
+Checksums for Namenode image files,NN should verify images and edit logs on startup
+Explore usage of the sendfile api via java.nio.channels.FileChannel.transfer{To|From} for i/o in datanodes,Shortcut a local client reads to a Datanodes files directly
+HDFS should blacklist datanodes that are not performing well,Generate a network infrastructre map
+FSEditLog should log progress during replay,While digesting edits NameNode should report its progress
+Modifications to enable multiple types of logging ,Add interface for generic Write Ahead Logging mechanisms
+FSEditLog dump/restore tool,Create multi-format parser for edits logs file; support binary and XML formats initially
+dfsadmin -metasave should also log corrupt replicas info,Add Corrupt Blocks Information in Metasave Output
+Better error message for DATA_TRANSFER_VERSION mismatched,o.a.h.hdfs.server.datanode.DataXceiver - run() - Version mismatch exception - more context to help debugging
+Reduce time taken to run TestUnderReplicatedBlocks ,TestUnderReplicatedBlocks may fail due to ReplicaAlreadyExistsException
+dfs -count -q should label output column,Extra argument for header in dfs -count output
+support for persistent connections to improve random read performance.,Datanode xceiver protocol should allow reuse of a connection
+parameter dfs.replication is not reflected when put file into hadoop with fuse-dfs,Hardcoded replication level for new files in fuse-dfs
+Fuse-dfs should cache fs handles,fuse-dfs leaks FileSystem handles as it never disconnects them because the FileSystem.Cache does not do reference counting
+javadoc warnings: broken links,javadoc warnings 
+Fix a compiling error for libhdfs on Mac OSX,hdfsJniHelper.c: #include <error.h> is not portable
+Bug Fixes + HdfsProxy to use proxy user to impresonate the real user,Support Kerberos authorization in HDFSProxy
+HDFS should expose a fileid to uniquely identify a file,Use InodeID as as an identifier of a file in HDFS protocols and APIs
+eliminate the usage of FileSystem.create( ) depracated by Hadoop-5438 ,Fix deprecation warnings introduced by HADOOP-5438
+Create stress tests for append feature,A stress-test tool for HDFS.
+Provide build target to run just those tests not in ten-minute-test set,Extract a subset of tests for smoke (DOA) validation.
+Porting libhdfs to Windows,libhdfs Windows compatibility.
+Support for getting user home dir from server side,Make the HDFS home directory location customizable.
+BlockReceiver:receivePacket(): packet's header parsing logic is complicated. Refactoring will help w/ testing efforts,Refactor DataNode Packet header into DataTransferProtocol
+Internal server errors,Multiple unit tests fail in branch-0.21
+Add a way to efficiently replace a disk in a live datanode,Provide volume management functionality for DataNode
+Remove unused method INodeFile.toINodeFileUnderConstruction(),commitBlockSynchronization() should directly update block GS and length.
+ERROR Block blk_XXX_1030 already exists in state RBW and thus cannot be created,Improve datanode error messages
+TestBlockReport fails intermittently,TestBlockReport.blockReport_08() and _09() are timing-dependent and likely to fail on fast servers
+libhdfs unit tests do not run ,test-c++-libhdfs constantly fails
+DFSClient.getFileChecksum(..) computes file md5 with extra padding,DFSClient uses non-valid data when computing file checksum
+HDFS side of HADOOP-6222. ,TestHDFSCLI failing after HADOOP-6222
+Add HTTP POST/PUT/DELETE support for web servers in datanodes,[umbrella] WebHDFS: a complete FileSystem implementation for accessing HDFS over HTTP
+namenode can save images in parallel to all directories in fs.name.dir,savenamespace should write the fsimage to all configured fs.name.dir in parallel
+libhdfs with gdb got SEGV,hdfsConnect segment fault where namenode not connected
+TestHDFSFileContextMainOperations fails on weirdly configured DNS hosts,TestFileStatus fails on some hosts
+NameNode incorretly handles corrupt replicas,Corrupt replicas are not tracked correctly through block report from DN
+libhdfs uses UnixUserGroupInformation,libhdfs needs to be updated to use the new UGI
+FSNamesystem.setTimes fails on directory,FSNamesystem.setTimes(..) expects the path is a file.
+TestBlockReport times out intermittently,TestBlockReport.blockReport_08() and _09() are timing-dependent and likely to fail on fast servers
+Improper synchronization in some FSNamesystem methods,saveNamespace race can corrupt the edits log
+Make DFSOutputStream MAX_PACKETS configurable,Make DFSOutputStream.MAX_PACKETS configurable
+TestDelegationToken unit test throws error,TestDelegationToken fails in trunk
+FileSystem.Statistics should include NN accesses from the clients,Add support in HDFS to update statistics that tracks number of file system operations in FileSystem
+Hot Standby for NameNode,High Availability Framework for HDFS NN
+Record every new block allocation of a file into the transaction log.,Log newly allocated blocks
+Convert FSNamesystem lock to ReadWriteLock,Improve namenode scalability by splitting the FSNamesystem synchronized section in a read/write lock
+saveNamespace race can corrupt the edits log,getContentSummary should hold the FSNamesystem readlock
+Generate Eclipse's .classpath file from Ivy config,Eclipse .classpath file should be generated from Ivy files to avoid duplicating dependencies
+org.apache.hadoop.security.AccessControlException should show full path on error,AccessControlException should display the full path
+Improve error messages for failed completeFile,completeFile does not check lease ownership
+Secondary Namenode fails to fetch image and edits files,NameNode should validate fsimage before rolling
+namenode RPC protocol method names are overloaded,TestDfsOverAvroRpc is failing on trunk
+Removing a datanode (failed or decommissioned) should not require a namenode restart,Remove a datanode from cluster if include list is not empty and this datanode is removed from both include and exclude lists
+Implement Background deletion,When a directory with huge number of files is deleted; the NN becomes unresponsive
+Reduce NN startup time by reducing the processing time of block reports,Improve namenode restart times by short-circuiting the first block reports from datanodes
+libhdfs::hdfsExists should return different value in case of 1. error and 2. file does not exist,libhdfs: fix exception handling
+ HDFS-457 increases the chances of losing blocks,Make DN minimum valid volumes configurable
+Blocks in newly completed files are considered under-replicated too quickly,After file closed; a race condition between IBR of 3rd replica of lastBlock and ReplicationMonitor
+Ivy2.0 has bugs: let's upgrate to 2.1.0,Harmonize HDFS JAR library versions with Common
+Implement a file change log,inotify in HDFS
+Re-balance disks within a Datanode,Balancer  for  DataNode's Volumes
+TestBlockRecovery should bind ephemeral ports,TestBlockRecovery should not use fixed port
+Provide volume management functionality for DataNode,Means of telling the datanode to stop using a sick disk
+HftpFileSystem should not start a RenewerThread in the static initializer,unnecessary hftp token fetch and renewal thread
+Improve namenode scalability by prioritizing datanode heartbeats over block reports,Not marking datanodes dead When namenode in safemode
+TestFileConcurrentReader test case is still timing out / failing,TestFileConcurrentReader fails intermittently
+TestFileConcurrentReader test case is still timing out / failing,Recurring failures in TestFileConcurrentReader for > 12 days
+The doCheckpoint() method should be invoked every hour,Checkpointer should trigger checkpoint with specified period.
+"DFSClient Uses Deprecated ""mapred.task.id"" Configuration Key Causing Unecessary Warning Messages",DFSClient should use mapreduce.task.attempt.id
+Fix reporting of 2NN address when dfs.secondary.http.address is default (wildcard),Make putImage in GetImageServlet infer remote address to fetch from request
+TestHDFSTrash times out on trunk,TestHDFSTrash failing on trunk and 22
+TransferFSImage should timeout,Image transfer never times out on client side
+TestStorageRestore is failing after HDFS-903 fix,NameNode storage failed replica restoration is broken
+mv the namenode NameSpace and BlocksMap to hbase to save the namenode memory,Scaling out the namespace using KV store
+project.version in aop.xml is out of sync with build.xml,mvn-install is broken after 0.22 branch creation
+TestLargeBlock is failing on 32-bit VMs,SocketOutputStream.transferToFully fails for blocks >= 2GB on 32 bit JVM
+Datanode startup doesn't honor volumes.tolerated ,Respect failed.volumes.tolerated on startup
+Fix NullPointerException in Secondary NameNode,Secondary Namenode dies when a mkdir on a non-existent parent directory is run
+Secondary namenode web UI does not print status,SecondaryNameNode web interface doesn't show the right info
+Federation: Bump up LAYOUT_VERSION in FSConstants.java for Federation before committing to trunk,Federation: Update the layout version for federation changes
+TestNodeCount is failing with NPE,TestNodeCount.testNodeCount failes with NPE
+Provide hooks / callbacks to execute some code based on events happening in HDFS (file / directory creation; opening; closing; etc),inotify in HDFS
+Improve error message when starting secure DN without jsvc,DNs should be able start with jsvc even if security is disabled
+Remove a datanode from cluster if include list is not empty and this datanode is removed from both include and exclude lists,Remove a datanode from cluster if include list is not empty and this datanode is removed from both include and exclude lists
+Add migration tests from old-format to new-format storage,1073: Improve upgrade tests from 0.22
+Add migration tests from old-format to new-format storage,Updating the layout version from HDFS-1822 causes upgrade problems.
+Enforce read-only permissions in FUSE open(),fuse-dfs RO mode still allows file truncation
+fail to start datanode while start-dfs.sh is executed by root user,hdfs script reporting Unrecognized option: -jvm
+Null pointer exception comes when Namenode recovery happens and there is no response from client to NN more than the hardlimit for NN recovery and the current block is more than the prev block size in NN ,Null pointer exception comes when Namenode recovery happens and there is no response from client to NN more than the hardlimit for NN recovery and the current block is more than the prev block size in NN 
+HA: Send block report from datanode to both active and standby namenodes,Datanodes should send block reports to both Active and Standby Namenodes.
+Stop using StringUtils.stringifyException(),Remove StringUtils.stringifyException(ie) in logger functions
+Backupnode downloading image/edits from Namenode at every checkpoint .. ,BackupNode is downloading image from NameNode for every checkpoint
+Fix NPE in DFSClient.getFileChecksum,FileSystem#getFileChecksum will throw NullPointerException on non existing directories/files.
+1073: create an escape hatch to ignore startup consistency problems,Implement Recovery Mode
+org.apache.hadoop.hdfs.server.datanode.DataNode#checkDiskError produces check storm making data node unavailable,DataNode#checkDiskError should not be called on network errors
+HA Agent should perform Active Namenode Election and should trigger the failover when Active Namenode goes down,Automatic failover support for NN HA
+Changes to balancer bandwidth should not require datanode restart.,Changes to balancer bandwidth should not require datanode restart.
+Fsck should work with fully qualified file paths.,Allow fsck to accept URIs as paths
+"Provide a ""-y"" option that skips the confirmation question of the namenode for use in scripts.",add -nonInteractive and -force option to namenode -format command
+AOP unit tests are not getting compiled or run ,AOP system test framework is broken
+NamenodeProtocol has the wrong value for clientPrincipal in KerberosInfo annotation,SecondaryNamenode doesn't start up in secure cluster
+NamenodeProtocol has the wrong value for clientPrincipal in KerberosInfo annotation,Primary and secondary NameNode principals must be the same
+NamenodeProtocol has the wrong value for clientPrincipal in KerberosInfo annotation,NamenodeProtocol and other Secure Protocols should use different config keys for serverPrincipal and clientPrincipal KerberosInfo components 
+src/test/unit tests not being run in mavenized HDFS,The unit tests (src/test/unit) are not being compiled and are not runnable
+Unbundle jsvc,jsvc needs to be removed from hdfs packaging
+HDFS Build failure due to unresolved commons.daemon.os.name & commons.daemon.os.arch properties in Windows 7,the build fails in Windows because commons-daemon TAR cannot be fetched
+HDFS-2317 in trunk appears to have broken the build,Hdfs compilation fails
+TestHost2NodesMap & TestReplicasMap will fail depending upon execution order of test methods,TestDfsOverAvroRpc fails
+HA: Enable the configuration of multiple HA cluster addresses,TestDFSClientFailover shuold use simpleHATopology.
+recoverBlock timeout in DFSClient should be longer,The rpc timeout for block recovery is too low 
+with security enabled fsck calls lead to handshake_failure and hftp fails throwing the same exception in the logs,hftp fails as it is not able to get delegation token over https
+Add public APIs for safemode,Add public waitOnSafeMode API with HdfsUtils 
+Add public APIs for safemode,Need a public way to check DFS Safemode status
+webhdfs GETFILESTATUAS for a path that does not exist returns a 200 instead of a 404,webhdfs setreplication api should return a 403 when called on a directory
+TestNameNodeMetrics.testCorruptBlock fails intermittently,TestNameNodeMetrics.testCorruptBlock fails
+Fix the findbugs introduced in HftpFileSystem,HftpFileSystem uses incorrect compare for finding delegation tokens
+Separate datatypes for DatanodeProtocol and InterDatanodeProtocol,Enable protobuf RPC for InterDatanodeProtocol; ClientDatanodeProtocol; JournalProtocol and NamenodeProtocol
+lastDeletedReport should be scoped to BPOfferService; not DN,Refactor BPOfferService to be a static inner class
+The C HDFS API should work with secure HDFS,fuse_dfs: add support for security
+SafeModeException cannot be unwrapped,SafeModeException never get unwrapped
+fuse-dfs's close() is asynchronous,"hadoop-fuse-dfs is not strictly consistent for ""cp"" actions file contents."
+Add separate metrics for missing blocks with desired replication level 1,Separate block metrics for files with replication count 1
+Federation docs do not describe how to enable mount side tables,User Guide for how to use viewfs with federation
+ClientDatanodeProtocol in Protocol Buffers,Enable protobuf RPC for InterDatanodeProtocol; ClientDatanodeProtocol; JournalProtocol and NamenodeProtocol
+Remove Mapred filenames from HDFS findbugsExcludeFile.xml file,Update findbugsExcludeFile.xml
+existing in_use.lock file is removed after failing to lock this file,If locking of a storage dir fails; it will remove the other NN's lock file on exit
+Javadoc generation hangs,Exclude javadoc generation for generated protobuf classes
+HA: Tests and fixes for pipeline targets and replica recovery,HA: Add lease recovery handling to HA
+ReadLock should be enough for FsNameSystem#renewLease.,renewLease should not hold fsn write lock
+HA: add tests for multiple shared edits dirs,HA: Support multiple shared edits dirs
+HDFS notification ,inotify in HDFS
+Standby does not start up due to a gap in transaction id,HA: edit log should log to shared dirs before local dirs
+DN continues to start up; even if block pool fails to initialize,{ Disk Fail } Can we shutdown the DN when it meet's disk failed condition
+DN continues to start up; even if block pool fails to initialize,NullPointerException was generated in getBlockLocalPathInfo when datanode restarts
+HA: NPE if shared edits directory is not available during failover,HA: Standby NN NPE when shared edits dir is deleted
+Under replicated block after the pipeline recovery.,Invalidate excess corrupted blocks as long as minimum replication is satisfied
+HA: Add check to active state transition to prevent operator-induced split brain,check other namenode's state before HAadmin transitionToActive
+Contending block synchronizations can result in scary log messages,replica.getGenerationStamp() may be >= recoveryId
+HA: TestBalancerWithHANameNodes is failing,HA: Balancer should use logical uri for creating failover proxy with HA enabled.
+HA: Test BookKeeperJournalManager with HA enabled,HA: Bring BookKeeperJournalManager up to date with HA changes
+HA: Handle failure during HA state transition,NullPointerException When trying to log to editstreams
+Small race in BlockManager#close,BlockManager#close races with ReplicationMonitor#run
+Support for true zero-copy (mmap-based) reads,enable HDFS local reads via mmap
+HDFS truncate,Add initial snapshot support based on pipeline recovery
+Add support for DFS upgrade with HA enabled,Support HDFS upgrade in HA
+DataNode block scanner is running too frequently,BlockPoolSliceScanner is too chatty
+Use fadvise in local read path,short-circuit reads do not honor readahead settings
+Get the fuse-dfs test running,TestFuseDFS test failing
+Get the fuse-dfs test running,Add self-contained; mavenized fuse_dfs test
+DFSTestUtil#waitCorruptReplicas doesn't sleep between checks,DFSTestUtil.waitCorruptReplicas() should not use file reading time as a timeout measure.
+TestBlocksWithNotEnoughRacks races with DN startup,TestBlocksWithNotEnoughRacks#testCorruptBlockRereplicatedAcrossRacks fails using IBM java
+run valgrind on fuse-dfs; fix any memory leaks,libhdfs: don't force the URI to look like hdfs://hostname:port
+'hdfs -format' should be able to initialize non-file journal managers.,Genericize format() to non-file JournalManagers
+Use a better local directory layout for the datanode,Use block ID-based block layout on datanodes
+When dfs.namenode.safemode.min.datanodes is configured there is a mismatch in UI report,Error message for insufficient data nodes to come out of safemode is wrong.
+change INode to package private,change INode to package private
+findbugs warning: INodeFileUnderConstruction doesn't override INodeFile.equals(Object),findbugs complains about INodeFileUnderConstruction lacking an equals method
+BK JM : Namenode is not deleting his lock entry '/ledgers/lock/lock-0000X'; when fails to acquire the lock,BKJM:Switch from standby to active fails and NN gets shut down due to delay in clearing of lock
+Checkpointing should use HTTP POST or PUT instead of GET-GET to send merged fsimages,Implement POST method to upload the checkpoint
+TestFileCreation fails,For branch-1; TestFileCreation should use JUnit4 to make assumeTrue work
+Move fuse-dfs out of contrib,Move libhdfs and fuse-dfs source to native subdirectories
+Invalidate excess corrupted blocks as long as minimum replication is satisfied,Blocks are not getting replicate even DN's are availble.
+Update Balancer to support new NetworkTopology with NodeGroup,Update balancer for correctness with NodeGroup - two replicas are not on the same node
+Update Balancer to support new NetworkTopology with NodeGroup,Update Balancer policy with NodeGroup layer
+Checkpoint upload may interfere with a concurrent saveNamespace,race condition between 2 namenodes in standby that are trying to checkpoint with one another can delete or corrupt a good fsimage
+Checkpoint upload may interfere with a concurrent saveNamespace,Assertion failed in TestStandbyCheckpoints.testBothNodesInStandbyState
+TestFileLengthOnClusterRestart failed due to error message change,TestFileLengthOnClusterRestart may fail
+Link to authentiation doc from the WebHDFS doc,Clarify WebHDFS REST API that all JSON respsonses may contain additional properties
+TestRaidNode is failing,TestRaidNode.testDistRaid fails
+Blocks are getting marked as corrupt with append operation under high load.,Race between close/recoverLease leads to missing block
+SSH fencing option may incorrectly succeed if nc (netcat) command not present,NameNode doFence state judgment problem
+WebHdfsFileSystem getHomeDirectory() should not resolve locally,WebHDFS getHomeDirectory behavior does not match specification
+backport HDFS-3568 (add security to fuse_dfs) to branch-1,Backport HDFS-3568 to branch-1 (fuse_dfs: add support for security)
+Datanode recoverRbw could hang sometime,Deadlock in pipeline recovery
+Datanode recoverRbw could hang sometime,Deadlock in pipeline recovery causes Datanode to be marked dead
+HDFS may miss the final block when reading a file opened for writing if one of the datanode is dead,DFSInputStream should not eat up exceptions if file is under construction
+Add an option for NOT writing the blocks locally if there is a datanode on the same box as the client,Allow preferLocalNode in BlockPlacementPolicyDefault to be configurable
+Manually convert remaining tests to JUnit4,Test cases in TestPBHelper fail
+Disallow self-failover when auto failover is enabled,Disallow manual failover to already active NN when auto failover is enabled
+Purger should remove stale fsimage ckpt files,Clean up old .ckpt files after saveNamespace
+Failure in starting NN due to fsimage loading failure,Shutting down namenode during checkpointing can lead to md5sum error
+retry support for webhdfs is breaking HttpFS support,Multiple test cases in TestWebhdfsFileSystem are failing
+libhdfs symbol visibility issues,hdfs.dll does not export functions of the public libhdfs API
+Decommissioned nodes are included in cluster after switch which is not expected,Improve DFSAdmin to support HA cluster better
+BOOTSTRAPSTANDBY for new Standby node will not work just after saveNameSpace at ANN in case of BKJM,"Add a new ""-skipSharedEditsCheck"" option for BootstrapStandby"
+NPE in DFSInputStream.read() when called on non-existing block,NPE in DFSInputStream.read
+NPE in DFSInputStream.read() when called on non-existing block,NPE in DFSInputStream.read()
+Fix findbugs warnings in Datanode,Fix DataNode.recoverBlock findbugs warning
+TestHftpDelegationToken is broken after HADOOP-8225,Test TestHftpDelegationToken.testHdfsDelegationToken fails permanently in 0.23
+Implement a fence method which should fence the BK shared storage.,
+Exception when client reports bad checksum to NN,Issue handling checksum errors in write pipeline
+Unclean exit in ReplicationMonitor#run occasionally causes tests to fail ,MiniDFSCluster shutdown races with BlocksMap usage
+DFSOutputStream constructor does not use bufferSize parameter,DFSClient ignores bufferSize argument & always performs small writes
+Integrate upgrade/finalize/rollback with external journals,Support HDFS upgrade in HA
+dfsadmin -metasave throws NPE when under-replicated blocks are recently deleted,metaSave NPEs when there are invalid blocks in repl queue.
+TestAuditLogs#testAuditWebHdfs flaky,TestAuditLogs is flaky
+Support webhdfs over HTTPS,Unify the initialization of the hsftp and swebhdfs clients
+FSShell should support creating symlinks,dfs -ls should show the character which means symlink and link target
+Test replication with snapshots,Add testcases for replication handling in snapshots
+Support O(1) snapshot creation,Use a persistent data structure for snapshots
+when libwebhdfs is not enabled; nativeMiniDfsClient frees uninitialized memory ,libhdfs segfaults after recent changes
+FSDirectory#hasSnapshot will NPE when deleting an empty directory,Rename should fail when the destination dir is snapshottable and has snapshots
+Add per-disk latency metrics to DataNode,Adding per disk IO statistics and metrics in DataNode.
+Throttle block recovery,LeaseManager.findPath is very slow when many leases need recovery
+Add the ability for Client to provide more hint information for DataNode to manage the OS buffer cache more accurate,make HDFS advisory caching configurable on a per-file basis
+NPE in BPServiceActor#sendHeartBeat,Initialization failed for block (...) Invalid volume failure  config value: 1
+Throw helpful exception when DNS entry for JournalNode cannot be resolved,In HA; Namenode is failed to start If any of the Quorum hostname is unresolved.
+NameNode can't differentiate between a never-created block and a block which is really missing,getAdditionalBlock() can create multiple blocks if the client times out and retries.
+When the client calls hsync; allows the client to update the file length in the NameNode,File size reports as zero after writing and calling FSDataOutputStream#hsync()
+block replica reads get hot-spots due to NetworkTopology#pseudoSortByDistance,Clients are always sent to the same datanode when read is off rack
+The ReplaceDatanodeOnFailure policies could have a forgiving option,Need a DEFAULT-like pipeline recovery policy that works for writers that flush
+Rename of Being Written Files,Use INode IDs to avoid conflicts when a file open for write is renamed
+TestBalancerWithNodeGroup times out,Add junit timeout to TestBalancerWithNodeGroup
+TestBalancerWithNodeGroup times out,Should reset Balancer.Parameters.DEFALUT.policy in TestBalancer
+TestEditLog.testFuzzSequences FAILED in all pre-commit test,Spurious Test failures in TestEditLog.testFuzzSequences
+StorageRetentionManager spews warnings when used with QJM,warning while purging logs with QJM enabled
+WebHDFS Should Support HA Configuration,Support failover and retry in WebHdfsFileSystem for NN HA
+Add a configurable limit on number of blocks per file; and min block size,NameNode should limit the number of blocks per file
+Provide a way to exclude subtree from balancing process,Provide a way to ask Balancer to exclude certain DataNodes in its computation and/or work.
+start-dfs.sh generates malformed ssh command when not running with native libs,stop-dfs.sh/start-dfs.sh breaks if native lib not installed
+Clients should not retain leases on moved files,Use INode IDs to avoid conflicts when a file open for write is renamed
+ReplicationMonitor thread can exit with NPE due to the race between delete and replication of same file.,Namenode crashes with NPE in ReplicationMonitor
+Confusing WebHDFS exception when user has no TGT,Webhdfs will NPE on some unexpected response codes
+NameNodeConnector should prevent other balancers to run while the one is running,Balancer failure with nameservice configuration.
+DFSOutputStream#close doesn't always release resources (such as leases),DFSOutputStream reference should be cleared from DFSClient#filesBeingWritten if the file closure fails.
+Balancer failure with nameservice configuration.,Prevent multiple balancers from running simultaneously
+return buffer into direct bufferPool in BlockReaderLocal as possible,allow use of legacy blockreader
+globStatus using backslash for escaping does not work on Windows,Disable TestGlobPaths#pTestEscape on Windows
+Make HDFS home directory configurable per user,Make the HDFS home directory location customizable.
+dfsadmin command reference is missing documentation for multiple commands,Separate HDFS commands from CommandsManual.apt.vm
+4 unit tests in TestFcHdfsSymlink failed on trunk,Unit test failure: TestFcHdfsSymlink
+Block corruption can happen during pipeline recovery,Incorrect offset/length calculation in pipeline recovery causes block corruption
+Capture renamed files/directories in snapshot diff report,Use InodeID to improve snapshot diff
+Renaming file in subdirectory of a snapshotted directory does not work.,Fix rename across snapshottable directories
+Implementation of ACLs in HDFS,Allow the owner of an HDFS path to be a group
+short-circuit reads do not honor readahead settings,allow BlockReaderLocal to switch between checksumming and not
+Address HDFS test failures on Windows because of invalid dfs.namenode.name.dir,TestAllowFormat#testFormatShouldBeIgnoredForNonFileBasedDirs fails on Windows
+TestDFSClientRetries->testGetFileChecksum fails on IBM JAVA 6,Create a new HdfsConfiguration before each TestDFSClientRetries testcases
+SCR should honor dfs.client.read.shortcircuit.buffer.size even when checksums are off,allow BlockReaderLocal to switch between checksumming and not
+TestHDFSCLI regexps reject valid user names,TestHDFSCLI fails for user names with the dash character
+Misleading warning message in WebhdfsFileSystem when trying to check whether path exist using webhdfs url,shouldRetry() in WebHDFSFileSystem generates excessive warnings
+File creation with overwrite flag set to true results in logSync holding namesystem lock,Improve NameNode performance when creating file  
+File creation with overwrite flag set to true results in logSync holding namesystem lock,Use single editlog record for creating file + overwrite.
+libhdfs documentation is out of date,libhdfs.html needs to be updated to point to the new location 
+Fix the broken images in the Federation documentation page,Fix broken links in the document of HDFS Federation
+Override verifyBlockPlacement() API in BlockPlacementPolicyWithNodeGroup,BlockPlacementPolicyWithNodeGroup should override verifyBlockPlacement
+TestNNThroughputBenchmark exits abruptly,TestNNThroughputBenchmark fails because of interrupted ReplicationMonitor
+Avoid protocol buffer RPC namespace clashes,fix HDFS protobuf namespace conflicts
+TestQuorumJournalManager.testPurgeLogs intermittently Fails assertNoThreadsMatching,Invariant assumption in TestQuorumJournalManager.shutdown() is wrong
+add symlink support to WebHDFS server side,WebHdfsFileSystem does not treat UnresolvedLinkException
+BlockId and Generation Stamp code should be moved to the blockmanagement package,Decouple the management of block id and gen stamps from FSNamesystem
+Datanode must support all the volumes as individual storages,Deprecate API of getStorageID() and setStorageID() in DatanodeID as multiple storages
+Balancer needs to consider storage type in balancing,Balancer should preserve storage type of replicas
+BPOfferService#processCommandFromActor() synchronization on namenode RPC call delays IBR to Active NN; if Stanby NN is unstable,Synchronized BPOfferService - datanode locks for slow namenode reply.
+BlockScanner scans the block multiple times and on restart scans everything,datanode keeps logging the same 'is no longer in the dataset' message over and over again
+Write pipeline failures caused by slow or busy disk may not be handled properly.,Slow datanode I/O can cause a wrong node to be marked bad
+Unnecessary permission denied error when creating/deleting snapshots with a non-existent directory,Remove duplicated error message for snapshot commands when processing invalid arguments
+Automatically cache new data added to a cached path,NameNode hangs during startup trying to apply OP_ADD_PATH_BASED_CACHE_DIRECTIVE.
+Support failover and retry in WebHdfsFileSystem for NN HA,Fail-over support for HA cluster in WebHDFS 
+Support failover and retry in WebHdfsFileSystem for NN HA,WebHDFS should support logical service names in URIs
+Hftp should support namenode logical service names in URI,hftp: does not work with HA NN configuration
+Deadlock in NameNode between SafeModeMonitor#run and DatanodeManager#handleHeartbeat,Namenode deadlock during safemode extention
+Deadlock in NameNode between SafeModeMonitor#run and DatanodeManager#handleHeartbeat,Deadlock found in NN between SafeMode#canLeave and DatanodeManager#handleHeartbeat
+Improve WriteManager for processing stable write requests and commit requests,COMMIT request should not block
+Datanode should send block reports for each storage in a separate message,Default ipc.maximum.data.length should be increased to 128MB from 64MB
+add command-line support for manipulating cache directives,prettier dfsadmin -listCachePools output
+caching PB cleanups,add modifyDirective to cacheAdmin
+Handle race condition for writes,Add OpenFileCtx cache
+DataTransferProtocol changes for supporting mutiple storages per DN,DFSClient should create blocks using StorageType 
+Move cache pool related CLI commands to CacheAdmin,Attempting to remove a cache directive fails with NullPointerException.
+dfs.datanode.du.reserved is not considered while computing available space,Incorrect calculation of NonDfsUsed and Remaining
+dfs.datanode.du.reserved is not considered while computing available space,Incorrect calculation of NonDfsUsed and Remaining
+NumDecomDeadDataNodes not returning correct number of dead decommissioned nodes ,Provide more information in the FSNamesystem JMX interfaces
+Allow edit log/fsimage format changes without changing layout version,Revist layout version
+Add a storage type attribute to file,Archival Storage: Change INodeFile and FSImage to support storage policy
+DFSUtil#getInfoServer cleanup,Generate HTTP / HTTPS URL in DFSUtil#getInfoServer() based on the configured http policy
+hsftp throws an exception in the end on secure cluster with https enabled,Fix HTTPS support in HsftpFileSystem
+Support both HTTP and HTTPS in TransferFsImage,Generate HTTP / HTTPS URL in DFSUtil#getInfoServer() based on the configured http policy
+Generate HTTP / HTTPS URL in DFSUtil#getInfoServer() based on the configured http policy,FSCK and checkpoint not working when kerberos security+https is enabled.
+[HDFS-Snapshot] Return code of SnapshotDiff of two invalid snapshots is 0,make SnapshotDiff.java to a o.a.h.util.Tool interface implementation
+writeBlock should accept a target storage directory,StorageType should be encoded in the block token
+writeBlock should accept a target storage directory,DFSClient should create blocks using StorageType 
+Unify the initialization of the hsftp and swebhdfs clients,Fix HTTPS support in HsftpFileSystem
+Deprecate the JSP web uis in HDFS,Phase out the old web UI in HDFS
+Send incremental block reports for all storages in a single call,Test cases for split and combined block reports
+Optional fields in PB definitions should be optional in HTTP deserialization as well,Fixup test-patch.sh warnings on HDFS-4949 branch
+Fix storage IDs in PBHelper and UpgradeUtilities,Fix NPE in PBHelper
+Fix storage IDs in PBHelper and UpgradeUtilities,Fix storage IDs in PBHelper and UpgradeUtilities
+Verify initializations of LocatedBlock/RecoveringBlock,Verify initializations of LocatedBlock/RecoveringBlock
+Remove FsDatasetSpi#getBlockReport,Fix TODO and clean up the code in HDFS-2832.
+support cachepool-based limit management in path-based caching,Refactor tests in TestCacheDirectives
+Support fine grain locking in FSNamesystem,We should not lock FsNamesystem even we operate a sub directory; we should refinement the lock
+Fix test failures in Balancer.,Update Balancer for HDFS-2832
+Improve datanode startup time,Add quick-restart option for datanode
+Datanode#checkDiskError also should check for ClosedChannelException,Datanode disk error check may be incorrectly skipped
+Consider maximum DN memory; stale status when scheduling recaching,Namenode loops caching and uncaching when data should be uncached
+HDFS doesn't compile/run against Guava 1.5,HDFS dangerously uses @Beta methods from very old versions of Guava
+CacheAdmin commands fail when first listed NameNode is in Standby,CacheAdmin doesn't work
+Under construction files make DataNode decommission take very long hours,can't decommission w/under construction blocks
+Implement RPC stubs,DistributedFileSystem: implement modifyAclEntries; removeAclEntries and removeAcl.
+Implement RPC stubs,DistributedFileSystem: implement removeDefaultAcl.
+libHDFS: implement hdfsGetAcls and hdfsSetAcl.,Implement libhdfs bindings for HDFS ACL APIs.
+libHDFS: implement hdfsModifyAclEntries; hdfsRemoveAclEntries and hdfsRemoveAcl.,Implement libhdfs bindings for HDFS ACL APIs.
+libHDFS: implement hdfsRemoveDefaultAcl.,Implement libhdfs bindings for HDFS ACL APIs.
+WebHDFS: implement ACL APIs.,WebHDFS: implement MODIFYACLENTRIES; REMOVEACLENTRIES and REMOVEACL.
+WebHDFS: implement ACL APIs.,WebHDFS: implement REMOVEDEFAULTACL.
+NameNode: implement default ACL handling.,Children are not inheriting parent's default ACLs
+NameNode: enforce maximum number of ACL entries.,Implement logic for modification of ACLs.
+NameNode: add indicator in web UI file system browser if a file has an ACL.,WebHdfs ACL compatibility is broken
+Fix inconsistent synchronization in BPOfferService,TestBPOfferService.testBPInitErrorHandling fails intermittently
+Fix socket leak in DFSInputStream#getBlockReader,connection leak in DFSInputStream
+TestSecondaryNameNodeUpgrade#testChangeNsIDFails may fail due to ConcurrentModificationException,ConcurrentModificationException exception during DataNode shutdown
+Inconsistent Audit logging for HDFS APIs,Make HDFS audit logging consistant
+BlockInfo#findDataNode can be removed,Code cleanup of BlockInfo and rename BlockInfo to BlockInfoContiguous
+refreshNodes with many nodes at the same time could slow down NN,Refactor and improve decommissioning logic into DecommissionManager
+LeaseManager.findPath is very slow when many leases need recovery,FSNamesystem closeFileCommitBlocks block FSNamesystem Ops
+HDFS rack-awareness for nodes outside of the cluster,Block should be placed in the client's 'rack-local' node if 'client-local' node is not available
+Unify mmap cache and short-circuit file descriptor cache,The legacy local reader stops working on block token expiration
+TestHDFSCLI fails for a user name with dash,TestHDFSCLI fails for user names with the dash character
+TestHDFSCLI fails for a user name with dash,TestHDFSCLI fails for user names with the dash character
+InterruptedException to thread.sleep ignored ,InterruptedException to thread sleep ignored
+InterruptedException to thread.sleep ignored ,InterruptedException to thread sleep ignored
+InterruptedException to thread sleep ignored ,InterruptedException to thread sleep ignored
+TestHDFSCLI fails for a user name with dash,TestHDFSCLI fails for user names with the dash character
+TestHDFSCLI fails for a user name with dash,TestHDFSCLI fails for user names with the dash character
+TestHDFSCLI fails for a user name with dash,TestHDFSCLI fails for user names with the dash character
+TestHDFSCLI fails for a user name with dash,TestHDFSCLI fails for user names with the dash character
+TesHDFSCLI does not work for user names with '-',TestHDFSCLI fails for user names with the dash character
+TestHDFSCLI fails for user names with the dash character,TestHDFSCLI tests will fail if machine user names are not the combination of alphanumeric
+Add a new option for starting standby NN when rolling upgrade is in progress,Reading edits should not stop at UpgradeMarker for normal restart of the namenode
+TestWebHDFS#testNamenodeRestart fails with NullPointerException in trunk,TestWebHDFS#testNamenodeRestart fails intermittently with NPE
+Validate configuration of dfs.http.policy,dfs.http.policy should have higher precedence over dfs.https.enable
+SecureDataNodeStarter does not pick up configuration in hdfs-site.xml,Datanode webUI hangs with HTTP protocol when dfs.http.policy is HTTPS_ONLY
+TestDeleteBlockPool fails in branch-2,MiniDFSNNTopology#simpleFederatedTopology(int) always hardcode nameservice ID
+Upgrade and rolling upgrade should not be allowed simultaneously,Add rolling upgrade information to fsimage
+Avoid logging unnecessary trace in IPCLoggerChannel#close(),Exception recorded in LOG when IPCLoggerChannel#close is called
+One very large node in a cluster prevents balancer from balancing data,Balancer may not move blocks efficiently in some cases
+caller of NetworkTopology's chooseRandom method to be expect null return value,callers of NetworkTopology's chooseRandom method to expect null return value
+Fix rollback of rolling upgrade in NameNode HA setup,Fix rollback of rolling upgrade in NameNode HA setup
+caller of NetworkTopology's chooseRandom method to be expect null return value,callers of NetworkTopology's chooseRandom method to expect null return value
+caller of NetworkTopology's chooseRandom method to be expect null return value,callers of NetworkTopology's chooseRandom method to expect null return value
+callers of NetworkTopology's chooseRandom method to expect null return value,callers of NetworkTopology's chooseRandom method to expect null return value
+callers of NetworkTopology's chooseRandom method to expect null return value,callers of NetworkTopology's chooseRandom method to expect null return value
+TestSafeMode#testInitializeReplQueuesEarly fails,TestSafeMode occasionally fails
+Bad fsimage always generated after upgrade,NPE in FSImageFormatProtobuf upgrading from layout -52 to -53
+TestFSEditLogLoader#testValidateEditLogWithCorruptBody gets OutOfMemoryError and dumps heap.,Allow JournalNode to handle editlog produced by new release with future layoutversion
+TestFSEditLogLoader#testValidateEditLogWithCorruptBody gets OutOfMemoryError and dumps heap.,Bound checks missing in FSEditLogOp.AclEditLogUtil
+TestHASafeMode#testBlocksAddedWhileStandbyIsDown fails in trunk,The same block can be counted twice towards safe mode threshold
+Make balancer able to balance data among specified servers,Add ability to exclude/include specific datanodes while balancing
+fix DFSClient issue without libhadoop.so and some other ShortCircuitShm cleanups,DFSClient fails if native library doesn't exist
+TestBlockReaderLocal fails if native code is not loaded or platform is Windows.,TestBlockReaderLocal fails if native library is not available
+Fix TestHDFSCLI failures after HADOOP-8691 change,TestAclCLI fails intermittently when running test 24: copyFromLocal
+Quash stack traces when ACLs are disabled,Reduce number of AclException messages in NN log when ACLs are disabled
+The same block can be counted twice towards safe mode threshold,LeaseManager crashes while initiating block recovery
+TestReplaceDatanodeOnFailure fails occasionally,TestReplaceDatanodeOnFailure sometimes fails
+FSImage file system image version check throw a (slightly) wrong parameter.,Wrong error message for upgrade
+Fix the usage of OfflineImageViewer,Move the default processor from Ls to Web in OfflineImageViewer
+Disable quota checks when replaying edit log.,SNN crash during replay of FSEditLog of files inside directories having QuotaExceeded directories 
+Remove background token renewer from webhdfs,FileSystem.Cache.closeAll() throws authentication exception at the end of a webhdfs client
+DFSClient hangs infinitely if using hedged reads and all eligible datanodes die.,In some case; the  hedged read will lead to client  infinite wait.
+TestBalancerWithNodeGroup.testBalancerWithRackLocality fails,TestBalancerWithNodeGroup.testBalancerWithRackLocality may fail if balancer.id file is huge
+TestBalancerWithNodeGroup.testBalancerWithRackLocality fails,TestBalancerWithNodeGroup is failing in trunk
+Phase out the old web UI in HDFS,Old hdfs .jsp pages need to be removed due to a security risk
+adding a timeout setting for local read io,Support non-positional hedged reads in HDFS
+Add new CLI cases to reflect new features of dfs and dfsadmin,Add CLI testcases to reflect new features of dfs and dfsadmin
+WebHdfs HA failover is broken on secure clusters,WebHdfs clients clears the delegation token on retry (for HA); thus failing retry requests
+"command ""hdfs dfs -rm -r"" can't remove empty directory ","Command ""hdfs dfs -rm -r"" can't remove empty directory"
+Incorrect check for unknown datanode in Balancer,Balancer throws NPE
+Skip checking xattr limits for non-user-visible namespaces,Should have different size limits for different XAttr namespaces (user; trusted; security and system).
+Add sorting and pagination in the datanode tab of the NN Web UI,Support sorting by columns in the Datanode Information tables of the NameNode web UI.
+nfs-hdfs-gateway mount raises I/O error and hangs when a unauthorized user attempts to access it,NFS: Add a log message 'Permission denied' while writing data from read only mountpoint
+nfs-hdfs-gateway mount raises I/O error and hangs when a unauthorized user attempts to access it,NFS: Different error messages for appending/writing data from read only mount
+nfs-hdfs-gateway mount raises I/O error and hangs when a unauthorized user attempts to access it,NFS: stale NFS file handle Error for previous mount point
+TestBookKeeperHACheckpoints#TestSBNCheckpoints fails on trunk,TestStandbyCheckpoints#testSBNCheckpoints throwing NPE when running TestBookKeeperHACheckpoints
+TestBookKeeperHACheckpoints#TestSBNCheckpoints fails on trunk,TestBookKeeperHACheckpoints#TestStandbyCheckpoints fails in trunk
+blockReport doesn't need to invalidate blocks on SBN,PendingDeletionBlocks on SBN keeps increasing
+Large postponedMisreplicatedBlocks has impact on blockReport latency,Move processing of postponed over-replicated blocks to a background task
+Newly moved block replica been invalidated and deleted in TestBalancer,TestBalancer#testExitZeroOnSuccess sometimes fails in trunk
+Newly moved block replica been invalidated and deleted in TestBalancer,TestBalancerWithEncryptedTransfer sometimes fails in trunk
+Remove hadoop-metrics2.properties from hdfs project,hadoop-metrics2.properties exists in hdfs subproject
+Fix build on macosx: HDFS parts,libhdfs fails compile step on OS X
+WebHDFSFileSystem doesn't transmit desired checksum type,Support specifying checksum type in WebHDFS/HTTPFS writers
+NameNode should delete intermediate fsimage.ckpt when checkpoint fails,Clean up temporary files after fsimage transfer failures
+INodesInPath.resolve is called multiple times in FSNamesystem.setPermission,Clean up path resolving in FSNamesystem/FSDirectory
+Support reading new data in a being written file until the file is closed,Support polling for more data from a write-in-progress file using same DFSInputStream
+Deletion failure can leak inodes permanently,AlreadyBeingCreatedException ... because pendingCreates is non-null but no leases found.
+"TestDFSAdminWithHA.testSaveNamespace failed with ""Timed out waiting for Mini HDFS Cluster to start""",TestDFSAdminWithHA fails on windows
+FSNamesystem#getAclStatus does not write to the audit log.,FSNamesystem ACL operations should write to audit log on failure
+Jira HDFS-5804 breaks default nfs-gateway behavior for unsecured config,Fix inconsistent description in NFS user guide doc for proxy user
+Support maintenance mode for DN,Support maintenance state for datanodes
+Improve permission denied message when FSPermissionChecker#checkOwner fails,Improve error messages for checkOwner permission related failures
+The DataNode should use its shared memory segment to mark short-circuit replicas that have been unlinked as stale,ShortCircuitCache.replicaInfoMap keeps too many deleted file descriptor  
+Namenode Web UI only display 1 datanode when multiple datanodes exist on same hostname under different ports,NN UI fails to distinguish datanodes on the same host
+Initialize file system-wide quota once on transitioning to active,updateCountForQuota method during EditlogTailer loadEdit can make SNN timeout very often 
+Fix a few unit tests that use hard-coded port numbers,TestRefreshCallQueue and TestGenericRefresh should use ephemeral ports
+"Add test for race condition between transferring block and appending block causes ""Unexpected checksum mismatch exception"" ",VolumeScanner reports write-in-progress replicas as corrupt incorrectly
+NPE is thrown at Namenode ; for every block report sent from DN,BlockInfo.addStorage fails when DN changes the storage for a block replica
+Fix bad default value for dfs.namenode.list.encryption.zones.num.responses,Mistakenly dfs.namenode.list.encryption.zones.num.responses configured as boolean
+make HDFS fault injection framework working with maven,Hadoop Fault Injection framework seems broken
+BlockInfo.addStorage fails when DN changes the storage for a block replica,NameNode crash caused by ArrayIndexOutOfBoundsException
+Archival Storage: Extend HdfsFileStatus to get storage policy,Archival Storage: Support storage policy on directories
+Enhance CLI to support memory storage.,'hdfs put' command should accept lazyPersist flag for testing
+Configuration key fs.homeDir is not taken into consideration when returning a user's home directory,Make the HDFS home directory location customizable.
+The DFSClient should use the sampler to determine whether to initiate trace spans when making RPCv9 calls to the NN and DN,Add trace spans for DFSClient metadata operations
+Remove unnecessary CryptoCodec and KeyProvider.Options definition in FSNamesystem,Cleanup javac warnings in FSNamesystem
+fs-encryption merge triggered release audit failures,Source files missing license headers
+fs-encryption merge triggered release audit failures,Some source files miss Apache license header
+incorrect snapshot directory diff generated by snapshot deletion,deleteSnapshot runs into AssertionError
+Enforce a single limit for RAM disk usage and replicas cached via locking,Integrate HDFS-6581 memory usage with HDFS-4949
+Add LazyPersist flag to FileStatus,The HttpFSFileSystem should also return the isLazyPersist flag in the FileStatus
+Improve replica eviction from RAM disk,Notify NN of evicted block before deleting it from RAM disk
+DN should reserve disk space for a full block when creating tmp files, Expose reservedForReplicas as a metric
+Allow DFSClient to manually specify that a request should be traced,Add trace command to FsShell
+NN fails to fix under replication leading to data loss,Successfully closed files can stay under-replicated.
+Bounded staleness of EDEK caches on the NN,Enhance key rolling to guarantee new KeyVersion is returned from generateEncryptedKeys after a key is rolled
+nntop: top  -like tool for name node users,Report Top Namenode rpc consumers through JMX
+Improve HDFS-6581 eviction configuration,Notify NN of evicted block before deleting it from RAM disk
+Add hdfs native client RPC functionality,Implement RPC framework version 9 for libhdfs3
+Add hdfs native client RPC functionality,Use protobuf files in Hadoop source tree instead of the copy in libhdfs3
+Implement C++ interface for file system for libhdfs3,Consider adding a C++ API for libhdfs; libhdfs3; and libwebhdfs
+Implementation of NameNodeMXBean.getLiveNodes() skips DataNodes started on the same host,NN UI fails to distinguish datanodes on the same host
+Snapshot support for truncate,Block and lease recovery failure caused by snapshot issue
+Allow users to define custom storage policies,HDFS Custom Storage Tier Policies
+TestDecommission#testIncludeByRegistrationName sometimes fails,TestDecommission.testIncludeByRegistrationName fails occassionally in trunk
+Fix findbugs warnings in the HDFS-6581 branch,Fix findbugs warnings in HDFS-6581 branch
+Allow block reports to be processed during checkpointing on standby name node,Checkpoint Can not be done by StandbyNameNode.Because checkpoint may cause DataNode blockReport.blockReceivedAndDeleted.heartbeat rpc timeout when the object num > 100000000.
+Support polling for more data from a write-in-progress file using same DFSInputStream,Support polling for more data from a write-in-progress file using same DFSInputStream
+Report failures during adding or removing volumes,Improve error messages for DataNode hot swap drive feature
+HDFS Federation  -- Adding a new Namenode to an existing HDFS cluster Document Has an Error ,Various typos and improvements to HDFS Federation doc
+Hashcode is logging while logging block report message,Improve log reporting during block report rpc failure
+Add an option to include minimal ACL in getAclStatus return,'getfacl' command and 'getAclStatus' output should be in sync
+WebHDFS prematurely closes connections under high concurrent loads,Use netty to implement DatanodeWebHdfsMethods
+Consider adding a C++ API for libhdfs; libhdfs3; and libwebhdfs,Revisit the public API of the libraries
+NN doesn't schedule replication when a DN storage fails,Namenode does not recognize block is missing on a datanode
+Display the time when NN became active on the webUI,Add the time of last HA state transition to NN's /jmx page
+Add HTTP response code to the HttpPutFailedException message,Improve diagnostics information for HttpPutFailedException
+Prevent thundering herd problem in ByteArrayManager by using notify not notifyAll,Clients may get stuck waiting when using ByteArrayManager
+Unclosed RandomAccessFile warnings in FSDatasetIml.,FsDatasetImpl.getTmpInputStreams(..) may leak file descriptors
+Fix TestMultipleNNDataBlockScanner failures in jenkin slaves.,Rewrite the BlockScanner to use O(1) memory and use multiple threads
+TestCheckpoint#testStorageAlreadyLockedErrorMessage fails after change of log message related to locking violation.,TestCheckpoint failed in trunk due to mismatching message
+Erasure coding: distribute recovery work for striped blocks to DataNode,Add periodic checker to find the corrupted EC blocks/files
+TestDFSUpgradeFromImage#testUpgradeFromCorruptRel22Image fails in trunk,BlockIdManager#clear() bails out when resetting the GenerationStampV1Limit
+Reset cached thread-local FSEditLogOp's on every FSEditLog#logEdit,FSEditLog's  'OpInstanceCache' instance of threadLocal cache exists dirty 'rpcId';which may cause standby NN too busy  to communicate 
+TestDatanodeBlockScanner#testDuplicateScans hangs,"SimpleHttpProxyHandler puts incorrect ""Connection: Close"" header"
+Refactor and improve decommissioning logic into DecommissionManager,Optimization for decommission-in-progress check
+Namenode got shutdown and can't recover where edit update might be missed,Edit log corruption due to delayed block removal again
+Rewrite the BlockScanner to use O(1) memory and use multiple threads,dncp_block_verification.log.prev too large
+Rewrite the BlockScanner to use O(1) memory and use multiple threads,TestNNHandlesBlockReportPerStorage/TestNNHandlesCombinedBlockReport Failed after patched HDFS-7704
+TestDatanodeManager#testNumVersionsReportedCorrect occasionally fails,TestDatanodeManager.testNumVersionsReportedCorrect fails occassionally in trunk
+If multiple threads call FsVolumeList#checkDirs at the same time; we should only do checkDirs once and give the results to all waiting threads,Improve the concurrent access on FsVolumeList
+removedDst should be checked against null in finally block of FSDirRenameOp#unprotectedRenameTo(),removedDst should be checked against null in the finally block of FSDirRenameOp#unprotectedRenameTo()
+Add NFSv4 + Kerberos / client authentication support,Support NFSv4 interface to HDFS
+TransactionsSinceLastCheckpoint can be negative on SBNs,"The ""TransactionsSinceLastCheckpoint"" metrics is wrong in Standby NameNode"
+Namenode restart after large deletions can cause slow processReport (due to logging),Loop on 'blocks does not belong to any file'
+Format string should use %n rather than \n in hadoop-hdfs,Fix new findbugs warnings in hadoop-hdfs
+Fix Boxing/unboxing to parse a primitive in hadoop-hdfs,Fix new findbugs warnings in hadoop-hdfs
+Fix byte to string encoding issues in hadoop-hdfs,Fix new findbugs warnings in hadoop-hdfs
+TestDecommission#testIncludeByRegistrationName sometimes timeout,TestDecommission.testIncludeByRegistrationName fails occassionally in trunk
+Fix TestDataNodeVolumeFailureToleration#testValidVolumesAtStartup,change FsVolumeList toString() to fix TestDataNodeVolumeFailureToleration 
+Fix the new findbugs warning from TransferFsImage,Fix findbug in TransferFsImage.java
+Avoid retry cache collision when Standby NameNode loading edits,Standby NameNode  dfshealth.jsp   Response very slow 
+Implement COMPLETE state of erasure coding block groups,Erasure Coding: Add striped block support in INodeFile
+Change disk quota calculation for EC files,Erasure Coding: Update INodeFile quota computation for striped blocks
+TestFileAppendRestart hardcode block size without considering native OS,TestConnCache hardcode block size without considering native OS
+TestPersistBlocks hardcode block size without considering native OS,TestConnCache hardcode block size without considering native OS
+TestPipelinesFailover hardcode block size without considering native OS,TestConnCache hardcode block size without considering native OS
+TestCacheDirectives hardcode block size without considering native OS,TestConnCache hardcode block size without considering native OS
+TestNameEditsConfigs hardcode block size without considering native OS,TestConnCache hardcode block size without considering native OS
+TestDisableConnCache hardcode block size without considering native OS,TestConnCache hardcode block size without considering native OS
+Verify that HDFS blocks are in the correct datanode directories,DataNode won't self-heal after some block dirs were manually misplaced
+TestFileTruncate#testTruncateEditLogLoad fails intermittently,Fix TestFileTruncate to avoid bug of HDFS-7611
+Expose truncate API for Web HDFS,expose truncate via webhdfs
+[umbrella] support hflush and hsync for erasure coded files,Handle hflush and hsync in the best optimal way possible during online Erasure encoding
+[umbrella] support hflush and hsync for erasure coded files,Erasure Coding: Correctly calculate last striped block length in DFSStripedInputStream if it's under construction.
+Erasure Coding: Append on striped file,Support appending to a striping layout file
+Erasure Coding: Append on striped file,Erasure Coding cann't support appendToFile
+Erasure Coding: consolidate streamer coordination logic and handle failure when writing striped blocks,Failure handling: DFSStripedOutputStream continues writing with enough remaining datanodes
+Support dataset-specific choice of short circuit implementation,Add pluggable interface for reading replicas in DFSClient
+Erasure Coding: distribute replication to EC conversion work to DataNode,Provide a tool to help covert existing file of default 3x replication to EC striped layout
+"Incorrect ""nodes in service"" metrics caused all writes to fail",Block placement completely fails if too many nodes are decommissioning
+Add logic to DFSOutputStream to support writing a file in striping layout ,Subclass DFSOutputStream to support writing striping layout files
+Add logic to DFSOutputStream to support writing a file in striping layout ,Refactor DFSOutputStream separating DataStreamer out
+Add logic to DFSOutputStream to support writing a file in striping layout ,Change DataStreamer/DFSOutputStream/DFSPacket for convenience of subclassing
+Fix Multithreaded correctness Warnings in BackupImage.java,Fix findbugs warning produced by HDFS-7710
+Need document for storage type label of data node storage locations under dfs.datanode.data.dir,Document how to specify storage types
+Erasure coding: NameNode manages multiple erasure coding policies,ECManager should be able to manage multiple ECSchemas
+"NameNodeEditLogRoller can keep printing ""Swallowing exception"" message",Checkpoint node keeps throwing exception
+Improve information on Top users for metrics in RollingWindowsManager and lower log level,Lower RollingWindowManager log to debug
+A block placement policy with best rack failure tolerance,a block placement policy with best fault tolerance
+truncate RPC should not be considered as idempotent,NameNode implementation of ClientProtocol.truncate(..) is not idempotent
+Improve naming of classes; methods; and variables related to block replication and recovery,Erasure coding: Rename Striped block recovery to reconstruction to eliminate confusion.
+Fix expected tracing spans in TestTracing along with HDFS-7054,TestTracing#testWriteTraceHooks is flaky
+huge non dfs space used,Reserved RBW space is not released if client terminates while writing block
+Erasure coding: extend UnderReplicatedBlocks to accurately handle striped blocks,Erasure coding: fix priority level of UnderReplicatedBlocks for striped block
+Erasure Coding: local and remote block reader for coding work in DataNode,Refactoring ErasureCodingWorker into smaller reusable constructs
+Erasure Coding: local and remote block writer for coding work in DataNode,Refactoring ErasureCodingWorker into smaller reusable constructs
+Move DFSIn/OutputStream and related classes to hadoop-hdfs-client,Move DFSClient to hadoop-hdfs-client
+Move DFSIn/OutputStream and related classes to hadoop-hdfs-client,Move DFSInputStream and related classes to hadoop-hdfs-client
+NullPointerException when topology script is missing.,NPE exception can be thrown in DatanodeManager#sortLocatedBlocks
+Erasure coding: revisit how to store EC schema and cellSize in NameNode,Erasure coding: store EC schema and cell size in INodeFile and eliminate notion of EC zones
+Create an Offline FSImage Viewer tool,OIV: add ReverseXML processor which reconstructs an fsimage from an XML file
+Remove hard-coded values in favor of EC schema,Erasure Coding: Use datablocks; parityblocks and cell size from ErasureCodingPolicy
+Reserved RBW space is not released if client terminates while writing block,The space reservation for RBW block is leaking
+Erasure coding: fix bug in EC zone and symlinks,Erasure coding: fix bug in TestFSImage
+blk does not exist or is not under Constructionnull,Balancer does not work with the HDFS-6376 HA setup
+Cluster web console (dfsclusterhealth.jsp) is not working,Create HTML5 cluster webconsole for federated cluster
+Erasure coding: created util class to analyze striped block groups,DFSStripedInputStream fails to read data after one stripe
+Erasure coding: created util class to analyze striped block groups,BlockManager treates good blocks in a block group as corrput
+ECSchema supports for offline EditsVisitor over an OEV XML file,Support ErasureCoding section in OIV XML/ReverseXML
+Both Namenodes are in standby State,HDFS have two Standby NNs because ActiveStandbyElectorLock ephemeralOwner in ZK is different with the sessionId stored in ZKFC
+Illegal Option is displayed while executing clrSpaceQuota with -storageType option,CommandFormat#parse() should not parse option as value of option
+Erasure Coding: StripedDataStreamer fails to handle the blocklocations which doesn't satisfy BlockGroupSize,Erasure Coding: Badly treated when short of Datanode in StripedDataStreamer
+Erasure Coding: StripedDataStreamer fails to handle the blocklocations which doesn't satisfy BlockGroupSize,DFSClient hang up when there are not sufficient DataNodes in EC cluster.
+Erasure Coding: StripedDataStreamer fails to handle the blocklocations which doesn't satisfy BlockGroupSize,Erasure Coding: client occasionally gets less block locations when some datanodes fail 
+Erasure Coding: SequentialBlockGroupIdGenerator#nextValue may cause block id conflicts,Erasure coding: [bug] should always allocate unique striped block group IDs
+TestDiskspaceQuotaUpdate#testAppendOverTypeQuota is failing,Fix test case failure in org.apache.hadoop.hdfs.server.namenode.TestDiskspaceQuotaUpdate.testAppendOverTypeQuota
+getBlockLocations() does not resolve the .reserved path and generates incorrect edit logs when updating the atime,namenode starts failed:FSEditLogLoader: Encountered exception on operation TimesOp
+DFSStripedOutputStream.writeChunk should not wait for writing parity ,Erasure Coding: optimize client writing by making the writing of data and parity  concurrently
+Erasure Coding: Fix Findbug warnings present in erasure coding,Fix FindBugs issues introduced by erasure coding
+Outputs Xattr in OIV XML format,OIV: add ReverseXML processor which reconstructs an fsimage from an XML file
+Skip unit test using DataNodeTestUtils#injectDataDirFailure() on Windows,Skip tests that call DataNodeTestUtils.injectDataDirFailure on Windows
+Follow-on to update decode for DataNode striped blocks reconstruction,ErasureCodingWorker fails to do decode work
+Erasure Coding:  Badly treated when createBlockOutputStream failed in DataStreamer,Tolerate multiple failures in DFSStripedOutputStream
+Erasure Coding: test failed in TestDFSStripedInputStream.testStatefulRead() when use ByteBuffer,Erasure Coding: stateful read result doesn't match data occasionally because of flawed test
+Document missing properties in hdfs-default.xml,dfs.checksum.type is not described in hdfs-default.xml
+Choose SSD over DISK in block placement,StorageType: SSD precede over DISK
+Java Compilation Error in TestHdfsConfigFields.java,TestHdfsConfigFields is placed in wrong dir; introducing compile error
+Fix test failure in TestHdfsConfigFields for spanreceiver properties,Fix failed TestHdfsConfigFields
+Erasure coding: compute storage type quotas for striped files; to be consistent with HDFS-8327,Fix issues like NPE in TestRecoverStripedFile
+Tolerate multiple failures in DFSStripedOutputStream,Erasure coding: Refactor DFSStripedOutputStream (Move Namenode RPC Requests to Coordinator)
+Erasure Coding: Allow concat striped files if they have the same ErasureCodingPolicy,DFS.concat should throw exception if files have different EC policies. 
+Add tasks count metrics to datanode for ECWorker,Add blocks count metrics to datanode for ECWorker
+Refactor BlockInfoContiguous and fix NPE in TestBlockInfo#testCopyConstructor(),Erasure Coding: fix the copy constructor of BlockInfoStriped and BlockInfoContiguous
+Subclass BlockInfo to represent contiguous blocks,Subclass BlockInfo to represent contiguous blocks
+Remove hard-coded chunk size in favor of ECZone,Erasure Coding: Use datablocks; parityblocks and cell size from ErasureCodingPolicy
+Ozone: Storage container data pipeline,Ozone: Support Ratis as a first class replication mechanism
+OzoneHandler: Integration of REST interface and container data pipeline back-end,OzoneHandler : Add Volume Interface to Data Node HTTP Server
+Restore ECZone info inside FSImageLoader,Erasure Coding: Remove dataBlockNum and parityBlockNum from StripedBlockProto 
+"Mismatch in displaying the ""MissingBlock"" count in fsck and in other metric reports",there is a corrupt/missing block report; but fsck result is HEALTHY
+Remove the use of hard-coded cell size value in balancer Dispatcher,Erasure Coding: Use datablocks; parityblocks and cell size from ErasureCodingPolicy
+BlockPoolSlice.checkDirs() will trigger excessive IO while traversing all sub-directories under finalizedDir,DiskChecker should not traverse the entire tree
+On upgrade; Datanode should process all storage/data dirs in parallel,Upgrade to block ID-based DN storage layout delays DN registration
+ContentSummary on / skips further counts on yielding lock,hdfs dfs -du -s / may return incorrect summary
+Erasure Coding: update invalidateBlock(..) logic for striped block,Erasure Coding: revisit replica counting for striped blocks
+"if set several dirs which belongs to one disk in ""dfs.datanode.data.dir""; NN calculate capacity wrong",Datanode Capacity is misleading if the dfs.datanode.data.dir is configured with two directories from the same file system.
+Correct HTTP method in WebHDFS document,WebHDFS: Some GET operations are wrongly documented as PUT operations
+Throttle DiskChecker#checkDirs() speed.,DiskChecker should not traverse the entire tree
+Update missing command option for fetchdt,Update document for hdfs fetchdt
+Fix setting of dfs.datanode.readahead.bytes in hdfs-default.xml to match DFSConfigKeys,Incorrect default value (typo) in hdfs-default.xml
+Tolerate disk errors during block pool initialization,datanode fails to start due to a bad disk
+Erasure Coding: handle missing internal block locations in DFSStripedInputStream,Erasure Coding: Fail to read a file with corrupted blocks
+Erasure Coding: Add EC-related Metrics to NN (seperate striped blocks count from UnderReplicatedBlocks count),Introduce separate stats for Replicated and Erasure Coded Blocks apart from the current Aggregated stats
+Block replicating cannot work after upgrading to 2.7 ,ReplicationMonitor thread could stuck for long time due to the race between replication and delete of same file in a large cluster.
+Move DistributedFileSystem to hadoop-hdfs-client,Move DistributedFileSystem to hadoop-hdfs-client
+Erasure Coding: block group ID displayed in WebUI is not consistent with fsck,WebUI fails to display block IDs that are larger than 2^53 - 1
+ReplicationMonitor thread received Runtime exception: NullPointerException when BlockManager.chooseExcessReplicates,Possible NullPointerException in BlockManager if no excess replica can be chosen
+ReplicationMonitor thread received Runtime exception: NullPointerException when BlockManager.chooseExcessReplicates,Improve BlockPlacementPolicyDefault's picking of excess replicas
+TestDistributedFileSystem is failing in trunk,TestDistributedFileSystem#testDFSClientPeerWriteTimeout fails
+Make StorageType for Volumes in DataNode visible through JMX,Display the volume storage type in datanode UI
+Do not use small blocks for balancing the cluster,Balancer slowly with too many small file blocks
+VolumeScanner thread exits with exception if there is no block pool to be scanned but there are suspicious blocks,VolumeScanner throwing NPE while scanning suspect block.
+Webhdfs client leaks active NameNode connections,TestDataNodeUGIProvider fails intermittently due to non-deterministic cache expiry.
+Improve quota initialization performance,Standby NameNode may crash during failover if loading edits takes too long
+Reporting of missing blocks is different in fsck and namenode ui/metasave,Block should be marked as missing if the all the replicas are on Decommissioned nodes.
+Allow the directoryScanner to be rate-limited,Allow rate-limiting the DirectoryScanner via time-slicing
+Erasure coding: update BlockInfoContiguousUC and BlockInfoStripedUC to use BlockUnderConstructionFeature,Convert BlockUnderConstructionFeature#replicas form list to array
+Add -source flag to balancer usage message,Document -source option for balancer
+Erasure Coding: createErasureCodingZone api should accept the policyname as argument instead of ErasureCodingPolicy,Change setErasureCodingPolicy to take a required string EC policy name
+Erasure coding: do not throw exception when setting replication factor on EC files,Erasure coding: MapReduce job failed when I set the / folder to the EC zone 
+hdfsOpenFile() in HDFS C API does not support block sizes larger than 2GB,Add hdfsStreamBuilder API to libhdfs to support defaultBlockSizes greater than 2 GB
+NameNode refresh doesn't remove DataNodes that are no longer in the allowed list,Namenode UI continues to list DNs that have been removed from include and exclude
+Clean up checkstyle warnings in shortcircuit package,Clean up checkstyle warnings in hadoop-hdfs-client module
+Provide information on BPOfferService in DN JMX,Improve DataNode web UI
+Balancer throws NPE,Balancer throws NPE
+Update the pom to add junit dependency and move TestXAttr to client project,Move client side unit test to hadoop-hdfs-client
+When NN is not able to identify DN for replication; reason behind it can be logged,BlockPlacementPolicyDefault's debugLoggingBuilder may not be logged
+Any Error during BPOfferService run can leads to Missing DN.,DataNode stopped sending heartbeat after getting OutOfMemoryError form DataTransfer thread.
+Make Datanode Netty reverse proxy port to be configurable,Data node opens random port for HTTPServer; not configurable
+Pagination; sorting and filtering of files/directories in the HDFS Web UI,File browser web UI should split to pages when files/dirs are too many
+NullPointerException when underreplicated blocks are there,Reduce client failures during datanode restart
+DeadLock between DataNode#refreshVolumes and BPOfferService#registrationSucceeded ,TestDataNodeHotSwapVolumes fails occasionally
+OEV should treat .XML files as XML even when the file name extension is uppercase,[OEV] : The inputFile does not follow case insensitiveness incase of XML file
+Cleanup the findbugs and other issues after HDFS EC merged to trunk.,Cleanup the findbugs and other issues after HDFS EC merged to trunk.
+Deprecation cases are not handled in hadoop-hdfs-client#DistributedFileSystem,HDFS clients can't construct HdfsConfiguration instances
+Suppress the RAT warnings in hdfs-native-client module,Fix RAT licensing issues
+DFSClient  deadlock when close file and failed to renew lease,DeadLock Happened Between DFSOutputStream and LeaseRenewer when Network unstable
+DFSClient  deadlock when close file and failed to renew lease,DFSClient got deadlock when close file and failed to renew lease
+Validate required params for WebHDFS requests,in webhdfs Null pointer exception will be thrown when xattrname is not given
+Get libhdfs++ gmock tests running with CI,Use ctest to run tests for hadoop-hdfs-native-client
+Fix findbugs warnings in BlockRecoveryWorker,Findbugs issue reported in BlockRecoveryWorker$RecoveryTaskContiguous.recover()
+FSImage may get corrupted after deleting snapshot,NN fails to restart due to corrupt fsimage caused by snapshot handling
+tSize of libhdfs in hadoop-2.7.1 is still int32_t,Add hdfsStreamBuilder API to libhdfs to support defaultBlockSizes greater than 2 GB
+Fix protobuf runtime warnings,libhdfs++: Client Name Protobuf Error
+TestBackupNode always binds to port 50070; which can cause bind failures.,TestBackupNode flakes with port in use error on 50070
+DiskBalancer: Add Scan Command,DiskBalancer: support running multiple commands in single test
+FsVolume should add the operation of creating file's time metrics,Adding per disk IO statistics and metrics in DataNode.
+DiskBalancer : Command utitlities,DiskBalancer : Add Plan Command
+Erasure Coding: Wrong limit setting of target ByteBuffer,ErasureCodingWorker may fail when recovering data blocks with length less than the first internal block
+BaseReplicationPolicyTest should update data node stats after adding a data node,TestReplicationPolicyConsiderLoad.testChooseTargetWithDecomNodes failed on trunk
+TestDecommissioningStatus.testDecommissionStatus occasionally fails,TestDecommissioningStatus fails intermittently in trunk
+set replication for empty file  failed when set storage policy,Mapreduce jobs fail when StoragePolicy is set
+TestStartup.testImageChecksum is broken by HDFS-9569's message change,TestStartup.testImageChecksum is broken by HDFS-9569
+Deadlock in DN.FsDatasetImpl between moveBlockAcrossStorage and createRbw,DataNode deadlocks after running hdfs mover
+Improve DelegationTokenIdentifier.toString() for better logging,Add more info to DelegationTokenIdentifier#toString for better supportability
+The implication of auth-conf is not followed in optimized HDFS data transfer encryption,The implication of auth-conf is not followed in optimized HDFS data transfer encryption
+Move disk IO out of the heartbeat thread,Datanode heartbeats can get blocked by disk in FsDatasetImpl#checkBlock()
+Remove LEASE_{SOFTLIMIT;HARDLIMIT}_PERIOD and unused import from HdfsServerConstants,Remove unused import in HdfsServerConstants
+Block#toString should not output information from derived classes,Block#toString should not output information from derived classes
+Expose FSNamesystem lock wait time as metrics,Add MutableRate metrics for FSNamesystemLock operations
+BlockManager#createLocatedBlocks can throw NPE for corruptBlocks on failed storages.,fsck NullPointerException when it encounters corrupt replicas
+TestEditLog.testBatchedSyncWithClosedLogs with useAsyncEditLog sometimes fails,Fix race condition in TestEditLog#testBatchedSyncWithClosedLogs
+MiniDFSCluster should implement AutoCloseable,Make MiniDFSCluster AutoCloseable
+TestRetryCacheWithHA#testRetryCacheOnStandbyNN failing,Fix TestRetryCacheWithHA and TestNamenodeRetryCache failures
+Fix hadoop-hdfs-native-client compilation on Windows,hadoop-hdfs-native-client fails distro build when trying to copy libhdfs binaries.
+DataTransferProtocol#writeBlock missing some javadocs,DataTransferProtocol#writeBlock missing some javadocs
+Test failures on trunk: TestEditLog and TestReconstructStripedBlocks,Test failure on trunk: TestEditLog
+Add out-of-order tests for async DFS API,Add interleaving tests for async DFS API
+TestDistributedFileSystem#MyDistributedFileSystem attempts to set up statistics before initialize() is called,NPE in TestDistributedFileSystem.testDFSCloseOrdering
+Refactor and speedup TestAsyncDFSRename,Refactor tests by moving irrevelant parts out of TestAsyncDFSRename
+Refactor and speedup TestAsyncDFSRename,Add timeout tests for async DFS API
+hdfs dfs -du -s / returns incorrect summary,hdfs dfs -du -s / may return incorrect summary
+hdfs dfs -du -s / may return incorrect summary,hdfs dfs -du -s / may return incorrect summary
+Add EC policy and storage policy related usage summarization function to dfs du command,Add -E option in 'ls' to list erasure coding policy of each file and directory if applicable
+Improve plan command help message,Format disk balance command's output info
+webhdfs fails with filenames including semicolons,webhdfs fails with filenames including semicolons
+ VolumeScanner to report why a block is found bad,VolumeScanner prints incorrect IOException in reportBadBlocks operation
+In Balancer; the target task should be removed when its size < 0.,TestBalancer#testUnknownDatanodeSimple and testBalancerWithKeytabs are flaky in branch-2.7
+Erasure Coding: Add removeErasureCodingPolicy API,Add ability to unset and change directory EC policy
+Snapshot read can reveal future bytes if snapshotted while writing,HDFS Snapshots should capture point-in-time copies of OPEN files
+Complete the document for FileDistribution processor in OfflineImageViewer,Complete the document for FileDistribution processor in OfflineImageViewer
+Switch HttpFS from Tomcat to Jetty,httpfs.sh run fails due to missing temp dir
+Switch HttpFS from Tomcat to Jetty,httpfs.sh will not run when temp dir does not exist
+Add instrumentation hooks around Datanode disk IO,Refactor DataNode file IO operations
+Add unit test for HDFS command 'dfsadmin -getDatanodeInfo',Add unit test for HDFS command 'dfsadmin -getDatanodeInfo'
+TestDirectoryScanner#testThrottling fails: Throttle is too permissive,TestDirectoryScanner#testThrottling fails on OSX
+Implement 'df' for viewfs    ,Implement 'hadoop fs -df' command for ViewFileSystem   
+Ozone:SCM: Remove null command,Ozone: TestContainerPlacement fails because of string mismatch in expected Message
+Improve the unit tests relevant to DataNode volume failure testing,Increase test timeouts that are too aggressive.
+Make WebHDFS' ACLs RegEx configurable,Make WebHDFS' ACLs RegEx configurable Testing
+FSCK shows overall health status as corrupt even one replica is corrupt,BlockManager#createLocatedBlocks() can throw ArrayIndexOutofBoundsException when corrupt replicas are inconsistent
+FSCK shows overall health status as corrupt even one replica is corrupt,Rolling restart can create inconsistency between blockMap and corrupt replicas map
+FSCK shows overall health status as corrupt even one replica is corrupt,when blocks has corrupted replicas   throws Exception
+Client close() should not fail fast if the last block is being decommissioned,Decommissioning stuck because of failing recovery
+Decommissioning stuck because of failing recovery,Under-repicated block never completes because of failure in commitBlockSynchronization()
+DFSTopologyNodeImpl#chooseRandom optimizations,[branch-2] Add storage type demand to into DFSNetworkTopology#chooseRandom
+Ozone: SCM: Support listContainers API,Ozone: Implement listKey function for KeyManager
+Unable to remove dead node after datanode decommission ,Namenode UI continues to list DNs that have been removed from include and exclude
+Ozone: Cleanup findbugs issues,Ozone: Container: Move IPC port to 98xx range
+LeaseManager#getINodeWithLeases() should support skipping leases of deleted files with snapshot feature,HDFS snapshots doesn't capture all open files when one of the open files is deleted
+Ozone: Implement the trace ID generator,Block Storage: Cblock should generated unique trace ID for the ops
+DFSZKFailoverController daemon exits with wrong status code,DFSZKFailoverController on error exits with 0 error code
+DFSZKFailoverController daemon exits with wrong status code,DFSZKFailoverController on error exits with 0 error code
+Ozone: KSM: set creationTime for volume/bucket/key,Ozone: KSM: Add creation time field in volume info
+TestDFSStripedOutputStreamWithFailure070 failed randomly,Precisely calculate acked length of striped block groups in updatePipeline
+Ozone: Recover SCM state when SCM is restarted,Ozone: SCM: Container metadata are not loaded properly after datanode restart
+Backport HDFS-9412 to branch-2.7: getBlocks occupies FSLock and takes too long to complete,Backport HDFS-9412 to branch-2.7: getBlocks occupies FSLock and takes too long to complete
+Ozone : Optimize putKey operation to be async and consensus,Ozone: KSM: Cleanup of keys in KSM for failed clients
+Add log for NameNode#monitorHealth,Add metric for time taken by NameNode resource check
+Ozone: TestStorageContainerManager#testRpcPermission fails when ipv6 address used,OzoneClientUtils#updateListenAddress should use server address to update listening addrees
+Enable DFSNetworkTopology as default,[branch-2] Enable DFSNetworkTopology as default
+Ozone: Container : Add key versioning support-1,Ozone: Bucket versioning design document
+Add counters for block re-replication,[branch-2] Add counters for block re-replication
+Ozone: TestKeys is failing consistently,Ozone: the static cache provided by ContainerCache does not work in Unit tests 
+Ozone: TestKeys is failing consistently,Ozone: TestKeys#testPutAndGetKeyWithDnRestart fails
+Ozone: SCM: Container State Machine -1- Track container creation state in SCM,Ozone: Support Ratis as a first class replication mechanism
+Ozone: Add metrics for pending storage container requests,Ozone: Fix TestXceiverClientMetrics#testMetrics 
+"Ozone: Concurrent RocksDB open calls fail because of ""No locks available""",TestKeys#testPutAndGetKeyWithDnRestart failed
+Ozone: SCM: clean up containers that timeout during creation,Ozone: SCM: Clean up of container in DELETING state
+TestBalancerRPCDelay#testBalancerRPCDelay fails very frequently,Fix TestBalancerRPCDelay#testBalancerRPCDelay
+TestLeaseRecoveryStriped.testLeaseRecovery failure,Fix test setup in TestLeaseRecoveryStriped
+Ozone: Too many open files error while running corona,Ozone: SCM: BlockManager creates a new container for each allocateBlock call
+TestClientProtocolForPipelineRecovery#testZeroByteBlockRecovery fails on trunk,TestClientProtocolForPipelineRecovery fails in trunk
+Ozone: TestXceiverClientManager and TestAllocateContainer occasionally fails,Ozone: TestAllocateContainer fails on jenkins
+TestReconstructStripedFile.testNNSendsErasureCodingTasks fails occasionally ,TestReconstructStripedFile.testNNSendsErasureCodingTasks randomly cannot finish in 60s
+Provide a configuration to adjust the weight of EC recovery tasks to adjust the speed of recovery,Provide a configuration to adjust the weight of EC recovery tasks to adjust the speed of recovery
+Ozone: SCM should read all Container info into memory when booting up,Ozone: SCM: Open containers are not reused for block allocation after restart
+Short-circuit reads unnecessarily disabled for a long time,Block invalid IOException causes the DFSClient domain socket being disabled
+Ozone: Use time units in the Ozone configuration values,Ozone: Add timeunit for ozone.scm.heartbeat.interval.seconds in ozone-default.xml
+Lease renewal can hit a deadlock ,DeadLock Happened Between DFSOutputStream and LeaseRenewer when LeaseRenewer#renew SocketTimeException
+Support multiple storages in DataNodeCluster / SimulatedFSDataset,Support multiple storages in DataNodeCluster / SimulatedFSDataset
+Output streams closed with IOUtils suppressing write errors,Port HDFS-12881 to branch-2 (Output streams closed with IOUtils suppressing write errors)
+TestErasureCodigCLI testAll failing consistently.,TestErasureCodingCLI failing because of mismatch in expected output.
+Ozone : TestSCMCli and TestContainerStateManager tests are failing consistently while updating the container state info.,Fix closeContainer API with the right container state change

@@ -1,0 +1,715 @@
+IllegalMonitorStateException in DataNode shutdown,processIOError() may cause infinite loop.
+processIOError() may cause infinite loop.,DF should use used + available as the capacity of this volume
+DF should use used + available as the capacity of this volume,Check that network topology is updated when new data-nodes are joining the cluster
+Check that network topology is updated when new data-nodes are joining the cluster,in FSNamesystem.registerDatanode; dnAddress should be resolved (rarely occured)
+in FSNamesystem.registerDatanode; dnAddress should be resolved (rarely occured),NotReplicatedYetException is handled incorrectly in DFSClient
+NotReplicatedYetException is handled incorrectly in DFSClient,Interrupting the namenode thread triggers System.exit()
+Interrupting the namenode thread triggers System.exit(),distcp job failed
+distcp job failed,DFS logging in NameSystem.pendingTransfer consumes all disk space
+DFS logging in NameSystem.pendingTransfer consumes all disk space,Tests fail on windows due to BindException.
+Tests fail on windows due to BindException.,hadoop dfs -put does not return nonzero status on failure
+hadoop dfs -put does not return nonzero status on failure,filenames with ':' colon throws java.lang.IllegalArgumentException
+DFSClient should timeout on long writes,Rack replication policy can be violated for over replicated blocks 
+Rack replication policy can be violated for over replicated blocks ,Data transfer buffer length in DFSOutputStream should not be user controlled.
+Data transfer buffer length in DFSOutputStream should not be user controlled.,HDFS FileStatus.getPermission() should return 777 when dfs.permissions=false
+HDFS FileStatus.getPermission() should return 777 when dfs.permissions=false,NameNode startup failed
+NameNode startup failed,Unhandled exceptions in DFSClient
+Unhandled exceptions in DFSClient,fsck <path> -delete doesn't report failures
+fsck <path> -delete doesn't report failures,unresponsive namenode because of not finding places to replicate
+unresponsive namenode because of not finding places to replicate,Help information of refreshNodes does not show how to decomission nodes
+Help information of refreshNodes does not show how to decomission nodes,many filelist calls to large directory killing the namenode
+FSDataOutputStream should flush last partial CRC chunk,The FSDirectory should not have waitForReady
+The FSDirectory should not have waitForReady,   HADOOP-5862 for version .20  (Namespace quota exceeded message unclear)
+   HADOOP-5862 for version .20  (Namespace quota exceeded message unclear),RPC on Datanode blocked forever.
+RPC on Datanode blocked forever.,On Namenode WebUI; sorting of the Datanode info table is not working for some of the columns in the table.
+On Namenode WebUI; sorting of the Datanode info table is not working for some of the columns in the table.,In Datanode; update block may fail due to length inconsistency
+In Datanode; update block may fail due to length inconsistency,Simulated DataNode crashes NameNode
+Simulated DataNode crashes NameNode,Hadoop distcp tool fails if file path contains special characters + & !
+Hadoop distcp tool fails if file path contains special characters + & !,testFilePermissions in TestDFSShell should shut down the mini dfs cluster when there is an error
+testFilePermissions in TestDFSShell should shut down the mini dfs cluster when there is an error,files disappearing on dfs
+files disappearing on dfs,The elephant should remember names; not numbers.
+The elephant should remember names; not numbers.,Confusing set replication message
+Confusing set replication message,Handling of deprecated dfs.info.bindAddress and dfs.info.port
+Handling of deprecated dfs.info.bindAddress and dfs.info.port,An invalidated block should be removed from the blockMap
+An invalidated block should be removed from the blockMap,"DFSClient getting stuck intermittently giving ""DFSClient: Could not complete file   filename retrying..."" message"
+"DFSClient getting stuck intermittently giving ""DFSClient: Could not complete file   filename retrying..."" message",Namenode blockMap not updated when datanode invalidates a block on heart beat
+Namenode blockMap not updated when datanode invalidates a block on heart beat,Unit test org.apache.hadoop.dfs.TestBalancer fails on Solaris with a timeout
+Unit test org.apache.hadoop.dfs.TestBalancer fails on Solaris with a timeout,fsimage;fstime not replicated when edit file is empty.
+fsimage;fstime not replicated when edit file is empty.,NetUtils.createSocketAddr NPEs if dfs.datanode.ipc.address is not set for a data node
+Ignoring IOExceptions on close,Unit test failed: TestInjectionForSimulatedStorage
+Unit test failed: TestInjectionForSimulatedStorage,DFS client should throw version mismatch errors in case of a changed functionality
+DFS client should throw version mismatch errors in case of a changed functionality,The namespace quota of root directory should not be Integer.MAX_VALUE
+The namespace quota of root directory should not be Integer.MAX_VALUE,dead datanodes because of OutOfMemoryError
+dead datanodes because of OutOfMemoryError,NN should check a block's length even if the block is not a new block when processing a blockreport
+MiniDFSCluster.stopDataNode will always shut down a node in the cluster if a matching name is not found,NullPointerException when reading deleted file
+NullPointerException when reading deleted file,dfs client throws java.lang.StackOverflowError in a corner case.
+datanode not failing when read-only filesystem,Change all references of dfs to hdfs in configs
+Change all references of dfs to hdfs in configs,"Datanodes get error message ""is valid; and cannot be written to"" "
+"Datanodes get error message ""is valid; and cannot be written to"" ",A Datanode's datadir could have lots of blocks in the top-level directory
+A Datanode's datadir could have lots of blocks in the top-level directory,DistributedFileSystem.listPaths with some paths causes directory to be cleared
+DistributedFileSystem.listPaths with some paths causes directory to be cleared,No recovery when trying to replicate on marginal datanode
+No recovery when trying to replicate on marginal datanode,loss of VERSION file on datanode when trying to startup with full disk
+loss of VERSION file on datanode when trying to startup with full disk,Datanode shutdown is called multiple times 
+Datanode shutdown is called multiple times ,SecondaryNamenode may report incorrect info host name
+SecondaryNamenode may report incorrect info host name,Datanode stops cleaning disk space
+Datanode stops cleaning disk space,delete on dfs hung
+delete on dfs hung,Unable to access data from non hadoop application (Version mismatch in DataNode)
+Unable to access data from non hadoop application (Version mismatch in DataNode),Develop a unit test to test deletion of excess replicas in DFS
+Develop a unit test to test deletion of excess replicas in DFS,/tmp/hadoop-${user}/dfs/tmp/tmp/client-${long}.tmp is not cleanup correctly
+/tmp/hadoop-${user}/dfs/tmp/tmp/client-${long}.tmp is not cleanup correctly,TestDFSUpgrade fails sporadically in nightly and patch builds
+TestDFSUpgrade fails sporadically in nightly and patch builds,Improve dfsadmin command line help 
+Improve dfsadmin command line help ,"Data node should shutdown when a ""critical"" error is returned by the name node"
+"Data node should shutdown when a ""critical"" error is returned by the name node","HTTP ERROR: 500 when using ""Go back to dir listing"" link in NameNode web interface"
+"HTTP ERROR: 500 when using ""Go back to dir listing"" link in NameNode web interface","IOException at task startup ""No valid local directories in property: dfs.client.buffer.dir"""
+DFSOutputStream does not close all the sockets,dfs.du.reserved not honored in 0.15/16 (regression from 0.14+patch for 2549)
+dfs.du.reserved not honored in 0.15/16 (regression from 0.14+patch for 2549),FSDataset.invalidate() throws IOException trying to delete a block which is not in the data-node blockMap
+FSDataset.invalidate() throws IOException trying to delete a block which is not in the data-node blockMap,Namespace quota exceeded message unclear
+Namespace quota exceeded message unclear,the permissions are not documented well enough and should be integrated with the hdfs user guide
+the permissions are not documented well enough and should be integrated with the hdfs user guide,Eliminate redundant searches in the namespace directory tree.
+Eliminate redundant searches in the namespace directory tree.,Uncaught Exception in DataTransfer.run
+Uncaught Exception in DataTransfer.run,Rename of a directory with many opened files blocks name-node for a long time. changeLease() to blame.
+Rename of a directory with many opened files blocks name-node for a long time. changeLease() to blame.,Impact in NameNode scalability because heartbeat processing acquires the global lock
+Impact in NameNode scalability because heartbeat processing acquires the global lock,recentInvalidateSets in FSNamesystem is not required 
+recentInvalidateSets in FSNamesystem is not required ,Move fs.checkpoint.* properties to hdfs-default.xml
+Move fs.checkpoint.* properties to hdfs-default.xml,DFSClient: All datanodes are bad
+DFSClient: All datanodes are bad,FSEditLog.open should stop going on if cannot open any directory
+FSEditLog.open should stop going on if cannot open any directory,Corrupted blocks get deleted but not replicated
+Corrupted blocks get deleted but not replicated,NameNode startup fails if edit log terminates prematurely
+NameNode startup fails if edit log terminates prematurely,Hung on hdfs: writeChunk; DFSClient.java:2126; DataStreamer socketWrite
+Hung on hdfs: writeChunk; DFSClient.java:2126; DataStreamer socketWrite,Datanode should verify block sizes vs metadata on startup
+"if hadoop.tmp.dir is under your dfs.data.dir; HDFS will silently wipe out your ""name"" directory",NameNode should not serve up a bad edits log
+NameNode should not serve up a bad edits log,"The ""Heap Size"" in HDFS web ui may not be accurate"
+"The ""Heap Size"" in HDFS web ui may not be accurate","UnknownHostException if the system can't determine its own name and you go DNS.getIPs(""name-of-an-unknown-interface"");"
+"UnknownHostException if the system can't determine its own name and you go DNS.getIPs(""name-of-an-unknown-interface"");",HDFS does not support blocks greater than 2GB
+DFS should detect slow links(nodes) and avoid them,creating a file in hdfs should not automatically create the parent directories
+creating a file in hdfs should not automatically create the parent directories,large dfs.block.size doesn't work
+dfs startup error; 0 datanodes in ,DFS write pipeline : DFSClient sometimes does not detect second datanode failure 
+high cpu usage in ReplicationMonitor thread ,handle return value of globStatus() to be uniform.
+handle return value of globStatus() to be uniform.,TestInjectionForSimulatedStorage fails once in a while
+TestInjectionForSimulatedStorage fails once in a while,Streaming task stuck in MapTask$DirectMapOutputCollector.close
+Streaming task stuck in MapTask$DirectMapOutputCollector.close,DataNode log message includes toString of an array
+DataNode log message includes toString of an array,Data-nodes should be formatted when the name-node is formatted.
+Data-nodes should be formatted when the name-node is formatted.,File write fails after data node goes down
+File write fails after data node goes down,Secondary name node won't start
+Secondary name node won't start,Failed to execute fsck with -move option
+Failed to execute fsck with -move option,UnderReplicationBlocks should use generic types
+UnderReplicationBlocks should use generic types,ClusterTestDFS fails
+ClusterTestDFS fails,"HDFS quotas should be settable on a ""over full"" directory"
+"HDFS quotas should be settable on a ""over full"" directory",Remove code related to OP_READ_METADATA from DataNode
+DFS missing block error message not propagated properly to the client,SecondaryNameNode:  should not throw exception and exit if only one makedir failure
+NPE if the system can't determine its own name and you go DNS.getDefaultHost(null),SecondaryNameNode:  should not throw exception and exit if only one makedir failure
+SecondaryNameNode:  should not throw exception and exit if only one makedir failure,Namenode clients should recover from connection or Namenode restarts
+Namenode clients should recover from connection or Namenode restarts,logSync() may block NameNode forever.
+logSync() may block NameNode forever.,All remaining UTF8 data structures in HDFS code should be removed
+NullPointerException in INode prevent Namenode from starting,Namenode should let Datanode decide how to delete blocks.
+Namenode should let Datanode decide how to delete blocks.,"dfs ""Rename failed"" doesn't give reason if source doesn't exist"
+"dfs ""Rename failed"" doesn't give reason if source doesn't exist",Consistency of different replicas of the same block is not checked.
+Namenode slowed down when many files with same filename were moved to Trash,Consistency of different replicas of the same block is not checked.
+Permission configuration files should use octal and symbolic,DFSClient block read failures cause open DFSInputStream to become unusable
+DFSClient block read failures cause open DFSInputStream to become unusable,downloading a file from dfs using the WI; using firefox; creates local files that start with a '-'
+downloading a file from dfs using the WI; using firefox; creates local files that start with a '-',NPE in FSNamesystem.checkDecommissionStateInternal
+NPE in FSNamesystem.checkDecommissionStateInternal,high rate of task failures because of bad or full datanodes
+high rate of task failures because of bad or full datanodes,null pointer exception while accessing secondaryname web interface (servlet dfshealth.jsp should not be served from the secondary Namenode)
+null pointer exception while accessing secondaryname web interface (servlet dfshealth.jsp should not be served from the secondary Namenode),Namenode in Safemode reports to Simon non-zero number of deleted files during startup
+Namenode in Safemode reports to Simon non-zero number of deleted files during startup,setPermssion locks FSNamesystem across logSync.
+premature end-of-decommission of datanodes,TestEditLog assumes that FSNamesystem.getFSNamesystem().dir is non-null; even after the FSNameSystem is closed
+TestEditLog assumes that FSNamesystem.getFSNamesystem().dir is non-null; even after the FSNameSystem is closed,Not able to run randomwriter/sort on hdfs if all the nodes of same rack are killed.
+Not able to run randomwriter/sort on hdfs if all the nodes of same rack are killed.,DataNode should clean up temporary files when writeBlock fails.
+DataNode should clean up temporary files when writeBlock fails.,data node process should not die if one dir goes bad
+Datanode block deletions can get starved.,When a file is deleted; its blocks remain in the blocksmap till the next block report from Datanode
+Extract SafeModeInfo from FSNamesystem into separate classes,In 0.20; move blocks being written into a blocksBeingWritten directory
+In 0.20; move blocks being written into a blocksBeingWritten directory,AlreadyBeingCreatedException because pendingCreates is non-null
+AlreadyBeingCreatedException because pendingCreates is non-null,Inadequate synchronization of namenode shutdown
+Inadequate synchronization of namenode shutdown,FSNameSystem#addStoredBlock does not handle inconsistent block length correctly
+FSNameSystem#addStoredBlock does not handle inconsistent block length correctly,Regression: TestInjectionForSimulatedStorage fails with IllegalMonitorStateException
+Regression: TestInjectionForSimulatedStorage fails with IllegalMonitorStateException,Stack trace on spaceQuota excced .
+timeout when writing dfs file causes infinite loop when closing the file,TestDFSUpgrade fails once in a while
+TestDFSUpgrade fails once in a while,Replication should be decoupled from heartbeat
+Not all of DfsClient's operations check the FS is open before calling the remote system,NameNode entered into an infinite loop of logging
+NameNode entered into an infinite loop of logging,hadoop secondary name node dfs metrics should show 0 values
+hadoop secondary name node dfs metrics should show 0 values,StatusHttpServer is failing if trying to use hadoop as a standalone jar
+StatusHttpServer is failing if trying to use hadoop as a standalone jar,namenode doesn't start if group id cannot be resolved to name
+dfs client -ls/-lsr outofmemory when one directory contained 2 million files.,HDFS soft lease limit should be configurable per-file
+HDFS soft lease limit should be configurable per-file,Block reports should be processed offline
+namenode fails to run on ppc,DataNode will create missing dfs.data.dir directories contrary to docs
+DataNode will create missing dfs.data.dir directories contrary to docs,DataNode fails to deliver blocks; holds thousands of open socket connections
+DataNode fails to deliver blocks; holds thousands of open socket connections,HDFS shell commands not as expected
+HDFS shell commands not as expected,Startup sanity data directory check in main loop.
+Startup sanity data directory check in main loop.,NPE in datanode.handshake()
+NPE in datanode.handshake(),NameNode#invalidateBlock's requirement on more than 1 valid replica exists before scheduling a replica to delete is too strict
+NameNode#invalidateBlock's requirement on more than 1 valid replica exists before scheduling a replica to delete is too strict,DFSClient continues to retry indefinitely
+DFSClient continues to retry indefinitely,Block report processing should compare gneration stamp
+Block report processing should compare gneration stamp,"dfshealth.jsp: sorting on ""remaining"" doesn't actually sort"
+"dfshealth.jsp: sorting on ""remaining"" doesn't actually sort",TestCrcCorruption sometimes fails
+TestCrcCorruption sometimes fails,Redundant error logging in FSNamesystem.
+Redundant error logging in FSNamesystem.,Quota exceed exception creates file of size 0
+Recursively deleting a directory with millions of files makes NameNode unresponsive for other commands until the deletion completes,GnuWin32 coreutils df output causes DF to throw
+GnuWin32 coreutils df output causes DF to throw,FSNamesystem.startFile throws an IOException when the number of chosen targets is less than the required minimum number
+FSNamesystem.startFile throws an IOException when the number of chosen targets is less than the required minimum number,"Error when 2 of 3 DataNodes are full: ""Could only be replicated to 0 nodes; instead of 1"""
+Progress-report RPC clients should wait for the RPC to complete before sending another progress report,"Error when 2 of 3 DataNodes are full: ""Could only be replicated to 0 nodes; instead of 1"""
+"Error when 2 of 3 DataNodes are full: ""Could only be replicated to 0 nodes; instead of 1""",Multiple concurrent instances of TestBalancer and TestBlockReplacements fails
+Multiple concurrent instances of TestBalancer and TestBlockReplacements fails,hadoop fs -test -d should return different codes for difference cases
+hadoop fs -test -d should return different codes for difference cases,namenode -format does not reset version
+namenode -format does not reset version,INode.getPathComponents throws NPE when given a non-absolute path
+MapReduce Streaming job hang when all replications of the input file has corrupted!,SecondaryNameNode doCheckpoint() renames current directory before asking NameNode to rollEditLog()
+SecondaryNameNode doCheckpoint() renames current directory before asking NameNode to rollEditLog(),Chown ; chgrp ; chmod operations allowed when namenode is in safemode .
+Chown ; chgrp ; chmod operations allowed when namenode is in safemode .,directory browser should paginate the list of files
+directory browser should paginate the list of files,TestStartup fails if hdfs is running in the same machine
+TestStartup fails if hdfs is running in the same machine,"DFS web UI does should have ""TAIL this block"" option"
+"DFS web UI does should have ""TAIL this block"" option",reportWrittenBlock() in DFSClient should retry
+reportWrittenBlock() in DFSClient should retry,DataNode should be marked as final to prevent subclassing
+DataNode should be marked as final to prevent subclassing,java.net.SocketTimeoutException: timed out waiting for rpc response 
+java.net.SocketTimeoutException: timed out waiting for rpc response ,TestBackupNode sometimes fails
+TestBackupNode sometimes fails,DataNode exceptions reading local disk
+DataNode exceptions reading local disk,hadoop fsck -<options> should not work when path is not specified by user  
+hadoop fsck -<options> should not work when path is not specified by user  ,Need to handle access token expiration when re-establishing the pipeline for dfs write
+Need to handle access token expiration when re-establishing the pipeline for dfs write,File length not reported correctly after application crash
+File length not reported correctly after application crash,du fails on Cygwin
+du fails on Cygwin,org.apache.hadoop.dfs.LeaseExpiredException during dfs write
+org.apache.hadoop.dfs.LeaseExpiredException during dfs write,add replication factor for hdfs directory
+add replication factor for hdfs directory,In HDFS; sync() not yet guarantees data available to the new readers
+In HDFS; sync() not yet guarantees data available to the new readers,Spring and OSGi support
+Add a bulk FIleSystem.getFileBlockLocations,Revive number of files listed metrics
+Add hadoop health check/diagnostics to run from command line; JSP pages; other tools,Revive number of files listed metrics
+Revive number of files listed metrics,HDFS Tmpreaper
+Support for head in FSShell,add querying block's info in the fsck facility
+add querying block's info in the fsck facility,name node should warn if only one dir is listed in dfs.name.dir
+name node should warn if only one dir is listed in dfs.name.dir,Provide tool to view/change edits file
+Support for options within the Datanode Transfer protocol,Need a tool to analyse and verify file block movements
+Need a tool to analyse and verify file block movements,Option for migrating logs to HDFS 
+Option for migrating logs to HDFS ,Random Write Access On Files
+Offline Namenode fsImage verification,Show last Trash expunge time in dfsadmin -report
+Show last Trash expunge time in dfsadmin -report,Need an FTP Server implementation over HDFS
+Need an FTP Server implementation over HDFS,name node should provide status of dfs.name.dir's
+name node should provide status of dfs.name.dir's,Add md5sum facility in dfsshell
+Transparent archival and restore of files from HDFS,Trigger block scans for datanode
+Support for concatenating of files into a single file,Asynchronous IO Handling in Hadoop and HDFS
+Asynchronous IO Handling in Hadoop and HDFS,I propose a tool for creating and manipulating a new abstraction; Hadoop Archives.
+I propose a tool for creating and manipulating a new abstraction; Hadoop Archives.,Expose HDFS as a WebDAV store
+Post users:  need admin-only access to HDFS,should have utime method in HDFS & FIleSystem to set modification times.
+should have utime method in HDFS & FIleSystem to set modification times.,Show last checkpoint time on the webUI
+Separate interface and implementation,Rsync like way of retrieving data from the dfs
+Rsync like way of retrieving data from the dfs,Cross-system causal tracing within Hadoop
+Cross-system causal tracing within Hadoop,Support for snapshots
+Integration with BookKeeper logging system,Add support for byte-ranges to hftp
+Add support for byte-ranges to hftp,Better handling of dfsadmin command when namenode is slow
+Random read benchmark for DFS,Better handling of dfsadmin command when namenode is slow
+Better handling of dfsadmin command when namenode is slow,imeplement DFSClient on top of thriftfs - this may require DFSClient or DN protocol changes
+imeplement DFSClient on top of thriftfs - this may require DFSClient or DN protocol changes,Brief; baseline namenode health check
+Brief; baseline namenode health check,Should HDFS restrict the names used for files?
+Should HDFS restrict the names used for files?,ch{mod;own;grp} -R to do recursion at the name node
+ch{mod;own;grp} -R to do recursion at the name node,Improve debugabillity
+Improve debugabillity,Namenode cluster(multi namenode working in active-active mode) to keep high availability and expansivity
+DFS should provide partition information for blocks; and map/reduce should schedule avoid schedule mappers with the splits off the same file system partition at the same time,Create symbolic links in HDFS
+Create symbolic links in HDFS,Add a method to get file length for Seekable; FSDataInputStream and libhdfs
+Add a method to get file length for Seekable; FSDataInputStream and libhdfs,A tool to plot the locations of the blocks of a directory
+A tool to plot the locations of the blocks of a directory,dynamically add/subtract dfs.name.dir directories
+dynamically add/subtract dfs.name.dir directories,RPC support for large data transfers.
+RPC support for large data transfers.,Save (sync) journal (fsimage) to alternate/secondary/read-only name node
+Save (sync) journal (fsimage) to alternate/secondary/read-only name node,Automatically increase replication of often used files/blocks
+Add more unit test for HDFS symlinks,Create a user-guide for describing HDFS symlinks
+Create a user-guide for describing HDFS symlinks,Split HDFS into sub project
+Split HDFS into sub project,Does a big delete starve other clients?
+Does a big delete starve other clients?,Confirm that all block history events are available in logs
+Confirm that all block history events are available in logs,Remove intentionally corrupt 0.13 directory layout creation
+Remove intentionally corrupt 0.13 directory layout creation,Add close of idle connection to DFSClient and to DataNode DataXceiveServer
+Add close of idle connection to DFSClient and to DataNode DataXceiveServer,Side classes should be moved to separate files
+Side classes should be moved to separate files,On a busy cluster; it is possible for the client to believe it cannot fetch a block when the client or datanodes are running slowly
+On a busy cluster; it is possible for the client to believe it cannot fetch a block when the client or datanodes are running slowly,fsck -files -blocks -locations is a little slow
+fsck -files -blocks -locations is a little slow,Better Datanode DiskOutOfSpaceException handling.
+Revisit append,JspHelper should be a singleton
+JspHelper should be a singleton,Distinguishing file missing/corruption for low replication files
+Fix HTML validation warnings in web UI,Distinguishing file missing/corruption for low replication files
+Distinguishing file missing/corruption for low replication files,Implement seek for HftpFileSystem
+Implement seek for HftpFileSystem,DFS Upgrade should process dfs.data.dirs in parallel
+DFS Upgrade should process dfs.data.dirs in parallel,Metrics on Secondary namenode's activity
+Metrics on Secondary namenode's activity,Update startup scripts to start Checkpoint node instead of SecondaryNameNode
+Update startup scripts to start Checkpoint node instead of SecondaryNameNode,Improve Block report processing and name node restarts (Master Jira)
+Improve Block report processing and name node restarts (Master Jira),Add the current time to all the pages in the user interface
+Add the current time to all the pages in the user interface,FSNamesystem should have an InvalidateBlockMap class to manage blocks scheduled to remove
+FSNamesystem should have an InvalidateBlockMap class to manage blocks scheduled to remove,Checksums for Namenode image files
+DFSClient  writes : DataStreamer thread can be removed,Should DFS outputstream's close wait forever?
+Should DFS outputstream's close wait forever?,Generation stamp value should be validated when creating a Block
+Generation stamp value should be validated when creating a Block,Secondary Namenode: Limit number of retries when fsimage/edits transfer fails
+Secondary Namenode: Limit number of retries when fsimage/edits transfer fails,Explore usage of the sendfile api via java.nio.channels.FileChannel.transfer{To|From} for i/o in datanodes
+Serialize ipcPort in DatanodeID instead of DatanodeRegistration and DatanodeInfo,Improve datanode decommission monitoring performance
+Improve datanode decommission monitoring performance,dfs.data.dir syntax needs revamping: multiple percentages and weights
+dfs.data.dir syntax needs revamping: multiple percentages and weights,limit concurrent connections(data serving thread) in one datanode
+limit concurrent connections(data serving thread) in one datanode,Move Datanode packet IO logging to its own log
+Move Datanode packet IO logging to its own log,should Storage.unlockAll() work through the list of storageDirs before bailing out?
+should Storage.unlockAll() work through the list of storageDirs before bailing out?,Redundant computation in hashCode() implemenation
+Redundant computation in hashCode() implemenation,HDFS should blacklist datanodes that are not performing well
+Additional performance improvement to chooseTarget,combine FsShell.copyToLocal to ChecksumFileSystem.copyToLocalFile
+combine FsShell.copyToLocal to ChecksumFileSystem.copyToLocalFile,TestDFSIO Should print stats for each file
+TestDFSIO Should print stats for each file,Remove code related to conversion of name-node and data-node storage directories to the format introduced in hadoop 0.13
+Remove code related to conversion of name-node and data-node storage directories to the format introduced in hadoop 0.13,Random writes in HDFS
+"Update the ""how to configure HDFS"" documentation to include new features",Serial streaming performance should be Math.min(ideal client performance; ideal serial hdfs performance)
+Serial streaming performance should be Math.min(ideal client performance; ideal serial hdfs performance),BlockSender and BlockReceiver should be refactored into separate classes
+Implement a pure Java CRC32 calculator,BlockSender and BlockReceiver should be refactored into separate classes
+BlockSender and BlockReceiver should be refactored into separate classes,myMetrix in NameNode class should not be static.
+myMetrix in NameNode class should not be static.,NameNode to blat total number of files and blocks
+NameNode to blat total number of files and blocks,Provide better error messages when fs.default.name is invalid
+Provide better error messages when fs.default.name is invalid,DFS client warnings / info's should be centrally logged by name node
+DFS client warnings / info's should be centrally logged by name node,Make contracts of LocalFileSystem and DistributedFileSystem consistent
+Make contracts of LocalFileSystem and DistributedFileSystem consistent,Slow namenode webUI (Taking 1 minute to load on 2000 nodes cluster.)
+Slow namenode webUI (Taking 1 minute to load on 2000 nodes cluster.),Namenode couldn't execute when the user name contains a space
+Namenode couldn't execute when the user name contains a space,FSNamesystem.shutdown() should be a part of FSNamesystem.close() 
+FSNamesystem.shutdown() should be a part of FSNamesystem.close() ,Namenode GUI does not show actual memory usage
+Namenode GUI does not show actual memory usage,Improve TransferFsImage
+Improve TransferFsImage,FSEditLog should log progress during replay
+Validate configuration parameters,Modifications to enable multiple types of logging 
+Threads in servers should not die silently.,Comment in dfs.hosts.exclude
+Allow simplified versioning for namenode and datanode metadata.,Balancer should run for a configurable # of iterations
+Balancer should run for a configurable # of iterations,Limiting memory usage on namenode
+Limiting memory usage on namenode,Building Hadoop results in a lot of warnings
+Building Hadoop results in a lot of warnings,Add option to fsck that checks the crc
+Add option to fsck that checks the crc,Namenode should return lease recovery request with other requests
+Namenode should return lease recovery request with other requests,All FileSystem implementations should return Paths fully-qualified with scheme and host
+All FileSystem implementations should return Paths fully-qualified with scheme and host,While digesting edits NameNode should report its progress
+Publish catalog of supported HDFS interfaces,Generate a network infrastructre map
+DFS should not use round robin policy in determing on which volume (file system partition)  to allocate for the next block,Add a lifecycle interface for Hadoop components: namenodes; job clients; etc.
+Add a lifecycle interface for Hadoop components: namenodes; job clients; etc.,DataNode should warn about unknown files in storage
+DataNode should warn about unknown files in storage,Improve fs -setrep error message for invalid replication factors
+Improve fs -setrep error message for invalid replication factors,separate space reservation for hdfs blocks and intermediate storage
+separate space reservation for hdfs blocks and intermediate storage,Datanode Web UIs should provide robots.txt
+Datanode Web UIs should provide robots.txt,hadoop fsck should ignore lost+found
+hadoop fsck should ignore lost+found,hadoop fs -put should return different code for different failures
+hadoop fs -put should return different code for different failures,A State Machine for name-node blocks.
+A State Machine for name-node blocks.,dfsadmin -metasave should also log corrupt replicas info
+improve singleton handling in DataNode,dfsadmin -report should report number of blocks from datanode
+dfsadmin -report should report number of blocks from datanode,Name collision for AccessControlException.
+Name collision for AccessControlException.,When a block is severely under replicated at creation time; a request for block replication should be scheduled immediately
+When a block is severely under replicated at creation time; a request for block replication should be scheduled immediately, Periodically move blocks from full nodes to those with space
+ Periodically move blocks from full nodes to those with space,Allow MAX_XCEIVER_COUNT to be configured
+Allow MAX_XCEIVER_COUNT to be configured,Better error message for DATA_TRANSFER_VERSION mismatched
+Better Target selection for block replication,JavaDoc warnings in HDFS
+JavaDoc warnings in HDFS,DataNode to send block reports to multiple namenodes?
+DataNode to send block reports to multiple namenodes?,"Version file in name-node image directory should include ""role"" field."
+"Version file in name-node image directory should include ""role"" field.",DFS read performance suboptimal when client co-located on nodes with data
+DFS read performance suboptimal when client co-located on nodes with data,When a HDFS client fails to read a block (due to server failure) the namenode should log this
+When a HDFS client fails to read a block (due to server failure) the namenode should log this,SecondaryNameNode could include the hostname/port in socket connect failures for better diagnostics
+SecondaryNameNode could include the hostname/port in socket connect failures for better diagnostics,DFSClient more robust if the namenode is busy doing GC
+DFSClient more robust if the namenode is busy doing GC,Could FSEditLog report problems more elegantly than with System.exit(-1)
+Could FSEditLog report problems more elegantly than with System.exit(-1),saveNamespace command should be documented.
+saveNamespace command should be documented.,DFSClient does not always throw a FileNotFound exception when a file could not be opened
+DFSClient does not always throw a FileNotFound exception when a file could not be opened,Data node process consumes 180% cpu 
+Data node process consumes 180% cpu ,Ability to throttle DFS/MR so as not to overwhelm colo to colo switches
+Ability to throttle DFS/MR so as not to overwhelm colo to colo switches,Short -metasave option 
+Short -metasave option ,CheckpointSignature should contain number of files.
+CheckpointSignature should contain number of files.,DataBlockScanner (via periodic verification) could be improved to check for corrupt block length
+DataBlockScanner (via periodic verification) could be improved to check for corrupt block length,Redundant field: DatanodeDescriptor.isAlive
+Redundant field: DatanodeDescriptor.isAlive,Replace Vector types by ArrayList in FSDirectory
+Replace Vector types by ArrayList in FSDirectory,Convert FSImage.removedStorageDirs into a map.
+Convert FSImage.removedStorageDirs into a map.,FSEditLog should not writes long and short as UTF8 and should not use ArrayWritable for writing non-array items
+FSEditLog should not writes long and short as UTF8 and should not use ArrayWritable for writing non-array items,list of dead nodes with time information
+IPC server should not hold a client's response queue lock while writing response back to a client,Support manually fsck in DataNode
+Make HDFS daemons independent of fs.default.name,Add standard interface/methods for all services to query IPC and HTTP addresses and ports
+Add standard interface/methods for all services to query IPC and HTTP addresses and ports,Use custom MAX_SIZE_TO_MOVE value  Balancer
+Use custom MAX_SIZE_TO_MOVE value  Balancer,Bad block reports should include the cause
+Bad block reports should include the cause,DataNode should reuse delBlockFromDisk
+Distcp setup is slow,DataNode should reuse delBlockFromDisk
+DataNode should reuse delBlockFromDisk,Name node should notify administrator if when struggling with replication
+Name node should notify administrator if when struggling with replication,HDFS needs to support a very large number of open files.
+HDFS needs to support a very large number of open files.,DFSClient cpu overhead is too high
+DFSClient cpu overhead is too high,FileSystem.listStatus should report the current length of a file if it has been sync'd
+FileSystem.listStatus should report the current length of a file if it has been sync'd,Code Refactoring: separate codes which implement DataTransferProtocol
+Code Refactoring: separate codes which implement DataTransferProtocol,DFSClient should track failures by datanode across all streams
+DFSClient should track failures by datanode across all streams,Cleanup and Document HDFS Client Intefaces and Protocol
+Cleanup and Document HDFS Client Intefaces and Protocol,support for persistent connections to improve random read performance.
+Datanode should report deletion of blocks to Namenode explicitly,When selecting node to put new block on; give priority to those with more free space/less blocks
+When selecting node to put new block on; give priority to those with more free space/less blocks,Modify datanode configs to specify minimum JVM heapsize
+Modify datanode configs to specify minimum JVM heapsize,optionally ignore a bad entry in namenode state when starting up
+optionally ignore a bad entry in namenode state when starting up,Design a pluggable interface to place replicas of blocks in HDFS
+Design a pluggable interface to place replicas of blocks in HDFS,NameNode webUI should show the config it is running with.
+Corrupted blocks leading to job failures,dfs.exclude file should allow unqualified host names
+dfs.exclude file should allow unqualified host names,reduce periodic block report time from datanodes
+reduce periodic block report time from datanodes,Hadoop daemons should support generic command-line options by implementing the Tool interface
+Hadoop daemons should support generic command-line options by implementing the Tool interface,Block Report Optimization: Replace class instance
+Block Report Optimization: Replace class instance,Add a Random backoff for the initial block report sent to the Name node
+Add a Random backoff for the initial block report sent to the Name node,Block Report Optimization: Queue block reports
+Block Report Optimization: Queue block reports,NameNode shoud give the DataNodes a parameter that specifies the backoff time for initial block reports
+NameNode shoud give the DataNodes a parameter that specifies the backoff time for initial block reports,DFS Scalability: Incremental block reports
+DFS Scalability: Incremental block reports,Process dfs.name.edits.dirs as URI 
+Process dfs.name.edits.dirs as URI ,Incorporate storage directories into EditLogFileInput/Output streams
+Incorporate storage directories into EditLogFileInput/Output streams,Cleanup HDFS FSConstants
+Cleanup HDFS FSConstants,Remove DFSFileInfo - FileStatus is sufficient
+Remove DFSFileInfo - FileStatus is sufficient,Make the Data transfer streaming protocol concrete
+Make the Data transfer streaming protocol concrete,Declare HDFS exceptions in the HDFS interface and also in class FileSystem and rethrow the encapsulated exception
+Declare HDFS exceptions in the HDFS interface and also in class FileSystem and rethrow the encapsulated exception,Display the server version in dfsadmin -report
+Display the server version in dfsadmin -report,Horizontally partitioning
+Horizontally partitioning,Why open method in class DFSClient would compare old LocatedBlocks and new LocatedBlocks?
+Why open method in class DFSClient would compare old LocatedBlocks and new LocatedBlocks?,Several unit tests failing on Windows frequently
+Several unit tests failing on Windows frequently,Automate test for Hadoop-4597
+Automate test for Hadoop-4597,data node startup problem
+data node startup problem,Synthetic Load Generator for NameNode testing -- Next Generation
+Synthetic Load Generator for NameNode testing -- Next Generation,Add more access token tests
+Add more access token tests,fsck: Check for files-under-contruction without leases
+fsck: Check for files-under-contruction without leases,parameter dfs.replication is not reflected when put file into hadoop with fuse-dfs
+Hadoop JMX usage makes Nagios monitoring impossible,fuse-dfs fix writeTest and add writeAppendtest
+fuse-dfs fix writeTest and add writeAppendtest,add fuse-dfs to src/contrib/build.xml test target
+add fuse-dfs to src/contrib/build.xml test target,Unchecked exception thrown inside of BlockReceiver cause some threads hang
+Unchecked exception thrown inside of BlockReceiver cause some threads hang,thriftfs creates jar file named $\{version\}-thriftfs.jar
+thriftfs creates jar file named $\{version\}-thriftfs.jar,Improvements to Hadoop Thrift bindings
+Improvements to Hadoop Thrift bindings,Move new per-daemon Thrift contrib into a new contrib project/package layout
+Move new per-daemon Thrift contrib into a new contrib project/package layout,Add Thrift interface to JobTracker/TaskTracker
+Add Thrift interface to JobTracker/TaskTracker,Fuse-dfs should cache fs handles
+fuse-dfs - df -kh on hdfs mount shows much less %used than the dfs UI,fuse-dfs leaks FileSystem handles as it never disconnects them because the FileSystem.Cache does not do reference counting
+Unbreak FUSE build and fuse_dfs_wrapper.sh,FUSE module chokes on directories with lots (10;000+ or so) files
+FUSE module chokes on directories with lots (10;000+ or so) files,fuse has major performance drop on slower machines
+fuse has major performance drop on slower machines,fuse-dfs documentation
+fuse-dfs documentation,fuse-dfs should support symlinks
+fuse-dfs should support symlinks,fuse-dfs implement posix access method
+fuse-dfs implement posix access method,fuse-dfs implement posix truncate functionality
+fuse-dfs implement posix truncate functionality,create posix-like (as far as we can) layer for Linux on top of libhdfs
+create posix-like (as far as we can) layer for Linux on top of libhdfs,port fuse-dfs existing autoconf to hadoop project's autoconf infrastructure
+port fuse-dfs existing autoconf to hadoop project's autoconf infrastructure,fuse-dfs: call fsshell trash instead of c re-implementation
+fuse-dfs: call fsshell trash instead of c re-implementation,Move fuse_dfs_wrapper.sh and fuse_dfs into the hadoop/contrib/fuse_dfs deploy directory and use hadoop-env.sh to get env info
+Move fuse_dfs_wrapper.sh and fuse_dfs into the hadoop/contrib/fuse_dfs deploy directory and use hadoop-env.sh to get env info,add fuse-dfs test for non sequential writes to ensure an error is returned
+add fuse-dfs test for non sequential writes to ensure an error is returned,Add orthogonal fault injection mechanism/framework
+Add orthogonal fault injection mechanism/framework,AspectJ framework for HDFS code and tests
+AspectJ framework for HDFS code and tests,Improve help message for quotas
+Improve help message for quotas,HADOOP-5961 is incorrectly committed.
+HADOOP-5961 is incorrectly committed.,javadoc warnings: broken links
+TestFTPFileSystem fails,dfsthroughput in test.jar throws NPE
+dfsthroughput in test.jar throws NPE,New metrics in namenode to capture lost heartbeats.
+New metrics in namenode to capture lost heartbeats.,Current fault injection framework implementation doesn't allow to change probability levels dynamically
+Current fault injection framework implementation doesn't allow to change probability levels dynamically,pread() fails when cached block locations are no longer valid
+pread() fails when cached block locations are no longer valid,Offline Image Viewer Ls visitor incorrectly says 'output file' instead of 'input file'
+Offline Image Viewer Ls visitor incorrectly says 'output file' instead of 'input file',proxy to call LDAP for IP lookup and get user ID and directories; validate requested URL
+proxy to call LDAP for IP lookup and get user ID and directories; validate requested URL,An IOException thrown in the BlockReceiver file causes some tests to hang
+An IOException thrown in the BlockReceiver file causes some tests to hang,javadoc warnings 
+eclipse-files target does not create HDFS_Ant_Builder,Test DataTransferProtocol with fault injection
+Test DataTransferProtocol with fault injection,Fs -count throws Access Control Exception when restricted acess directories are present in the user's directory  . 
+Fs -count throws Access Control Exception when restricted acess directories are present in the user's directory  . ,XML-based metrics as JSP servlet for NameNode
+XML-based metrics as JSP servlet for NameNode,HDFS workflow in JIRA does not match MAPREDUCE; HADOOP
+HDFS workflow in JIRA does not match MAPREDUCE; HADOOP,Make NN and DN handle in a intuitive way comma-separated configuration strings
+Make NN and DN handle in a intuitive way comma-separated configuration strings,Problems with dfs.name.edits.dirs as URI
+Problems with dfs.name.edits.dirs as URI,better handling of volume failure in Data Node storage
+better handling of volume failure in Data Node storage,Create target for 10 minute patch test build for hdfs
+Create target for 10 minute patch test build for hdfs,Job History Log Analyzer
+Job History Log Analyzer,Expose NN and DN hooks to service plugins
+Expose NN and DN hooks to service plugins,Analyzing file size distribution.
+Analyzing file size distribution.,Unit tests not working under Windows
+Unit tests not working under Windows,CreateEditsLog utility broken due to FSImage URL scheme check
+CreateEditsLog utility broken due to FSImage URL scheme check,Memory leaks in libhdfs
+Memory leaks in libhdfs,in branch-1; libhdfs makes jni lib calls after setting errno in some places
+in branch-1; libhdfs makes jni lib calls after setting errno in some places,hdfs_write infinite loop when dfs fails and cannot write files > 2 GB
+hdfs_write infinite loop when dfs fails and cannot write files > 2 GB,Fix a compiling error for libhdfs on Mac OSX
+libhdfs should expose symlink dfs API,libhdfs should expose the acess permissions for the connected user from hdfs
+libhdfs should expose the acess permissions for the connected user from hdfs,libhdfs should handle 0-length reads from FSInputStream correctly
+libhdfs should handle 0-length reads from FSInputStream correctly,hdfsproxy tests fails test patch builds. 
+hdfsproxy tests fails test patch builds. ,Document hdfsproxy design and set-up guide
+Document hdfsproxy design and set-up guide,TestHdfsProxy fails in Linux
+Add simple HTTP GET support for single cluster case and for both Jetty and Tomcat based proxy ,Create a separate targets for fault injection related test and jar files creation files
+Create a separate targets for fault injection related test and jar files creation files,Create a fi test target.
+New Hadoop HDFS Site,Typo in jar name in build.xml
+Incomplete help message is displayed for rm and rmr options.,Typo in jar name in build.xml
+No error message for deleting non-existant file or directory.,Typo in jar name in build.xml
+Typo in jar name in build.xml,Bug Fixes + HdfsProxy to use proxy user to impresonate the real user
+change HsftpFileSystem's ssl.client.do.not.authenticate.server configuration setting to ssl-client.xml  ,Data transfer (aka pipeline) implementation cannot tolerate exceptions
+Data transfer (aka pipeline) implementation cannot tolerate exceptions,bin-package and package doesnt seem to package any jar file
+bin-package and package doesnt seem to package any jar file,error : too many fetch failures
+error : too many fetch failures,error : too many fetch failures
+error : too many fetch failures,HDFS should expose a fileid to uniquely identify a file
+Implement moveToLocal  HDFS command,Updated TestHDFSCLI for changes from HADOOP-6139
+Updated TestHDFSCLI for changes from HADOOP-6139,eliminate the usage of FileSystem.create( ) depracated by Hadoop-5438 
+Broken link in Safemode documentation,Expose corrupt replica/block information
+Expose corrupt replica/block information,Only fault-injected tests have to be executed by run-test-*-faul-inject targets; none of fault-injected tests need to be ran normal testing process
+Only fault-injected tests have to be executed by run-test-*-faul-inject targets; none of fault-injected tests need to be ran normal testing process,TestHDFSCLI tests FsShell; which is in common; causing a cross-project dependency
+TestHDFSCLI tests FsShell; which is in common; causing a cross-project dependency,Hadoop FSNamesystem startFileInternal() getLease() has bug
+Use PureJavaCrc32 in HDFS,One of the DFSClient::create functions ignores parameter
+One of the DFSClient::create functions ignores parameter,Add development guide and framework documentation
+Add development guide and framework documentation,Fix deprecation warnings introduced by HADOOP-5438
+Fix lingering and new javac warnings,Use enum to define the constants in DataTransferProtocol
+Use enum to define the constants in DataTransferProtocol,hudson ignored a test failure while generating the junit test report.
+hudson ignored a test failure while generating the junit test report.,Implement erasure coding as a layer on HDFS
+Implement erasure coding as a layer on HDFS,HDFS updates the modification time of a file when the file is closed.
+HDFS updates the modification time of a file when the file is closed.,Convert the file including 10 minutes run's tests into the test harness test suite
+Convert the file including 10 minutes run's tests into the test harness test suite,Upgrade build to use findbugs-1.3.8
+"Incorrect UserName at Solaris because it has no ""whoami"" command by default",Upgrade build to use findbugs-1.3.8
+Upgrade build to use findbugs-1.3.8,Factor out BlockInfo from BlocksMap
+Factor out BlockInfo from BlocksMap,Redesign DataNode volumeMap to include all types of Replicas
+Redesign DataNode volumeMap to include all types of Replicas,Rename DatanodeBlockInfo to be ReplicaInfo
+Rename DatanodeBlockInfo to be ReplicaInfo,Redundant block searches in BlockManager.
+Redundant block searches in BlockManager.,Set block id as the key to Block
+Set block id as the key to Block,NameNode.getBlockLocations throws NPE when offset > filesize and file is not empty
+NameNode.getBlockLocations throws NPE when offset > filesize and file is not empty,DFSClient.namenode is a public field. Should be private.
+DFSClient.namenode is a public field. Should be private.,test-patch doesn't work on git checkouts
+test-patch doesn't work on git checkouts,Low Latency distributed reads
+Low Latency distributed reads,Introduce BlockInfoUnderConstruction to reflect block replica states while writing.
+Introduce BlockInfoUnderConstruction to reflect block replica states while writing.,Create new tests for Append's hflush
+Create new tests for Append's hflush,Create new tests for lease recovery
+Create new tests for lease recovery,Create new tests for block recovery
+Create new tests for block recovery,Create new tests for pipeline
+Create new tests for pipeline,Create stress tests for append feature
+Create performance/scalability tests for append feature,Further DataTransferProtocol code refactoring.
+Further DataTransferProtocol code refactoring.,ListPathsServlet.java uses static SimpleDateFormat that has threading issues
+ListPathsServlet.java uses static SimpleDateFormat that has threading issues,TestBackupNode is currently flaky and shouldn't be in commit test
+TestBackupNode is currently flaky and shouldn't be in commit test,Refactor DFSClient constructors
+Refactor DFSClient constructors,Add ability for safemode to wait for a minimum number of live datanodes
+Add ability for safemode to wait for a minimum number of live datanodes,More redundant block searches in BlockManager.
+More redundant block searches in BlockManager.,Refactor TestFileAppend* to remove code duplications
+Refactor TestFileAppend* to remove code duplications,Renaming of configuration keys
+Renaming of configuration keys,Allow applications to know that a read request failed because block is missing
+Allow applications to know that a read request failed because block is missing,Fix Eclipse template
+Fix Eclipse template,Required avro classes are missing
+Required avro classes are missing,TestFileCreation occasionally fails because of an exception in DataStreamer.
+TestFileCreation occasionally fails because of an exception in DataStreamer.,Support hflush at DFSClient
+Support hflush at DFSClient,DataNode uses ReplicaBeingWritten to support dfs writes/hflush
+DataNode uses ReplicaBeingWritten to support dfs writes/hflush,DistributedFileSystem::listStatus incorrectly returns null for empty result sets
+DistributedFileSystem::listStatus incorrectly returns null for empty result sets,Fault injeciton utlis for pipeline testing needs to be refactored for future reuse by other tests
+Fault injeciton utlis for pipeline testing needs to be refactored for future reuse by other tests,TestNameNodeMetrics fails intermittently
+TestNameNodeMetrics fails intermittently,What will we encounter if we add a lot of nodes into the current cluster?
+What will we encounter if we add a lot of nodes into the current cluster?,Support fault injection tests in Hudson
+Support fault injection tests in Hudson,Break FSDatasetInterface#writeToBlock() into writeToTemporary; writeToRBW; and append
+Break FSDatasetInterface#writeToBlock() into writeToTemporary; writeToRBW; and append,"Add a ""rbw"" sub directory to DataNode data directory"
+"Add a ""rbw"" sub directory to DataNode data directory",Add service lifecycle to the HDFS classes: NameNode; Datanode; etc
+Add service lifecycle to the HDFS classes: NameNode; Datanode; etc,DatanodeDescriptor block iterator should be BlockInfo based rather than Block.
+DatanodeDescriptor block iterator should be BlockInfo based rather than Block.,TestHDFSFileSystemContract#testOutputStreamClosedTwice sometimes fails with ClosedByInterruptException
+TestHDFSFileSystemContract#testOutputStreamClosedTwice sometimes fails with ClosedByInterruptException,TestFsck takes nearly 10 minutes to run - a quarter of the entire hdfs-test time
+TestFsck takes nearly 10 minutes to run - a quarter of the entire hdfs-test time,Allow non fault-inject specific tests execution with an explicit -Dtestcase=... setting
+Allow non fault-inject specific tests execution with an explicit -Dtestcase=... setting,DataNode restarts may introduce corrupt/duplicated/lost replicas when handling detached replicas
+DataNode restarts may introduce corrupt/duplicated/lost replicas when handling detached replicas,Create new functional test for a block report.
+Create new functional test for a block report.,Change TestFiDataTransferProtocol to junit 4 and add a few new tests
+Change TestFiDataTransferProtocol to junit 4 and add a few new tests,BlockSender reports wrong failed position in ChecksumException
+BlockSender reports wrong failed position in ChecksumException,BlockInfo.ensureCapacity may get a speedup from System.arraycopy()
+BlockInfo.ensureCapacity may get a speedup from System.arraycopy(),A few improvements to DataNodeCluster - HADOOP-5556 
+A few improvements to DataNodeCluster - HADOOP-5556 ,Provide info on failed volumes in the web ui
+Provide info on failed volumes in the web ui,documentation for dfsadmin; datanode; etc is using bin/hadoop instead of bin/hdfs
+Work out the memory consumption of NN artifacts on a compressed pointer JVM,Proposed enhancements/tuning to hadoop-hdfs/build.xml
+Proposed enhancements/tuning to hadoop-hdfs/build.xml,Fix write pipeline READ_TIMEOUT
+Fix write pipeline READ_TIMEOUT,Add a test for NameNode.getBlockLocations(..) to check read from un-closed file.
+Add a test for NameNode.getBlockLocations(..) to check read from un-closed file.,Simplify the codes in FSNamesystem.getBlockLocations(..)
+Simplify the codes in FSNamesystem.getBlockLocations(..),Adding pipeline test 17-35
+Adding pipeline test 17-35,Introduce block committing logic during new block allocation and file close.
+Introduce block committing logic during new block allocation and file close.,INode.permissions should be marked as volatile to avoid synchronization problems
+INode.permissions should be marked as volatile to avoid synchronization problems,Two contrib tools to facilitate searching for block history information 
+Two contrib tools to facilitate searching for block history information ,TestServiceLevelAuthorization fails on latest build in Hudson
+TestServiceLevelAuthorization fails on latest build in Hudson,When opening a file for read; make the file length avaliable to client.
+chmod fails on Windows+cygwin,When opening a file for read; make the file length avaliable to client.
+When opening a file for read; make the file length avaliable to client.,Hdfs source code has significant number of JavaDocs errors and warnings
+Hdfs source code has significant number of JavaDocs errors and warnings,Porting libhdfs to Windows
+Hadoop Doc Split: HDFS Docs,DFSClient read performance can be improved by stagerring connection setup to datanode(s)
+DFSClient read performance can be improved by stagerring connection setup to datanode(s),Extend Block report to include under-construction replicas
+Extend Block report to include under-construction replicas,Name node doesn't always properly recognize health of data node
+Name node doesn't always properly recognize health of data node,Support for using server default values for blockSize and replication when creating a file
+Support for using server default values for blockSize and replication when creating a file,HADOOP-3792 update of DfsTask incomplete
+HADOOP-3792 update of DfsTask incomplete,Name node will exit safe mode w/0 blocks even if data nodes are broken
+Name node will exit safe mode w/0 blocks even if data nodes are broken,Introduce an iterator over blocks in the block report array.
+Introduce an iterator over blocks in the block report array.,Create a fsckraid tool to verify the consistency of erasure codes for HDFS-503
+Create a fsckraid tool to verify the consistency of erasure codes for HDFS-503,HDFS should enforce a max block size
+HDFS should enforce a max block size,Fail the fault-inject build if any advices are mis-bound
+Fail the fault-inject build if any advices are mis-bound,Datanode should serve up to visible length of a replica for read requests
+Datanode should serve up to visible length of a replica for read requests,TestBlocksWithNotEnoughRacks fails
+TestBlocksWithNotEnoughRacks fails,Test programs support only default queue.
+Test programs support only default queue.,Fix TestFiDataTransferProtocol and TestAppend2 failures in append branch.
+Fix TestFiDataTransferProtocol and TestAppend2 failures in append branch.,Change block write protocol to support pipeline recovery
+Change block write protocol to support pipeline recovery,When trying to rename a non-existent path; LocalFileSystem throws an FileNotFoundException; while HDFS returns false
+Allow client to get a new generation stamp from NameNode,Support for getting user home dir from server side
+Add support for byte-ranges to hsftp,FsPermission tests need to be updated for new octal configuration parameter from HADOOP-6234
+FsPermission tests need to be updated for new octal configuration parameter from HADOOP-6234,Memory leak in libhdfs: hdfsFreeFileInfo() in libhdfs does not free memory for mOwner and mGroup
+Memory leak in libhdfs: hdfsFreeFileInfo() in libhdfs does not free memory for mOwner and mGroup,Mofication introduced by HDFS-537 breakes an advice binding in FSDatasetAspects
+Mofication introduced by HDFS-537 breakes an advice binding in FSDatasetAspects,Eclipse launch task for HDFS
+Eclipse launch task for HDFS,Improve Namenode robustness by prioritizing datanode heartbeats over client requests
+Improve Namenode robustness by prioritizing datanode heartbeats over client requests,Support for pluggable erasure coding policy for HDFS
+Support for pluggable erasure coding policy for HDFS,TestBlockReport should obtain data directories from MiniHDFSCluster
+TestBlockReport should obtain data directories from MiniHDFSCluster,Atempt to make a directory under an existing file on DistributedFileSystem should throw an FileAlreadyExistsException instead of FileNotFoundException
+Atempt to make a directory under an existing file on DistributedFileSystem should throw an FileAlreadyExistsException instead of FileNotFoundException,Most replica related classes cannot be accessed
+Most replica related classes cannot be accessed,Block report processing for append
+Block report processing for append,There's not need to run fault-inject tests by 'run-test-hdfs-with-mr' target
+There's not need to run fault-inject tests by 'run-test-hdfs-with-mr' target,ConcurrentModificationException in invalidateCorruptReplicas()
+ConcurrentModificationException in invalidateCorruptReplicas(),HDFS should support SNMP
+HDFS should support SNMP,BlockReceiver:receivePacket(): packet's header parsing logic is complicated. Refactoring will help w/ testing efforts
+Create a file with the append flag does not work in HDFS,Add support for FileContext
+Add support for FileContext,Heartbeats times from Datanodes increase when there are plenty of blocks to delete
+Heartbeats times from Datanodes increase when there are plenty of blocks to delete,FSDataset should not use org.mortbay.log.Log
+FSDataset should not use org.mortbay.log.Log,TestBalancer and TestBlockTokenWithDFS fail Balancer assert
+TestBalancer and TestBlockTokenWithDFS fail Balancer assert,TestDatanodeBlockScanner obtain should data-node directories directly from MiniDFSCluster
+TestDatanodeBlockScanner obtain should data-node directories directly from MiniDFSCluster,TestLargeDirectoryDelete fails with NullPointerException
+TestLargeDirectoryDelete fails with NullPointerException,Create functional tests for new design of the block report
+Create functional tests for new design of the block report,Support for non-recursive create() in HDFS
+Support for non-recursive create() in HDFS,Support for non-recursive mkdir in HDFS
+Support for non-recursive mkdir in HDFS,Support replica recovery initialization in datanode
+Support replica recovery initialization in datanode,HDFS code is extensively using system property 'test.build.data' which is likely to fail under Eclipse environment
+HDFS code is extensively using system property 'test.build.data' which is likely to fail under Eclipse environment,checkMinReplication should count only live node.
+Exposing MiniDFS and MiniMR clusters as a single process command-line,checkMinReplication should count only live node.
+checkMinReplication should count only live node.,hdfs jar-test ant target fails with the latest commons jar's from the common trunk
+hdfs jar-test ant target fails with the latest commons jar's from the common trunk,Client support pipeline recovery
+Client support pipeline recovery,ListPathsServlet throws NullPointerException
+ListPathsServlet throws NullPointerException,NameNode.complete(..) may throw NullPointerException
+NameNode.complete(..) may throw NullPointerException,Support replica update in datanode
+Support replica update in datanode,Simplify the codes in the replica related classes
+Simplify the codes in the replica related classes,Remove ReplicationTargetChooser.java along with fixing import warnings.
+Remove ReplicationTargetChooser.java along with fixing import warnings.,In DFSOutputStream.nextBlockOutputStream(); the client can exclude specific datanodes when locating the next block.
+In DFSOutputStream.nextBlockOutputStream(); the client can exclude specific datanodes when locating the next block.,Changes in HDFS to rename the config keys as detailed in HDFS-531.
+Changes in HDFS to rename the config keys as detailed in HDFS-531.,DFSClient#primitiveMkdir should have createParent parameter and not assume true.
+DFSClient#primitiveMkdir should have createParent parameter and not assume true.,HDFS Project page does not show 0.20.1 documentation/release information.
+hdfsJniHelper.h: Yahoo! specific paths are encoded,HDFS Project page does not show 0.20.1 documentation/release information.
+HDFS Project page does not show 0.20.1 documentation/release information.,SafeMode should count only complete blocks.
+SafeMode should count only complete blocks.,DataNode sends a Success ack when block write fails
+DataNode sends a Success ack when block write fails,The build.xml refences jars that don't exist
+The build.xml refences jars that don't exist,dfs does not support -rmdir
+dfs does not support -rmdir,TestHDFSFileContextMainOperations uses old FileContext.mkdirs(..)
+TestHDFSFileContextMainOperations uses old FileContext.mkdirs(..),Move all of the benchmarks and tests that depend on mapreduce to mapreduce
+Move all of the benchmarks and tests that depend on mapreduce to mapreduce,Support pipeline close and close recovery
+Support pipeline close and close recovery,Strange behavior with bin/hadoop dfs -mv
+Strange behavior with bin/hadoop dfs -mv,Lease recovery; concurrency support.
+Lease recovery; concurrency support.,Namenode does not leave safe mode even if all blocks are available
+Namenode does not leave safe mode even if all blocks are available,missing test-contrib ant target would break hudson patch test process
+missing test-contrib ant target would break hudson patch test process,Internal server errors
+Public access is required for some of methods in AppendTestUtil,When non pipeline related tests are executed some advices causing NPE
+When non pipeline related tests are executed some advices causing NPE,Namenode in infinite loop for removing/recovering lease.
+Namenode in infinite loop for removing/recovering lease.,HDFS Docs - fix listing of docs in the doc menu
+HDFS Docs - fix listing of docs in the doc menu,Replace BlockInfo.isUnderConstruction() with isComplete() 
+Replace BlockInfo.isUnderConstruction() with isComplete() ,Multiple unit tests fail in branch-0.21
+HDFS needs to support new rename introduced for FileContext,test.py under particular directory Found checksum error 
+test.py under particular directory Found checksum error ,Clarify error handling and retry semantics for DFS read path
+Clarify error handling and retry semantics for DFS read path,Remove unused legacy protocol methods.
+Remove unused legacy protocol methods.,Block recovery for primary data-node
+Block recovery for primary data-node,DFSClient cannot read all the available bytes
+DFSClient cannot read all the available bytes,Remove deprecated methods from InterDatanodeProtocol.
+Remove deprecated methods from InterDatanodeProtocol.,Data-node upgrade problem
+Data-node upgrade problem,Unnecessary info message from DFSClient
+Unnecessary info message from DFSClient,DFSIO for append
+DFSIO for append,Add a way to efficiently replace a disk in a live datanode
+TestFileAppend2 sometimes hangs,Unit test for FsShell -text
+Unit test for FsShell -text,test-contrib target fails on hdfsproxy tests
+test-contrib target fails on hdfsproxy tests,TestFileAppend3#TC7 sometimes hangs
+TestFileAppend3#TC7 sometimes hangs,Add unit tests framework (Mockito)
+Add unit tests framework (Mockito),Config changes for hdfs-with-mr in 21.
+Config changes for hdfs-with-mr in 21.,Documentation change for updated configuration keys.
+Documentation change for updated configuration keys.,String literals for configuration keys should be changed to use constants.
+String literals for configuration keys should be changed to use constants.,BlockReceiver#PacketResponder should not remove a packet from the ack queue before its ack is sent
+BlockReceiver#PacketResponder should not remove a packet from the ack queue before its ack is sent,Native compression configure script needs otool support for Mac OS X
+Native compression configure script needs otool support for Mac OS X,File not being replicated; even when #of DNs >0
+File not being replicated; even when #of DNs >0,NPE in FSDataset.updateReplicaUnderRecovery(..)
+NPE in FSDataset.updateReplicaUnderRecovery(..),Rename failure due to quota results in deletion of src directory
+Rename failure due to quota results in deletion of src directory,add test for different URI.schemas in  TestGlobPaths.java to support changes in HADOOP-6286 
+add test for different URI.schemas in  TestGlobPaths.java to support changes in HADOOP-6286 ,Appending to a partial chunk incorrectly assumes the first packet fills up the partial chunk
+Appending to a partial chunk incorrectly assumes the first packet fills up the partial chunk,Add new access method to a copy of a block's replica
+Add new access method to a copy of a block's replica,A client should not send buffered data to datanodes on close of a file if the data have already been flushed
+A client should not send buffered data to datanodes on close of a file if the data have already been flushed,TestBlockUnderConstruction fails
+TestBlockUnderConstruction fails,TestOfflineImageViewer fails
+TestOfflineImageViewer fails,Use HAR filesystem to merge parity files 
+Use the user-to-groups mapping service in the NameNode,NullPointerException is thrown while merging edit log and image
+NullPointerException is thrown while merging edit log and image,FS setSpaceQuota should warn  when user attempts to set quota of very large amount.
+FS setSpaceQuota should warn  when user attempts to set quota of very large amount.,Add configuration resources to DFSAdmin
+Add configuration resources to DFSAdmin,Destination ending with \ should be treated as a dir
+Destination ending with \ should be treated as a dir,"TestAppend2#testComplexAppend failed on ""Too many open files"""
+"TestAppend2#testComplexAppend failed on ""Too many open files""",Limitation on java.io.InputStream.available()
+Limitation on java.io.InputStream.available(),java.net.SocketTimeoutException: 480000 millis timeout while waiting for channel to be ready for write exceptions were cast when trying to read file via StreamFile.
+java.net.SocketTimeoutException: 480000 millis timeout while waiting for channel to be ready for write exceptions were cast when trying to read file via StreamFile.,Add a test to make sure that node decomission does not get blocked by underreplicated blocks in an unclosed file
+Add a test to make sure that node decomission does not get blocked by underreplicated blocks in an unclosed file,RaidNode should read in configuration from hdfs-site.xml
+RaidNode should read in configuration from hdfs-site.xml,Java assertion failures triggered by tests
+Java assertion failures triggered by tests,Enable asserts for tests by default
+Enable asserts for tests by default,BlockSender should compare on disk file length with replica length instead of replica visible length.
+BlockSender should compare on disk file length with replica length instead of replica visible length.,Primary datanode should compare replicas' on disk lengths
+Primary datanode should compare replicas' on disk lengths,BlockReceiver is ignoring java.io.InterruptedIOException.
+DataNode's volumeMap should be private.,Add Hdfs Impl for the new file system interface
+Add Hdfs Impl for the new file system interface,Replace current fault injection implementation with one from Common
+Replace current fault injection implementation with one from Common,Unify build property names to facilitate cross-projects modifications
+Unify build property names to facilitate cross-projects modifications,Create an adapter to access some of package-private methods of DataNode from tests
+Create an adapter to access some of package-private methods of DataNode from tests,Intermittent failures in TestFiHFlush
+Intermittent failures in TestFiHFlush,Remove unused method INodeFile.toINodeFileUnderConstruction()
+TestDFSShell failure,Add actions with constraints to the pipeline fault injection tests
+Add actions with constraints to the pipeline fault injection tests,hdfsUtime does not handle atime = 0 or mtime = 0 correctly
+hdfsUtime does not handle atime = 0 or mtime = 0 correctly,Move libhdfs from mr to hdfs 
+Move libhdfs from mr to hdfs ,Need to properly check the type of the test class from an aspect
+Need to properly check the type of the test class from an aspect,Create fault injection test for the new pipeline close
+Create fault injection test for the new pipeline close,Hadoop HDFS - Site Logo
+Hadoop HDFS - Site Logo,Define a pointcut for pipeline close
+Define a pointcut for pipeline close,configuration parameter to prevent accidental formatting of HDFS filesystem
+configuration parameter to prevent accidental formatting of HDFS filesystem,Add more fault injection tests for pipeline close
+Add more fault injection tests for pipeline close,NPE in BlockReceiver$PacketResponder.run(BlockReceiver.java:923)
+NPE in BlockReceiver$PacketResponder.run(BlockReceiver.java:923),ERROR Block blk_XXX_1030 already exists in state RBW and thus cannot be created
+The pointcut callCreateBlockWriteStream in FSDatasetAspects is broken,Deadlock in DFSClient#DFSOutputStream
+Deadlock in DFSClient#DFSOutputStream,Pipeline close hangs if one of the datanode is not responsive.
+Pipeline close hangs if one of the datanode is not responsive.,Support the build error fix for HADOOP-6327
+Support the build error fix for HADOOP-6327,Eclipse .classpath template has outdated jar files and is missing some new ones.
+Eclipse .classpath template has outdated jar files and is missing some new ones.,bug setting block size hdfsOpenFile 
+bug setting block size hdfsOpenFile ,Create a comprehensive functional test for append
+Create a comprehensive functional test for append,fsck option to list only corrupted files
+fsck option to list only corrupted files,Add fault injection tests for pipleline close ack
+Add fault injection tests for pipleline close ack,Support new Syncable interface in HDFS
+Support new Syncable interface in HDFS,HDFS files are ending up truncated
+HDFS files are ending up truncated,TestBlockReport fails intermittently
+TestReadWhileWriting has wrong line termination symbols,commitBlockSynchronization() should directly update block GS and length.
+commitBlockSynchronization() should directly update block GS and length.,Improvement in metasave output
+Improvement in metasave output,Improve the disk utilization of HDFS
+Improve the disk utilization of HDFS,Go to parent directory link broken running on windows
+Go to parent directory link broken running on windows,TestHFlush test doesn't seek() past previously written part of the file
+rm and rmr fail to correctly move the user's files to the trash prior to deleting when they are over quota.  ,TestHFlush test doesn't seek() past previously written part of the file
+TestHFlush test doesn't seek() past previously written part of the file,A down DataNode makes Balancer to hang on repeatingly asking NameNode its partial block list
+A down DataNode makes Balancer to hang on repeatingly asking NameNode its partial block list,file size is fluctuating although file is closed
+file size is fluctuating although file is closed,Support hsync in HDFS
+Support hsync in HDFS,TestFsck timeout on 0.20.
+TestFsck timeout on 0.20.,Documenting HDFS metrics
+Documenting HDFS metrics,Add JSure annotations to HDFS code
+Add JSure annotations to HDFS code,TestReadWhileWriting test case can't be extended for a multiple writes
+TestReadWhileWriting test case can't be extended for a multiple writes,HDFS build is broken: hadoop-core snapshot can't be resolved.
+HDFS build is broken: hadoop-core snapshot can't be resolved.,TestRename build failure
+TestRename build failure,TestCrcCorruption succeeds but is not testing anything of value
+TestCrcCorruption succeeds but is not testing anything of value,Add interface classification stable & scope to HDFS
+Add interface classification stable & scope to HDFS,HDFS allows delete of read only files and directories
+HDFS allows delete of read only files and directories,Reduce ivy console output to observable level
+Reduce ivy console output to observable level,Read multiple checksum chunks at once in DFSInputStream
+Read multiple checksum chunks at once in DFSInputStream,libhdfs unit tests do not run 
+Unit tests failure for RAID,Improve reporting of progress of decommissioning
+Improve reporting of progress of decommissioning,Extend DataNodeCluster to allow block injection for  real (non simulated) DNs
+Extend DataNodeCluster to allow block injection for  real (non simulated) DNs,fs -put fails if dfs.umask is set to 63
+fs -put fails if dfs.umask is set to 63,Failure to process rename operation from edits log due to quota verification
+Failure to process rename operation from edits log due to quota verification,Trying to start the balancer throws a NPE
+Trying to start the balancer throws a NPE,DataBlockScanner reporting of bad blocks is slightly misleading
+DataBlockScanner reporting of bad blocks is slightly misleading,Moving Access Token implementation from Common to HDFS
+Moving Access Token implementation from Common to HDFS,Error message not clear for set space quota out of boundary  values. 
+Deprecate FileSystem,Error message not clear for set space quota out of boundary  values. 
+Error message not clear for set space quota out of boundary  values. ,Job failure due to BlockMissingException
+Job failure due to BlockMissingException,HDFS Contrib project ivy dependencies are not included in binary target
+HDFS Contrib project ivy dependencies are not included in binary target,test-c++-libhdfs constantly fails
+SocketTimeoutException: timeout while waiting for channel to be ready for read,DFSClient.getFileChecksum(..) computes file md5 with extra padding
+NameNode's HttpServer can't instantiate InetSocketAddress: IllegalArgumentException is thrown,DFSClient.getFileChecksum(..) computes file md5 with extra padding
+libhdfs test for memory leaks ,Intermittent race condition in TestFiPipelines
+Intermittent race condition in TestFiPipelines,FSDataset calls getCapacity() twice -bug?
+FSDataset calls getCapacity() twice -bug?,Fix exception handling in Balancer
+Fix exception handling in Balancer,A zero size file is created when SpaceQuota exceeded
+DistributedFileSystem.getFileBlockLocations() may occasionally return numeric ips as hostnames.,Automatic move to safe-mode when cluster size drops
+Automatic move to safe-mode when cluster size drops,Revive TestFuseDFS
+Revive TestFuseDFS,Metrics PendingDeletionBlocks is not decremented
+Metrics PendingDeletionBlocks is not decremented,dynamic replication
+libhdfs tests brakes code coverage runs with Clover,TestFsck times out on branch 0.20.1
+TestFsck times out on branch 0.20.1,Missing license header in java source files. 
+Missing license header in java source files. ,Implement getContentSummary(..) in HftpFileSystem
+Implement getContentSummary(..) in HftpFileSystem,Make the versions of libraries consistent
+Make the versions of libraries consistent,Datanode behaves badly when one disk is very low on space
+Datanode behaves badly when one disk is very low on space,Add conf to classpath in start_thrift_server.sh
+Add conf to classpath in start_thrift_server.sh,Build is broken after HDFS-787 patch has been applied
+c++ utils doesn't compile,Build is broken after HDFS-787 patch has been applied
+Build is broken after HDFS-787 patch has been applied,TestHDFSCLI is failing 
+TestHDFSCLI is failing ,DataNode should first receive the whole packet ack message before it constructs and sends its own ack message for the packet
+DataNode should first receive the whole packet ack message before it constructs and sends its own ack message for the packet,many tests in a patch verification process are failing without an error code
+many tests in a patch verification process are failing without an error code,DFS Write pipeline does not detect defective datanode correctly in some cases (HADOOP-3339)
+TestHDFSCLI much slower after HDFS-265 merge,Exclude second Ant JAR from classpath in hdfs builds
+Exclude second Ant JAR from classpath in hdfs builds,libhdfs must call DetachCurrentThread when a thread is destroyed
+libhdfs must call DetachCurrentThread when a thread is destroyed,The last block of a file under construction may change to the COMPLETE state in response to getAdditionalBlock or completeFileInternal
+The last block of a file under construction may change to the COMPLETE state in response to getAdditionalBlock or completeFileInternal,Add SureLogic annotations' jar into Ivy and Eclipse configs
+Add SureLogic annotations' jar into Ivy and Eclipse configs,Update Eclipse configuration to match changes to Ivy configuration
+Update Eclipse configuration to match changes to Ivy configuration,eclipse-files target needs to depend on 'ivy-retrieve-test'
+eclipse-files target needs to depend on 'ivy-retrieve-test',New unit tests for concurrent lease recovery
+New unit tests for concurrent lease recovery,Add new unit tests to the 10-mins 'run-commit-test' target
+TestHDFSCLI has to check if it's running any testcases at all,Add new unit tests to the 10-mins 'run-commit-test' target
+Add new unit tests to the 10-mins 'run-commit-test' target,Move Ivy related build targets from the list of public targets
+Move Ivy related build targets from the list of public targets,Implement something like PAR2 support?
+Add command line help for -expunge command.,Number of Under-Replicated Blocks information posted on WebUI is  inconsistent with CLI Fsck report. 
+Number of Under-Replicated Blocks information posted on WebUI is  inconsistent with CLI Fsck report. ,Add metrics; failure reporting and additional tests for HDFS-457
+Add metrics; failure reporting and additional tests for HDFS-457,FSNamesystem#internalReleaseLease throws NullPointerException on a single-block file's lease recovery
+FSNamesystem#internalReleaseLease throws NullPointerException on a single-block file's lease recovery,Enable the append test in TestReadWhileWriting
+Enable the append test in TestReadWhileWriting,Add an api to get the visible length of a DFSDataInputStream.
+Add an api to get the visible length of a DFSDataInputStream.,FileContext tests fail on Windows
+FileContext tests fail on Windows,TestLargeDirectoryDelete fails
+TestLargeDirectoryDelete fails,Display disk ( volume ) failure of data node in WebUI.
+Port FsShell to FileContext ,Display disk ( volume ) failure of data node in WebUI.
+Add unit tests framework (Mockito),Garbage collect datanode tmp dirs
+Garbage collect datanode tmp dirs,Appends to already-finalized blocks can rename across volumes
+Appends to already-finalized blocks can rename across volumes,In Checkpointer the getImage servlet is added to public rather than internal servlet list
+In Checkpointer the getImage servlet is added to public rather than internal servlet list,Stop lease checker in TestReadWhileWriting
+Stop lease checker in TestReadWhileWriting,Build fails to pull latest hadoop-core-* artifacts
