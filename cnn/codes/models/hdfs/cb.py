@@ -7,7 +7,7 @@ from sklearn import preprocessing
 
 pos = pd.read_csv('pos.csv')
 neg = pd.read_csv('neg.csv')
-sim = pd.read_csv('456_sim.csv')
+sim = pd.read_csv('hdfs_sim.csv')
 sim = sim[['sim', 'label', 'pair_id']]
 
 
