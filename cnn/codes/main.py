@@ -17,7 +17,7 @@ import pickle
 from gensim.models import Word2Vec
 import jieba
 
-wordvec_save = 'wordvec_save/hdfs_w2v.save'
+wordvec_save = 'wordvec_save/spark_w2v.save'
 
 
 def train_word2vec_model(df):

@@ -6,7 +6,7 @@ import urllib
 from torchtext import data
 
 
-data_path = '../hdfs/'
+data_path = '../spark/'
 
 
 class TarDataset(data.Dataset):

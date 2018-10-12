@@ -10,7 +10,7 @@ import urllib
 from torchtext import data
 
 
-data_path = '../hadoop/hadoop.csv'
+data_path = '../spark/spark.csv'
 
 
 

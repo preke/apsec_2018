@@ -15,6 +15,12 @@ from gensim.models import Word2Vec
 import jieba
 import traceback
 
+
+
+data_path = '../spark/spark.csv'
+neg_path = '../../lr_pair_feature_data/spark/neg.csv'
+pos_path = '../../lr_pair_feature_data/spark/pos.csv'
+
 def times_window(t1, t2):
     t1 = pd.to_datetime(t1)
     t2 = pd.to_datetime(t2)
@@ -110,8 +116,8 @@ def load_data(data_path):
     df_pairs_pos['Title_2'].apply(lambda x: str(' '.join(x)))
     '''
     '''
-    df_pairs_neg.to_csv('../../lr/spark/neg.csv', )#index=False, header=False)
-    df_pairs_pos.to_csv('../../lr/spark/pos.csv', )#index=False, header=False)
+    df_pairs_neg.to_csv(neg_path)#, index=False, header=False)
+    df_pairs_pos.to_csv(pos_path)#, index=False, header=False)
     '''
     '''
     ratios = [0.7, 0.1, 0.2]
@@ -132,4 +138,4 @@ def load_glove_as_dict(filepath):
     return word_vec
 
 if __name__ == '__main__':
-     load_data('../spark/spark.csv')    
+     load_data(data_path)    
