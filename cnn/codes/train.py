@@ -218,9 +218,10 @@ def eval_test(data_iter, model, args):
     t = precision
     precision = t / float(float(sum(list(res))))
     recall = t /sum(list(tmp['label']))
+    f1 = 2*precision*recall / (precision + recall)
     
     print('Test acc: %f' %(float(cnt)/len(tmp)) )
-    print('Test f1: %f' %(float(cnt)/len(tmp)) )
+    print('Test f1: %f' %(f1) )
     return accuracy
 
 def predict(line, model, issue1_field, issue2_field, label_field, cuda_flag):
