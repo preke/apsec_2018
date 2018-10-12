@@ -17,8 +17,12 @@ import pickle
 from gensim.models import Word2Vec
 import jieba
 
-wordvec_save = 'wordvec_save/spark_w2v.save'
+
 use_global_w2v = True
+glove_path = 'wordvec.txt'
+data_path = '../spark/spark.csv'
+wordvec_save = 'wordvec_save/spark_w2v.save'
+
 
 def train_word2vec_model(df):
     '''
@@ -40,14 +44,7 @@ def train_word2vec_model(df):
 
 
 if __name__ == '__main__':
-    # data_path = '../hadoop/hadoop.csv'
-    # df = pd.read_csv(data_path, encoding = 'gb18030')
-    # word2vec_model = train_word2vec_model(df)
-    # word2vec_model.save('hadoop_w2v.save')
-
-
-
-
+    
     parser = argparse.ArgumentParser(description='')
     # learning
     parser.add_argument('-lr', type=float, default=0.005, help='initial learning rate [default: 0.001]')
@@ -77,7 +74,7 @@ if __name__ == '__main__':
     parser.add_argument('-test', action='store_true', default=False, help='train or test')
     args = parser.parse_args()
     # load data
-    
+    load_data('../datas/hdfs.csv')
     
     '''
     '''
@@ -101,11 +98,17 @@ if __name__ == '__main__':
     args.class_num = len(label_field.vocab) - 1
 
     # add
-    glove_path = 'wordvec.txt'
+    
     if use_global_w2v:
         embedding_dict = load_glove_as_dict(glove_path)
     else:
-        embedding_dict = Word2Vec.load(wordvec_save)
+        try:
+            embedding_dict = Word2Vec.load(wordvec_save)
+        except: 
+            df = pd.read_csv(data_path, encoding = 'gb18030')
+            word2vec_model = train_word2vec_model(df)
+            word2vec_model.save('spark_w2v.save')
+            embedding_dict = Word2Vec.load(wordvec_save)
     word_vec_list = []
     for idx, word in enumerate(issue1_field.vocab.itos):
         try:

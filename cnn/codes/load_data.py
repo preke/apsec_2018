@@ -85,7 +85,7 @@ def load_data(data_path):
         if r['Duplicate_null'] == True:
             j = 1
             try:
-                while not df.ix[i+j]['Issue_id'].startswith('MAP'):
+                while not df.ix[i+j]['Issue_id'].startswith(prefix):
                     j += 1
                 neg_dup_list.append([r['Issue_id'], df.ix[i+j]['Issue_id'], r['Resolution']])
                 cnt += 1
