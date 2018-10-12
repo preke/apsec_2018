@@ -136,19 +136,21 @@ if __name__ == '__main__':
     if args.snapshot is not None:
         print('\nLoading model from {}...'.format(args.snapshot))
         cnn.load_state_dict(torch.load(args.snapshot))
+    else:
+        try:
+            train.train(train_iter, dev_iter, cnn, args)
+        except KeyboardInterrupt:
+            print(traceback.print_exc())
+            print('\n' + '-' * 89)
+            print('Exiting from training early')
 
+    
     if args.cuda:
         torch.cuda.set_device(args.device)
         cnn = cnn.cuda()
     
      
-    try:
-        train.train(train_iter, dev_iter, cnn, args)
-    except KeyboardInterrupt:
-        print(traceback.print_exc())
-        print('\n' + '-' * 89)
-        print('Exiting from training early')
-    
+        
     
     #'''
     try:
