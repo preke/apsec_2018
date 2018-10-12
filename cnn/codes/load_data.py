@@ -20,7 +20,14 @@ import traceback
 data_path = '../spark/spark.csv'
 neg_path = '../../lr_pair_feature_data/spark/neg.csv'
 pos_path = '../../lr_pair_feature_data/spark/pos.csv'
-
+prefix = 'SPARK'
+'''
+prefix: 
+spark: 'SPARK'
+map_reduce: 'MAP'
+hdfs:'HDFS'
+hadoop: 'HADOOP'
+'''
 def times_window(t1, t2):
     t1 = pd.to_datetime(t1)
     t2 = pd.to_datetime(t2)
@@ -67,7 +74,7 @@ def load_data(data_path):
         for dup in r['dup_list']:
             # print(dup)
             if int(r['Issue_id'].split('-')[1]) < int(dup.split('-')[1]):
-                if dup.startswith('MAP'):
+                if dup.startswith(prefix):
                     Dup_list.append([r['Issue_id'], dup, r['Resolution']])
     df_pairs_pos = pd.DataFrame(Dup_list, columns = ['Issue_id_1', 'Issue_id_2', 'Resolution'])
 
