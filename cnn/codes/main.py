@@ -20,6 +20,7 @@ import jieba
 
 use_global_w2v = True
 glove_path = 'wordvec.txt'
+load_path = '../datas/spark.csv'
 data_path = '../spark/spark.csv'
 wordvec_save = 'wordvec_save/spark_w2v.save'
 
@@ -74,7 +75,7 @@ if __name__ == '__main__':
     parser.add_argument('-test', action='store_true', default=False, help='train or test')
     args = parser.parse_args()
     # load data
-    load_data('../datas/hdfs.csv')
+    load_data(load_path)
     
     '''
     '''
