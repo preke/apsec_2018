@@ -69,7 +69,7 @@ for i in range(len(test_sim)):
     elif (test_sim[i] < 0.5) & (list(validation_label)[i] == 0):
         cnn_cnt += 1
 
-print('acc:{:.6f}'.format(float(cnn_cnt)/len(res)))
+# print('acc:{:.6f}'.format(float(cnn_cnt)/len(res)))
 
 # cnn_test = sim.tail(int(0.2*len(sim)))[['Title_1', 'Title_2', 'label']]
 # print('===')

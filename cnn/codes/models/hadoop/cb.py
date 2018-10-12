@@ -72,11 +72,11 @@ f1 = 2*precision*recall / (precision + recall)
 '''
 print('acc:{:.6f}'.format(float(cnt)/len(res)))
 print('f1:{:.6f}'.format(f1))
-print('===')
-print(len(train_set)/8*7)
-print(len(train_set)/8*1)
-print(len(test_set))
-print(len(sim))
+# print('===')
+# print(len(train_set)/8*7)
+# print(len(train_set)/8*1)
+# print(len(test_set))
+# print(len(sim))
 
 #cnn_test = sim[['Title_1', 'Title_2', 'label']]
 #cnn_test.to_csv('cnn_test.csv')
