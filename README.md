@@ -12,6 +12,7 @@ Codes and data for the paper **Detecting Duplicate Bug Reports with Convolutiona
 - cuda 8.0
 
 
+
 ### Basic usage:
 
 Before run codes, set parameters(paths) in each .py file in `codes/`
@@ -33,3 +34,7 @@ In `main.py`:
 ### Change CNN parameters:
 In `main.py`:
 change variables straightly in `parser`
+
+
+Pretrained word vectors could be download from https://pan.baidu.com/s/18R_lZhlOdp-kgDlbrBq7iA
+and unzip it in `codes/`
