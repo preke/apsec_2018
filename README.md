@@ -35,6 +35,7 @@ In `main.py`:
 In `main.py`:
 change variables straightly in `parser`
 
+---
 
 Pretrained word vectors could be download from https://pan.baidu.com/s/18R_lZhlOdp-kgDlbrBq7iA
 and unzip it in `codes/`
